@@ -22,3 +22,7 @@ The gallery adds our finished compositions, not external benchmark films. Per-ca
 - [SoftSignal](gallery/ui-morph/CREDITS.md): original synthesized audio and procedural layout; rendered Geist font, Lucide icons and D3 shapes retain the notices identified in the case.
 
 No standalone third-party music or sound-effect files are included in these added cases.
+
+## Research references
+
+The primary style library cites external work and observed positions. Its HTML page uses YouTube's hosted players and an image hosted on Antoni Sendra's [Vox Earworm project page](https://podenco.tv/vox-earwormdub-music/); the README and research document also link/embed that author-hosted image. Those references remain the respective rights holders' work, are not covered by this project's MIT license and are not checked into this repository as media files. A project image is identified as static reference, not continuous motion evidence.

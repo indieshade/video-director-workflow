@@ -1,6 +1,6 @@
 {
   "reviewed_on": "2026-10-06",
-  "scope": "画面风格库：材料处理、字体、图形、版面与动态质地；口播规划独立。局部静态参考，尚无风格带来流量的因果证据",
+  "scope": "基于既有外部作品调研的画面风格库；含一项自有改编，不由Opus对照实验推导分类。观察范围与制作状态分开。",
   "profiles": [
     {
       "id": "vox-editorial-collage-tutorial",
@@ -17,7 +17,22 @@
       "motion": "建议按观察任务错峰进入，保留主体用于下一次关系变化；仅凭 0:22 静帧尚不能核验这种动作。",
       "fit": "具体事件、物件与少量数据可视化；有摄影素材时更可行。",
       "failure": "只抄纸纹与半调，失去摄影对象、层级和解释任务。",
-      "source_url": "https://www.youtube.com/watch?v=7wuYBfE131U"
+      "source_url": "https://www.youtube.com/watch?v=7wuYBfE131U",
+      "keywords": [
+        "照片剪贴",
+        "编辑式版面",
+        "半调印刷质感",
+        "分层场景",
+        "少量关键数据"
+      ],
+      "observation": "0:22 的成片示例将黑白半调船只剪贴、灰色纸感网格、海面和橙色油桶符号分层组合。关键价格占据独立区域，照片承担具体对象，图标与数字承担信息。",
+      "reference_positions_seconds": [
+        22
+      ],
+      "observation_limit": "这是用户原先提供的 Vox 风格制作教程中的示例，不能视为 Vox 官方作品。这里只核查局部实际帧；分层错峰、跨镜头对象连续性是本片待验证的编排选择，未由该静帧证明。教程的播放数据不代表 Vox 风格带来的流量。",
+      "origin_type": "third_party_tutorial",
+      "implementation_status": "adapted_sample_available",
+      "application_sample": "examples/collage-paper-study/README.md"
     },
     {
       "id": "vox-mechanism",
@@ -31,7 +46,20 @@
       "motion": "已有 1:35、1:38、1:43 状态观察；本片可试对象放大与记录承接，尚无完整连续动作审查。",
       "fit": "尺度、比较与机制关系明确的知识解释。",
       "failure": "借来地图外观当装饰，或把一次信息比较铺成全屏关系网。",
-      "source_url": "https://www.youtube.com/watch?v=kIID5FDi2JQ"
+      "source_url": "https://www.youtube.com/watch?v=kIID5FDi2JQ",
+      "keywords": [
+        "黑白主体",
+        "精确细线",
+        "纸面纹理",
+        "证据与图解交接"
+      ],
+      "observation": "已核查 1:35 的地图图解、1:38 的局部放大和 1:43 的真实地图界面：粗轮廓承担主形，细边界承担细节，图解与真实记录解释同一对象。",
+      "reference_positions_seconds": [
+        98
+      ],
+      "observation_limit": "这三个局部状态支持视觉组织的观察；未完成整片运动或听觉审查。地图题材与本片不同，不复制地图造型，也不把该作品代表整个 Vox。",
+      "origin_type": "external_work",
+      "implementation_status": "not_produced_in_this_library"
     },
     {
       "id": "vox-earworm-mixed-media",
@@ -56,7 +84,10 @@
       "typography": "本轮未深入核查文字设计，不预设标题字体或文字动画。",
       "motion": "作者说明使用拼贴和角色动画；本轮只看项目图，动作节奏待连续观看。",
       "fit": "对象与文化情境具有视觉材料的叙事；可借材料关系，不能凭空为当前口播增加音乐史内容。",
-      "failure": "只加黑白滤镜和荧光描边，没有对象关系与具体情境；把封面当动作证据。"
+      "failure": "只加黑白滤镜和荧光描边，没有对象关系与具体情境；把封面当动作证据。",
+      "origin_type": "participating_author_project",
+      "implementation_status": "not_produced_in_this_library",
+      "reference_image_url": "https://podenco.tv/wp-content/uploads/2022/04/vox1.jpg"
     },
     {
       "id": "drawn-everyday",
@@ -70,7 +101,49 @@
       "motion": "已观察 0:45 与 1:04 状态；人物姿态与景别变化可作本片提案，尚未核验完整动作。",
       "fit": "个人经历、学习状态和亲切的解释语气。",
       "failure": "把完整插画反复缩放，缺少口播语义引起的姿态或场景变化。",
-      "source_url": "https://www.youtube.com/watch?v=N2uQWfV6Jr4"
+      "source_url": "https://www.youtube.com/watch?v=N2uQWfV6Jr4",
+      "keywords": [
+        "手绘轮廓",
+        "纸感底色",
+        "叠色与排线",
+        "人物表情",
+        "局部具象符号"
+      ],
+      "observation": "0:45 的人物被零散符号环绕，1:04 聚焦表情。粗细不完全均匀的轮廓、局部排线和底色共同提供绘画感；它与另一条 TED-Ed 参考的粗形剪影明显不同。",
+      "reference_positions_seconds": [
+        64
+      ],
+      "observation_limit": "本视频发布较近且累计播放突出，但题材、标题、分发与风格无法从公开数据分离。只核查局部帧，未完成整片运动或听觉审查；参考中的散落字母也不自动适合本片。",
+      "origin_type": "external_work",
+      "implementation_status": "not_produced_in_this_library"
+    },
+    {
+      "id": "character-object-feeling",
+      "family": "illustration",
+      "name": "角色剪影与物件尺度",
+      "reference_id": "IzFObkVRSV0",
+      "reference_identity": "TED-Ed 具体作品；与绘画式日常情境分开",
+      "source_url": "https://www.youtube.com/watch?v=IzFObkVRSV0",
+      "keywords": [
+        "角色剪影",
+        "限制色",
+        "物件尺度",
+        "细线表情",
+        "印刷颗粒"
+      ],
+      "reference_positions_seconds": [
+        48
+      ],
+      "observation": "0:35 以手和心脏聚焦身体感受；0:48 用蓝色人物、红色大铅笔与细线表情构成可辨认的情境，粗形与细线分工明确。",
+      "observation_limit": "只核查局部实际帧，未完成整片运动或听觉审查。这里研究表达与美术，不沿用参考中的医学内容，也不将惊恐发作等同于日常焦虑。",
+      "material": "粗形角色剪影、限制色、印刷颗粒与细线表情。",
+      "composition": "角色和任务物件通过尺度、距离及遮挡形成具体情境。",
+      "typography": "情境与身体姿态承担感受，文字补充必要对象或命题。",
+      "motion": "已观察0:35和0:48的状态；角色受力及物件尺度变化是制作提案，连续动作尚未核验。",
+      "fit": "压力、身体感受与任务负担的情境呈现；不迁移原作的医学主张。",
+      "failure": "只留下大色块，表情、接触点和角色与物件的关系不成立。",
+      "origin_type": "external_work",
+      "implementation_status": "not_produced_in_this_library"
     },
     {
       "id": "geometric-emotion",
@@ -84,7 +157,21 @@
       "motion": "已观察 0:45、1:03 的状态，受力变化是可迁移设计建议；未做整片动作审查。",
       "fit": "压力、矛盾和关系等难以直接摄影的体验。",
       "failure": "有抽象形状却无法说明它与当前口播的对应关系。",
-      "source_url": "https://www.youtube.com/watch?v=8_PQJNo2wME"
+      "source_url": "https://www.youtube.com/watch?v=8_PQJNo2wME",
+      "keywords": [
+        "几何角色",
+        "粉紫限制色",
+        "纸片颗粒",
+        "具象心理隐喻",
+        "宽阔留白"
+      ],
+      "observation": "0:45 的几何碎片保留眼睛让主体可追踪；1:03 同一个几何角色在大圆物件的重量关系中被理解，造型与受力关系承担含义。",
+      "reference_positions_seconds": [
+        63
+      ],
+      "observation_limit": "是从局部画面得到的本片应用建议，尚未制作新样段。原片色板与角色不作为模板；未完成整片运动或听觉审查。",
+      "origin_type": "external_work",
+      "implementation_status": "not_produced_in_this_library"
     },
     {
       "id": "coherent-graphic-world",
@@ -98,7 +185,21 @@
       "motion": "已观察 0:50、0:59 状态；尺度交接与同世界延展是本片提案，未核验连续动作。",
       "fit": "系统、流程或对象间机制比较清楚的内容；造型设计投入较高。",
       "failure": "只借鲜艳色板和圆形，却没有统一造型语言或空间关系。",
-      "source_url": "https://www.youtube.com/watch?v=WPPPFqsECz0"
+      "source_url": "https://www.youtube.com/watch?v=WPPPFqsECz0",
+      "keywords": [
+        "高饱和色组",
+        "几何化物件",
+        "轴测空间",
+        "尺度交接",
+        "连接关系"
+      ],
+      "observation": "0:50 的人和机器、0:59 的多组对象共享几何化造型和受光方式，连接线承担关系，而不靠多段说明文字组织画面。",
+      "reference_positions_seconds": [
+        59
+      ],
+      "observation_limit": "仅从两个实际状态研究画面层级与连续性，未完成整片运动或听觉审查。本片没有讲述医疗机制，不沿用原片的医学模型或高密度总览。",
+      "origin_type": "external_work",
+      "implementation_status": "not_produced_in_this_library"
     },
     {
       "id": "indieshade-editorial-storybook",
@@ -123,7 +224,9 @@
       "motion": "沿用已经制作的书页交接、关系编排与镜头推近；本轮只核查风格静帧，不重作完整节奏评价。",
       "fit": "作者学习经历与个人成长口播，适合延续现有 IP；不能把本片素材无限复用到所有选题。",
       "failure": "因使用纸感与拼贴就继续叫纯 Vox；暖光人物场景压过知识解释，或所有段落反复套同一素材。",
-      "distribution_note": "本地成片案例，未随公开版分发；不是外部原作参考。"
+      "distribution_note": "本地成片案例，未随公开版分发；不是外部原作参考。",
+      "origin_type": "own_adaptation",
+      "implementation_status": "local_private_example_not_distributed"
     }
   ],
   "distribution_note": "Historical observations dated 2026-10-06; source links only. Screenshots and downloaded references are not redistributed."

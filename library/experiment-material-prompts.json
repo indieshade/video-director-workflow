@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-06",
+  "status": "起步库：按已有工艺整理，待逐条生成验证",
+  "entries": [
+    {
+      "id": "collage-reader",
+      "style": "editorial-collage",
+      "role": "reader",
+      "kind": "raster_generation",
+      "prompt": "一位正在读书的{人物}，侧身面向书页；灰阶摄影印刷裁片，保留{衣服}轮廓，暖白手剪边缘，透明背景。主体完整，不画标题和箭头。",
+      "variables": [
+        "人物",
+        "衣服"
+      ],
+      "based_on_case": "collage",
+      "validation_status": "authored_after_example_not_generation_tested",
+      "output_scope": "用于生成或设计独立素材/关系，不保证一次得到成片质量"
+    },
+    {
+      "id": "collage-arrow",
+      "style": "editorial-collage",
+      "role": "arrow",
+      "kind": "vector_or_cutpaper",
+      "prompt": "为{方向关系}绘制一条剪纸箭头：先保证轮廓、尖端和转折清楚，再给纸边、局部缺墨与短接触阴影；与主体纸材统一，勿用杂乱辅助线。",
+      "variables": [
+        "方向关系"
+      ],
+      "based_on_case": "collage",
+      "validation_status": "authored_after_example_not_generation_tested",
+      "output_scope": "用于生成或设计独立素材/关系，不保证一次得到成片质量"
+    },
+    {
+      "id": "collage-title",
+      "style": "editorial-collage",
+      "role": "title",
+      "kind": "typography",
+      "prompt": "将{短命题}作为印在独立纸条上的中文标题；根据字形性格选厚重宋体或黑体，保留完整笔画与可读字腔，再加入轻微印刷磨损。",
+      "variables": [
+        "短命题"
+      ],
+      "based_on_case": "collage",
+      "validation_status": "authored_after_example_not_generation_tested",
+      "output_scope": "用于生成或设计独立素材/关系，不保证一次得到成片质量"
+    },
+    {
+      "id": "shape-play-shape",
+      "style": "flat-graphic-motion",
+      "role": "shape",
+      "kind": "procedural_geometry",
+      "prompt": "设计一个可形变为{目标轮廓}的实心图形。先保证正负形有性格、端点与绕行次序可对应，再提供起始、过渡和结果姿态；不依靠描边花纹解释形变。",
+      "variables": [
+        "目标轮廓"
+      ],
+      "based_on_case": "shape-play",
+      "validation_status": "authored_after_example_not_generation_tested",
+      "output_scope": "用于生成或设计独立素材/关系，不保证一次得到成片质量"
+    },
+    {
+      "id": "shape-play-group",
+      "style": "flat-graphic-motion",
+      "role": "group",
+      "kind": "procedural_layout",
+      "prompt": "将{图形族}组织为有主次的群体，给领头对象、回应顺序和最终排列；变化来自尺度、密度和方向，避免复制成均匀壁纸。",
+      "variables": [
+        "图形族"
+      ],
+      "based_on_case": "shape-play",
+      "validation_status": "authored_after_example_not_generation_tested",
+      "output_scope": "用于生成或设计独立素材/关系，不保证一次得到成片质量"
+    },
+    {
+      "id": "shape-play-sound",
+      "style": "flat-graphic-motion",
+      "role": "sound",
+      "kind": "sound_design",
+      "prompt": "为{动作事件}设计同族声音：少量音色，通过音高、包络与空间位置表现单体和群体；落定与留白支持观看。先决定音乐段落，再挑动作音。",
+      "variables": [
+        "动作事件"
+      ],
+      "based_on_case": "shape-play",
+      "validation_status": "authored_after_example_not_generation_tested",
+      "output_scope": "用于生成或设计独立素材/关系，不保证一次得到成片质量"
+    },
+    {
+      "id": "material-field-membrane",
+      "style": "lit-3d-material",
+      "role": "membrane",
+      "kind": "procedural_geometry",
+      "prompt": "以程序几何设计{曲面主体}，明确厚度、轮廓和空隙；每个时间由同一视频时间重新计算姿态与法线。先验证形变中的绕行顺序与自交，再决定反射材质。",
+      "variables": [
+        "曲面主体"
+      ],
+      "based_on_case": "material-field",
+      "validation_status": "authored_after_example_not_generation_tested",
+      "output_scope": "用于生成或设计独立素材/关系，不保证一次得到成片质量"
+    },
+    {
+      "id": "material-field-light",
+      "style": "lit-3d-material",
+      "role": "light",
+      "kind": "lighting_setup",
+      "prompt": "为{材料}安排有方向的主光、局部反射和暗部，背景受光与主角相关；记录光源位置及受光对象。高亮用于说明形体，不把全局辉光当质感。",
+      "variables": [
+        "材料"
+      ],
+      "based_on_case": "material-field",
+      "validation_status": "authored_after_example_not_generation_tested",
+      "output_scope": "用于生成或设计独立素材/关系，不保证一次得到成片质量"
+    },
+    {
+      "id": "material-field-environment",
+      "style": "lit-3d-material",
+      "role": "environment",
+      "kind": "scene_design",
+      "prompt": "设计能承接{主体事件}的空间环境：近、中、远层级有可观察区别，镜头穿行有目标，背景不只是一张渐变；安静区给形体留辨识度。",
+      "variables": [
+        "主体事件"
+      ],
+      "based_on_case": "material-field",
+      "validation_status": "authored_after_example_not_generation_tested",
+      "output_scope": "用于生成或设计独立素材/关系，不保证一次得到成片质量"
+    },
+    {
+      "id": "pixel-wizard-character",
+      "style": "pixel-art-animation",
+      "role": "character",
+      "kind": "procedural_pixel_art",
+      "prompt": "为{角色身份}设计小尺寸像素角色：先做轮廓、手臂与身体负空间，再分配限定色阶；提供静止、准备、释放、恢复几种可辨姿态，不把矢量图缩小当像素画。",
+      "variables": [
+        "角色身份"
+      ],
+      "based_on_case": "pixel-wizard",
+      "validation_status": "authored_after_example_not_generation_tested",
+      "output_scope": "用于生成或设计独立素材/关系，不保证一次得到成片质量"
+    },
+    {
+      "id": "pixel-wizard-spell",
+      "style": "pixel-art-animation",
+      "role": "spell",
+      "kind": "procedural_pixel_effect",
+      "prompt": "使用{魔法色组}设计汇聚、核心、扩散、飞行和消散的像素簇；阶段有不同形态，亮度层级服务主动作，不用随机满屏粒子或模糊发光。",
+      "variables": [
+        "魔法色组"
+      ],
+      "based_on_case": "pixel-wizard",
+      "validation_status": "authored_after_example_not_generation_tested",
+      "output_scope": "用于生成或设计独立素材/关系，不保证一次得到成片质量"
+    },
+    {
+      "id": "pixel-wizard-ground",
+      "style": "pixel-art-animation",
+      "role": "ground",
+      "kind": "procedural_pixel_art",
+      "prompt": "用低对比的整数像素簇表现{环境}，接触点与角色站姿一致；局部色阶随能量方向改变，背景不抢动作高潮。",
+      "variables": [
+        "环境"
+      ],
+      "based_on_case": "pixel-wizard",
+      "validation_status": "authored_after_example_not_generation_tested",
+      "output_scope": "用于生成或设计独立素材/关系，不保证一次得到成片质量"
+    },
+    {
+      "id": "ui-morph-shell",
+      "style": "minimal-ui-motion",
+      "role": "shell",
+      "kind": "procedural_ui",
+      "prompt": "为{状态链}设计同一个连续外壳，保持颜色、圆角和尺度变化的身份线索；起点、过渡与结果都有可读轮廓，内容进入时容器已可用。",
+      "variables": [
+        "状态链"
+      ],
+      "based_on_case": "ui-morph",
+      "validation_status": "authored_after_example_not_generation_tested",
+      "output_scope": "用于生成或设计独立素材/关系，不保证一次得到成片质量"
+    },
+    {
+      "id": "ui-morph-chart",
+      "style": "minimal-ui-motion",
+      "role": "chart",
+      "kind": "procedural_chart",
+      "prompt": "以{数据关系}生成少量有意义的图表转折，曲线保持可辨方向；鼠标、选点和提示框沿同一真实路径定位，不随意在附近放标记。",
+      "variables": [
+        "数据关系"
+      ],
+      "based_on_case": "ui-morph",
+      "validation_status": "authored_after_example_not_generation_tested",
+      "output_scope": "用于生成或设计独立素材/关系，不保证一次得到成片质量"
+    },
+    {
+      "id": "ui-morph-cursor",
+      "style": "minimal-ui-motion",
+      "role": "cursor",
+      "kind": "motion_staging",
+      "prompt": "编排{交互事件}的鼠标动作：点击有接触目标和反馈，拖动与数值直接对应，释放恢复；轨迹服务焦点交接，不加无原因的鼠标舞蹈。",
+      "variables": [
+        "交互事件"
+      ],
+      "based_on_case": "ui-morph",
+      "validation_status": "authored_after_example_not_generation_tested",
+      "output_scope": "用于生成或设计独立素材/关系，不保证一次得到成片质量"
+    }
+  ],
+  "scope": "实验案例的事后工艺配方，不是外部调研风格库"
+}

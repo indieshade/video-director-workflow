@@ -4,19 +4,36 @@
 
 这是 indieshade 与 AI 持续试作、反馈、修订形成的工作流。我们尝试在同一公开提示词下，让独立创作的设计质量靠近公开分享中的 Opus 作品，**目前仍有明显差距，尚未证明能够稳定追平，也没有建立受控模型排名**。仓库公开不同风格的实际作品、可迁移的方法、失败教训和一个可运行样例。
 
-## 不同画面风格，实际作品
+## 从调研作品选择画面风格
 
-| 风格与作品静帧 | 成片与制作内容 |
-| --- | --- |
-| [![摄影印刷剪贴](gallery/collage/poster.jpg)](gallery/collage/README.md) | **摄影印刷剪贴** · 5 秒。摄影裁片、纸片箭头、印刷字形、有限姿态。[视频](gallery/collage/film.mp4) · [提示词与制作方法](gallery/collage/prompt.md) |
-| [![平涂图形编排](gallery/shape-play/poster.jpg)](gallery/shape-play/README.md) | **平涂图形与群体编排** · 15 秒。实心轮廓、形变接力、错峰群体与声音编排。[视频](gallery/shape-play/film.mp4) · [提示词与制作方法](gallery/shape-play/prompt.md) |
-| [![立体材质与光影](gallery/material-field/poster.jpg)](gallery/material-field/README.md) | **立体材质与空间光影** · 30 秒。曲面、反射、空间穿行；包含意义与节奏不够成立的失败教训。[视频](gallery/material-field/film.mp4) · [提示词与制作方法](gallery/material-field/prompt.md) |
-| [![像素角色表演](gallery/pixel-wizard/poster.jpg)](gallery/pixel-wizard/README.md) | **像素角色与法术表演** · 11.2 秒，无声。轮廓、色阶、受力、像素光效。[视频](gallery/pixel-wizard/film.mp4) · [提示词与制作方法](gallery/pixel-wizard/prompt.md) |
-| [![极简UI形变](gallery/ui-morph/poster.jpg)](gallery/ui-morph/README.md) | **极简 UI 连续形变** · 14 秒。连续外壳、游标与图表关系、音乐节拍。[视频](gallery/ui-morph/film.mp4) · [提示词与制作方法](gallery/ui-morph/prompt.md) |
+主风格库沿用我们实际调研过的外部作品；Opus 对照实验放在后面的应用记录里。
 
-[完整展示与输入边界](docs/showcase.md) · [十五条素材提示词](library/README.md) · [交互展示页源码](showcase.html) · [实验复盘](docs/experiment-notes.md)
+| 调研方向 | 设计关键词 | 实际参考与状态 |
+| --- | --- | --- |
+| Vox 编辑拼贴 · 第三方教程 | 摄影剪贴、纸边、半调、印刷字形 | [参考与制作提案](docs/researched-styles.md#编辑拼贴--第三方-vox-教程)；已有自有剪贴样例 |
+| Vox 编辑式机制图解 | 地图轮廓、粗细线、局部放大 | [调研条目](docs/researched-styles.md#编辑式机制图解--vox-原作)；原创样片待制作 |
+| Vox Earworm 混合媒介 | 灰阶器物、彩色几何、不对称拼贴 | [作者项目图与条目](docs/researched-styles.md#混合媒介拼贴--vox-earworm)；原创样片待制作 |
+| TED-Ed 绘画式日常情境 | 手绘轮廓、排线、叠色、表情 | [调研条目](docs/researched-styles.md#绘画式日常情境)；原创样片待制作 |
+| TED-Ed 角色剪影与物件尺度 | 粗形、细线表情、限制色、物件尺度 | [调研条目](docs/researched-styles.md#角色剪影与物件尺度)；原创样片待制作 |
+| The School of Life 心理隐喻 | 几何角色、受力关系、纸片颗粒 | [调研条目](docs/researched-styles.md#几何角色与心理隐喻)；原创样片待制作 |
+| Kurzgesagt 统一图形世界 | 几何物件、统一受光、连接与尺度 | [调研条目](docs/researched-styles.md#统一图形世界)；原创样片待制作 |
+| indieshade 自有改编 | 编辑拼贴 × 温柔绘本 | [改编与外部参考的区别](docs/researched-styles.md#indieshade--编辑拼贴--温柔绘本)；本地成片未公开 |
 
-这是不同题材的风格展示，不是同题排名。每例记录是否看过参考、额外选择及不足；复用提示词为事后提炼，十五条素材配方尚未逐条生成验证。除剪贴样例外，其余案例目前公开成片与方法，未打包完整源工程。
+[原作者项目图 · Vox Earworm](https://podenco.tv/vox-earwormdub-music/)：图像版权属原权利人，项目图不当作连续动作证据。
+
+![Antoni Sendra 的 Vox Earworm 项目展示图](https://podenco.tv/wp-content/uploads/2022/04/vox1.jpg)
+
+[调研风格与具体制作指导](docs/researched-styles.md) · [21 条调研风格素材配方](library/README.md) · [本地交互参考页源码](style-library.html)
+
+风格以素材处理、造型、字体、版面和动态质地定义。观察只覆盖注明的局部，不把整个频道当成同一种风格，也没有“画风带来流量”的因果证明。新配方来自参考研究与制作提案，尚未逐条生成验证。
+
+## 应用样例与实验记录
+
+![自有五秒剪贴应用](gallery/collage/poster.jpg)
+
+[五秒剪贴视频](gallery/collage/film.mp4) · [可运行工程](examples/collage-paper-study/README.md) · [实际输入](examples/collage-paper-study/BRIEF.md)
+
+另外保留 [五个已有实验作品](docs/showcase.md)及其工艺、额外输入和局限，包括图形编排、立体光影、像素和 UI 形变。它们不替代外部调研风格库，也不证明这些方向已达到外部参考质量。旧的十五条事后工艺配方另存于[实验素材配方](library/experiment-material-prompts.json)。
 
 ## 长期方向：让指导最终不再必要
 
@@ -30,7 +47,7 @@
 | 安装、调用导演 skill | [narration-video-director](skills/narration-video-director/SKILL.md) |
 | 理解制作过程与提示词结构 | [工作流](docs/workflow.md) · [提示词示例](docs/prompts.md) |
 | 选择画面风格 | [风格条目](docs/style-profiles.json) · [剪贴画指导](skills/narration-video-director/references/vox-collage.md) |
-| 查看实际作品与选择素材配方 | [五种风格作品](docs/showcase.md) · [素材库](library/README.md) |
+| 查看实际作品与选择素材配方 | [外部调研风格](docs/researched-styles.md) · [素材库](library/README.md) |
 | 扩充库与评估新模型 | [维护方法](docs/library-roadmap.md) · [导演库维护指导](skills/narration-video-director/references/library-maintenance.md) |
 | 判断首版之后还该做什么 | [创作复审](skills/narration-video-director/references/creative-iteration.md) |
 | 复现这个五秒样段 | [样例说明](examples/collage-paper-study/README.md) |

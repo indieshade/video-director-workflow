@@ -67,16 +67,32 @@ for case in cases:
         if not video_streams or float(metadata['measurements']['format']['duration']) <= 0:
             problems.append(f'Invalid gallery media measurements: {case["id"]}')
 
+profile_ids = {item['id'] for item in profile['profiles']}
+for item in profile['profiles']:
+    if item.get('origin_type') not in {'external_work', 'third_party_tutorial', 'participating_author_project', 'own_adaptation'}:
+        problems.append(f'Unknown research origin: {item["id"]}')
+    if not item.get('implementation_status'):
+        problems.append(f'Missing implementation boundary: {item["id"]}')
+    if item.get('application_sample') and not (root / item['application_sample']).is_file():
+        problems.append(f'Missing profile application sample: {item["id"]}')
 recipes = json.loads((root / 'library/material-prompts.json').read_text(encoding='utf8'))['entries']
+experimental_recipes = json.loads((root / 'library/experiment-material-prompts.json').read_text(encoding='utf8'))['entries']
+for recipe in recipes:
+    if recipe.get('source_profile') not in profile_ids:
+        problems.append(f'Unknown research recipe profile: {recipe["id"]}')
+    if not recipe.get('acceptance') or not recipe.get('basis'):
+        problems.append(f'Missing recipe basis/acceptance: {recipe["id"]}')
+for recipe in experimental_recipes:
+    if recipe['based_on_case'] not in case_ids or recipe['style'] not in families:
+        problems.append(f'Unknown experimental recipe case/style: {recipe["id"]}')
+recipes = recipes + experimental_recipes
 if len({recipe['id'] for recipe in recipes}) != len(recipes):
     problems.append('Duplicate material recipe IDs')
 for recipe in recipes:
-    if recipe['based_on_case'] not in case_ids or recipe['style'] not in families:
-        problems.append(f'Unknown recipe case/style: {recipe["id"]}')
     if set(re.findall(r'\{([^{}]+)\}', recipe['prompt'])) != set(recipe['variables']):
         problems.append(f'Recipe placeholder mismatch: {recipe["id"]}')
     status = recipe['validation_status']
-    if status not in {'authored_after_example_not_generation_tested', 'generation_tested_with_evidence'}:
+    if status not in {'authored_after_example_not_generation_tested', 'authored_from_reference_not_generation_tested', 'generation_tested_with_evidence'}:
         problems.append(f'Unknown recipe validation status: {recipe["id"]}')
     if status == 'generation_tested_with_evidence':
         evidence = recipe.get('evidence')

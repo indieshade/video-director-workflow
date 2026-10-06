@@ -1,0 +1,647 @@
+{
+  "status": "final",
+  "phase": "director-part-2",
+  "case_id": "vox-mechanism",
+  "category": "custom-style-probe",
+  "classification_note": "内容已给，无需搜索；本测试的素材与关系画面不属于默认统计、地图、文字或真实来源资产融合分类。custom-style-probe 是本次 schema 扩展，不强套分类模板。",
+  "duration_s": 6,
+  "fps": 30,
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9"
+  },
+  "audio": false,
+  "style": "编辑式机制图解 · Vox 原作：地图轮廓、细边界与真实地图界面；精度和可辨认性优先。",
+  "palette": [
+    "#151515",
+    "#737373",
+    "#DBD6CD",
+    "#F4F0E8"
+  ],
+  "font": "Microsoft YaHei",
+  "font_status": "assets/probe-msyh.ttc 已就位，Microsoft YaHei 本地私有渲染，不公开分发；中文字形和可读性仍待首版帧核对。",
+  "beats": [
+    0,
+    24,
+    60,
+    102,
+    132
+  ],
+  "beat_unit": "frames",
+  "export": "mp4",
+  "shot_brief": "示意打开的书保持整体坐标；粗主体轮廓与细页内行块建立层级。一个待学习段落被定位框选出，同一内容经连线对应到局部放大区，最终保留整体和局部供回认。内容来源只有输入主题，不虚构实际章节或数据。",
+  "asset_needs": [],
+  "search_required": false,
+  "content": {
+    "brief_from_input": "用六秒无声横屏视频呈现：读者面对整本书，找到一小段需要学习的内容；重点是画面语言与动作，不复制参考的题材或造型。",
+    "recipes": [
+      {
+        "id": "vox-mechanism-map",
+        "source_profile": "vox-mechanism",
+        "role": "map",
+        "kind": "procedural_geometry",
+        "prompt": "根据{真实空间关系}制作有来源的地图或机制轮廓：粗轮廓定义主体，细线定义必要边界；各层可独立放大。未知数据留空，不为了构图虚构。",
+        "variables": [
+          "真实空间关系"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "空间与事实对应；必要细节在近景可辨。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "真实空间关系": "读者从整本书定位到一个待学段落的关系"
+        },
+        "filled_prompt": "根据读者从整本书定位到一个待学段落的关系制作有来源的地图或机制轮廓：粗轮廓定义主体，细线定义必要边界；各层可独立放大。未知数据留空，不为了构图虚构。"
+      },
+      {
+        "id": "vox-mechanism-detail",
+        "source_profile": "vox-mechanism",
+        "role": "detail",
+        "kind": "scene_design",
+        "prompt": "为{局部细节}设计整体定位框、局部放大区和对应真实资料的连续版面；视觉处理保持线重、比例及指代一致。",
+        "variables": [
+          "局部细节"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "观众能从局部回认整体，不靠补一段说明找位置。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "局部细节": "待学习段落与整页书的位置关系"
+        },
+        "filled_prompt": "为待学习段落与整页书的位置关系设计整体定位框、局部放大区和对应真实资料的连续版面；视觉处理保持线重、比例及指代一致。"
+      },
+      {
+        "id": "vox-mechanism-label",
+        "source_profile": "vox-mechanism",
+        "role": "label",
+        "kind": "typography",
+        "prompt": "为{对象区别}只保留必要标签，字号与层级对应主次；来源脚注和字幕分区，避免细字贴满图形。",
+        "variables": [
+          "对象区别"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "标签明确指代，图形仍是主要观察对象。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "对象区别": "已掌握内容与待学习内容"
+        },
+        "filled_prompt": "为已掌握内容与待学习内容只保留必要标签，字号与层级对应主次；来源脚注和字幕分区，避免细字贴满图形。"
+      }
+    ],
+    "source_phase_note": "无 raster 输入；冻结非 raster 配方由程序化 SVG/CSS/GSAP 实现，不新增图片。",
+    "layout": {
+      "unit": "canvas-px",
+      "source_regions_unit": "normalized-raw-image-coordinate",
+      "policy": "图像完整等比包含；所有 raster 覆盖层用同一 source-to-canvas affine 变换。非 raster 几何为执行者补充。",
+      "elements": [
+        {
+          "id": "whole-book",
+          "kind": "procedural-svg",
+          "bounds": [
+            100,
+            190,
+            520,
+            330
+          ],
+          "geometry": "两页多边形共享书脊；轮廓 8px，必要内线 2px",
+          "z": 1
+        },
+        {
+          "id": "known-lines",
+          "kind": "procedural-svg-lines",
+          "bounds": [
+            170,
+            250,
+            330,
+            170
+          ],
+          "line_count": 12,
+          "z": 2
+        },
+        {
+          "id": "target",
+          "kind": "procedural-svg-frame",
+          "bounds": [
+            418,
+            330,
+            145,
+            66
+          ],
+          "stroke_width": 5,
+          "z": 3
+        },
+        {
+          "id": "connector",
+          "kind": "procedural-svg-path",
+          "points": [
+            [
+              563,
+              363
+            ],
+            [
+              678,
+              363
+            ],
+            [
+              714,
+              285
+            ]
+          ],
+          "stroke_width": 3,
+          "z": 3
+        },
+        {
+          "id": "detail",
+          "kind": "procedural-svg-group",
+          "bounds": [
+            714,
+            218,
+            430,
+            235
+          ],
+          "geometry": "与 target 对应的相同行块 ID，放大但不改段落身份",
+          "z": 4
+        },
+        {
+          "id": "known-label",
+          "kind": "type",
+          "text": "已掌握",
+          "bounds": [
+            168,
+            560,
+            180,
+            52
+          ],
+          "font_px": 32,
+          "z": 5
+        },
+        {
+          "id": "target-label",
+          "kind": "type",
+          "text": "待学习",
+          "bounds": [
+            770,
+            490,
+            220,
+            52
+          ],
+          "font_px": 36,
+          "z": 5
+        }
+      ]
+    },
+    "scenes": [
+      {
+        "id": "full-shot",
+        "start": 0,
+        "end": 6,
+        "dominant_motion": "同一整体到一小段的连续定位"
+      }
+    ],
+    "timeline": [
+      {
+        "start": 0,
+        "end": 0.8,
+        "target": "whole-book,known-lines",
+        "action": "opacity 0 到 1，整体轮廓固定"
+      },
+      {
+        "start": 0.9,
+        "end": 1.7,
+        "target": "target",
+        "action": "stroke reveal 标出位置"
+      },
+      {
+        "start": 1.7,
+        "end": 2.4,
+        "target": "connector",
+        "action": "strokeDashoffset 连续揭示对应线"
+      },
+      {
+        "start": 2.2,
+        "end": 3.4,
+        "target": "detail",
+        "action": "共享段落形状从 source target bounds 到 detail bounds 作 affine scale/translate，whole-book 始终不动"
+      },
+      {
+        "start": 3.2,
+        "end": 3.8,
+        "target": "known-label,target-label",
+        "action": "opacity 0 到 1"
+      },
+      {
+        "start": 3.8,
+        "end": 6,
+        "target": "all",
+        "action": "保持整体定位框、对应线和放大区"
+      }
+    ],
+    "available_scope": "完整执行程序化机制轮廓、整体定位和局部放大；事实范围限于冻结 brief 的已知关系。",
+    "unmet_requirements": [
+      "没有真实资料或地理数据；此处只能验证主题给出的示意机制关系。",
+      "几何、行数与位置均为额外实现选择，不可当作真实书页结构或学习比例。",
+      "没有真实记录或地图界面输入，不能完成卡片的证据与真实记录交接；只验证示意图解的尺度承接。"
+    ],
+    "style_card_application": {
+      "material": {
+        "provided": "地图轮廓、细边界与真实地图界面；精度和可辨认性优先。",
+        "implementation": "黑白主体与灰阶细线，细密低对比纸面点纹仅在背景；8px 主轮廓、2px 必要内线。"
+      },
+      "composition": {
+        "provided": "大尺度关系与局部细节切换；粗轮廓承担主形，细线承担内部信息。",
+        "implementation": "整体和局部同时回认，单一对应连线；无地理外观或全屏网状装饰。"
+      },
+      "typography": {
+        "provided": "标签负责对象指代和必要区别，字幕负责语言跟随；不能让细字与图形争夺观察。",
+        "implementation": "仅已掌握/待学习两标签，无口播字幕。"
+      },
+      "keywords": {
+        "provided": [
+          "黑白主体",
+          "精确细线",
+          "纸面纹理",
+          "证据与图解交接"
+        ],
+        "implementation_note": "只迁移与当前阅读主题和现有资产相符的材料与关系，不复制卡片观察中的具体题材/造型。"
+      },
+      "motion": {
+        "provided": "已有 1:35、1:38、1:43 状态观察；本片可试对象放大与记录承接，尚无完整连续动作审查。",
+        "implementation": "同一段落 affine 放大并连续对应整体定位框。"
+      },
+      "status": "first-probe-executed-not-reference-equivalent"
+    },
+    "material_system": {
+      "source": "existing-style-card plus executor numerical realization",
+      "implementation": "黑白主体与灰阶细线，细密低对比纸面点纹仅在背景；8px 主轮廓、2px 必要内线。",
+      "procedural_pattern_rule": "仅非 raster 层可用重复 SVG pattern；固定点距与坐标，不用随机数，不覆盖或处理 raw 图。",
+      "parameters": {
+        "dot_radius_px": 0.55,
+        "dot_pitch_px": 8,
+        "dot_opacity": 0.06,
+        "contact_shadow_offset_px": [
+          2,
+          3
+        ],
+        "contact_shadow_opacity": 0.12,
+        "paper_edge_jitter_px": 2
+      },
+      "avoid": "不要通用 glow、粒子、光滑默认箭头或图表外观。"
+    },
+    "recipe_execution": [
+      {
+        "recipe_id": "vox-mechanism-map",
+        "kind": "procedural_geometry",
+        "filled_prompt": "根据读者从整本书定位到一个待学段落的关系制作有来源的地图或机制轮廓：粗轮廓定义主体，细线定义必要边界；各层可独立放大。未知数据留空，不为了构图虚构。",
+        "status": "implementation-executed-partial",
+        "evidence_or_scope": "只用冻结主题的示意关系，无地理或真实书页资料。",
+        "validation_status": "implementation_tested_with_evidence",
+        "observed_result": "partial",
+        "pre_execution_status": "planned-procedural",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      },
+      {
+        "recipe_id": "vox-mechanism-detail",
+        "kind": "scene_design",
+        "filled_prompt": "为待学习段落与整页书的位置关系设计整体定位框、局部放大区和对应真实资料的连续版面；视觉处理保持线重、比例及指代一致。",
+        "status": "implementation-executed-partial",
+        "evidence_or_scope": "同一段落 ID 的定位和局部放大；没有真实资料交接。",
+        "validation_status": "implementation_tested_with_evidence",
+        "observed_result": "partial",
+        "pre_execution_status": "planned-procedural",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      },
+      {
+        "recipe_id": "vox-mechanism-label",
+        "kind": "typography",
+        "filled_prompt": "为已掌握内容与待学习内容只保留必要标签，字号与层级对应主次；来源脚注和字幕分区，避免细字贴满图形。",
+        "status": "implementation-executed-partial",
+        "evidence_or_scope": "两项必要标签；中文最终帧检查待执行。",
+        "validation_status": "implementation_tested_with_evidence",
+        "observed_result": "partial",
+        "pre_execution_status": "planned-procedural",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      }
+    ]
+  },
+  "extra_decisions": [
+    {
+      "area": "category_extension",
+      "decision": "使用 custom-style-probe；冻结配方本身未提供此 IR 分类。",
+      "provenance": "executor"
+    },
+    {
+      "area": "source_limitation",
+      "decision": "唯一事实来源是 input 的主题关系；书页采用注明的示意布局，不虚构真实章节、页码、学习比例或地理数据。",
+      "provenance": "executor"
+    },
+    {
+      "area": "final-layout-and-motion",
+      "provenance": "executor",
+      "decision": "content.layout 与 content.timeline 的全部数值、几何、阶段、时长、光影实现和字形均由执行者补充，不能当作配方明确提供。"
+    },
+    {
+      "area": "final-palette",
+      "provenance": "executor",
+      "decision": "palette 为执行者选择的色值，最后一项是画布底色；原图不重新着色。"
+    },
+    {
+      "area": "system-font",
+      "provenance": "executor",
+      "decision": "使用已存在 Microsoft YaHei 系统字体，替换 Part1 的未验证 Noto Sans SC；最终渲染需核对中文字形。"
+    },
+    {
+      "area": "raw-constraints",
+      "provenance": "actual-generated-asset",
+      "decision": "完整执行程序化机制轮廓、整体定位和局部放大；事实范围限于冻结 brief 的已知关系。"
+    },
+    {
+      "area": "generation-background",
+      "provenance": "executor",
+      "decision": "四次 imagegen transparent_background=true 是技术调用选项；不能把该请求当作已经满足透明层。drawn 配方未明确透明，该选项为额外选择。"
+    },
+    {
+      "area": "catalog-reuse",
+      "provenance": "technical-skill-and-parent-authorized",
+      "decision": "只读技术检索后使用当前 GSAP 3.13.0 技术，不导入 registry 的默认外观。"
+    },
+    {
+      "area": "existing-style-card-guidance",
+      "provenance": "style-card-provided",
+      "decision": {
+        "material": "地图轮廓、细边界与真实地图界面；精度和可辨认性优先。",
+        "composition": "大尺度关系与局部细节切换；粗轮廓承担主形，细线承担内部信息。",
+        "typography": "标签负责对象指代和必要区别，字幕负责语言跟随；不能让细字与图形争夺观察。",
+        "keywords": [
+          "黑白主体",
+          "精确细线",
+          "纸面纹理",
+          "证据与图解交接"
+        ]
+      },
+      "note": "这是既有输入提供的指导，不是执行者原创选择。"
+    },
+    {
+      "area": "style-card-realization",
+      "provenance": "executor",
+      "decision": {
+        "material": "黑白主体与灰阶细线，细密低对比纸面点纹仅在背景；8px 主轮廓、2px 必要内线。",
+        "composition": "整体和局部同时回认，单一对应连线；无地理外观或全屏网状装饰。",
+        "typography": "仅已掌握/待学习两标签，无口播字幕。",
+        "motion": "同一段落 affine 放大并连续对应整体定位框。"
+      },
+      "note": "具体数字、轮廓、色值、影子、纸粒参数、摆位和时序是执行者补充。"
+    }
+  ],
+  "validation_plan": {
+    "status": "first-probe-reviewed-with-limitations",
+    "raster": [],
+    "procedural": [
+      {
+        "recipe_id": "vox-mechanism-map",
+        "acceptance": "空间与事实对应；必要细节在近景可辨。"
+      },
+      {
+        "recipe_id": "vox-mechanism-detail",
+        "acceptance": "观众能从局部回认整体，不靠补一段说明找位置。"
+      },
+      {
+        "recipe_id": "vox-mechanism-label",
+        "acceptance": "标签明确指代，图形仍是主要观察对象。"
+      }
+    ],
+    "sample_checks": [
+      "核对 input 与 generation.json 的 filled_prompt 逐字一致及 raw hash 不变。",
+      "仅制作一次美术首版；看0.6/2.4/4.4/5.8秒关键帧及完整六秒动作，不以编译或导出替代观看。",
+      "逐条标明素材层、关系层和动作层是否完成；整图镜头动作不算角色姿态或独立物件动画。",
+      "只允许记录技术修复，不优化首版审美；不补图、抠图或重画来掩盖原配方素材不足。",
+      "组合样段的指导输入是既有风格卡+三条冻结配方；图片素材测试仍只来自各条 filled_prompt 原文。分别报告，不能称为仅素材配方的受控风格测试。"
+    ],
+    "technical": [
+      "1280×720，30fps，180 帧，六秒，无声。",
+      "像素资产生成后才确认边缘、裁切、实际尺寸和可分层程度；草案不声称已有透明层或合格素材。"
+    ],
+    "comparison_limit": "既有风格卡文字已揭示；未看目标原作图像、研究目录、旧片。组合样段不称为纯配方盲测，参考匹配结论需另行观看原作后的比较。"
+  },
+  "experimental_rule": "现有配方不改写；仅填变量。实现时自行添加的材料/造型/布局/时序逐项记录。禁止查看原片、图像、原研究描述或此前实验成片。只做一次美术首版；技术修复单独记录，不优化首版审美。",
+  "technical_environment": {
+    "source": "父代理提供的当前技术环境",
+    "hyperframes": "0.8.137",
+    "gsap": "3.13.0",
+    "policy": "沿用现有 public 仓库运行时，不升级或安装。"
+  },
+  "technical_fixes": [],
+  "test_layer": "existing-style-card-plus-recipes-motion-probe",
+  "asset_review": {
+    "reviewed_with": "none-no-raster",
+    "observation_status": "procedural-not-rendered",
+    "unmet_requirements": [
+      "没有真实资料或地理数据；此处只能验证主题给出的示意机制关系。",
+      "几何、行数与位置均为额外实现选择，不可当作真实书页结构或学习比例。",
+      "没有真实记录或地图界面输入，不能完成卡片的证据与真实记录交接；只验证示意图解的尺度承接。"
+    ]
+  },
+  "catalog_technical_audit": {
+    "queries": [
+      {
+        "query": "GSAP translate scale image camera zoom",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"GSAP translate scale image camera zoom\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "transitions-scale",
+          "cinematic-zoom",
+          "zoom-through-transition",
+          "parallax-zoom",
+          "camera-dolly-zoom",
+          "ui-focus-zoom",
+          "yt-camera-move",
+          "camera-rig-depth-stack",
+          "camera-scan-gate",
+          "frost-sequence-camera-orbit",
+          "particle-image-reveal",
+          "camera-shake"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "SVG stroke dashoffset path reveal",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"SVG stroke dashoffset path reveal\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "svg-stroke-trace",
+          "svg-mask-reveal",
+          "hw-path-text",
+          "svg-line-draw-loader",
+          "offset-path-traveler",
+          "ui-3d-reveal",
+          "arc-motion-path",
+          "lt-mask-reveal",
+          "whiteboard-ink",
+          "carousel-path-5",
+          "carousel-path-4",
+          "carousel-path-3"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "GSAP rotate translate vector shape groups",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"GSAP rotate translate vector shape groups\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "avatar-group-hover",
+          "vector-editor-rig",
+          "transitions-3d",
+          "success-check",
+          "offset-path-traveler",
+          "beat-timeline",
+          "stagger-lattice",
+          "shutter-slam",
+          "code-3d-extrude",
+          "arc-motion-path",
+          "wordmark-tiles",
+          "us-map"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "CSS opacity highlight rectangle",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"CSS opacity highlight rectangle\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "inline-highlight",
+          "yt-feather-highlight",
+          "caption-highlight",
+          "code-highlight",
+          "mk-callout-highlight",
+          "marker-highlight",
+          "shimmer-sweep",
+          "organic-light-leak-overlay",
+          "transitions-light",
+          "light-leak",
+          "soft-blur-in",
+          "caption-pill-karaoke"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "SVG pattern deterministic dots polygon uneven edges",
+        "cli_version": "0.8.137",
+        "tier": "words",
+        "candidate": "svg-stroke-trace",
+        "gap": "查询未给出同时满足纸片边缘和固定颗粒图案的专用能力；该几何由现有 SVG/CSS 技术实现。",
+        "external_preview_opened": false,
+        "installation": false
+      }
+    ],
+    "selected_capabilities": [
+      "existing GSAP transform/opacity",
+      "SVG strokeDashoffset primitive",
+      "existing SVG pattern geometry"
+    ],
+    "reuse_mode": "不下载、add 或引入默认美术模板；按父代理许可复用仓库现有 GSAP3.13.0 基础技术并定制输入关系。",
+    "scope": "只检索技术能力，未查看外部视觉作品、poster 或视频。"
+  },
+  "provenance": {
+    "input_provided": {
+      "file": "input.json",
+      "scope": [
+        "brief",
+        "output",
+        "全部 recipes 原文与 filled_prompt",
+        "experimental_rule"
+      ],
+      "unaltered": true,
+      "style_card": "existing-style-card.json 的材料、构图、字形职责和关键词；仅文字输入，未打开其中来源链接或图片。"
+    },
+    "actual_asset": null,
+    "executor_provided": [
+      "content.layout",
+      "content.timeline",
+      "palette 数值",
+      "font 选择",
+      "额外程序化几何和镜头"
+    ],
+    "technical_provided": [
+      "HF0.8.137/GSAP3.13.0 确定性和单 paused timeline 合同"
+    ]
+  },
+  "builder_contract": {
+    "framework": "HyperFrames0.8.137",
+    "animation": "GSAP3.13.0",
+    "master_timeline": "exactly one gsap.timeline({paused:true}); register window.__timelines[case_id]; tl.seek(0); never play()",
+    "stage": "1280x720, fps30, duration6, one full-duration .clip with stable id",
+    "eases": [
+      "power2.inOut",
+      "power2.out",
+      "sine.inOut"
+    ],
+    "repeat": "none",
+    "determinism": "no timers, network, Math.random or Date.now",
+    "asset_policy": "source PNG byte-for-byte unchanged, full image contained in canvas through all transforms",
+    "export_audio": false,
+    "local_resources": {
+      "gsap": "assets/gsap.min.js",
+      "font": "assets/probe-msyh.ttc",
+      "font_use": "local @font-face, private render only, no public font redistribution"
+    }
+  },
+  "recipe_only_baseline": "recipe-only-plan.json",
+  "style_card_input": {
+    "file": "existing-style-card.json",
+    "origin": "既有公开库条目，是当前新增允许使用的既有输入；不是父代理临时强化或改写的配方。",
+    "card": {
+      "id": "vox-mechanism",
+      "family": "vox",
+      "name": "编辑式机制图解 · Vox 原作",
+      "reference_id": "kIID5FDi2JQ",
+      "reference_identity": "Vox 原作；局部片内状态",
+      "material": "地图轮廓、细边界与真实地图界面；精度和可辨认性优先。",
+      "composition": "大尺度关系与局部细节切换；粗轮廓承担主形，细线承担内部信息。",
+      "typography": "标签负责对象指代和必要区别，字幕负责语言跟随；不能让细字与图形争夺观察。",
+      "motion": "已有 1:35、1:38、1:43 状态观察；本片可试对象放大与记录承接，尚无完整连续动作审查。",
+      "fit": "尺度、比较与机制关系明确的知识解释。",
+      "failure": "借来地图外观当装饰，或把一次信息比较铺成全屏关系网。",
+      "source_url": "https://www.youtube.com/watch?v=kIID5FDi2JQ",
+      "keywords": [
+        "黑白主体",
+        "精确细线",
+        "纸面纹理",
+        "证据与图解交接"
+      ],
+      "observation": "已核查 1:35 的地图图解、1:38 的局部放大和 1:43 的真实地图界面：粗轮廓承担主形，细边界承担细节，图解与真实记录解释同一对象。",
+      "reference_positions_seconds": [
+        98
+      ],
+      "observation_limit": "这三个局部状态支持视觉组织的观察；未完成整片运动或听觉审查。地图题材与本片不同，不复制地图造型，也不把该作品代表整个 Vox。",
+      "origin_type": "external_work",
+      "implementation_status": "not_produced_in_this_library"
+    }
+  },
+  "actual_review": {
+    "movie_sha256": "83703fbca5047a024ace2a39aa842227b6a5e6fb6322900b4128e6b4743ce46c",
+    "source_sha256": "04c0c7b23214e36f9e6ddb42637d92a39e6f4c058df2b8359b34db38b2315961",
+    "finding": {
+      "verdict": "定位关系成立；风格与真实证据交接未验证",
+      "observed": "粗书本轮廓、细行块、整体定位框、连线与局部放大区有明确对应，两个中文标签可读。形体是执行者选择的通用书本示意，当前输入没有真实书页或记录，不能展示图解与证据的交接。",
+      "conclusion": "整体与局部回认方法有效，但本主题和输入只覆盖示意关系；不能用它证明参考中地图精度、真实记录与连续视觉组织都已实现。",
+      "recipe_results": [
+        "partial",
+        "partial",
+        "partial"
+      ]
+    },
+    "own_observation": "六关键帧与导出视频15帧动作采样（0.0至5.6秒，间隔0.4秒）",
+    "reference_limit": "只比较既有参考静态状态与作者项目图；未审查原片完整运动或声音",
+    "stop_reason": "本任务检验原配方首版；保留失败与限制，不在本版本增强审美后倒算通过"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "library_sha256": "beabcd177282d9cd89e854f048fe46dc3bd1eccb722941361a436e016eae8bd0",
+  "test": "recipe-first-production-probes",
+  "scope": "七个方向的首轮素材及六秒动作样段；不是整片或受控模型排名",
+  "cases": [
+    {
+      "id": "vox-editorial-collage-tutorial",
+      "input": "vox-editorial-collage-tutorial/input.json",
+      "input_sha256": "220718c24b115e5cbae86eeaf9192cd20542a7984e6ea22b58f5ac4febd4e6e1",
+      "style_card_sha256": "a1370fa318a7fe054199d85163d4d8419d72956ca7fecc3c1b359345034ea17f"
+    },
+    {
+      "id": "vox-mechanism",
+      "input": "vox-mechanism/input.json",
+      "input_sha256": "a8fa5a093e5cc2ed8fc5b6e0cdc1e6e373f6db6737cf36bfb09ced15ed947d8f",
+      "style_card_sha256": "13d605c7ac53099a60173376f026e8bf5fcf8c3c8f48c78c453707333387e642"
+    },
+    {
+      "id": "vox-earworm-mixed-media",
+      "input": "vox-earworm-mixed-media/input.json",
+      "input_sha256": "f9674b9d0c5acd7401c05bf2b8dd9061b90db5559f20406ea2be82965e1861fa",
+      "style_card_sha256": "dabe6e21b919450f9a1b321a6bba30c0061d31e53168016329fea64b8c0b969b"
+    },
+    {
+      "id": "drawn-everyday",
+      "input": "drawn-everyday/input.json",
+      "input_sha256": "a595721ec7eada570aaba65b85aec417230653fee643c9fef2a12cdd6d860eb5",
+      "style_card_sha256": "f151a47968fb03c19752a54bea643d4a33ab3e933cceb83e5ad1b943a916a721"
+    },
+    {
+      "id": "character-object-feeling",
+      "input": "character-object-feeling/input.json",
+      "input_sha256": "9cd4f9126557c769287918dca3bdee2f05e5feeac41db9c9a16041853f7202f8",
+      "style_card_sha256": "98ca25ec1f4e1dbad881247f3c5001996dd6c738111af04fa21f9d001c954b99"
+    },
+    {
+      "id": "geometric-emotion",
+      "input": "geometric-emotion/input.json",
+      "input_sha256": "89523a29dff11bde27b785f13e2497aa30c1569d29201755ddf7d0f7f21a6459",
+      "style_card_sha256": "9b5ffd0ba9c46f25f266c6e67439c039ad38ee7eef55d3c52b9be653a0b88533"
+    },
+    {
+      "id": "coherent-graphic-world",
+      "input": "coherent-graphic-world/input.json",
+      "input_sha256": "72c6ec3ce5a7e9a0cd166e164b36a5f1a4fd7591a9f40e88d7ee0b7e33033390",
+      "style_card_sha256": "41491a0d7cf24c8ce597637f44d621808de1f00b1ea0f08deca8597b40a542d3"
+    }
+  ],
+  "conditions": {
+    "raster": "filled_prompt verbatim + transparent_background=true; no reference image or style-card text",
+    "composition": "existing style card + three filled recipes + HyperFrames technical skills; raw raster assets; no target images",
+    "producer_context": "fresh agent context; director has no prior conversation; target-derived style-card text is disclosed, so not a blind model comparison",
+    "replications": 1,
+    "allowed_revisions": "technical fixes only; do not retouch or regenerate raw assets",
+    "not_tested": [
+      "full narration film",
+      "audio design",
+      "multi-topic consistency",
+      "multi-seed reliability",
+      "external original full-motion timing"
+    ]
+  },
+  "technical_environment": {
+    "framework": "HyperFrames 0.8.137",
+    "gsap": "3.13.0",
+    "render_font": "local Microsoft YaHei; no font redistribution",
+    "raster_tool": "host built-in imagegen; underlying model not reported by tool"
+  }
+}

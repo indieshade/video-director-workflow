@@ -1,0 +1,68 @@
+{
+  "case_id": "drawn-everyday",
+  "brief": "用六秒无声横屏视频呈现：读者面对整本书，找到一小段需要学习的内容；重点是画面语言与动作，不复制参考的题材或造型。",
+  "output": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "duration": 6,
+    "audio": false
+  },
+  "recipes": [
+    {
+      "id": "drawn-everyday-person",
+      "source_profile": "drawn-everyday",
+      "role": "person",
+      "kind": "raster_generation",
+      "prompt": "绘制处于{日常情境}的原创人物，使用有粗细变化的手绘轮廓、克制排线和纸感叠色；完整身体与道具分层，不照搬参考人物。",
+      "variables": [
+        "日常情境"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "表情、手势和道具共同说明情境。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "日常情境": "一个读者面对打开的书，正在找出还没掌握的段落"
+      },
+      "filled_prompt": "绘制处于一个读者面对打开的书，正在找出还没掌握的段落的原创人物，使用有粗细变化的手绘轮廓、克制排线和纸感叠色；完整身体与道具分层，不照搬参考人物。"
+    },
+    {
+      "id": "drawn-everyday-environment",
+      "source_profile": "drawn-everyday",
+      "role": "environment",
+      "kind": "scene_design",
+      "prompt": "为{人物行为}设计纸感绘画环境，选择少量有关系的对象，用局部排线与底色区分空间；留出人物姿态变化所需的区域。",
+      "variables": [
+        "人物行为"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "环境服务人物行为，不变成静态装饰壁纸。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "人物行为": "读者翻阅书页，找到一小段接下来要学的内容"
+      },
+      "filled_prompt": "为读者翻阅书页，找到一小段接下来要学的内容设计纸感绘画环境，选择少量有关系的对象，用局部排线与底色区分空间；留出人物姿态变化所需的区域。"
+    },
+    {
+      "id": "drawn-everyday-poses",
+      "source_profile": "drawn-everyday",
+      "role": "poses",
+      "kind": "motion_staging",
+      "prompt": "为{情绪变化}提出起始、转折、结果几种手绘姿态，保持轮廓与对象身份；先展示姿态比较，再选择过渡方式。",
+      "variables": [
+        "情绪变化"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "无须大字复述情绪也能看出变化；这是待验证提案。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "情绪变化": "从面对整本书无从下手到发现只需先学一小段"
+      },
+      "filled_prompt": "为从面对整本书无从下手到发现只需先学一小段提出起始、转折、结果几种手绘姿态，保持轮廓与对象身份；先展示姿态比较，再选择过渡方式。"
+    }
+  ],
+  "experimental_rule": "现有配方不改写；仅填变量。实现时自行添加的材料/造型/布局/时序逐项记录。禁止查看原片、图像、原研究描述或此前实验成片。只做一次美术首版；技术修复单独记录，不优化首版审美。"
+}

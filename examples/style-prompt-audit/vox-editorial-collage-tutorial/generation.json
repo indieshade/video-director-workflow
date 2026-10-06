@@ -1,0 +1,18 @@
+{
+  "asset": "assets/hero.png",
+  "tool": "built-in imagegen",
+  "requested_transparent_background": true,
+  "prompt": "为打开的旧书制作灰阶摄影印刷裁片，保留辨认所需的细节；透明背景，轮廓完整。依据目标版面调整明暗和半调尺度；不生成数字或品牌标识。",
+  "mode": "RGBA",
+  "size": [
+    1536,
+    1024
+  ],
+  "sha256": "11586458c2247a3d3096f6b5cdc5aa61b4b8565a4cd87663ccfdbcbffabd3fb1",
+  "alpha_extrema": [
+    0,
+    254
+  ],
+  "zero_alpha_fraction": 0.2840722401936849,
+  "source_note": "raw tool output; no crop, cutout, recolor or cleanup; one PNG returned, not separate object layers"
+}

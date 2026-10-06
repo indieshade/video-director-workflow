@@ -1,0 +1,114 @@
+{
+  "finding": {
+    "verdict": "画风偏离；完整插画代替了可动画素材",
+    "observed": "生成结果是暖色、细腻、带许多额外文字的完整阅读插画；与参考的简化造型、鲜明叠色和线条语言差异明显。人物、道具与环境没有独立层，也没有起始/转折/结果姿态；样段只是整图轻微靠近与局部指示。",
+    "conclusion": "图片本身可用作另一种绘本风格，但没有完成这条参考方向的素材和动作契约。现有‘手绘、纸感、排线’描述太宽，不能稳定限定目标造型语言。",
+    "recipe_results": [
+      "partial",
+      "not_executed",
+      "blocked"
+    ]
+  },
+  "recipe_execution": [
+    {
+      "recipe_id": "drawn-everyday-person",
+      "kind": "raster_generation",
+      "filled_prompt": "绘制处于一个读者面对打开的书，正在找出还没掌握的段落的原创人物，使用有粗细变化的手绘轮廓、克制排线和纸感叠色；完整身体与道具分层，不照搬参考人物。",
+      "status": "raster-generated-reviewed-partial",
+      "evidence_or_scope": "一体环境图及单姿态，完整身体/道具分层未满足。",
+      "validation_status": "generation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "raw-generated-partial",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    },
+    {
+      "recipe_id": "drawn-everyday-environment",
+      "kind": "scene_design",
+      "filled_prompt": "为读者翻阅书页，找到一小段接下来要学的内容设计纸感绘画环境，选择少量有关系的对象，用局部排线与底色区分空间；留出人物姿态变化所需的区域。",
+      "status": "raw-incidental-only",
+      "evidence_or_scope": "原图已有环境为模型附带，不是独立生成或程序化设计的环境资产。",
+      "validation_status": "not_executed_or_blocked",
+      "observed_result": "not_executed",
+      "pre_execution_status": "raw-incidental-only",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    },
+    {
+      "recipe_id": "drawn-everyday-poses",
+      "kind": "motion_staging",
+      "filled_prompt": "为从面对整本书无从下手到发现只需先学一小段提出起始、转折、结果几种手绘姿态，保持轮廓与对象身份；先展示姿态比较，再选择过渡方式。",
+      "status": "blocked-multiple-poses",
+      "evidence_or_scope": "只有一个现成姿态；无起始/转折/结果比较或姿态动画。",
+      "validation_status": "not_executed_or_blocked",
+      "observed_result": "blocked",
+      "pre_execution_status": "blocked-multiple-poses",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    }
+  ],
+  "measurements": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "unknown",
+        "profile": "100",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1280,
+        "height": 720,
+        "coded_width": 1280,
+        "coded_height": 720,
+        "closed_captions": 0,
+        "film_grain": 0,
+        "has_b_frames": 0,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": 31,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "center",
+        "field_order": "progressive",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 92160,
+        "duration": "6.000000",
+        "bit_rate": "1935710",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "180",
+        "extradata_size": 51
+      }
+    ],
+    "format": {
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "start_time": "0.000000",
+      "duration": "6.000000",
+      "size": "1453713",
+      "bit_rate": "1938284",
+      "probe_score": 100
+    },
+    "sha256": "df2dbeb5698513241d04ac0a127c83bf341317e503822d0f12b44893e4a6fb3c"
+  },
+  "hashes": {
+    "id": "drawn-everyday",
+    "video": "examples/style-prompt-audit/drawn-everyday/probe.mp4",
+    "poster": "examples/style-prompt-audit/drawn-everyday/poster.jpg",
+    "report": "examples/style-prompt-audit/drawn-everyday/report.json",
+    "delivery_sha256": "df2dbeb5698513241d04ac0a127c83bf341317e503822d0f12b44893e4a6fb3c",
+    "source_private_sha256": "ae065b3248ec1d15d4680ab3b549383bc84f92761b19b34ffcdca4b5eb398439",
+    "source_portable_sha256": "4b212adc3811204ed4bfe476ceae45c219dbf1a353bb22256064b6517f51e1de"
+  },
+  "source_export_difference": "Only font loading changed from private bundled font to installed Microsoft YaHei with existing CSS fallbacks; this file is not the exact private render source. No standalone font redistributed."
+}

@@ -1,0 +1,114 @@
+{
+  "finding": {
+    "verdict": "部分材料迁移；剪贴视觉系统尚未成立",
+    "observed": "灰阶旧书在缩小后清楚，纸底网格、黄色指示和独立文字条能辨认。书页行块及L形指示均为执行者另画。实际书本更接近写实灰阶插图；半调颗粒、纸片边缘、短接触影子与字体印刷处理不够鲜明，主体长期居中。",
+    "conclusion": "素材配方提供了灰阶摄影方向，但现有卡＋三条配方没有让摄影、箭头、文本自然成为同一剪贴材料系统。读懂关系并不等于达到参考的版面与印刷质感。",
+    "recipe_results": [
+      "partial",
+      "partial",
+      "partial"
+    ]
+  },
+  "recipe_execution": [
+    {
+      "recipe_id": "vox-editorial-collage-tutorial-object",
+      "kind": "raster_generation",
+      "filled_prompt": "为打开的旧书制作灰阶摄影印刷裁片，保留辨认所需的细节；透明背景，轮廓完整。依据目标版面调整明暗和半调尺度；不生成数字或品牌标识。",
+      "status": "raster-generated-reviewed-partial",
+      "evidence_or_scope": "旧书可辨，透明数据存在；片内边缘和纹理仍待渲染检查。",
+      "validation_status": "generation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "raw-generated-inspected",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    },
+    {
+      "recipe_id": "vox-editorial-collage-tutorial-arrow",
+      "kind": "vector_or_cutpaper",
+      "filled_prompt": "把从书页中指向选中的一段画成清楚的剪纸箭头，安排起点、转折和指向对象；纸边、短接触阴影和局部印刷缺墨与摄影裁片统一。",
+      "status": "implementation-executed-partial",
+      "evidence_or_scope": "纸片箭头几何/纸边/缺墨由执行者按原配方和既有卡实现。",
+      "validation_status": "implementation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "planned-procedural",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    },
+    {
+      "recipe_id": "vox-editorial-collage-tutorial-type",
+      "kind": "typography",
+      "filled_prompt": "将先学这一段编排成纸条或印刷标题，按语气选择中文宋体或黑体并验证授权与字形；字腔可读后再做裁边、轻微磨损和套色。",
+      "status": "implementation-executed-partial",
+      "evidence_or_scope": "必要命题逐字保留；本地中文字体、纸条裁边由执行者落实。",
+      "validation_status": "implementation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "planned-procedural",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    }
+  ],
+  "measurements": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "unknown",
+        "profile": "100",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1280,
+        "height": 720,
+        "coded_width": 1280,
+        "coded_height": 720,
+        "closed_captions": 0,
+        "film_grain": 0,
+        "has_b_frames": 0,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": 31,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "center",
+        "field_order": "progressive",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 92160,
+        "duration": "6.000000",
+        "bit_rate": "645090",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "180",
+        "extradata_size": 51
+      }
+    ],
+    "format": {
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "start_time": "0.000000",
+      "duration": "6.000000",
+      "size": "485732",
+      "bit_rate": "647642",
+      "probe_score": 100
+    },
+    "sha256": "4c0f8fe189f45539e8a5d54c40968d820ced2d5947a16811155584a0687a60b8"
+  },
+  "hashes": {
+    "id": "vox-editorial-collage-tutorial",
+    "video": "examples/style-prompt-audit/vox-editorial-collage-tutorial/probe.mp4",
+    "poster": "examples/style-prompt-audit/vox-editorial-collage-tutorial/poster.jpg",
+    "report": "examples/style-prompt-audit/vox-editorial-collage-tutorial/report.json",
+    "delivery_sha256": "4c0f8fe189f45539e8a5d54c40968d820ced2d5947a16811155584a0687a60b8",
+    "source_private_sha256": "aed78cc6ce7a135c0fda686d072ab406f0a26f95f36f526676de410edaadbba4",
+    "source_portable_sha256": "e8838d88542edca78e9fc856a88024ab3fa0a1eff5b1c9018a071eeb5fb2e08c"
+  },
+  "source_export_difference": "Only font loading changed from private bundled font to installed Microsoft YaHei with existing CSS fallbacks; this file is not the exact private render source. No standalone font redistributed."
+}

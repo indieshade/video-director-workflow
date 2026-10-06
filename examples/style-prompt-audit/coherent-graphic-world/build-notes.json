@@ -1,0 +1,89 @@
+{
+  "case_id": "coherent-graphic-world",
+  "status": "first-art-build-complete-technical-review-only",
+  "outputs": [
+    "index.html",
+    "build-notes.json"
+  ],
+  "implementation_contract": {
+    "duration_s": 6,
+    "fps": 30,
+    "width": 1280,
+    "height": 720,
+    "audio": false,
+    "timeline_count": 1,
+    "timeline_paused": true,
+    "timeline_registry": "window.__timelines['coherent-graphic-world']",
+    "initial_seek": 0
+  },
+  "inputs_read": [
+    "input.json",
+    "existing-style-card.json",
+    "shot-plan.json",
+    "assets/index.md"
+  ],
+  "reference_images_or_videos_opened": false,
+  "research_or_previous_films_opened": false,
+  "build_passes": 1,
+  "prescribed_plan_realized": [
+    "reader 与 book 位于计划区域；以6px深色轮廓和同一顶面偏移/侧面色阶规则定义少量对象族。",
+    "pages 内5组一般示意行块与 target 内1组共6组；target主体面125×52位于669,356。",
+    "main-path 与 detail-path 严格使用计划坐标和4px/3px线宽。",
+    "target同一DOM组从669,356连续仿射移到925,226的255×126主体面终态；原位保留locator框。",
+    "建立0–0.8秒，主路径0.8–2，定位框2–2.6，连续目标与对应线2.6–4，最后保持至6秒。",
+    "palette 与固定点纹、阴影(2,3)/0.12取自计划。"
+  ],
+  "builder_extra_decisions": [
+    {
+      "area": "object-family",
+      "decision": "reader为橙色圆角头部和紫色圆角身体，book为蓝色双页；具体比例、顶点与圆角是Builder补充，非实际人物或原作造型。"
+    },
+    {
+      "area": "lighting-colors",
+      "decision": "蓝主色#2466CF、顶面#2872E8、侧面#1A4995；紫主色#7A43AD、顶面#894BC2、侧面#58307D；橙主色#F28732、顶面#FF9738、侧面#AE6124。各通道按计划倍率1.12/0.72取整截断。"
+    },
+    {
+      "area": "top-and-side-geometry",
+      "decision": "顶面以计划[24,-14]偏移形成斜切面，右侧面10px厚；target给定bounds解释为前部主体面，斜切面伸出该bounds。终态主体面仍为255×126，顶面随该组同一仿射保留。"
+    },
+    {
+      "area": "page-blocks",
+      "decision": "五组普通行块各3条，端点与圆角由Builder补充；第六组是target的三条示意行块。没有页码、书名、章节、实际文字或百分比。"
+    },
+    {
+      "area": "target-appearance",
+      "decision": "target主面使用橙色与深色三行块，locator及路径用同一橙色；近景使用原DOM对象连续移动，没有重建内容。"
+    },
+    {
+      "area": "path-lengths",
+      "decision": "main-path长度约344，detail-path约193，圆角locator/target-frame周长约342，用作stroke-dasharray/offset常量。"
+    },
+    {
+      "area": "contact-shadow",
+      "decision": "reader身体与book轮廓各用计划(2,3)偏移/0.12阴影；无glow、粒子或额外对象。"
+    },
+    {
+      "area": "font-loading",
+      "decision": "保留私有ProbeYaHei font-face技术资源但本case无文字标签，遵循计划不新增说明。"
+    },
+    {
+      "area": "easing",
+      "decision": "对象族opacity和定位框用power2.out，路径用sine.inOut，目标组仿射用power2.inOut；只使用合同提供eases。"
+    }
+  ],
+  "uncompleted_scope": [
+    "尚未渲染、观看关键帧及完整动作；不能以技术检查声称统一世界或尺度回认已验证。",
+    "只有少量对象，未检验更大规模对象集群与背景对象主次。",
+    "读者形体仅建立opacity，没有独立角色姿态或环境动画。",
+    "示意行块不是实际书中文字或数据。"
+  ],
+  "technical_fixes": [],
+  "verification": {
+    "inline_script_syntax": "passed-node-vm.Script",
+    "local_resources": "passed-existing-local-gsap-and-font",
+    "visual_and_motion": "not-performed",
+    "render": "not-performed-by-builder",
+    "unique_ids": "passed",
+    "single_timeline_static_check": "passed"
+  }
+}

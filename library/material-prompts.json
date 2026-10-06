@@ -1,8 +1,8 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "updated_on": "2026-10-06",
   "scope": "外部调研风格的素材配方，与实验工艺库分开",
-  "status": "依据既有研究整理，未逐条生成验证",
+  "status": "首轮实测：4条图片生成、12条实现、5条未执行或受阻；无参考等效通过",
   "entries": [
     {
       "id": "vox-editorial-collage-tutorial-object",
@@ -13,10 +13,13 @@
       "variables": [
         "具体对象"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "generation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "缩到片内尺寸后仍能辨认对象；纹理不能吞掉轮廓。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/vox-editorial-collage-tutorial/report.json"
     },
     {
       "id": "vox-editorial-collage-tutorial-arrow",
@@ -27,10 +30,13 @@
       "variables": [
         "方向关系"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "implementation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "指向关系先成立；删去装饰后仍能读懂。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/vox-editorial-collage-tutorial/report.json"
     },
     {
       "id": "vox-editorial-collage-tutorial-type",
@@ -41,10 +47,13 @@
       "variables": [
         "必要命题"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "implementation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "中文文本在真实镜头尺寸与保持时间内能读清。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/vox-editorial-collage-tutorial/report.json"
     },
     {
       "id": "vox-mechanism-map",
@@ -55,10 +64,13 @@
       "variables": [
         "真实空间关系"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "implementation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "空间与事实对应；必要细节在近景可辨。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/vox-mechanism/report.json"
     },
     {
       "id": "vox-mechanism-detail",
@@ -69,10 +81,13 @@
       "variables": [
         "局部细节"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "implementation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "观众能从局部回认整体，不靠补一段说明找位置。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/vox-mechanism/report.json"
     },
     {
       "id": "vox-mechanism-label",
@@ -83,10 +98,13 @@
       "variables": [
         "对象区别"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "implementation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "标签明确指代，图形仍是主要观察对象。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/vox-mechanism/report.json"
     },
     {
       "id": "vox-earworm-mixed-media-cutout",
@@ -97,10 +115,13 @@
       "variables": [
         "文化场景"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "generation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "器物能建立情境，透明边缘没有脏边。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/vox-earworm-mixed-media/report.json"
     },
     {
       "id": "vox-earworm-mixed-media-color-shape",
@@ -111,10 +132,13 @@
       "variables": [
         "主体对象"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "implementation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "彩色部分帮助轮廓和层级，不只是荧光描边。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/vox-earworm-mixed-media/report.json"
     },
     {
       "id": "vox-earworm-mixed-media-space",
@@ -128,7 +152,14 @@
       "validation_status": "authored_from_reference_not_generation_tested",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "器物站得住，阴影对应光源；动态节奏另行试验。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "blocked",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "test_attempt": {
+        "result": "blocked",
+        "evidence": "examples/style-prompt-audit/vox-earworm-mixed-media/report.json",
+        "reason": "接触、遮挡和阴影已烘焙；不能说成独立安排或可动画灯光。"
+      }
     },
     {
       "id": "drawn-everyday-person",
@@ -139,10 +170,13 @@
       "variables": [
         "日常情境"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "generation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "表情、手势和道具共同说明情境。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/drawn-everyday/report.json"
     },
     {
       "id": "drawn-everyday-environment",
@@ -156,7 +190,14 @@
       "validation_status": "authored_from_reference_not_generation_tested",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "环境服务人物行为，不变成静态装饰壁纸。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "not_executed",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "test_attempt": {
+        "result": "not_executed",
+        "evidence": "examples/style-prompt-audit/drawn-everyday/report.json",
+        "reason": "原图已有环境为模型附带，不是独立生成或程序化设计的环境资产。"
+      }
     },
     {
       "id": "drawn-everyday-poses",
@@ -170,7 +211,14 @@
       "validation_status": "authored_from_reference_not_generation_tested",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "无须大字复述情绪也能看出变化；这是待验证提案。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "blocked",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "test_attempt": {
+        "result": "blocked",
+        "evidence": "examples/style-prompt-audit/drawn-everyday/report.json",
+        "reason": "只有一个现成姿态；无起始/转折/结果比较或姿态动画。"
+      }
     },
     {
       "id": "character-object-feeling-silhouette",
@@ -181,10 +229,13 @@
       "variables": [
         "任务处境"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "generation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "缩小后能辨姿态，细线不承担全部角色辨认。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/character-object-feeling/report.json"
     },
     {
       "id": "character-object-feeling-prop",
@@ -198,7 +249,14 @@
       "validation_status": "authored_from_reference_not_generation_tested",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "大小变化对应当前表达，不是随意把东西放大。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "blocked",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "test_attempt": {
+        "result": "blocked",
+        "evidence": "examples/style-prompt-audit/character-object-feeling/report.json",
+        "reason": "厚书是 raw 图的一部分，不能单独缩放、接触或遮挡编排。"
+      }
     },
     {
       "id": "character-object-feeling-weight",
@@ -212,7 +270,14 @@
       "validation_status": "authored_from_reference_not_generation_tested",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "动作支持同一句口播，不把医学参考当个人诊断。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "blocked",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "test_attempt": {
+        "result": "blocked",
+        "evidence": "examples/style-prompt-audit/character-object-feeling/report.json",
+        "reason": "无多姿态、下身支点或独立物件，不能执行承重/失衡/恢复。"
+      }
     },
     {
       "id": "geometric-emotion-character",
@@ -223,10 +288,13 @@
       "variables": [
         "心理处境"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "implementation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "变形后角色身份仍可追踪。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/geometric-emotion/report.json"
     },
     {
       "id": "geometric-emotion-relation",
@@ -237,10 +305,13 @@
       "variables": [
         "压力关系"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "implementation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "关系让观众观察到压力，而不是只有抽象形状。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/geometric-emotion/report.json"
     },
     {
       "id": "geometric-emotion-release",
@@ -251,10 +322,13 @@
       "variables": [
         "关系变化"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "implementation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "变化兑现当前含义；不把通用粒子消散当消解。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/geometric-emotion/report.json"
     },
     {
       "id": "coherent-graphic-world-object-family",
@@ -265,10 +339,13 @@
       "variables": [
         "对象族"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "implementation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "对象在同一场景中像属于同一世界。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/coherent-graphic-world/report.json"
     },
     {
       "id": "coherent-graphic-world-system",
@@ -279,10 +356,13 @@
       "variables": [
         "机制关系"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "implementation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "关系清楚，规模增大仍有主次。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/coherent-graphic-world/report.json"
     },
     {
       "id": "coherent-graphic-world-scale",
@@ -293,10 +373,13 @@
       "variables": [
         "尺度变化"
       ],
-      "validation_status": "authored_from_reference_not_generation_tested",
+      "validation_status": "implementation_tested_with_evidence",
       "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
       "acceptance": "观众能认出同一个对象，没有每句重开一页。",
-      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证"
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "validation_result": "partial",
+      "test_scope": "2026-10-06，同一阅读主题的一次首版；图像单配方，组合使用既有卡＋三条配方；非整片与多次稳定性验证",
+      "evidence": "examples/style-prompt-audit/coherent-graphic-world/report.json"
     }
   ]
 }

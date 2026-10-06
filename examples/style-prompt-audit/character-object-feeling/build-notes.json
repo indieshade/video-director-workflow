@@ -1,0 +1,173 @@
+{
+  "case_id": "character-object-feeling",
+  "status": "first-art-build-static-technical-checks-passed",
+  "edit_scope": [
+    "index.html",
+    "build-notes.json"
+  ],
+  "framework": {
+    "hyperframes": "0.8.137",
+    "gsap": "3.13.0",
+    "installed_or_upgraded": false
+  },
+  "output": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "duration_s": 6,
+    "frames": 180,
+    "audio": false
+  },
+  "inputs_read": [
+    "input.json",
+    "existing-style-card.json",
+    "shot-plan.json",
+    "assets/index.md"
+  ],
+  "visual_inputs_viewed": [
+    "assets/hero.png"
+  ],
+  "external_reference_or_prior_film_viewed": false,
+  "first_art_build_count": 1,
+  "implementation": {
+    "root": "#stage; data-composition-id=character-object-feeling; one full-duration clip",
+    "timeline": "one paused GSAP timeline, registered after synchronous construction, seek(0), no play",
+    "background": "#EFE4CF from shot-plan palette",
+    "image": {
+      "path": "assets/hero.png",
+      "bounds": [
+        160,
+        40,
+        960,
+        640
+      ],
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "source_to_canvas_scale": 0.625,
+      "unchanged_sha256": "b36c1d7efb8bced581d1b5010de47f05ccdda94fca6b14ff9a7061af5b6785bb"
+    },
+    "whole_book_frame": {
+      "source_region": [
+        0.125,
+        0.495,
+        0.815,
+        0.4
+      ],
+      "canvas_bounds": [
+        280,
+        356.8,
+        782.4,
+        256
+      ],
+      "stroke_width": 3
+    },
+    "target_frame": {
+      "source_region": [
+        0.64,
+        0.54,
+        0.16,
+        0.08
+      ],
+      "canvas_bounds": [
+        774.4,
+        385.6,
+        153.6,
+        51.2
+      ],
+      "stroke_width": 4,
+      "dash_length": 409.6
+    },
+    "shared_camera": {
+      "origin": [
+        640,
+        360
+      ],
+      "scale": [
+        1,
+        1.04
+      ],
+      "peak_image_bounds": [
+        140.8,
+        27.2,
+        998.4,
+        665.6
+      ],
+      "full_raw_image_visible": true
+    },
+    "timeline_seconds": [
+      {
+        "start": 0,
+        "end": 0.6,
+        "action": "raw image opacity 0 to 1",
+        "ease": "power2.out"
+      },
+      {
+        "start": 0.8,
+        "end": 1.5,
+        "action": "whole frame opacity 0 to 0.6",
+        "ease": "sine.inOut"
+      },
+      {
+        "start": 1.8,
+        "end": 3.1,
+        "action": "target frame stroke offset 409.6 to 0; whole frame opacity to 0.15",
+        "ease": "power2.inOut and sine.inOut"
+      },
+      {
+        "start": 3.2,
+        "end": 4.3,
+        "action": "whole image and both indicators scale together to 1.04",
+        "ease": "power2.inOut"
+      },
+      {
+        "start": 4.3,
+        "end": 6,
+        "action": "hold same image and posture"
+      }
+    ]
+  },
+  "additional_technical_choices": [
+    "Local SVG image href preserves the complete PNG; image and normalized indicator coordinates share one SVG group.",
+    "Frame stroke is the supplied #14213B; no fill, no glow, no extra texture or caption.",
+    "Target frame has an explicit opacity gate at 1.8 seconds and a 409.6px rectangle perimeter for deterministic dash reveal.",
+    "The explicit plan starts its fade at 0 seconds, overriding the general motion-principles recommendation for a delayed first animation.",
+    "Local @font-face references the supplied private TTC; no visible text is added.",
+    "No registry block is added. The final plan already records the authorized technical catalog audit and selection of the existing GSAP/SVG primitives."
+  ],
+  "recipe_execution": [
+    {
+      "recipe_id": "character-object-feeling-silhouette",
+      "status": "partial-raw-asset-composition",
+      "scope": "Coarse character and book remain a single generated PNG."
+    },
+    {
+      "recipe_id": "character-object-feeling-prop",
+      "status": "blocked-independent-prop",
+      "scope": "Only whole-book and existing paragraph indication is implemented."
+    },
+    {
+      "recipe_id": "character-object-feeling-weight",
+      "status": "blocked-weight-acting",
+      "scope": "Whole-image scale does not count as bearing weight, imbalance or recovery."
+    }
+  ],
+  "unmet_requirements": [
+    "No independent character/book layers or multiple poses; cannot animate bearing weight, imbalance or recovery.",
+    "Only the pre-existing result posture exists; no key-state comparison or task unloading is claimed.",
+    "The source-added book, bookmark, yellow emphasis, upper-body crop and lighting remain unchanged.",
+    "Motion and visual acceptance require actual frames and six-second playback in the parent verification workflow."
+  ],
+  "verification": {
+    "inline_javascript_syntax": "passed with node vm.Script",
+    "local_resource_references": "passed",
+    "single_timeline_and_no_play_or_clock": "passed static check",
+    "raw_sha256": "matches shot-plan",
+    "hyperframes_lint": "not run by builder",
+    "runtime_seek_or_visual_review": "not run by builder",
+    "render": "not run by builder"
+  },
+  "technical_fixes": [],
+  "aesthetic_revision": false
+}

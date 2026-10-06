@@ -11,12 +11,12 @@
 | 调研方向 | 设计关键词 | 实际参考与状态 |
 | --- | --- | --- |
 | Vox 编辑拼贴 · 第三方教程 | 摄影剪贴、纸边、半调、印刷字形 | [参考与制作提案](docs/researched-styles.md#编辑拼贴--第三方-vox-教程)；已有自有剪贴样例 |
-| Vox 编辑式机制图解 | 地图轮廓、粗细线、局部放大 | [调研条目](docs/researched-styles.md#编辑式机制图解--vox-原作)；原创样片待制作 |
-| Vox Earworm 混合媒介 | 灰阶器物、彩色几何、不对称拼贴 | [作者项目图与条目](docs/researched-styles.md#混合媒介拼贴--vox-earworm)；原创样片待制作 |
-| TED-Ed 绘画式日常情境 | 手绘轮廓、排线、叠色、表情 | [调研条目](docs/researched-styles.md#绘画式日常情境)；原创样片待制作 |
-| TED-Ed 角色剪影与物件尺度 | 粗形、细线表情、限制色、物件尺度 | [调研条目](docs/researched-styles.md#角色剪影与物件尺度)；原创样片待制作 |
-| The School of Life 心理隐喻 | 几何角色、受力关系、纸片颗粒 | [调研条目](docs/researched-styles.md#几何角色与心理隐喻)；原创样片待制作 |
-| Kurzgesagt 统一图形世界 | 几何物件、统一受光、连接与尺度 | [调研条目](docs/researched-styles.md#统一图形世界)；原创样片待制作 |
+| Vox 编辑式机制图解 | 地图轮廓、粗细线、局部放大 | [调研条目](docs/researched-styles.md#编辑式机制图解--vox-原作)；已有首版实测，尚未达到参考 |
+| Vox Earworm 混合媒介 | 灰阶器物、彩色几何、不对称拼贴 | [作者项目图与条目](docs/researched-styles.md#混合媒介拼贴--vox-earworm)；已有首版实测，尚未达到参考 |
+| TED-Ed 绘画式日常情境 | 手绘轮廓、排线、叠色、表情 | [调研条目](docs/researched-styles.md#绘画式日常情境)；已有首版实测，尚未达到参考 |
+| TED-Ed 角色剪影与物件尺度 | 粗形、细线表情、限制色、物件尺度 | [调研条目](docs/researched-styles.md#角色剪影与物件尺度)；已有首版实测，尚未达到参考 |
+| The School of Life 心理隐喻 | 几何角色、受力关系、纸片颗粒 | [调研条目](docs/researched-styles.md#几何角色与心理隐喻)；已有首版实测，尚未达到参考 |
+| Kurzgesagt 统一图形世界 | 几何物件、统一受光、连接与尺度 | [调研条目](docs/researched-styles.md#统一图形世界)；已有首版实测，尚未达到参考 |
 | indieshade 自有改编 | 编辑拼贴 × 温柔绘本 | [改编与外部参考的区别](docs/researched-styles.md#indieshade--编辑拼贴--温柔绘本)；本地成片未公开 |
 
 [原作者项目图 · Vox Earworm](https://podenco.tv/vox-earwormdub-music/)：图像版权属原权利人，项目图不当作连续动作证据。
@@ -25,7 +25,11 @@
 
 [调研风格与具体制作指导](docs/researched-styles.md) · [21 条调研风格素材配方](library/README.md) · [本地交互参考页源码](style-library.html)
 
-风格以素材处理、造型、字体、版面和动态质地定义。观察只覆盖注明的局部，不把整个频道当成同一种风格，也没有“画风带来流量”的因果证明。新配方来自参考研究与制作提案，尚未逐条生成验证。
+风格以素材处理、造型、字体、版面和动态质地定义。观察只覆盖注明的局部，不把整个频道当成同一种风格，也没有“画风带来流量”的因果证明。配方来自参考研究与制作提案；本轮实际生成4条、实施12条，另5条未执行或受阻。七个首版都只部分兑现，不能当作参考风格通过。
+
+## 现有提示词是否有效
+
+[七方向首版样段与报告](examples/style-prompt-audit/README.md) · [交互检验页](examples/style-prompt-audit/review.html)。这轮保留原配方只填变量，不补图或润色首版来掩盖失败；图像生成、组合设计、动作可实现性分别记录。
 
 ## 应用样例与实验记录
 

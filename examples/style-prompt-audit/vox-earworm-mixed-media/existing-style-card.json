@@ -1,0 +1,28 @@
+{
+  "id": "vox-earworm-mixed-media",
+  "family": "vox",
+  "name": "混合媒介拼贴 · Vox Earworm",
+  "graphics": "已观察灰阶器物与黄色色形组合；本账号的箭头和文字应作为同一拼贴材料系统设计，后者属于待制作方案。",
+  "surface_language": "摄影裁片与彩色局部形成材料对比，遮挡和方向性阴影组织空间；字形处理本轮尚未深入核查。",
+  "temporal_texture": "只核查项目图。类低频绘本的姿态切换是用户要求的本账号试验方向，不能归为已观察的 Earworm 时序。",
+  "reference_identity": "参与作者 Antoni Sendra 的项目展示图；不是本轮截取的片内时间帧",
+  "source_url": "https://podenco.tv/vox-earwormdub-music/",
+  "image_kind": "作者项目页语境截图；包含静态作品图及播放器封面，未播放视频",
+  "keywords": [
+    "灰阶摄影",
+    "彩色几何",
+    "不对称拼贴",
+    "器物场景",
+    "方向性影子"
+  ],
+  "observation": "项目图以音箱和话筒建立具体场景，灰阶器物与黄色边缘、珊瑚底色组合；下方另有蓝色场景。作者署名和项目身份同页可见。",
+  "material": "摄影人物与音箱等器物、局部几何色形；材料变化保留对象可辨认性。",
+  "composition": "器物堆叠构成主形；前后遮挡、话筒的位置和地面方向性影子建立空间。",
+  "typography": "本轮未深入核查文字设计，不预设标题字体或文字动画。",
+  "motion": "作者说明使用拼贴和角色动画；本轮只看项目图，动作节奏待连续观看。",
+  "fit": "对象与文化情境具有视觉材料的叙事；可借材料关系，不能凭空为当前口播增加音乐史内容。",
+  "failure": "只加黑白滤镜和荧光描边，没有对象关系与具体情境；把封面当动作证据。",
+  "origin_type": "participating_author_project",
+  "implementation_status": "not_produced_in_this_library",
+  "reference_image_url": "https://podenco.tv/wp-content/uploads/2022/04/vox1.jpg"
+}

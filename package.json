@@ -6,6 +6,7 @@
   "description": "Design-led AI video workflow, director skill and a reproducible collage sample",
   "scripts": {
     "setup": "node scripts/setup-demo.mjs",
+    "setup:probes": "node scripts/setup-probes.mjs",
     "preview": "hyperframes preview examples/collage-paper-study",
     "check:demo": "hyperframes check examples/collage-paper-study",
     "render:demo": "hyperframes render examples/collage-paper-study --workers 3 --output examples/collage-paper-study/renders/picture.mp4",

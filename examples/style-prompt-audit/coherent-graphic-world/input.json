@@ -1,0 +1,68 @@
+{
+  "case_id": "coherent-graphic-world",
+  "brief": "用六秒无声横屏视频呈现：读者面对整本书，找到一小段需要学习的内容；重点是画面语言与动作，不复制参考的题材或造型。",
+  "output": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "duration": 6,
+    "audio": false
+  },
+  "recipes": [
+    {
+      "id": "coherent-graphic-world-object-family",
+      "source_profile": "coherent-graphic-world",
+      "role": "object-family",
+      "kind": "procedural_geometry",
+      "prompt": "为{对象族}制定统一的几何化比例、轮廓与受光方式，输出主对象和辅助对象；色组按本片层级选择，不照搬原作造型。",
+      "variables": [
+        "对象族"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "对象在同一场景中像属于同一世界。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "对象族": "同一阅读场景中的读者、书、书页和待学习段落"
+      },
+      "filled_prompt": "为同一阅读场景中的读者、书、书页和待学习段落制定统一的几何化比例、轮廓与受光方式，输出主对象和辅助对象；色组按本片层级选择，不照搬原作造型。"
+    },
+    {
+      "id": "coherent-graphic-world-system",
+      "source_profile": "coherent-graphic-world",
+      "role": "system",
+      "kind": "procedural_layout",
+      "prompt": "将{机制关系}组织成局部到整体的场景，连接线只表达已知关系，区分主路径与背景对象；先验证少量对象，再扩展。",
+      "variables": [
+        "机制关系"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "关系清楚，规模增大仍有主次。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "机制关系": "读者从整本书中定位到一个待学习段落"
+      },
+      "filled_prompt": "将读者从整本书中定位到一个待学习段落组织成局部到整体的场景，连接线只表达已知关系，区分主路径与背景对象；先验证少量对象，再扩展。"
+    },
+    {
+      "id": "coherent-graphic-world-scale",
+      "source_profile": "coherent-graphic-world",
+      "role": "scale",
+      "kind": "motion_staging",
+      "prompt": "为{尺度变化}设计可追踪对象在近景和总览的对应位置，给观察留出保持状态；光影与造型随景别保持一致。",
+      "variables": [
+        "尺度变化"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "观众能认出同一个对象，没有每句重开一页。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "尺度变化": "从整本书的总览到一个被选出的学习段落"
+      },
+      "filled_prompt": "为从整本书的总览到一个被选出的学习段落设计可追踪对象在近景和总览的对应位置，给观察留出保持状态；光影与造型随景别保持一致。"
+    }
+  ],
+  "experimental_rule": "现有配方不改写；仅填变量。实现时自行添加的材料/造型/布局/时序逐项记录。禁止查看原片、图像、原研究描述或此前实验成片。只做一次美术首版；技术修复单独记录，不优化首版审美。"
+}

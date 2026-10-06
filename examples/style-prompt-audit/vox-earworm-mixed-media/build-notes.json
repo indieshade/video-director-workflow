@@ -1,0 +1,63 @@
+{
+  "case_id": "vox-earworm-mixed-media",
+  "status": "built-not-rendered",
+  "implementation_pass": "one-art-first-pass",
+  "inputs_read": [
+    "input.json",
+    "existing-style-card.json",
+    "shot-plan.json",
+    "assets/index.md"
+  ],
+  "image_review": "view_image: only this case assets/hero.png; no reference, research or prior sample viewed",
+  "output": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "duration": 6,
+    "audio": false
+  },
+  "source_asset": {
+    "path": "assets/hero.png",
+    "sha256": "d4ee4187dfe75f66b7d9fa149c55723d82aab379c4158a281a1cb883c2e8cb90",
+    "policy": "byte-for-byte unchanged; full1536x1024 source in 1000x666.666667 contain box at [140,27]"
+  },
+  "plan_realization": [
+    "0-.8 desk opacity; .8-1.3 rear paper and1-1.5 front paper opacity; 1.8-2.7 three symbolic page lines; 2.7-3.4 frame draw; 3.4-4.4 whole source group scale1->1.015; hold to6.",
+    "Source-normalized lines [.52,.746,.22,.08] and frame [.52,.741,.22,.09] share exact affine coordinates and group scale.",
+    "No added title/text animation. Two fixed color layers occupy final plan polygons, behind and ahead of whole raw image.",
+    "One full-duration clip; one paused GSAP3.13.0 timeline; root/key match; timeline seeks to0 and never plays."
+  ],
+  "executor_details": [
+    {
+      "area": "paper-shapes",
+      "detail": "Exact four corner anchors retained; fixed intermediate points add at most about2px edge deviation. Ink dots r.55/pitch8/opacity.06 and contact copy offset[2,3]/opacity.12 apply only to procedural papers; no raw image lighting treatment."
+    },
+    {
+      "area": "timing",
+      "detail": "Two color entrances stagger by.2s inside planned .8-1.5 window. sine.inOut fades; power2.out book and lines; constant-speed frame draw; power2.inOut single group zoom."
+    },
+    {
+      "area": "full-image-bounds",
+      "detail": "Final source rectangle at scale1.015 is [132.5,22,1015,676.666667], entirely within canvas; source PNG is not cropped."
+    },
+    {
+      "area": "svg-draw",
+      "detail": "Frame getTotalLength measured once at setup; dasharray/dashoffset explicitly initialized; frame opacity switches at2.7."
+    }
+  ],
+  "limitations": [
+    "Single composite PNG contains book, lamp, pencils and baked contact/lighting; these are not independent layers or editable illumination.",
+    "Color papers occlude whole PNG only, not its internal objects.",
+    "Page lines are executor-added symbolic content, not actual book text.",
+    "No render, screenshot or complete motion review performed by Builder; this file is not visual acceptance evidence."
+  ],
+  "technical_fixes": [],
+  "verification": {
+    "syntax": "passed: inline JavaScript vm.Script parse; JSON parse; unique DOM ids",
+    "resources": "passed: all local image/script/font paths and SVG use references resolve",
+    "asset_hash": "passed: post-build source SHA256 matches frozen plan",
+    "contract": "passed static checks: one paused timeline, matching root/key, 6s/30fps/1280x720, no audio or clocks",
+    "render": "not-run-per-builder-scope",
+    "visual_motion": "not-reviewed-by-builder"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "case_id": "geometric-emotion",
+  "brief": "用六秒无声横屏视频呈现：读者面对整本书，找到一小段需要学习的内容；重点是画面语言与动作，不复制参考的题材或造型。",
+  "output": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "duration": 6,
+    "audio": false
+  },
+  "recipes": [
+    {
+      "id": "geometric-emotion-character",
+      "source_profile": "geometric-emotion",
+      "role": "character",
+      "kind": "vector_or_cutpaper",
+      "prompt": "为{心理处境}设计原创几何角色，保留一个可追踪的面部或轮廓特征；纸片颗粒与色组服从辨认，避免复制原片角色。",
+      "variables": [
+        "心理处境"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "变形后角色身份仍可追踪。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "心理处境": "读者面对厚书无从下手，找到可以先处理的一小段"
+      },
+      "filled_prompt": "为读者面对厚书无从下手，找到可以先处理的一小段设计原创几何角色，保留一个可追踪的面部或轮廓特征；纸片颗粒与色组服从辨认，避免复制原片角色。"
+    },
+    {
+      "id": "geometric-emotion-relation",
+      "source_profile": "geometric-emotion",
+      "role": "relation",
+      "kind": "scene_design",
+      "prompt": "用{压力关系}安排角色与物件的体量、距离、支撑和留白；比较两个关键状态，不把心理词写满屏幕。",
+      "variables": [
+        "压力关系"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "关系让观众观察到压力，而不是只有抽象形状。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "压力关系": "整本书的信息负担变成一段可处理的学习任务"
+      },
+      "filled_prompt": "用整本书的信息负担变成一段可处理的学习任务安排角色与物件的体量、距离、支撑和留白；比较两个关键状态，不把心理词写满屏幕。"
+    },
+    {
+      "id": "geometric-emotion-release",
+      "source_profile": "geometric-emotion",
+      "role": "release",
+      "kind": "motion_staging",
+      "prompt": "为{关系变化}设计受力或空间改变的关键姿态，保持角色与对象的因果连续；何时保持、何时过渡由口播锚点决定。",
+      "variables": [
+        "关系变化"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "变化兑现当前含义；不把通用粒子消散当消解。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "关系变化": "角色从被书的重量压住到只托起一小段"
+      },
+      "filled_prompt": "为角色从被书的重量压住到只托起一小段设计受力或空间改变的关键姿态，保持角色与对象的因果连续；何时保持、何时过渡由口播锚点决定。"
+    }
+  ],
+  "experimental_rule": "现有配方不改写；仅填变量。实现时自行添加的材料/造型/布局/时序逐项记录。禁止查看原片、图像、原研究描述或此前实验成片。只做一次美术首版；技术修复单独记录，不优化首版审美。"
+}

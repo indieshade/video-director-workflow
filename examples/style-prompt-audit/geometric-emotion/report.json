@@ -1,0 +1,114 @@
+{
+  "finding": {
+    "verdict": "负担变小的关系可读；造型与材质仍过于通用",
+    "observed": "紫色双眼角色、巨书与小段落保留身份，同一段落移出后书退后、身体恢复。轮廓以薄线和轻色填充为主，纸粒近似均匀网点，受力差异较弱；与参考的粗几何体量、饱满限制色和颗粒肌理存在明显距离。",
+    "conclusion": "三条关系配方能驱动一次有因果的动作，但几何角色形态、材料和受力表现大多由执行者临场决定。当前描述还不足以产生参考级的造型判断。",
+    "recipe_results": [
+      "partial",
+      "partial",
+      "partial"
+    ]
+  },
+  "recipe_execution": [
+    {
+      "recipe_id": "geometric-emotion-character",
+      "kind": "vector_or_cutpaper",
+      "filled_prompt": "为读者面对厚书无从下手，找到可以先处理的一小段设计原创几何角色，保留一个可追踪的面部或轮廓特征；纸片颗粒与色组服从辨认，避免复制原片角色。",
+      "status": "implementation-executed-partial",
+      "evidence_or_scope": "原创几何角色、双眼身份和纸片颗粒需在首版验证。",
+      "validation_status": "implementation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "planned-procedural",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    },
+    {
+      "recipe_id": "geometric-emotion-relation",
+      "kind": "scene_design",
+      "filled_prompt": "用整本书的信息负担变成一段可处理的学习任务安排角色与物件的体量、距离、支撑和留白；比较两个关键状态，不把心理词写满屏幕。",
+      "status": "implementation-executed-partial",
+      "evidence_or_scope": "两个关系状态及支点由执行者设计；未渲染。",
+      "validation_status": "implementation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "planned-procedural",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    },
+    {
+      "recipe_id": "geometric-emotion-release",
+      "kind": "motion_staging",
+      "filled_prompt": "为角色从被书的重量压住到只托起一小段设计受力或空间改变的关键姿态，保持角色与对象的因果连续；何时保持、何时过渡由口播锚点决定。",
+      "status": "implementation-executed-partial",
+      "evidence_or_scope": "同段落转移、角色恢复和保持时长是额外实现选择。",
+      "validation_status": "implementation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "planned-procedural",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    }
+  ],
+  "measurements": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "unknown",
+        "profile": "100",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1280,
+        "height": 720,
+        "coded_width": 1280,
+        "coded_height": 720,
+        "closed_captions": 0,
+        "film_grain": 0,
+        "has_b_frames": 0,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": 31,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "center",
+        "field_order": "progressive",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 92160,
+        "duration": "6.000000",
+        "bit_rate": "349365",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "180",
+        "extradata_size": 51
+      }
+    ],
+    "format": {
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "start_time": "0.000000",
+      "duration": "6.000000",
+      "size": "263938",
+      "bit_rate": "351917",
+      "probe_score": 100
+    },
+    "sha256": "d2c53e3371e5a06c2cd24cff416041f4daf3284c21bf9d9454257d97e96f75ab"
+  },
+  "hashes": {
+    "id": "geometric-emotion",
+    "video": "examples/style-prompt-audit/geometric-emotion/probe.mp4",
+    "poster": "examples/style-prompt-audit/geometric-emotion/poster.jpg",
+    "report": "examples/style-prompt-audit/geometric-emotion/report.json",
+    "delivery_sha256": "d2c53e3371e5a06c2cd24cff416041f4daf3284c21bf9d9454257d97e96f75ab",
+    "source_private_sha256": "bb689a69df0150484ab3c64733c888966bbe60e72e886c1d75f5c95bdd58b5c1",
+    "source_portable_sha256": "ed1667f3bd0e941f02e5e0d663e2120386856931851e48dca4dbd0c0280a9388"
+  },
+  "source_export_difference": "Only font loading changed from private bundled font to installed Microsoft YaHei with existing CSS fallbacks; this file is not the exact private render source. No standalone font redistributed."
+}

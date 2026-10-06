@@ -1,0 +1,18 @@
+{
+  "asset": "assets/hero.png",
+  "tool": "built-in imagegen",
+  "requested_transparent_background": true,
+  "prompt": "为读者面对厚书，试图挑出自己需要学的一小段设计原创粗形角色剪影，以少量细线刻画表情；限制色与颗粒按画面可读性选择，透明层输出。",
+  "mode": "RGBA",
+  "size": [
+    1536,
+    1024
+  ],
+  "sha256": "b36c1d7efb8bced581d1b5010de47f05ccdda94fca6b14ff9a7061af5b6785bb",
+  "alpha_extrema": [
+    0,
+    254
+  ],
+  "zero_alpha_fraction": 0.4815076192220052,
+  "source_note": "raw tool output; no crop, cutout, recolor or cleanup; one PNG returned, not separate object layers"
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>character-object-feeling</title>
+  <style>
+    @font-face { font-family: 'ProbeYaHei'; src: local("Microsoft YaHei"); font-weight: 400; }
+    * { box-sizing: border-box; }
+    html, body { width: 1280px; height: 720px; margin: 0; overflow: hidden; }
+    body { font-family: 'ProbeYaHei', sans-serif; }
+    #stage { width: 100%; height: 100%; position: relative; background: #EFE4CF; }
+    .clip { width: 100%; height: 100%; }
+    svg { display: block; width: 100%; height: 100%; }
+    #raw-character-book, #whole-book-frame, #target-frame { opacity: 0; }
+  </style>
+</head>
+<body>
+  <div id="stage" data-composition-id="character-object-feeling" data-start="0" data-duration="6" data-fps="30" data-width="1280" data-height="720">
+    <div id="character-object-feeling-full-shot" class="clip" data-start="0" data-duration="6" data-track-index="0">
+      <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" aria-label="读者与厚书整图，定位框从整书转向原有小段">
+        <g id="raw-character-book-coordinate-group">
+          <image id="raw-character-book" href="assets/hero.png" x="160" y="40" width="960" height="640" preserveAspectRatio="xMidYMid meet" />
+          <rect id="whole-book-frame" x="280" y="356.8" width="782.4" height="256" fill="none" stroke="#14213B" stroke-width="3" />
+          <rect id="target-frame" x="774.4" y="385.6" width="153.6" height="51.2" fill="none" stroke="#14213B" stroke-width="4" stroke-dasharray="409.6" stroke-dashoffset="409.6" />
+        </g>
+      </svg>
+    </div>
+  </div>
+  <script src="assets/gsap.min.js"></script>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#raw-character-book', { opacity: 0 }, { opacity: 1, duration: 0.6, ease: 'power2.out' }, 0);
+    tl.fromTo('#whole-book-frame', { opacity: 0 }, { opacity: 0.6, duration: 0.7, ease: 'sine.inOut' }, 0.8);
+    tl.set('#target-frame', { opacity: 1 }, 1.8);
+    tl.fromTo('#target-frame', { strokeDashoffset: 409.6 }, { strokeDashoffset: 0, duration: 1.3, ease: 'power2.inOut' }, 1.8);
+    tl.to('#whole-book-frame', { opacity: 0.15, duration: 1.3, ease: 'sine.inOut' }, 1.8);
+    tl.fromTo('#raw-character-book-coordinate-group', { scale: 1, svgOrigin: '640 360' }, { scale: 1.04, duration: 1.1, ease: 'power2.inOut' }, 3.2);
+    window.__timelines['character-object-feeling'] = tl;
+    tl.seek(0);
+  </script>
+</body>
+</html>

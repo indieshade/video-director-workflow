@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1280, height=720">
+  <title>现有提示词实测 · 绘画式日常</title>
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Probe YaHei"; src: local("Microsoft YaHei"); font-weight: 100 900; }
+    html, body { width: 1280px; height: 720px; margin: 0; }
+    body { font-family: "Probe YaHei", sans-serif; }
+    #stage { position: relative; width: 100%; height: 100%; overflow: hidden; background: #EFE4D0; }
+    .clip { position: absolute; inset: 0; }
+    #raw-scene-coordinate-group { position: absolute; left: 320px; top: 67.6px; width: 640px; height: 584.87804878px; transform-origin: 50% 50%; }
+    #raw-scene { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; }
+    #scene-annotation { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+    #selected-paragraph { opacity: 0; }
+  </style>
+</head>
+<body>
+  <div id="stage" data-composition-id="drawn-everyday" data-start="0" data-duration="6" data-fps="30" data-width="1280" data-height="720">
+    <section id="drawn-everyday-full-shot" class="clip" data-start="0" data-duration="6" data-track-index="0">
+      <div id="raw-scene-coordinate-group">
+        <img id="raw-scene" src="assets/hero.png" width="1312" height="1199" alt="生成器输出的整张日常阅读插画，原文字和单一姿态保留">
+        <svg id="scene-annotation" viewBox="0 0 640 584.87804878" aria-label="指示原图书页小段的局部框">
+          <rect id="selected-paragraph" x="425.6" y="375.491707317" width="92.8" height="37.432195122" fill="none" stroke="#B9835B" stroke-width="3"/>
+        </svg>
+      </div>
+    </section>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const frame = document.getElementById("selected-paragraph");
+    const frameLength = frame.getTotalLength();
+    frame.style.strokeDasharray = String(frameLength);
+    frame.style.strokeDashoffset = String(frameLength);
+    tl.fromTo("#raw-scene", { opacity: 0 }, { opacity: 1, duration: .6, ease: "power2.out" }, 0);
+    tl.set("#selected-paragraph", { opacity: 1 }, 2.2);
+    tl.fromTo("#selected-paragraph", { strokeDashoffset: frameLength }, { strokeDashoffset: 0, duration: 1.1, ease: "none" }, 2.2);
+    tl.fromTo("#raw-scene-coordinate-group", { scale: 1 }, { scale: 1.1, duration: 1.1, ease: "power2.inOut" }, 3.3);
+    window.__timelines = window.__timelines || {};
+    window.__timelines["drawn-everyday"] = tl;
+    tl.seek(0);
+  </script>
+</body>
+</html>

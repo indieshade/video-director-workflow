@@ -4,3 +4,7 @@
 *.mp4 binary
 *.wav binary
 *.woff2 binary
+# Keep frozen probe inputs and exported render source byte-identical on checkout.
+examples/style-prompt-audit/*/input.json -text whitespace=cr-at-eol
+examples/style-prompt-audit/*/existing-style-card.json -text whitespace=cr-at-eol
+examples/style-prompt-audit/*/index.html -text whitespace=cr-at-eol

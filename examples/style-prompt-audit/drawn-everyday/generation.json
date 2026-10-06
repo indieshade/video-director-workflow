@@ -1,0 +1,18 @@
+{
+  "asset": "assets/hero.png",
+  "tool": "built-in imagegen",
+  "requested_transparent_background": true,
+  "prompt": "绘制处于一个读者面对打开的书，正在找出还没掌握的段落的原创人物，使用有粗细变化的手绘轮廓、克制排线和纸感叠色；完整身体与道具分层，不照搬参考人物。",
+  "mode": "RGBA",
+  "size": [
+    1312,
+    1199
+  ],
+  "sha256": "14224ef7c029c01df0f895cea6eece048ea9527ae5d68f15dcccef0bc0dd4408",
+  "alpha_extrema": [
+    6,
+    250
+  ],
+  "zero_alpha_fraction": 0.0,
+  "source_note": "raw tool output; no crop, cutout, recolor or cleanup; one PNG returned, not separate object layers"
+}

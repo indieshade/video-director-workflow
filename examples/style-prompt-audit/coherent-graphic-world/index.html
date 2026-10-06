@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>coherent-graphic-world</title>
+  <style>
+    @font-face { font-family: 'ProbeYaHei'; src: local("Microsoft YaHei"); font-weight: 100 900; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+    #stage { position: relative; width: 100%; height: 100%; overflow: hidden; background: #101D4D; }
+    .clip { width: 100%; height: 100%; }
+    svg { display: block; width: 100%; height: 100%; }
+    .delayed { opacity: 0; }
+    .object { stroke: #101D4D; stroke-width: 6; stroke-linejoin: round; stroke-linecap: round; }
+  </style>
+</head>
+<body>
+<div id="stage" data-composition-id="coherent-graphic-world" data-start="0" data-duration="6" data-fps="30" data-width="1280" data-height="720">
+  <div id="coherent-graphic-world-clip" class="clip" data-start="0" data-duration="6">
+    <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" aria-label="同一图形世界中的读者、书和连续放大的待学段落">
+      <defs>
+        <pattern id="coherent-paper" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="0.55" fill="#F28732" opacity="0.06"/></pattern>
+      </defs>
+      <rect width="1280" height="720" fill="url(#coherent-paper)"/>
+      <g id="reader" class="object delayed">
+        <path d="M157 462 Q157 429 188 422 H290 Q326 429 326 462 V562 Q326 583 299 584 H183 Q157 583 157 560 Z" fill="#000000" opacity="0.12" stroke="none" transform="translate(2 3)"/>
+        <path d="M304 416 L328 402 L350 430 V553 Q350 571 328 575 L304 587 Z" fill="#58307D"/>
+        <path d="M155 451 Q155 423 183 423 H277 Q306 423 306 451 V563 Q306 587 282 587 H179 Q155 587 155 563 Z" fill="#7A43AD"/>
+        <path d="M155 451 Q155 423 183 423 H277 Q306 423 306 451 L330 437 Q330 409 301 409 H207 Q179 409 179 437 Z" fill="#894BC2"/>
+        <path d="M268 326 L292 312 Q322 312 326 338 V367 Q326 399 295 407 L271 421 Z" fill="#AE6124"/>
+        <rect x="184" y="326" width="87" height="96" rx="25" fill="#F28732"/>
+        <path d="M184 351 Q184 326 209 326 H246 Q271 326 271 351 L295 337 Q295 312 270 312 H233 Q208 312 208 337 Z" fill="#FF9738"/>
+      </g>
+      <g id="book" class="object delayed">
+        <path d="M392 267 L624 260 L642 281 L867 251 L875 509 L640 533 L622 514 L390 523 Z" fill="#000000" opacity="0.12" stroke="none" transform="translate(2 3)"/>
+        <path d="M390 277 L622 262 L642 283 L865 251 L875 509 L640 533 L622 514 L390 523 Z" fill="#1A4995"/>
+        <path d="M390 265 L622 251 L642 271 L865 237 L875 499 L640 523 L622 504 L390 513 Z" fill="#2466CF"/>
+        <path d="M390 265 L414 251 L646 237 L666 257 L865 237 L841 251 L642 271 L622 251 Z" fill="#2872E8"/>
+        <path d="M622 251 L622 504 M642 271 L640 523" fill="none"/>
+      </g>
+      <g id="pages" class="delayed" fill="#894BC2">
+        <g data-block-id="overview-a"><rect x="437" y="290" width="143" height="8" rx="4"/><rect x="437" y="305" width="125" height="8" rx="4"/><rect x="437" y="320" width="136" height="8" rx="4"/></g>
+        <g data-block-id="overview-b"><rect x="437" y="356" width="137" height="8" rx="4"/><rect x="437" y="371" width="143" height="8" rx="4"/><rect x="437" y="386" width="110" height="8" rx="4"/></g>
+        <g data-block-id="overview-c"><rect x="437" y="417" width="143" height="8" rx="4"/><rect x="437" y="432" width="120" height="8" rx="4"/><rect x="437" y="447" width="134" height="8" rx="4"/></g>
+        <g data-block-id="overview-d"><rect x="669" y="290" width="148" height="8" rx="4"/><rect x="669" y="305" width="119" height="8" rx="4"/><rect x="669" y="320" width="137" height="8" rx="4"/></g>
+        <g data-block-id="overview-e"><rect x="669" y="417" width="148" height="8" rx="4"/><rect x="669" y="432" width="120" height="8" rx="4"/><rect x="669" y="447" width="135" height="8" rx="4"/></g>
+      </g>
+      <path id="main-path" d="M326 404 H400 L669 382" fill="none" stroke="#F28732" stroke-width="4" stroke-linejoin="round" stroke-dasharray="344" stroke-dashoffset="344"/>
+      <rect id="locator" x="669" y="356" width="125" height="52" rx="7" fill="none" stroke="#F28732" stroke-width="6" stroke-dasharray="342" stroke-dashoffset="342"/>
+      <path id="detail-path" d="M794 382 H873 L925 281" fill="none" stroke="#F28732" stroke-width="3" stroke-linejoin="round" stroke-dasharray="193" stroke-dashoffset="193"/>
+      <g id="target" class="delayed" data-paragraph-id="learning-paragraph">
+        <g class="object">
+          <path d="M669 356 L693 342 H818 L794 356 Z" fill="#FF9738"/>
+          <path d="M794 356 L804 350 V402 L794 408 Z" fill="#AE6124"/>
+          <rect x="669" y="356" width="125" height="52" rx="7" fill="#F28732"/>
+        </g>
+        <g fill="#101D4D" data-content-kind="schematic-line-blocks">
+          <rect x="681" y="366" width="100" height="5" rx="2.5"/><rect x="681" y="380" width="85" height="5" rx="2.5"/><rect x="681" y="394" width="94" height="5" rx="2.5"/>
+        </g>
+        <rect id="target-frame" x="669" y="356" width="125" height="52" rx="7" fill="none" stroke="#FF9738" stroke-width="6" stroke-dasharray="342" stroke-dashoffset="342"/>
+      </g>
+    </svg>
+  </div>
+</div>
+<script src="assets/gsap.min.js"></script>
+<script>
+  window.__timelines = window.__timelines || {};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo('#reader, #book, #pages, #target', {opacity:0}, {opacity:1,duration:0.8,ease:'power2.out'}, 0);
+  tl.fromTo('#main-path', {strokeDashoffset:344}, {strokeDashoffset:0,duration:1.2,ease:'sine.inOut'}, 0.8);
+  tl.fromTo('#target-frame, #locator', {strokeDashoffset:342}, {strokeDashoffset:0,duration:0.6,ease:'power2.out'}, 2);
+  tl.fromTo('#target', {x:0,y:0,scaleX:1,scaleY:1,svgOrigin:'669 356'}, {x:256,y:-130,scaleX:255/125,scaleY:126/52,duration:1.4,ease:'power2.inOut',immediateRender:false}, 2.6);
+  tl.fromTo('#detail-path', {strokeDashoffset:193}, {strokeDashoffset:0,duration:1.4,ease:'sine.inOut'}, 2.6);
+  window.__timelines['coherent-graphic-world'] = tl;
+  tl.seek(0);
+</script>
+</body>
+</html>

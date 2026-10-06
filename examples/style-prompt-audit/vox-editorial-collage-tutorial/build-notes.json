@@ -1,0 +1,63 @@
+{
+  "case_id": "vox-editorial-collage-tutorial",
+  "status": "built-not-rendered",
+  "implementation_pass": "one-art-first-pass",
+  "inputs_read": [
+    "input.json",
+    "existing-style-card.json",
+    "shot-plan.json",
+    "assets/index.md"
+  ],
+  "image_review": "view_image: only this case assets/hero.png; no reference, research or prior sample viewed",
+  "output": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "duration": 6,
+    "audio": false
+  },
+  "source_asset": {
+    "path": "assets/hero.png",
+    "sha256": "11586458c2247a3d3096f6b5cdc5aa61b4b8565a4cd87663ccfdbcbffabd3fb1",
+    "policy": "byte-for-byte unchanged; full 1536x1024 source in 900x600 contain box at [190,60]"
+  },
+  "plan_realization": [
+    "0-.6 raw-book opacity; .8-1.8 seven symbolic page lines; discrete three-piece arrow at 1.8/2.2/2.6; 2.8-3.4 paragraph opacity; 4-4.5 title opacity and y6->0; hold to6.",
+    "Source-normalized lines region [.58,.3,.26,.26] and frame [.59,.405,.235,.12] share source-to-canvas coordinates.",
+    "Only title text is 先学这一段, local YaHei 38px. Raw book has no real paragraph text.",
+    "One full-duration clip; one paused GSAP3.13.0 timeline; root/key match; timeline seeks to0 and never plays."
+  ],
+  "executor_details": [
+    {
+      "area": "arrow-path",
+      "detail": "Source-local start [300,150], horizontal bend [636.75,150], end [636.75,279] at selected paragraph center; three fixed uneven polygons nominal10px and terminal16px; no extra animation beyond planned discrete appearance."
+    },
+    {
+      "area": "paper-material",
+      "detail": "Paper grid40px opacity.07; procedural ink dots r.55/pitch8/opacity.06 only on arrow/title; short contact copies offset[2,3]/opacity.12. Fixed uneven points of about2px are numerical realization, not recipe-provided geometry."
+    },
+    {
+      "area": "fade-eases",
+      "detail": "power2.out for book/title; sine.inOut for line-block/frame; fixed source placement instead of image tilt/zoom because final plan explicitly holds book size."
+    },
+    {
+      "area": "font",
+      "detail": "Local assets/probe-msyh.ttc via @font-face, private render only. Browser glyph/font-face validation remains with orchestrator."
+    }
+  ],
+  "limitations": [
+    "No true text selection or page-turn animation.",
+    "Raw generated soft edge and texture retained; no raster filters, crop, cutout, recolor or cleanup.",
+    "Seven lines are added symbolic content; arrow and strip geometry are executor-provided.",
+    "No render, screenshot or complete motion review performed by Builder; this file is not visual acceptance evidence."
+  ],
+  "technical_fixes": [],
+  "verification": {
+    "syntax": "passed: inline JavaScript vm.Script parse; JSON parse; unique DOM ids",
+    "resources": "passed: all local image/script/font paths and SVG use references resolve",
+    "asset_hash": "passed: post-build source SHA256 matches frozen plan",
+    "contract": "passed static checks: one paused timeline, matching root/key, 6s/30fps/1280x720, no audio or clocks",
+    "render": "not-run-per-builder-scope",
+    "visual_motion": "not-reviewed-by-builder"
+  }
+}

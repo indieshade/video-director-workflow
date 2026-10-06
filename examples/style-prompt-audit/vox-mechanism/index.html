@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>vox-mechanism</title>
+  <style>
+    @font-face { font-family: 'ProbeYaHei'; src: local("Microsoft YaHei"); font-weight: 100 900; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+    #stage { width: 100%; height: 100%; position: relative; overflow: hidden; background: #F4F0E8; }
+    .clip { width: 100%; height: 100%; }
+    svg { display: block; width: 100%; height: 100%; }
+    .delayed { opacity: 0; }
+    .label { font-family: 'ProbeYaHei'; fill: #151515; }
+  </style>
+</head>
+<body>
+<div id="stage" data-composition-id="vox-mechanism" data-start="0" data-duration="6" data-fps="30" data-width="1280" data-height="720">
+  <div id="vox-mechanism-clip" class="clip" data-start="0" data-duration="6">
+    <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" aria-label="整本书定位到待学习段落的示意机制图">
+      <defs>
+        <pattern id="vox-paper" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="0.55" fill="#151515" opacity="0.06"/></pattern>
+        <g id="vox-paragraph" data-paragraph-id="learning-paragraph">
+          <path d="M12 15 H132 M12 33 H119 M12 51 H127" fill="none" stroke="#151515" stroke-width="2"/>
+        </g>
+      </defs>
+      <rect width="1280" height="720" fill="url(#vox-paper)"/>
+      <g id="whole-book" class="delayed">
+        <path d="M102 212 L350 192 L360 221 L609 197 L620 500 L363 520 L350 495 L100 516 Z" fill="#151515" opacity="0.12" transform="translate(2 3)"/>
+        <path d="M100 210 L350 190 L360 220 L610 195 L620 500 L363 520 L350 493 L100 515 Z" fill="#F4F0E8" stroke="#151515" stroke-width="8" stroke-linejoin="round"/>
+        <path d="M350 190 L350 493 M360 220 L363 520" fill="none" stroke="#151515" stroke-width="2"/>
+      </g>
+      <g id="known-lines" class="delayed" stroke="#737373" stroke-width="2" fill="none">
+        <path d="M170 250 H302 M170 280 H289 M170 310 H302 M170 340 H291 M170 380 H302 M170 420 H281"/>
+        <path d="M389 250 H500 M389 280 H486 M389 310 H500 M389 405 H490 M389 412 H500 M389 420 H478"/>
+      </g>
+      <use id="source-paragraph" href="#vox-paragraph" x="418" y="330" opacity="0"/>
+      <rect id="target" x="418" y="330" width="145" height="66" fill="none" stroke="#151515" stroke-width="5" stroke-dasharray="422" stroke-dashoffset="422"/>
+      <path id="connector" d="M563 363 H678 L714 285" fill="none" stroke="#151515" stroke-width="3" stroke-dasharray="201" stroke-dashoffset="201"/>
+      <g id="detail" class="delayed" data-paragraph-id="learning-paragraph">
+        <svg x="714" y="218" width="430" height="235" viewBox="0 0 145 66" preserveAspectRatio="none" style="width:430px;height:235px">
+          <rect x="0" y="0" width="145" height="66" fill="#F4F0E8" stroke="#151515" stroke-width="1.7"/>
+          <use href="#vox-paragraph"/>
+        </svg>
+      </g>
+      <text id="known-label" class="label delayed" x="168" y="598" font-size="32">已掌握</text>
+      <text id="target-label" class="label delayed" x="770" y="532" font-size="36">待学习</text>
+    </svg>
+  </div>
+</div>
+<script src="assets/gsap.min.js"></script>
+<script>
+  window.__timelines = window.__timelines || {};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo('#whole-book, #known-lines, #source-paragraph', {opacity:0}, {opacity:1,duration:0.8,ease:'power2.out'}, 0);
+  tl.fromTo('#target', {strokeDashoffset:422}, {strokeDashoffset:0,duration:0.8,ease:'sine.inOut'}, 0.9);
+  tl.fromTo('#connector', {strokeDashoffset:201}, {strokeDashoffset:0,duration:0.7,ease:'sine.inOut'}, 1.7);
+  tl.fromTo('#detail', {opacity:0,x:-296,y:112,scaleX:145/430,scaleY:66/235,svgOrigin:'714 218'}, {opacity:1,x:0,y:0,scaleX:1,scaleY:1,duration:1.2,ease:'power2.inOut'}, 2.2);
+  tl.fromTo('#known-label, #target-label', {opacity:0}, {opacity:1,duration:0.6,ease:'power2.out'}, 3.2);
+  window.__timelines['vox-mechanism'] = tl;
+  tl.seek(0);
+</script>
+</body>
+</html>

@@ -1,0 +1,657 @@
+{
+  "status": "final",
+  "phase": "director-part-2",
+  "case_id": "coherent-graphic-world",
+  "category": "custom-style-probe",
+  "classification_note": "内容已给，无需搜索；本测试的素材与关系画面不属于默认统计、地图、文字或真实来源资产融合分类。custom-style-probe 是本次 schema 扩展，不强套分类模板。",
+  "duration_s": 6,
+  "fps": 30,
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9"
+  },
+  "audio": false,
+  "style": "统一图形世界：几何化人物与机器、统一受光及高饱和色组。",
+  "palette": [
+    "#2466CF",
+    "#F28732",
+    "#7A43AD",
+    "#101D4D"
+  ],
+  "font": "Microsoft YaHei",
+  "font_status": "assets/probe-msyh.ttc 已就位，Microsoft YaHei 本地私有渲染，不公开分发；中文字形和可读性仍待首版帧核对。",
+  "beats": [
+    0,
+    24,
+    60,
+    102,
+    132
+  ],
+  "beat_unit": "frames",
+  "export": "mp4",
+  "shot_brief": "建立统一几何读者、书、书页和段落的小型阅读世界：轮廓、斜切边和左上受光规则一致。先总览，再以主路径连续指向书内的唯一段落，把同一段落在邻近区域连续放大，同时保留总览与连接位置；不重建无关新页。",
+  "asset_needs": [],
+  "search_required": false,
+  "content": {
+    "brief_from_input": "用六秒无声横屏视频呈现：读者面对整本书，找到一小段需要学习的内容；重点是画面语言与动作，不复制参考的题材或造型。",
+    "recipes": [
+      {
+        "id": "coherent-graphic-world-object-family",
+        "source_profile": "coherent-graphic-world",
+        "role": "object-family",
+        "kind": "procedural_geometry",
+        "prompt": "为{对象族}制定统一的几何化比例、轮廓与受光方式，输出主对象和辅助对象；色组按本片层级选择，不照搬原作造型。",
+        "variables": [
+          "对象族"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "对象在同一场景中像属于同一世界。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "对象族": "同一阅读场景中的读者、书、书页和待学习段落"
+        },
+        "filled_prompt": "为同一阅读场景中的读者、书、书页和待学习段落制定统一的几何化比例、轮廓与受光方式，输出主对象和辅助对象；色组按本片层级选择，不照搬原作造型。"
+      },
+      {
+        "id": "coherent-graphic-world-system",
+        "source_profile": "coherent-graphic-world",
+        "role": "system",
+        "kind": "procedural_layout",
+        "prompt": "将{机制关系}组织成局部到整体的场景，连接线只表达已知关系，区分主路径与背景对象；先验证少量对象，再扩展。",
+        "variables": [
+          "机制关系"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "关系清楚，规模增大仍有主次。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "机制关系": "读者从整本书中定位到一个待学习段落"
+        },
+        "filled_prompt": "将读者从整本书中定位到一个待学习段落组织成局部到整体的场景，连接线只表达已知关系，区分主路径与背景对象；先验证少量对象，再扩展。"
+      },
+      {
+        "id": "coherent-graphic-world-scale",
+        "source_profile": "coherent-graphic-world",
+        "role": "scale",
+        "kind": "motion_staging",
+        "prompt": "为{尺度变化}设计可追踪对象在近景和总览的对应位置，给观察留出保持状态；光影与造型随景别保持一致。",
+        "variables": [
+          "尺度变化"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "观众能认出同一个对象，没有每句重开一页。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "尺度变化": "从整本书的总览到一个被选出的学习段落"
+        },
+        "filled_prompt": "为从整本书的总览到一个被选出的学习段落设计可追踪对象在近景和总览的对应位置，给观察留出保持状态；光影与造型随景别保持一致。"
+      }
+    ],
+    "source_phase_note": "无 raster 输入；冻结非 raster 配方由程序化 SVG/CSS/GSAP 实现，不新增图片。",
+    "layout": {
+      "unit": "canvas-px",
+      "source_regions_unit": "normalized-raw-image-coordinate",
+      "policy": "图像完整等比包含；所有 raster 覆盖层用同一 source-to-canvas affine 变换。非 raster 几何为执行者补充。",
+      "elements": [
+        {
+          "id": "reader",
+          "kind": "procedural-svg-group",
+          "bounds": [
+            155,
+            312,
+            195,
+            275
+          ],
+          "geometry": "圆角几何身体，右侧斜切面，轮廓 6px",
+          "z": 3
+        },
+        {
+          "id": "book",
+          "kind": "procedural-svg-group",
+          "bounds": [
+            390,
+            237,
+            485,
+            296
+          ],
+          "geometry": "两页共享书脊、斜切边、10px 侧厚；与 reader 共享受光色阶",
+          "z": 3
+        },
+        {
+          "id": "pages",
+          "kind": "procedural-svg-group",
+          "bounds": [
+            437,
+            290,
+            380,
+            165
+          ],
+          "geometry": "6 组示意行块；其中一个段落为唯一 target",
+          "z": 4
+        },
+        {
+          "id": "target",
+          "kind": "procedural-svg-group",
+          "bounds": [
+            669,
+            356,
+            125,
+            52
+          ],
+          "geometry": "相同三条行块保持 ID",
+          "z": 5
+        },
+        {
+          "id": "main-path",
+          "kind": "procedural-svg-path",
+          "points": [
+            [
+              326,
+              404
+            ],
+            [
+              400,
+              404
+            ],
+            [
+              669,
+              382
+            ]
+          ],
+          "stroke_width": 4,
+          "z": 5
+        },
+        {
+          "id": "detail-path",
+          "kind": "procedural-svg-path",
+          "points": [
+            [
+              794,
+              382
+            ],
+            [
+              873,
+              382
+            ],
+            [
+              925,
+              281
+            ]
+          ],
+          "stroke_width": 3,
+          "z": 5
+        },
+        {
+          "id": "detail-anchor",
+          "kind": "procedural-layout-anchor",
+          "bounds": [
+            925,
+            226,
+            255,
+            126
+          ],
+          "geometry": "target 的连续放大终点，无重建内容",
+          "z": 6
+        }
+      ]
+    },
+    "scenes": [
+      {
+        "id": "full-shot",
+        "start": 0,
+        "end": 6,
+        "dominant_motion": "同一整体到一小段的连续定位"
+      }
+    ],
+    "timeline": [
+      {
+        "start": 0,
+        "end": 0.8,
+        "target": "reader,book,pages",
+        "action": "opacity 0 到 1，建立统一对象族"
+      },
+      {
+        "start": 0.8,
+        "end": 2,
+        "target": "main-path",
+        "action": "strokeDashoffset 显示已知读者到书到段落主路径"
+      },
+      {
+        "start": 2,
+        "end": 2.6,
+        "target": "target",
+        "action": "描出目标段落边框，整体不换页"
+      },
+      {
+        "start": 2.6,
+        "end": 4,
+        "target": "target,detail-path",
+        "action": "同一目标组连续 affine 移到 detail-anchor 的 bounds；整体留原位置 locator 框及对应路径"
+      },
+      {
+        "start": 4,
+        "end": 6,
+        "target": "all",
+        "action": "总览和局部同时保持；光向和对象色阶一致"
+      }
+    ],
+    "available_scope": "执行少量统一对象、已知主路径和连续尺度对应；实际一致性须看首版静帧及动作。",
+    "unmet_requirements": [
+      "具体对象族比例、轮廓、阴影色阶和版面由执行者补充，不代表配方已给定。",
+      "行块只表达已知定位关系，不添加页码、书名、章节或学习百分比。",
+      "本次只有少量对象，不能称为已验证规模增大后的表现。",
+      "仅少量对象，未检验更大规模对象集群的层级。"
+    ],
+    "style_card_application": {
+      "material": {
+        "provided": "几何化人物与机器、统一受光及高饱和色组。",
+        "implementation": "高饱和蓝、橙、紫色组，统一几何物件、左上受光与轴测斜切面；不复制卡中人物或机器。"
+      },
+      "composition": {
+        "provided": "对象集群与连接关系形成场景，局部和整体尺度可相互解释。",
+        "implementation": "读者、书、书页和唯一目标组成小对象集群，主路径与放大对应连线各一条。"
+      },
+      "typography": {
+        "provided": "优先观察形体和关系，标签只作必要辨认。",
+        "implementation": "不新增说明段落，以形体与关系为主。"
+      },
+      "keywords": {
+        "provided": [
+          "高饱和色组",
+          "几何化物件",
+          "轴测空间",
+          "尺度交接",
+          "连接关系"
+        ],
+        "implementation_note": "只迁移与当前阅读主题和现有资产相符的材料与关系，不复制卡片观察中的具体题材/造型。"
+      },
+      "motion": {
+        "provided": "已观察 0:50、0:59 状态；尺度交接与同世界延展是本片提案，未核验连续动作。",
+        "implementation": "总览保留，同一段落连续转到近景对应位置；共享造型和光向随尺度保持。"
+      },
+      "status": "first-probe-executed-not-reference-equivalent"
+    },
+    "material_system": {
+      "source": "existing-style-card plus executor numerical realization",
+      "implementation": "高饱和蓝、橙、紫色组，统一几何物件、左上受光与轴测斜切面；不复制卡中人物或机器。",
+      "procedural_pattern_rule": "仅非 raster 层可用重复 SVG pattern；固定点距与坐标，不用随机数，不覆盖或处理 raw 图。",
+      "parameters": {
+        "dot_radius_px": 0.55,
+        "dot_pitch_px": 8,
+        "dot_opacity": 0.06,
+        "contact_shadow_offset_px": [
+          2,
+          3
+        ],
+        "contact_shadow_opacity": 0.12,
+        "paper_edge_jitter_px": 2
+      },
+      "avoid": "不要通用 glow、粒子、光滑默认箭头或图表外观。",
+      "geometry_rule": {
+        "view": "轴测示意，所有顶面偏移[24,-14]，右侧厚度10px",
+        "lighting": "左上，顶面亮度为主色×1.12，右侧面×0.72；数值为执行者选择，不加渐变glow",
+        "outline": "统一6px深色轮廓与相同圆角规则；这是实现选择"
+      }
+    },
+    "recipe_execution": [
+      {
+        "recipe_id": "coherent-graphic-world-object-family",
+        "kind": "procedural_geometry",
+        "filled_prompt": "为同一阅读场景中的读者、书、书页和待学习段落制定统一的几何化比例、轮廓与受光方式，输出主对象和辅助对象；色组按本片层级选择，不照搬原作造型。",
+        "status": "implementation-executed-partial",
+        "evidence_or_scope": "对象族比例、轮廓和统一受光由执行者设计。",
+        "validation_status": "implementation_tested_with_evidence",
+        "observed_result": "partial",
+        "pre_execution_status": "planned-procedural",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      },
+      {
+        "recipe_id": "coherent-graphic-world-system",
+        "kind": "procedural_layout",
+        "filled_prompt": "将读者从整本书中定位到一个待学习段落组织成局部到整体的场景，连接线只表达已知关系，区分主路径与背景对象；先验证少量对象，再扩展。",
+        "status": "implementation-executed-partial",
+        "evidence_or_scope": "少量对象的已知定位关系；不扩展虚构数据。",
+        "validation_status": "implementation_tested_with_evidence",
+        "observed_result": "partial",
+        "pre_execution_status": "planned-procedural",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      },
+      {
+        "recipe_id": "coherent-graphic-world-scale",
+        "kind": "motion_staging",
+        "filled_prompt": "为从整本书的总览到一个被选出的学习段落设计可追踪对象在近景和总览的对应位置，给观察留出保持状态；光影与造型随景别保持一致。",
+        "status": "implementation-executed-partial",
+        "evidence_or_scope": "同目标 ID 连续尺度交接；实际回认待首版查看。",
+        "validation_status": "implementation_tested_with_evidence",
+        "observed_result": "partial",
+        "pre_execution_status": "planned-procedural",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      }
+    ]
+  },
+  "extra_decisions": [
+    {
+      "area": "category_extension",
+      "decision": "使用 custom-style-probe；冻结配方本身未提供此 IR 分类。",
+      "provenance": "executor"
+    },
+    {
+      "area": "geometry",
+      "decision": "采用圆角多边形与统一斜切边的对象族，是执行者补充的几何规则。",
+      "provenance": "executor"
+    },
+    {
+      "area": "final-layout-and-motion",
+      "provenance": "executor",
+      "decision": "content.layout 与 content.timeline 的全部数值、几何、阶段、时长、光影实现和字形均由执行者补充，不能当作配方明确提供。"
+    },
+    {
+      "area": "final-palette",
+      "provenance": "executor",
+      "decision": "palette 为执行者选择的色值，最后一项是画布底色；原图不重新着色。"
+    },
+    {
+      "area": "system-font",
+      "provenance": "executor",
+      "decision": "使用已存在 Microsoft YaHei 系统字体，替换 Part1 的未验证 Noto Sans SC；最终渲染需核对中文字形。"
+    },
+    {
+      "area": "raw-constraints",
+      "provenance": "actual-generated-asset",
+      "decision": "执行少量统一对象、已知主路径和连续尺度对应；实际一致性须看首版静帧及动作。"
+    },
+    {
+      "area": "generation-background",
+      "provenance": "executor",
+      "decision": "四次 imagegen transparent_background=true 是技术调用选项；不能把该请求当作已经满足透明层。drawn 配方未明确透明，该选项为额外选择。"
+    },
+    {
+      "area": "catalog-reuse",
+      "provenance": "technical-skill-and-parent-authorized",
+      "decision": "只读技术检索后使用当前 GSAP 3.13.0 技术，不导入 registry 的默认外观。"
+    },
+    {
+      "area": "existing-style-card-guidance",
+      "provenance": "style-card-provided",
+      "decision": {
+        "material": "几何化人物与机器、统一受光及高饱和色组。",
+        "composition": "对象集群与连接关系形成场景，局部和整体尺度可相互解释。",
+        "typography": "优先观察形体和关系，标签只作必要辨认。",
+        "keywords": [
+          "高饱和色组",
+          "几何化物件",
+          "轴测空间",
+          "尺度交接",
+          "连接关系"
+        ]
+      },
+      "note": "这是既有输入提供的指导，不是执行者原创选择。"
+    },
+    {
+      "area": "style-card-realization",
+      "provenance": "executor",
+      "decision": {
+        "material": "高饱和蓝、橙、紫色组，统一几何物件、左上受光与轴测斜切面；不复制卡中人物或机器。",
+        "composition": "读者、书、书页和唯一目标组成小对象集群，主路径与放大对应连线各一条。",
+        "typography": "不新增说明段落，以形体与关系为主。",
+        "motion": "总览保留，同一段落连续转到近景对应位置；共享造型和光向随尺度保持。"
+      },
+      "note": "具体数字、轮廓、色值、影子、纸粒参数、摆位和时序是执行者补充。"
+    }
+  ],
+  "validation_plan": {
+    "status": "first-probe-reviewed-with-limitations",
+    "raster": [],
+    "procedural": [
+      {
+        "recipe_id": "coherent-graphic-world-object-family",
+        "acceptance": "对象在同一场景中像属于同一世界。"
+      },
+      {
+        "recipe_id": "coherent-graphic-world-system",
+        "acceptance": "关系清楚，规模增大仍有主次。"
+      },
+      {
+        "recipe_id": "coherent-graphic-world-scale",
+        "acceptance": "观众能认出同一个对象，没有每句重开一页。"
+      }
+    ],
+    "sample_checks": [
+      "核对 input 与 generation.json 的 filled_prompt 逐字一致及 raw hash 不变。",
+      "仅制作一次美术首版；看0.6/2.4/4.4/5.8秒关键帧及完整六秒动作，不以编译或导出替代观看。",
+      "逐条标明素材层、关系层和动作层是否完成；整图镜头动作不算角色姿态或独立物件动画。",
+      "只允许记录技术修复，不优化首版审美；不补图、抠图或重画来掩盖原配方素材不足。",
+      "组合样段的指导输入是既有风格卡+三条冻结配方；图片素材测试仍只来自各条 filled_prompt 原文。分别报告，不能称为仅素材配方的受控风格测试。"
+    ],
+    "technical": [
+      "1280×720，30fps，180 帧，六秒，无声。",
+      "像素资产生成后才确认边缘、裁切、实际尺寸和可分层程度；草案不声称已有透明层或合格素材。"
+    ],
+    "comparison_limit": "既有风格卡文字已揭示；未看目标原作图像、研究目录、旧片。组合样段不称为纯配方盲测，参考匹配结论需另行观看原作后的比较。"
+  },
+  "experimental_rule": "现有配方不改写；仅填变量。实现时自行添加的材料/造型/布局/时序逐项记录。禁止查看原片、图像、原研究描述或此前实验成片。只做一次美术首版；技术修复单独记录，不优化首版审美。",
+  "technical_environment": {
+    "source": "父代理提供的当前技术环境",
+    "hyperframes": "0.8.137",
+    "gsap": "3.13.0",
+    "policy": "沿用现有 public 仓库运行时，不升级或安装。"
+  },
+  "technical_fixes": [],
+  "test_layer": "existing-style-card-plus-recipes-motion-probe",
+  "asset_review": {
+    "reviewed_with": "none-no-raster",
+    "observation_status": "procedural-not-rendered",
+    "unmet_requirements": [
+      "具体对象族比例、轮廓、阴影色阶和版面由执行者补充，不代表配方已给定。",
+      "行块只表达已知定位关系，不添加页码、书名、章节或学习百分比。",
+      "本次只有少量对象，不能称为已验证规模增大后的表现。",
+      "仅少量对象，未检验更大规模对象集群的层级。"
+    ]
+  },
+  "catalog_technical_audit": {
+    "queries": [
+      {
+        "query": "GSAP translate scale image camera zoom",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"GSAP translate scale image camera zoom\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "transitions-scale",
+          "cinematic-zoom",
+          "zoom-through-transition",
+          "parallax-zoom",
+          "camera-dolly-zoom",
+          "ui-focus-zoom",
+          "yt-camera-move",
+          "camera-rig-depth-stack",
+          "camera-scan-gate",
+          "frost-sequence-camera-orbit",
+          "particle-image-reveal",
+          "camera-shake"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "SVG stroke dashoffset path reveal",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"SVG stroke dashoffset path reveal\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "svg-stroke-trace",
+          "svg-mask-reveal",
+          "hw-path-text",
+          "svg-line-draw-loader",
+          "offset-path-traveler",
+          "ui-3d-reveal",
+          "arc-motion-path",
+          "lt-mask-reveal",
+          "whiteboard-ink",
+          "carousel-path-5",
+          "carousel-path-4",
+          "carousel-path-3"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "GSAP rotate translate vector shape groups",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"GSAP rotate translate vector shape groups\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "avatar-group-hover",
+          "vector-editor-rig",
+          "transitions-3d",
+          "success-check",
+          "offset-path-traveler",
+          "beat-timeline",
+          "stagger-lattice",
+          "shutter-slam",
+          "code-3d-extrude",
+          "arc-motion-path",
+          "wordmark-tiles",
+          "us-map"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "CSS opacity highlight rectangle",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"CSS opacity highlight rectangle\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "inline-highlight",
+          "yt-feather-highlight",
+          "caption-highlight",
+          "code-highlight",
+          "mk-callout-highlight",
+          "marker-highlight",
+          "shimmer-sweep",
+          "organic-light-leak-overlay",
+          "transitions-light",
+          "light-leak",
+          "soft-blur-in",
+          "caption-pill-karaoke"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "SVG pattern deterministic dots polygon uneven edges",
+        "cli_version": "0.8.137",
+        "tier": "words",
+        "candidate": "svg-stroke-trace",
+        "gap": "查询未给出同时满足纸片边缘和固定颗粒图案的专用能力；该几何由现有 SVG/CSS 技术实现。",
+        "external_preview_opened": false,
+        "installation": false
+      }
+    ],
+    "selected_capabilities": [
+      "existing GSAP transform/opacity",
+      "SVG strokeDashoffset primitive",
+      "existing SVG pattern geometry"
+    ],
+    "reuse_mode": "不下载、add 或引入默认美术模板；按父代理许可复用仓库现有 GSAP3.13.0 基础技术并定制输入关系。",
+    "scope": "只检索技术能力，未查看外部视觉作品、poster 或视频。"
+  },
+  "provenance": {
+    "input_provided": {
+      "file": "input.json",
+      "scope": [
+        "brief",
+        "output",
+        "全部 recipes 原文与 filled_prompt",
+        "experimental_rule"
+      ],
+      "unaltered": true,
+      "style_card": "existing-style-card.json 的材料、构图、字形职责和关键词；仅文字输入，未打开其中来源链接或图片。"
+    },
+    "actual_asset": null,
+    "executor_provided": [
+      "content.layout",
+      "content.timeline",
+      "palette 数值",
+      "font 选择",
+      "额外程序化几何和镜头"
+    ],
+    "technical_provided": [
+      "HF0.8.137/GSAP3.13.0 确定性和单 paused timeline 合同"
+    ]
+  },
+  "builder_contract": {
+    "framework": "HyperFrames0.8.137",
+    "animation": "GSAP3.13.0",
+    "master_timeline": "exactly one gsap.timeline({paused:true}); register window.__timelines[case_id]; tl.seek(0); never play()",
+    "stage": "1280x720, fps30, duration6, one full-duration .clip with stable id",
+    "eases": [
+      "power2.inOut",
+      "power2.out",
+      "sine.inOut"
+    ],
+    "repeat": "none",
+    "determinism": "no timers, network, Math.random or Date.now",
+    "asset_policy": "source PNG byte-for-byte unchanged, full image contained in canvas through all transforms",
+    "export_audio": false,
+    "local_resources": {
+      "gsap": "assets/gsap.min.js",
+      "font": "assets/probe-msyh.ttc",
+      "font_use": "local @font-face, private render only, no public font redistribution"
+    }
+  },
+  "recipe_only_baseline": "recipe-only-plan.json",
+  "style_card_input": {
+    "file": "existing-style-card.json",
+    "origin": "既有公开库条目，是当前新增允许使用的既有输入；不是父代理临时强化或改写的配方。",
+    "card": {
+      "id": "coherent-graphic-world",
+      "family": "illustration",
+      "name": "统一图形世界",
+      "reference_id": "WPPPFqsECz0",
+      "reference_identity": "Kurzgesagt 具体作品；经典局部参考",
+      "material": "几何化人物与机器、统一受光及高饱和色组。",
+      "composition": "对象集群与连接关系形成场景，局部和整体尺度可相互解释。",
+      "typography": "优先观察形体和关系，标签只作必要辨认。",
+      "motion": "已观察 0:50、0:59 状态；尺度交接与同世界延展是本片提案，未核验连续动作。",
+      "fit": "系统、流程或对象间机制比较清楚的内容；造型设计投入较高。",
+      "failure": "只借鲜艳色板和圆形，却没有统一造型语言或空间关系。",
+      "source_url": "https://www.youtube.com/watch?v=WPPPFqsECz0",
+      "keywords": [
+        "高饱和色组",
+        "几何化物件",
+        "轴测空间",
+        "尺度交接",
+        "连接关系"
+      ],
+      "observation": "0:50 的人和机器、0:59 的多组对象共享几何化造型和受光方式，连接线承担关系，而不靠多段说明文字组织画面。",
+      "reference_positions_seconds": [
+        59
+      ],
+      "observation_limit": "仅从两个实际状态研究画面层级与连续性，未完成整片运动或听觉审查。本片没有讲述医疗机制，不沿用原片的医学模型或高密度总览。",
+      "origin_type": "external_work",
+      "implementation_status": "not_produced_in_this_library"
+    }
+  },
+  "actual_review": {
+    "movie_sha256": "c55a58e8f540f164b5a8f7d7b7614d27da19e35d1c94decbff4408efec9b38f2",
+    "source_sha256": "379ff1fac200a94f0ead5796c0949e57fa612ff8b741f5f2ecfdfb02f32a2b43",
+    "finding": {
+      "verdict": "对象一致与尺度承接成立；图形世界的设计成熟度不足",
+      "observed": "蓝、紫、橙三个对象组共享斜切面和受光规则；橙色段落连续移动放大、连回原位置，身份可以追踪。读者是泛化块状人形，书与对象的比例、色阶及空间细节较简略，场景层次少。",
+      "conclusion": "只证明少量对象可保持统一和对应，不能据此说已产生参考的精细几何造型与场景丰富度。色值、对象族比例、顶点、材质与镜头仍是执行者补充。",
+      "recipe_results": [
+        "partial",
+        "partial",
+        "partial"
+      ]
+    },
+    "own_observation": "六关键帧与导出视频15帧动作采样（0.0至5.6秒，间隔0.4秒）",
+    "reference_limit": "只比较既有参考静态状态与作者项目图；未审查原片完整运动或声音",
+    "stop_reason": "本任务检验原配方首版；保留失败与限制，不在本版本增强审美后倒算通过"
+  }
+}

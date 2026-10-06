@@ -1,0 +1,114 @@
+{
+  "finding": {
+    "verdict": "灰阶器物＋彩片有效；空间分层与器物动作受阻",
+    "observed": "灰阶书桌与黄、珊瑚色片产生前后遮挡；能认出书、灯和铅笔。原图把整个桌面焊成一层，原有影子也焊在里面；色片只能放在整图前后，无法进入器物之间。后续只有整图靠近和段落框。",
+    "conclusion": "这是最接近材料搭配的一案，但不足以实现参考项目的逐件拼贴空间。‘分别输出透明层’不能靠一句话保证，必须落实为实际多文件资产交付。",
+    "recipe_results": [
+      "partial",
+      "partial",
+      "blocked"
+    ]
+  },
+  "recipe_execution": [
+    {
+      "recipe_id": "vox-earworm-mixed-media-cutout",
+      "kind": "raster_generation",
+      "filled_prompt": "制作关于阅读桌面的旧书、铅笔与台灯的灰阶器物摄影裁片，保留具体材质与可辨轮廓；人物与器物分别输出透明层，不生成文字、logo或原作角色。",
+      "status": "raster-generated-reviewed-partial",
+      "evidence_or_scope": "灰阶器物可辨，但只有单 PNG；分别透明层未满足。",
+      "validation_status": "generation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "raw-generated-partial",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    },
+    {
+      "recipe_id": "vox-earworm-mixed-media-color-shape",
+      "kind": "vector_or_cutpaper",
+      "filled_prompt": "用一本打开的书周围的少量彩色形片建立不对称拼贴构图；颜色根据当前主题选择，形片与摄影裁片产生明确遮挡。",
+      "status": "implementation-executed-partial",
+      "evidence_or_scope": "两片彩色形状与整图遮挡；无法穿插独立器物。",
+      "validation_status": "implementation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "planned-procedural-partial",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    },
+    {
+      "recipe_id": "vox-earworm-mixed-media-space",
+      "kind": "lighting_setup",
+      "filled_prompt": "为书、铅笔、台灯安排接触点、前后遮挡及一致方向的地面影子；分层可用于后续动画，先验证静态空间。",
+      "status": "blocked-independent-lighting",
+      "evidence_or_scope": "接触、遮挡和阴影已烘焙；不能说成独立安排或可动画灯光。",
+      "validation_status": "not_executed_or_blocked",
+      "observed_result": "blocked",
+      "pre_execution_status": "blocked-independent-lighting",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    }
+  ],
+  "measurements": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "unknown",
+        "profile": "100",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1280,
+        "height": 720,
+        "coded_width": 1280,
+        "coded_height": 720,
+        "closed_captions": 0,
+        "film_grain": 0,
+        "has_b_frames": 0,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": 31,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "center",
+        "field_order": "progressive",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 92160,
+        "duration": "6.000000",
+        "bit_rate": "1725396",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "180",
+        "extradata_size": 51
+      }
+    ],
+    "format": {
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "start_time": "0.000000",
+      "duration": "6.000000",
+      "size": "1295977",
+      "bit_rate": "1727969",
+      "probe_score": 100
+    },
+    "sha256": "09280524bbab20b7528824d1789983daa59bbb40a416520c3671d5941fe67ee0"
+  },
+  "hashes": {
+    "id": "vox-earworm-mixed-media",
+    "video": "examples/style-prompt-audit/vox-earworm-mixed-media/probe.mp4",
+    "poster": "examples/style-prompt-audit/vox-earworm-mixed-media/poster.jpg",
+    "report": "examples/style-prompt-audit/vox-earworm-mixed-media/report.json",
+    "delivery_sha256": "09280524bbab20b7528824d1789983daa59bbb40a416520c3671d5941fe67ee0",
+    "source_private_sha256": "5c28654cdc9023a17b049457551d6e638514cbf21eb3a090d37b77ec55fcfcd6",
+    "source_portable_sha256": "90f7fa509132a8eee7cfa53eaabd719132c60dc8572c773038089990fa4ae05e"
+  },
+  "source_export_difference": "Only font loading changed from private bundled font to installed Microsoft YaHei with existing CSS fallbacks; this file is not the exact private render source. No standalone font redistributed."
+}

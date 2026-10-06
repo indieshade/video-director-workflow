@@ -11,3 +11,4 @@ snapshots/
 examples/collage-paper-study/assets/gsap.min.js
 examples/collage-paper-study/renders/picture.mp4
 examples/collage-paper-study/renders/reproduced.mp4
+examples/style-prompt-audit/*/assets/gsap.min.js

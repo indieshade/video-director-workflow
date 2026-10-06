@@ -1,0 +1,638 @@
+{
+  "status": "final",
+  "phase": "director-part-2",
+  "case_id": "character-object-feeling",
+  "category": "custom-style-probe",
+  "classification_note": "内容已给，无需搜索；本测试的素材与关系画面不属于默认统计、地图、文字或真实来源资产融合分类。custom-style-probe 是本次 schema 扩展，不强套分类模板。",
+  "duration_s": 6,
+  "fps": 30,
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9"
+  },
+  "audio": false,
+  "style": "角色剪影与物件尺度：粗形角色剪影、限制色、印刷颗粒与细线表情。",
+  "palette": [
+    "#14213B",
+    "#F4C448",
+    "#EFE4CF"
+  ],
+  "font": "Microsoft YaHei",
+  "font_status": "assets/probe-msyh.ttc 已就位，Microsoft YaHei 本地私有渲染，不公开分发；中文字形和可读性仍待首版帧核对。",
+  "beats": [
+    0,
+    24,
+    60,
+    102,
+    132
+  ],
+  "beat_unit": "frames",
+  "export": "mp4",
+  "shot_brief": "整张原始粗形角色加厚书 PNG 保持完整；它已显示选出黄色小段的结果状态。以程序化定位框从整本书转向原图现成黄色段落，整图轻微靠近后保持；不扭曲人物或重画书来模拟卸重。",
+  "asset_needs": [
+    {
+      "role": "silhouette",
+      "kind": "image",
+      "source": "builtin:imagegen",
+      "query": "为读者面对厚书，试图挑出自己需要学的一小段设计原创粗形角色剪影，以少量细线刻画表情；限制色与颗粒按画面可读性选择，透明层输出。",
+      "treatment": "none",
+      "recipe_id": "character-object-feeling-silhouette",
+      "generation_kind": "raster_generation",
+      "output_path": "assets/hero.png",
+      "transparent_background": true,
+      "status": "resolved_raw_single_png",
+      "request_policy": "只把冻结 filled_prompt 原文传给 imagegen.prompt；不得补写美术限定，不做视觉搜索或参考图片输入。",
+      "resolved_asset": "assets/hero.png",
+      "generation_record": "generation.json",
+      "sha256": "b36c1d7efb8bced581d1b5010de47f05ccdda94fca6b14ff9a7061af5b6785bb",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "layer_count": 1,
+      "raw_policy": "保持原图字节不变；没有独立对象层。",
+      "generation_prompt_verified_equal": true
+    }
+  ],
+  "search_required": false,
+  "content": {
+    "brief_from_input": "用六秒无声横屏视频呈现：读者面对整本书，找到一小段需要学习的内容；重点是画面语言与动作，不复制参考的题材或造型。",
+    "recipes": [
+      {
+        "id": "character-object-feeling-silhouette",
+        "source_profile": "character-object-feeling",
+        "role": "silhouette",
+        "kind": "raster_generation",
+        "prompt": "为{任务处境}设计原创粗形角色剪影，以少量细线刻画表情；限制色与颗粒按画面可读性选择，透明层输出。",
+        "variables": [
+          "任务处境"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "缩小后能辨姿态，细线不承担全部角色辨认。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "任务处境": "读者面对厚书，试图挑出自己需要学的一小段"
+        },
+        "filled_prompt": "为读者面对厚书，试图挑出自己需要学的一小段设计原创粗形角色剪影，以少量细线刻画表情；限制色与颗粒按画面可读性选择，透明层输出。"
+      },
+      {
+        "id": "character-object-feeling-prop",
+        "source_profile": "character-object-feeling",
+        "role": "prop",
+        "kind": "vector_or_cutpaper",
+        "prompt": "用{任务物件}与角色的尺度、接触点和遮挡表现任务负担，保留物件本身可辨认的特征；不要增加不存在的事实。",
+        "variables": [
+          "任务物件"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "大小变化对应当前表达，不是随意把东西放大。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "任务物件": "打开的厚书"
+        },
+        "filled_prompt": "用打开的厚书与角色的尺度、接触点和遮挡表现任务负担，保留物件本身可辨认的特征；不要增加不存在的事实。"
+      },
+      {
+        "id": "character-object-feeling-weight",
+        "source_profile": "character-object-feeling",
+        "role": "weight",
+        "kind": "motion_staging",
+        "prompt": "为{受力关系}设计承重、失衡和恢复的可辨姿态，确认接触点与身体重心；比较关键状态后再做动作短样。",
+        "variables": [
+          "受力关系"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "动作支持同一句口播，不把医学参考当个人诊断。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "受力关系": "读者原本被整本书压得吃力，缩小到一段后恢复稳定"
+        },
+        "filled_prompt": "为读者原本被整本书压得吃力，缩小到一段后恢复稳定设计承重、失衡和恢复的可辨姿态，确认接触点与身体重心；比较关键状态后再做动作短样。"
+      }
+    ],
+    "source_phase_note": "实际 raw hero.png 已接收；只使用整张图，不清理、抠图、分层、重新着色、遮盖补救、重画或生成替代图片。非 raster 配方能执行的范围见 available_scope。",
+    "layout": {
+      "unit": "canvas-px",
+      "source_regions_unit": "normalized-raw-image-coordinate",
+      "policy": "图像完整等比包含；所有 raster 覆盖层用同一 source-to-canvas affine 变换。非 raster 几何为执行者补充。",
+      "elements": [
+        {
+          "id": "raw-character-book",
+          "kind": "raw-image",
+          "path": "assets/hero.png",
+          "bounds": [
+            160,
+            40,
+            960,
+            640
+          ],
+          "z": 1
+        },
+        {
+          "id": "whole-book-frame",
+          "kind": "procedural-svg-frame",
+          "source_region": [
+            0.125,
+            0.495,
+            0.815,
+            0.4
+          ],
+          "parent": "raw-character-book-coordinate-group",
+          "stroke_width": 3,
+          "z": 2
+        },
+        {
+          "id": "target-frame",
+          "kind": "procedural-svg-frame",
+          "source_region": [
+            0.64,
+            0.54,
+            0.16,
+            0.08
+          ],
+          "parent": "raw-character-book-coordinate-group",
+          "stroke_width": 4,
+          "z": 3
+        }
+      ]
+    },
+    "scenes": [
+      {
+        "id": "full-shot",
+        "start": 0,
+        "end": 6,
+        "dominant_motion": "同一整体到一小段的连续定位"
+      }
+    ],
+    "timeline": [
+      {
+        "start": 0,
+        "end": 0.6,
+        "target": "raw-character-book",
+        "action": "opacity 0 到 1"
+      },
+      {
+        "start": 0.8,
+        "end": 1.5,
+        "target": "whole-book-frame",
+        "action": "opacity 0 到 0.6，整体位置先成立"
+      },
+      {
+        "start": 1.8,
+        "end": 3.1,
+        "target": "target-frame",
+        "action": "strokeDashoffset 框出原图现成黄色小段，同时 whole-book-frame opacity 降到 0.15"
+      },
+      {
+        "start": 3.2,
+        "end": 4.3,
+        "target": "raw-character-book-coordinate-group",
+        "action": "scale 1 到 1.04，中心原点，全部原图保持可见"
+      },
+      {
+        "start": 4.3,
+        "end": 6,
+        "target": "all",
+        "action": "保持同一静态人物姿态与段落"
+      }
+    ],
+    "available_scope": "可观察粗形角色、书本关系和现成段落指示；weight 动作配方因原图无独立角色/物件及多姿态而未执行。",
+    "unmet_requirements": [
+      "角色与书本无法独立变化；不能建立书本压迫身体的承重、失衡、恢复连续姿态。",
+      "只有结果状态，不能把整图缩放称为任务卸重，也不能宣称完成关键状态比较。",
+      "生成结果的书、书签、黄色强调、裁切式上身与受光是模型添加；不重画或补充身体。",
+      "卡片强调接触与受力情境；原图仅上身结果姿态，无独立角色或书层，此核心动作仍受阻。"
+    ],
+    "style_card_application": {
+      "material": {
+        "provided": "粗形角色剪影、限制色、印刷颗粒与细线表情。",
+        "implementation": "原图深蓝、奶白与黄色构成限制色；粗形及细线表情、颗粒均沿用原图，不额外重画。"
+      },
+      "composition": {
+        "provided": "角色和任务物件通过尺度、距离及遮挡形成具体情境。",
+        "implementation": "保留原图角色与大书的尺度和遮挡，用定位框让整书到现成段落的指代明确。"
+      },
+      "typography": {
+        "provided": "情境与身体姿态承担感受，文字补充必要对象或命题。",
+        "implementation": "不额外用文字代替身体动作。"
+      },
+      "keywords": {
+        "provided": [
+          "角色剪影",
+          "限制色",
+          "物件尺度",
+          "细线表情",
+          "印刷颗粒"
+        ],
+        "implementation_note": "只迁移与当前阅读主题和现有资产相符的材料与关系，不复制卡片观察中的具体题材/造型。"
+      },
+      "motion": {
+        "provided": "已观察0:35和0:48的状态；角色受力及物件尺度变化是制作提案，连续动作尚未核验。",
+        "implementation": "仅指代范围变化与一次整图靠近；不把它等同于承重、失衡或恢复动作。"
+      },
+      "status": "first-probe-executed-not-reference-equivalent"
+    },
+    "material_system": {
+      "source": "existing-style-card plus executor numerical realization",
+      "implementation": "原图深蓝、奶白与黄色构成限制色；粗形及细线表情、颗粒均沿用原图，不额外重画。",
+      "procedural_pattern_rule": "仅非 raster 层可用重复 SVG pattern；固定点距与坐标，不用随机数，不覆盖或处理 raw 图。",
+      "parameters": {
+        "dot_radius_px": 0.55,
+        "dot_pitch_px": 8,
+        "dot_opacity": 0.06,
+        "contact_shadow_offset_px": [
+          2,
+          3
+        ],
+        "contact_shadow_opacity": 0.12,
+        "paper_edge_jitter_px": 2
+      },
+      "avoid": "不要通用 glow、粒子、光滑默认箭头或图表外观。"
+    },
+    "recipe_execution": [
+      {
+        "recipe_id": "character-object-feeling-silhouette",
+        "kind": "raster_generation",
+        "filled_prompt": "为读者面对厚书，试图挑出自己需要学的一小段设计原创粗形角色剪影，以少量细线刻画表情；限制色与颗粒按画面可读性选择，透明层输出。",
+        "status": "raster-generated-reviewed-partial",
+        "evidence_or_scope": "粗形角色与书合成，无法作为独立剪影层使用。",
+        "validation_status": "generation_tested_with_evidence",
+        "observed_result": "partial",
+        "pre_execution_status": "raw-generated-partial",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      },
+      {
+        "recipe_id": "character-object-feeling-prop",
+        "kind": "vector_or_cutpaper",
+        "filled_prompt": "用打开的厚书与角色的尺度、接触点和遮挡表现任务负担，保留物件本身可辨认的特征；不要增加不存在的事实。",
+        "status": "blocked-independent-prop",
+        "evidence_or_scope": "厚书是 raw 图的一部分，不能单独缩放、接触或遮挡编排。",
+        "validation_status": "not_executed_or_blocked",
+        "observed_result": "blocked",
+        "pre_execution_status": "blocked-independent-prop",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      },
+      {
+        "recipe_id": "character-object-feeling-weight",
+        "kind": "motion_staging",
+        "filled_prompt": "为读者原本被整本书压得吃力，缩小到一段后恢复稳定设计承重、失衡和恢复的可辨姿态，确认接触点与身体重心；比较关键状态后再做动作短样。",
+        "status": "blocked-weight-acting",
+        "evidence_or_scope": "无多姿态、下身支点或独立物件，不能执行承重/失衡/恢复。",
+        "validation_status": "not_executed_or_blocked",
+        "observed_result": "blocked",
+        "pre_execution_status": "blocked-weight-acting",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      }
+    ]
+  },
+  "extra_decisions": [
+    {
+      "area": "category_extension",
+      "decision": "使用 custom-style-probe；冻结配方本身未提供此 IR 分类。",
+      "provenance": "executor"
+    },
+    {
+      "area": "causal_metaphor",
+      "decision": "承重采用 input 已给的心理隐喻；不加入真实能力、健康诊断或学习进度事实。",
+      "provenance": "executor"
+    },
+    {
+      "area": "final-layout-and-motion",
+      "provenance": "executor",
+      "decision": "content.layout 与 content.timeline 的全部数值、几何、阶段、时长、光影实现和字形均由执行者补充，不能当作配方明确提供。"
+    },
+    {
+      "area": "final-palette",
+      "provenance": "executor",
+      "decision": "palette 为执行者选择的色值，最后一项是画布底色；原图不重新着色。"
+    },
+    {
+      "area": "system-font",
+      "provenance": "executor",
+      "decision": "使用已存在 Microsoft YaHei 系统字体，替换 Part1 的未验证 Noto Sans SC；最终渲染需核对中文字形。"
+    },
+    {
+      "area": "raw-constraints",
+      "provenance": "actual-generated-asset",
+      "decision": "可观察粗形角色、书本关系和现成段落指示；weight 动作配方因原图无独立角色/物件及多姿态而未执行。"
+    },
+    {
+      "area": "generation-background",
+      "provenance": "executor",
+      "decision": "四次 imagegen transparent_background=true 是技术调用选项；不能把该请求当作已经满足透明层。drawn 配方未明确透明，该选项为额外选择。"
+    },
+    {
+      "area": "catalog-reuse",
+      "provenance": "technical-skill-and-parent-authorized",
+      "decision": "只读技术检索后使用当前 GSAP 3.13.0 技术，不导入 registry 的默认外观。"
+    },
+    {
+      "area": "existing-style-card-guidance",
+      "provenance": "style-card-provided",
+      "decision": {
+        "material": "粗形角色剪影、限制色、印刷颗粒与细线表情。",
+        "composition": "角色和任务物件通过尺度、距离及遮挡形成具体情境。",
+        "typography": "情境与身体姿态承担感受，文字补充必要对象或命题。",
+        "keywords": [
+          "角色剪影",
+          "限制色",
+          "物件尺度",
+          "细线表情",
+          "印刷颗粒"
+        ]
+      },
+      "note": "这是既有输入提供的指导，不是执行者原创选择。"
+    },
+    {
+      "area": "style-card-realization",
+      "provenance": "executor",
+      "decision": {
+        "material": "原图深蓝、奶白与黄色构成限制色；粗形及细线表情、颗粒均沿用原图，不额外重画。",
+        "composition": "保留原图角色与大书的尺度和遮挡，用定位框让整书到现成段落的指代明确。",
+        "typography": "不额外用文字代替身体动作。",
+        "motion": "仅指代范围变化与一次整图靠近；不把它等同于承重、失衡或恢复动作。"
+      },
+      "note": "具体数字、轮廓、色值、影子、纸粒参数、摆位和时序是执行者补充。"
+    }
+  ],
+  "validation_plan": {
+    "status": "first-probe-reviewed-with-limitations",
+    "raster": [
+      {
+        "recipe_id": "character-object-feeling-silhouette",
+        "acceptance": "缩小后能辨姿态，细线不承担全部角色辨认。"
+      }
+    ],
+    "procedural": [
+      {
+        "recipe_id": "character-object-feeling-prop",
+        "acceptance": "大小变化对应当前表达，不是随意把东西放大。"
+      },
+      {
+        "recipe_id": "character-object-feeling-weight",
+        "acceptance": "动作支持同一句口播，不把医学参考当个人诊断。"
+      }
+    ],
+    "sample_checks": [
+      "核对 input 与 generation.json 的 filled_prompt 逐字一致及 raw hash 不变。",
+      "仅制作一次美术首版；看0.6/2.4/4.4/5.8秒关键帧及完整六秒动作，不以编译或导出替代观看。",
+      "逐条标明素材层、关系层和动作层是否完成；整图镜头动作不算角色姿态或独立物件动画。",
+      "只允许记录技术修复，不优化首版审美；不补图、抠图或重画来掩盖原配方素材不足。",
+      "组合样段的指导输入是既有风格卡+三条冻结配方；图片素材测试仍只来自各条 filled_prompt 原文。分别报告，不能称为仅素材配方的受控风格测试。"
+    ],
+    "technical": [
+      "1280×720，30fps，180 帧，六秒，无声。",
+      "像素资产生成后才确认边缘、裁切、实际尺寸和可分层程度；草案不声称已有透明层或合格素材。"
+    ],
+    "comparison_limit": "既有风格卡文字已揭示；未看目标原作图像、研究目录、旧片。组合样段不称为纯配方盲测，参考匹配结论需另行观看原作后的比较。"
+  },
+  "experimental_rule": "现有配方不改写；仅填变量。实现时自行添加的材料/造型/布局/时序逐项记录。禁止查看原片、图像、原研究描述或此前实验成片。只做一次美术首版；技术修复单独记录，不优化首版审美。",
+  "technical_environment": {
+    "source": "父代理提供的当前技术环境",
+    "hyperframes": "0.8.137",
+    "gsap": "3.13.0",
+    "policy": "沿用现有 public 仓库运行时，不升级或安装。"
+  },
+  "technical_fixes": [],
+  "test_layer": "existing-style-card-plus-recipes-motion-probe",
+  "asset_review": {
+    "reviewed_with": "view_image",
+    "view_scope": "只看本 case 当前 raw hero.png",
+    "raw_observation": "原图是一体的深蓝粗形上身角色、奶白面部和手、打开的厚书与黄色段落/书签。已出现挑起黄色段落的结果姿势，有透明空白，但不是角色剪影独立层；下半身、脚和身体重心支点不可见。",
+    "generation_metadata": {
+      "asset": "assets/hero.png",
+      "tool": "built-in imagegen",
+      "requested_transparent_background": true,
+      "prompt": "为读者面对厚书，试图挑出自己需要学的一小段设计原创粗形角色剪影，以少量细线刻画表情；限制色与颗粒按画面可读性选择，透明层输出。",
+      "mode": "RGBA",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "b36c1d7efb8bced581d1b5010de47f05ccdda94fca6b14ff9a7061af5b6785bb",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_fraction": 0.4815076192220052,
+      "source_note": "raw tool output; no crop, cutout, recolor or cleanup; one PNG returned, not separate object layers"
+    },
+    "observation_status": "raw-inspected-motion-not-rendered",
+    "unmet_requirements": [
+      "角色与书本无法独立变化；不能建立书本压迫身体的承重、失衡、恢复连续姿态。",
+      "只有结果状态，不能把整图缩放称为任务卸重，也不能宣称完成关键状态比较。",
+      "生成结果的书、书签、黄色强调、裁切式上身与受光是模型添加；不重画或补充身体。",
+      "卡片强调接触与受力情境；原图仅上身结果姿态，无独立角色或书层，此核心动作仍受阻。"
+    ]
+  },
+  "catalog_technical_audit": {
+    "queries": [
+      {
+        "query": "GSAP translate scale image camera zoom",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"GSAP translate scale image camera zoom\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "transitions-scale",
+          "cinematic-zoom",
+          "zoom-through-transition",
+          "parallax-zoom",
+          "camera-dolly-zoom",
+          "ui-focus-zoom",
+          "yt-camera-move",
+          "camera-rig-depth-stack",
+          "camera-scan-gate",
+          "frost-sequence-camera-orbit",
+          "particle-image-reveal",
+          "camera-shake"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "SVG stroke dashoffset path reveal",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"SVG stroke dashoffset path reveal\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "svg-stroke-trace",
+          "svg-mask-reveal",
+          "hw-path-text",
+          "svg-line-draw-loader",
+          "offset-path-traveler",
+          "ui-3d-reveal",
+          "arc-motion-path",
+          "lt-mask-reveal",
+          "whiteboard-ink",
+          "carousel-path-5",
+          "carousel-path-4",
+          "carousel-path-3"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "GSAP rotate translate vector shape groups",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"GSAP rotate translate vector shape groups\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "avatar-group-hover",
+          "vector-editor-rig",
+          "transitions-3d",
+          "success-check",
+          "offset-path-traveler",
+          "beat-timeline",
+          "stagger-lattice",
+          "shutter-slam",
+          "code-3d-extrude",
+          "arc-motion-path",
+          "wordmark-tiles",
+          "us-map"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "CSS opacity highlight rectangle",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"CSS opacity highlight rectangle\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "inline-highlight",
+          "yt-feather-highlight",
+          "caption-highlight",
+          "code-highlight",
+          "mk-callout-highlight",
+          "marker-highlight",
+          "shimmer-sweep",
+          "organic-light-leak-overlay",
+          "transitions-light",
+          "light-leak",
+          "soft-blur-in",
+          "caption-pill-karaoke"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "SVG pattern deterministic dots polygon uneven edges",
+        "cli_version": "0.8.137",
+        "tier": "words",
+        "candidate": "svg-stroke-trace",
+        "gap": "查询未给出同时满足纸片边缘和固定颗粒图案的专用能力；该几何由现有 SVG/CSS 技术实现。",
+        "external_preview_opened": false,
+        "installation": false
+      }
+    ],
+    "selected_capabilities": [
+      "existing GSAP transform/opacity",
+      "SVG strokeDashoffset primitive",
+      "existing SVG pattern geometry"
+    ],
+    "reuse_mode": "不下载、add 或引入默认美术模板；按父代理许可复用仓库现有 GSAP3.13.0 基础技术并定制输入关系。",
+    "scope": "只检索技术能力，未查看外部视觉作品、poster 或视频。"
+  },
+  "provenance": {
+    "input_provided": {
+      "file": "input.json",
+      "scope": [
+        "brief",
+        "output",
+        "全部 recipes 原文与 filled_prompt",
+        "experimental_rule"
+      ],
+      "unaltered": true,
+      "style_card": "existing-style-card.json 的材料、构图、字形职责和关键词；仅文字输入，未打开其中来源链接或图片。"
+    },
+    "actual_asset": {
+      "file": "assets/hero.png",
+      "record": "generation.json",
+      "scope": "原图像素和生成器自行添加的对象、文字、构图、光影；这些并非执行者可编辑的分层输入。"
+    },
+    "executor_provided": [
+      "content.layout",
+      "content.timeline",
+      "palette 数值",
+      "font 选择",
+      "额外程序化几何和镜头"
+    ],
+    "technical_provided": [
+      "HF0.8.137/GSAP3.13.0 确定性和单 paused timeline 合同"
+    ]
+  },
+  "builder_contract": {
+    "framework": "HyperFrames0.8.137",
+    "animation": "GSAP3.13.0",
+    "master_timeline": "exactly one gsap.timeline({paused:true}); register window.__timelines[case_id]; tl.seek(0); never play()",
+    "stage": "1280x720, fps30, duration6, one full-duration .clip with stable id",
+    "eases": [
+      "power2.inOut",
+      "power2.out",
+      "sine.inOut"
+    ],
+    "repeat": "none",
+    "determinism": "no timers, network, Math.random or Date.now",
+    "asset_policy": "source PNG byte-for-byte unchanged, full image contained in canvas through all transforms",
+    "export_audio": false,
+    "local_resources": {
+      "gsap": "assets/gsap.min.js",
+      "font": "assets/probe-msyh.ttc",
+      "font_use": "local @font-face, private render only, no public font redistribution"
+    }
+  },
+  "recipe_only_baseline": "recipe-only-plan.json",
+  "style_card_input": {
+    "file": "existing-style-card.json",
+    "origin": "既有公开库条目，是当前新增允许使用的既有输入；不是父代理临时强化或改写的配方。",
+    "card": {
+      "id": "character-object-feeling",
+      "family": "illustration",
+      "name": "角色剪影与物件尺度",
+      "reference_id": "IzFObkVRSV0",
+      "reference_identity": "TED-Ed 具体作品；与绘画式日常情境分开",
+      "source_url": "https://www.youtube.com/watch?v=IzFObkVRSV0",
+      "keywords": [
+        "角色剪影",
+        "限制色",
+        "物件尺度",
+        "细线表情",
+        "印刷颗粒"
+      ],
+      "reference_positions_seconds": [
+        48
+      ],
+      "observation": "0:35 以手和心脏聚焦身体感受；0:48 用蓝色人物、红色大铅笔与细线表情构成可辨认的情境，粗形与细线分工明确。",
+      "observation_limit": "只核查局部实际帧，未完成整片运动或听觉审查。这里研究表达与美术，不沿用参考中的医学内容，也不将惊恐发作等同于日常焦虑。",
+      "material": "粗形角色剪影、限制色、印刷颗粒与细线表情。",
+      "composition": "角色和任务物件通过尺度、距离及遮挡形成具体情境。",
+      "typography": "情境与身体姿态承担感受，文字补充必要对象或命题。",
+      "motion": "已观察0:35和0:48的状态；角色受力及物件尺度变化是制作提案，连续动作尚未核验。",
+      "fit": "压力、身体感受与任务负担的情境呈现；不迁移原作的医学主张。",
+      "failure": "只留下大色块，表情、接触点和角色与物件的关系不成立。",
+      "origin_type": "external_work",
+      "implementation_status": "not_produced_in_this_library"
+    }
+  },
+  "actual_review": {
+    "movie_sha256": "c052e98286f189e4af9906c35f3d6d09afc94a8a20e382df62549cabe7555017",
+    "source_sha256": "9ae6790d160757a1f2b131aab1877eff02dfd6943625ec93405fbe447265ff27",
+    "finding": {
+      "verdict": "限制色、粗形部分成立；尺度与受力叙事未完成",
+      "observed": "深蓝、奶油和黄色的角色书本合成图可辨认，局部段落被框选。角色更接近通用可爱插画，身体裁成上身，只有已经找到段落的结果姿态；无法让角色与书独立改变大小、接触或重心。",
+      "conclusion": "核心是角色与物件形成处境，而不是粗色块本身。本轮只有结果插图和指示框，不能把镜头靠近称作承重、失衡及恢复。",
+      "recipe_results": [
+        "partial",
+        "blocked",
+        "blocked"
+      ]
+    },
+    "own_observation": "六关键帧与导出视频15帧动作采样（0.0至5.6秒，间隔0.4秒）",
+    "reference_limit": "只比较既有参考静态状态与作者项目图；未审查原片完整运动或声音",
+    "stop_reason": "本任务检验原配方首版；保留失败与限制，不在本版本增强审美后倒算通过"
+  }
+}

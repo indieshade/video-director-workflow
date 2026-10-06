@@ -1,0 +1,68 @@
+{
+  "case_id": "character-object-feeling",
+  "brief": "用六秒无声横屏视频呈现：读者面对整本书，找到一小段需要学习的内容；重点是画面语言与动作，不复制参考的题材或造型。",
+  "output": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "duration": 6,
+    "audio": false
+  },
+  "recipes": [
+    {
+      "id": "character-object-feeling-silhouette",
+      "source_profile": "character-object-feeling",
+      "role": "silhouette",
+      "kind": "raster_generation",
+      "prompt": "为{任务处境}设计原创粗形角色剪影，以少量细线刻画表情；限制色与颗粒按画面可读性选择，透明层输出。",
+      "variables": [
+        "任务处境"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "缩小后能辨姿态，细线不承担全部角色辨认。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "任务处境": "读者面对厚书，试图挑出自己需要学的一小段"
+      },
+      "filled_prompt": "为读者面对厚书，试图挑出自己需要学的一小段设计原创粗形角色剪影，以少量细线刻画表情；限制色与颗粒按画面可读性选择，透明层输出。"
+    },
+    {
+      "id": "character-object-feeling-prop",
+      "source_profile": "character-object-feeling",
+      "role": "prop",
+      "kind": "vector_or_cutpaper",
+      "prompt": "用{任务物件}与角色的尺度、接触点和遮挡表现任务负担，保留物件本身可辨认的特征；不要增加不存在的事实。",
+      "variables": [
+        "任务物件"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "大小变化对应当前表达，不是随意把东西放大。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "任务物件": "打开的厚书"
+      },
+      "filled_prompt": "用打开的厚书与角色的尺度、接触点和遮挡表现任务负担，保留物件本身可辨认的特征；不要增加不存在的事实。"
+    },
+    {
+      "id": "character-object-feeling-weight",
+      "source_profile": "character-object-feeling",
+      "role": "weight",
+      "kind": "motion_staging",
+      "prompt": "为{受力关系}设计承重、失衡和恢复的可辨姿态，确认接触点与身体重心；比较关键状态后再做动作短样。",
+      "variables": [
+        "受力关系"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "动作支持同一句口播，不把医学参考当个人诊断。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "受力关系": "读者原本被整本书压得吃力，缩小到一段后恢复稳定"
+      },
+      "filled_prompt": "为读者原本被整本书压得吃力，缩小到一段后恢复稳定设计承重、失衡和恢复的可辨姿态，确认接触点与身体重心；比较关键状态后再做动作短样。"
+    }
+  ],
+  "experimental_rule": "现有配方不改写；仅填变量。实现时自行添加的材料/造型/布局/时序逐项记录。禁止查看原片、图像、原研究描述或此前实验成片。只做一次美术首版；技术修复单独记录，不优化首版审美。"
+}

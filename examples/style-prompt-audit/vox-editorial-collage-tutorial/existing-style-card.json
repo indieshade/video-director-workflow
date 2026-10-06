@@ -1,0 +1,32 @@
+{
+  "id": "vox-editorial-collage-tutorial",
+  "family": "vox",
+  "name": "编辑拼贴 · 第三方 Vox 教程",
+  "graphics": "本账号待落实的剪贴方向：箭头与 SVG 先设计轮廓，再统一纸边、笔触、色阶与印刷尺度；不能直接放入默认光滑矢量。",
+  "surface_language": "图片抠图与明暗处理、纸片裁切、克制的半调或套色；文字也通过字形和纸条／印刷标题参与材料统一。",
+  "temporal_texture": "用户选择的后续方向是类低频绘本／剪纸动作：有意姿态保持、分帧切换、纸片替换；不是由教程静帧证明的原片特征。",
+  "reference_id": "7wuYBfE131U",
+  "reference_identity": "MoSidd 第三方教程，非 Vox 原作",
+  "material": "黑白摄影剪贴、半调、平面符号与纸面网格。摄影指出对象，数字承担必要信息。",
+  "composition": "船只、海面、油桶和数据分层，画面中有明确主次，而非单个居中图标。",
+  "typography": "数据和必要命题独立成层；不由教程的大数字反推本片每句都要大标题。",
+  "motion": "建议按观察任务错峰进入，保留主体用于下一次关系变化；仅凭 0:22 静帧尚不能核验这种动作。",
+  "fit": "具体事件、物件与少量数据可视化；有摄影素材时更可行。",
+  "failure": "只抄纸纹与半调，失去摄影对象、层级和解释任务。",
+  "source_url": "https://www.youtube.com/watch?v=7wuYBfE131U",
+  "keywords": [
+    "照片剪贴",
+    "编辑式版面",
+    "半调印刷质感",
+    "分层场景",
+    "少量关键数据"
+  ],
+  "observation": "0:22 的成片示例将黑白半调船只剪贴、灰色纸感网格、海面和橙色油桶符号分层组合。关键价格占据独立区域，照片承担具体对象，图标与数字承担信息。",
+  "reference_positions_seconds": [
+    22
+  ],
+  "observation_limit": "这是用户原先提供的 Vox 风格制作教程中的示例，不能视为 Vox 官方作品。这里只核查局部实际帧；分层错峰、跨镜头对象连续性是本片待验证的编排选择，未由该静帧证明。教程的播放数据不代表 Vox 风格带来的流量。",
+  "origin_type": "third_party_tutorial",
+  "implementation_status": "adapted_sample_available",
+  "application_sample": "examples/collage-paper-study/README.md"
+}

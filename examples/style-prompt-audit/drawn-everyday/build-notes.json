@@ -1,0 +1,63 @@
+{
+  "case_id": "drawn-everyday",
+  "status": "built-not-rendered",
+  "implementation_pass": "one-art-first-pass",
+  "inputs_read": [
+    "input.json",
+    "existing-style-card.json",
+    "shot-plan.json",
+    "assets/index.md"
+  ],
+  "image_review": "view_image: only this case assets/hero.png; no reference, research or prior sample viewed",
+  "output": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "duration": 6,
+    "audio": false
+  },
+  "source_asset": {
+    "path": "assets/hero.png",
+    "sha256": "14224ef7c029c01df0f895cea6eece048ea9527ae5d68f15dcccef0bc0dd4408",
+    "policy": "byte-for-byte unchanged; full1312x1199 source in640x584.878049 contain box at[320,67.6]"
+  },
+  "plan_realization": [
+    "0-.6 raw-scene opacity; .6-2.2 hold; 2.2-3.3 selected frame stroke draw; 3.3-4.4 whole source-coordinate group center scale1->1.1; hold to6.",
+    "Frame source region [.665,.642,.145,.064] maps to [425.6,375.491707317,92.8,37.432195122] within source group and scales with it.",
+    "No new characters, symbols, typography, texture or environment; all existing embedded text and objects remain unchanged.",
+    "One full-duration clip; one paused GSAP3.13.0 timeline; root/key match; timeline seeks to0 and never plays."
+  ],
+  "executor_details": [
+    {
+      "area": "source-ratio",
+      "detail": "Rounded shot-plan height584.9 is implemented as exact640*1199/1312=584.87804878 to keep source-to-canvas mapping exactly equal on both axes; position unchanged."
+    },
+    {
+      "area": "frame-style",
+      "detail": "No-fill rectangle, palette #B9835B, stroke3px; getTotalLength measured once at setup; opacity gated at2.2; constant-speed draw."
+    },
+    {
+      "area": "eases",
+      "detail": "power2.out entrance, power2.inOut group zoom; stillness before/after matches final plan."
+    },
+    {
+      "area": "full-image-bounds",
+      "detail": "Scale1.1 final source rectangle [288,38.356097561,704,643.365853658] entirely within1280x720; no crop or image distortion."
+    }
+  ],
+  "limitations": [
+    "One intact illustration and one pose; no character/object independent layer, gesture, page turn or emotion transition.",
+    "No alpha0 background in original asset; existing baked environment and dense embedded text retained.",
+    "Whole-image zoom is a limited camera treatment and does not fulfill multiple-pose staging.",
+    "No render, screenshot or complete motion review performed by Builder; this file is not visual acceptance evidence."
+  ],
+  "technical_fixes": [],
+  "verification": {
+    "syntax": "passed: inline JavaScript vm.Script parse; JSON parse; unique DOM ids",
+    "resources": "passed: all local image/script/font paths and SVG use references resolve",
+    "asset_hash": "passed: post-build source SHA256 matches frozen plan",
+    "contract": "passed static checks: one paused timeline, matching root/key, 6s/30fps/1280x720, no audio or clocks",
+    "render": "not-run-per-builder-scope",
+    "visual_motion": "not-reviewed-by-builder"
+  }
+}

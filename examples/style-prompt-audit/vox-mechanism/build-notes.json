@@ -1,0 +1,84 @@
+{
+  "case_id": "vox-mechanism",
+  "status": "first-art-build-complete-technical-review-only",
+  "outputs": [
+    "index.html",
+    "build-notes.json"
+  ],
+  "implementation_contract": {
+    "duration_s": 6,
+    "fps": 30,
+    "width": 1280,
+    "height": 720,
+    "audio": false,
+    "timeline_count": 1,
+    "timeline_paused": true,
+    "timeline_registry": "window.__timelines['vox-mechanism']",
+    "initial_seek": 0
+  },
+  "inputs_read": [
+    "input.json",
+    "existing-style-card.json",
+    "shot-plan.json",
+    "assets/index.md"
+  ],
+  "reference_images_or_videos_opened": false,
+  "research_or_previous_films_opened": false,
+  "build_passes": 1,
+  "prescribed_plan_realized": [
+    "whole-book 总览固定为 100,190,520,330 的双页轮廓，8px 外轮廓与 2px 内线；12 条已掌握示意线位于指定区域。",
+    "target 定位框为 418,330,145,66；connector 从 563,363 经 678,363 到 714,285。",
+    "detail 的 430×235 终态位于 714,218；由目标 bounds 经连续 affine scale/translate 到该位置。",
+    "已掌握/待学习两标签使用计划字体大小与坐标；0–0.8、0.9–1.7、1.7–2.4、2.2–3.4、3.2–3.8 各阶段后保持至 6 秒。",
+    "palette 与背景点纹半径0.55、间距8、opacity0.06 完全取自计划。"
+  ],
+  "builder_extra_decisions": [
+    {
+      "area": "book-polygon-realization",
+      "decision": "在指定整体 bounds 内以折角双页多边形定义纸页；书脊位于 x350–363。多边形顶点是 Builder 补充，不是真实书页资料。"
+    },
+    {
+      "area": "known-lines",
+      "decision": "12 条示意线分成左右各6条；右侧避开 target 定位区。具体端点和长度由 Builder 补充。"
+    },
+    {
+      "area": "paragraph-identity",
+      "decision": "待学内容为三条水平示意行块，局部端点分别为(12,15)→(132,15)、(12,33)→(119,33)、(12,51)→(127,51)。source 与 detail 共用 SVG defs 中同一段落几何，并用 data-paragraph-id 记录语义身份，绝不是实际书中文字。"
+    },
+    {
+      "area": "detail-frame",
+      "decision": "detail 内嵌 SVG 将145×66几何非等比映射到计划430×235；这是计划给定 bounds 的仿射实现。局部框线1.7内部单位，背景取#F4F0E8。"
+    },
+    {
+      "area": "contact-shadow",
+      "decision": "使用计划规定的(2,3)偏移与opacity0.12，将书轮廓作为阴影，没有添加发光。"
+    },
+    {
+      "area": "text-baseline",
+      "decision": "标签基线分别采用 y598 和 y532，使字形落在规定 type bounds 中；以 ProbeYaHei 私有 font-face 引用已有 probe-msyh.ttc。"
+    },
+    {
+      "area": "stroke-reveal",
+      "decision": "定位矩形总周长422；对应线长度约201，作为 stroke-dasharray/offset 常量。仅使用现有GSAP技术。"
+    },
+    {
+      "area": "easing",
+      "decision": "书与标签opacity用power2.out，描线用sine.inOut，局部仿射用power2.inOut；取自builder_contract。不增加任何新动作。"
+    }
+  ],
+  "uncompleted_scope": [
+    "尚未渲染、观看实际关键帧或完整动作；不能用脚本检查判断审美或可回认性。",
+    "无真实书页、地图或记录资料；不能完成证据与真实记录交接。",
+    "所有行块与轮廓只表达已知主题关系；不能称为真实空间数据或学习比例。",
+    "没有角色姿态动画。中文字形与实际可读性仍待父代理关键帧检查。"
+  ],
+  "technical_fixes": [],
+  "verification": {
+    "inline_script_syntax": "passed-node-vm.Script",
+    "local_resources": "passed-existing-local-gsap-and-font",
+    "visual_and_motion": "not-performed",
+    "render": "not-performed-by-builder",
+    "unique_ids": "passed",
+    "single_timeline_static_check": "passed"
+  }
+}

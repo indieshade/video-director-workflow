@@ -1,0 +1,114 @@
+{
+  "finding": {
+    "verdict": "定位关系成立；风格与真实证据交接未验证",
+    "observed": "粗书本轮廓、细行块、整体定位框、连线与局部放大区有明确对应，两个中文标签可读。形体是执行者选择的通用书本示意，当前输入没有真实书页或记录，不能展示图解与证据的交接。",
+    "conclusion": "整体与局部回认方法有效，但本主题和输入只覆盖示意关系；不能用它证明参考中地图精度、真实记录与连续视觉组织都已实现。",
+    "recipe_results": [
+      "partial",
+      "partial",
+      "partial"
+    ]
+  },
+  "recipe_execution": [
+    {
+      "recipe_id": "vox-mechanism-map",
+      "kind": "procedural_geometry",
+      "filled_prompt": "根据读者从整本书定位到一个待学段落的关系制作有来源的地图或机制轮廓：粗轮廓定义主体，细线定义必要边界；各层可独立放大。未知数据留空，不为了构图虚构。",
+      "status": "implementation-executed-partial",
+      "evidence_or_scope": "只用冻结主题的示意关系，无地理或真实书页资料。",
+      "validation_status": "implementation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "planned-procedural",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    },
+    {
+      "recipe_id": "vox-mechanism-detail",
+      "kind": "scene_design",
+      "filled_prompt": "为待学习段落与整页书的位置关系设计整体定位框、局部放大区和对应真实资料的连续版面；视觉处理保持线重、比例及指代一致。",
+      "status": "implementation-executed-partial",
+      "evidence_or_scope": "同一段落 ID 的定位和局部放大；没有真实资料交接。",
+      "validation_status": "implementation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "planned-procedural",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    },
+    {
+      "recipe_id": "vox-mechanism-label",
+      "kind": "typography",
+      "filled_prompt": "为已掌握内容与待学习内容只保留必要标签，字号与层级对应主次；来源脚注和字幕分区，避免细字贴满图形。",
+      "status": "implementation-executed-partial",
+      "evidence_or_scope": "两项必要标签；中文最终帧检查待执行。",
+      "validation_status": "implementation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "planned-procedural",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    }
+  ],
+  "measurements": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "unknown",
+        "profile": "100",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1280,
+        "height": 720,
+        "coded_width": 1280,
+        "coded_height": 720,
+        "closed_captions": 0,
+        "film_grain": 0,
+        "has_b_frames": 0,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": 31,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "center",
+        "field_order": "progressive",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 92160,
+        "duration": "6.000000",
+        "bit_rate": "245005",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "180",
+        "extradata_size": 51
+      }
+    ],
+    "format": {
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "start_time": "0.000000",
+      "duration": "6.000000",
+      "size": "185668",
+      "bit_rate": "247557",
+      "probe_score": 100
+    },
+    "sha256": "83703fbca5047a024ace2a39aa842227b6a5e6fb6322900b4128e6b4743ce46c"
+  },
+  "hashes": {
+    "id": "vox-mechanism",
+    "video": "examples/style-prompt-audit/vox-mechanism/probe.mp4",
+    "poster": "examples/style-prompt-audit/vox-mechanism/poster.jpg",
+    "report": "examples/style-prompt-audit/vox-mechanism/report.json",
+    "delivery_sha256": "83703fbca5047a024ace2a39aa842227b6a5e6fb6322900b4128e6b4743ce46c",
+    "source_private_sha256": "04c0c7b23214e36f9e6ddb42637d92a39e6f4c058df2b8359b34db38b2315961",
+    "source_portable_sha256": "fc3e23d2f3b6a79bbfc701fd20418be04ace93b9f1dc1814a55d7240b616bb10"
+  },
+  "source_export_difference": "Only font loading changed from private bundled font to installed Microsoft YaHei with existing CSS fallbacks; this file is not the exact private render source. No standalone font redistributed."
+}

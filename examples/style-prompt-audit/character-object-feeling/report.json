@@ -1,0 +1,114 @@
+{
+  "finding": {
+    "verdict": "限制色、粗形部分成立；尺度与受力叙事未完成",
+    "observed": "深蓝、奶油和黄色的角色书本合成图可辨认，局部段落被框选。角色更接近通用可爱插画，身体裁成上身，只有已经找到段落的结果姿态；无法让角色与书独立改变大小、接触或重心。",
+    "conclusion": "核心是角色与物件形成处境，而不是粗色块本身。本轮只有结果插图和指示框，不能把镜头靠近称作承重、失衡及恢复。",
+    "recipe_results": [
+      "partial",
+      "blocked",
+      "blocked"
+    ]
+  },
+  "recipe_execution": [
+    {
+      "recipe_id": "character-object-feeling-silhouette",
+      "kind": "raster_generation",
+      "filled_prompt": "为读者面对厚书，试图挑出自己需要学的一小段设计原创粗形角色剪影，以少量细线刻画表情；限制色与颗粒按画面可读性选择，透明层输出。",
+      "status": "raster-generated-reviewed-partial",
+      "evidence_or_scope": "粗形角色与书合成，无法作为独立剪影层使用。",
+      "validation_status": "generation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "raw-generated-partial",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    },
+    {
+      "recipe_id": "character-object-feeling-prop",
+      "kind": "vector_or_cutpaper",
+      "filled_prompt": "用打开的厚书与角色的尺度、接触点和遮挡表现任务负担，保留物件本身可辨认的特征；不要增加不存在的事实。",
+      "status": "blocked-independent-prop",
+      "evidence_or_scope": "厚书是 raw 图的一部分，不能单独缩放、接触或遮挡编排。",
+      "validation_status": "not_executed_or_blocked",
+      "observed_result": "blocked",
+      "pre_execution_status": "blocked-independent-prop",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    },
+    {
+      "recipe_id": "character-object-feeling-weight",
+      "kind": "motion_staging",
+      "filled_prompt": "为读者原本被整本书压得吃力，缩小到一段后恢复稳定设计承重、失衡和恢复的可辨姿态，确认接触点与身体重心；比较关键状态后再做动作短样。",
+      "status": "blocked-weight-acting",
+      "evidence_or_scope": "无多姿态、下身支点或独立物件，不能执行承重/失衡/恢复。",
+      "validation_status": "not_executed_or_blocked",
+      "observed_result": "blocked",
+      "pre_execution_status": "blocked-weight-acting",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    }
+  ],
+  "measurements": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "unknown",
+        "profile": "100",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1280,
+        "height": 720,
+        "coded_width": 1280,
+        "coded_height": 720,
+        "closed_captions": 0,
+        "film_grain": 0,
+        "has_b_frames": 0,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": 31,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "center",
+        "field_order": "progressive",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 92160,
+        "duration": "6.000000",
+        "bit_rate": "1309913",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "180",
+        "extradata_size": 51
+      }
+    ],
+    "format": {
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "start_time": "0.000000",
+      "duration": "6.000000",
+      "size": "984349",
+      "bit_rate": "1312465",
+      "probe_score": 100
+    },
+    "sha256": "c052e98286f189e4af9906c35f3d6d09afc94a8a20e382df62549cabe7555017"
+  },
+  "hashes": {
+    "id": "character-object-feeling",
+    "video": "examples/style-prompt-audit/character-object-feeling/probe.mp4",
+    "poster": "examples/style-prompt-audit/character-object-feeling/poster.jpg",
+    "report": "examples/style-prompt-audit/character-object-feeling/report.json",
+    "delivery_sha256": "c052e98286f189e4af9906c35f3d6d09afc94a8a20e382df62549cabe7555017",
+    "source_private_sha256": "9ae6790d160757a1f2b131aab1877eff02dfd6943625ec93405fbe447265ff27",
+    "source_portable_sha256": "f37849e716c5509f8c28bbccde5757a3362c9b0df498b3ec0080b4d7171973af"
+  },
+  "source_export_difference": "Only font loading changed from private bundled font to installed Microsoft YaHei with existing CSS fallbacks; this file is not the exact private render source. No standalone font redistributed."
+}

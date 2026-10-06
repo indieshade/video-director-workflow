@@ -1,0 +1,771 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>现有风格提示词：实际生产检验</title>
+<style>body{margin:0;background:#eeeae1;color:#20211e;font:16px/1.75 system-ui,sans-serif}main{max-width:1320px;margin:auto;padding:42px 30px}h1{font-size:38px;line-height:1.3}h2{font-size:25px}h3{font-size:17px}.lead,.verdict{border-left:5px solid #b75737;background:#fff8e7;padding:16px 22px}section{padding:32px 0;border-top:1px solid #b6b6ac;margin-top:35px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:24px}video,.reference,.raw{width:100%;height:325px;object-fit:contain;background:#e2e0d7}.crop{position:relative;height:325px;overflow:hidden;background:#ccc}.crop img{position:absolute;width:146.75%;max-width:none;left:-1.86%;top:-13.8%}a{color:#76492b}.frames{display:flex;gap:8px;overflow:auto;padding:12px 0}.frames img{width:225px;display:block}details{background:#faf8f1;margin:10px 0;padding:12px 18px}summary{cursor:pointer}pre{white-space:pre-wrap;font:13px/1.7 ui-monospace,monospace}.nav{font-size:14px}@media(max-width:760px){.pair{grid-template-columns:1fr}main{padding:20px}}</style><main>
+<h1>现有提示词，能否产生参考的画面语言？</h1><div class="lead">本轮不能支持‘现有提示词已能产出参考视频’。七个方向均做出了六秒首版，但只迁移了部分材料或关系组织；没有一个可据此标为参考风格已验证。四条图像配方里，三条没有交付动作所需的分层或姿态；程序化方向仍需执行者补充大部分造型、版面与时序。</div>
+<p>同一阅读主题，七个方向各执行一次。四张图只用原素材配方＋透明背景选项生成；动作样段使用既有风格卡、三条原配方和技术 skills。执行者不知道目标图片；本页面的比较者已经看过参考。</p>
+<p><b>检验边界：</b>参考是既有局部画面或作者项目图；本次未审查原片完整运动与声音。六秒无声样段检验素材契约、视觉语言和可实现动作，不证明已能生成整片或稳定复现。没有为了过关补图或优化首版美术。</p>
+<p class="nav"><a href="#vox-editorial-collage-tutorial">编辑拼贴 · 第三方 Vox 教程</a> · <a href="#vox-mechanism">编辑式机制图解 · Vox 原作</a> · <a href="#vox-earworm-mixed-media">混合媒介拼贴 · Vox Earworm</a> · <a href="#drawn-everyday">绘画式日常情境</a> · <a href="#character-object-feeling">角色剪影与物件尺度</a> · <a href="#geometric-emotion">几何角色与心理隐喻</a> · <a href="#coherent-graphic-world">统一图形世界</a></p><section id="vox-editorial-collage-tutorial"><h2>编辑拼贴 · 第三方 Vox 教程</h2>
+    <div class="verdict">部分材料迁移；剪贴视觉系统尚未成立</div>
+    <div class="pair"><div><h3>参考来源</h3><p><a target="_blank" href="https://www.youtube.com/watch?v=7wuYBfE131U">原始来源</a>；外部截图仅在本地检查，未公开复制。位置见既有风格卡。</p></div><div><h3>现有卡片＋配方首版样段</h3><video controls loop preload="metadata" src="vox-editorial-collage-tutorial/probe.mp4" poster="vox-editorial-collage-tutorial/poster.jpg"></video><p>6 秒 · 无声 · 1280×720 / 30 fps</p></div></div>
+    <p>灰阶旧书在缩小后清楚，纸底网格、黄色指示和独立文字条能辨认。书页行块及L形指示均为执行者另画。实际书本更接近写实灰阶插图；半调颗粒、纸片边缘、短接触影子与字体印刷处理不够鲜明，主体长期居中。</p><p><b>判断：</b>素材配方提供了灰阶摄影方向，但现有卡＋三条配方没有让摄影、箭头、文本自然成为同一剪贴材料系统。读懂关系并不等于达到参考的版面与印刷质感。</p>
+    <details><summary>原始生成图片（未经修饰）</summary><img class="raw" src="vox-editorial-collage-tutorial/assets/hero.png"></details>
+    <details><summary>实际输入的三条配方</summary><pre>vox-editorial-collage-tutorial-object
+为打开的旧书制作灰阶摄影印刷裁片，保留辨认所需的细节；透明背景，轮廓完整。依据目标版面调整明暗和半调尺度；不生成数字或品牌标识。
+
+vox-editorial-collage-tutorial-arrow
+把从书页中指向选中的一段画成清楚的剪纸箭头，安排起点、转折和指向对象；纸边、短接触阴影和局部印刷缺墨与摄影裁片统一。
+
+vox-editorial-collage-tutorial-type
+将先学这一段编排成纸条或印刷标题，按语气选择中文宋体或黑体并验证授权与字形；字腔可读后再做裁边、轻微磨损和套色。</pre></details>
+    <details><summary>既有风格卡（原输入）</summary><pre>{
+  &quot;id&quot;: &quot;vox-editorial-collage-tutorial&quot;,
+  &quot;family&quot;: &quot;vox&quot;,
+  &quot;name&quot;: &quot;编辑拼贴 · 第三方 Vox 教程&quot;,
+  &quot;graphics&quot;: &quot;本账号待落实的剪贴方向：箭头与 SVG 先设计轮廓，再统一纸边、笔触、色阶与印刷尺度；不能直接放入默认光滑矢量。&quot;,
+  &quot;surface_language&quot;: &quot;图片抠图与明暗处理、纸片裁切、克制的半调或套色；文字也通过字形和纸条／印刷标题参与材料统一。&quot;,
+  &quot;temporal_texture&quot;: &quot;用户选择的后续方向是类低频绘本／剪纸动作：有意姿态保持、分帧切换、纸片替换；不是由教程静帧证明的原片特征。&quot;,
+  &quot;reference_id&quot;: &quot;7wuYBfE131U&quot;,
+  &quot;reference_identity&quot;: &quot;MoSidd 第三方教程，非 Vox 原作&quot;,
+  &quot;material&quot;: &quot;黑白摄影剪贴、半调、平面符号与纸面网格。摄影指出对象，数字承担必要信息。&quot;,
+  &quot;composition&quot;: &quot;船只、海面、油桶和数据分层，画面中有明确主次，而非单个居中图标。&quot;,
+  &quot;typography&quot;: &quot;数据和必要命题独立成层；不由教程的大数字反推本片每句都要大标题。&quot;,
+  &quot;motion&quot;: &quot;建议按观察任务错峰进入，保留主体用于下一次关系变化；仅凭 0:22 静帧尚不能核验这种动作。&quot;,
+  &quot;fit&quot;: &quot;具体事件、物件与少量数据可视化；有摄影素材时更可行。&quot;,
+  &quot;failure&quot;: &quot;只抄纸纹与半调，失去摄影对象、层级和解释任务。&quot;,
+  &quot;source_url&quot;: &quot;https://www.youtube.com/watch?v=7wuYBfE131U&quot;,
+  &quot;keywords&quot;: [
+    &quot;照片剪贴&quot;,
+    &quot;编辑式版面&quot;,
+    &quot;半调印刷质感&quot;,
+    &quot;分层场景&quot;,
+    &quot;少量关键数据&quot;
+  ],
+  &quot;observation&quot;: &quot;0:22 的成片示例将黑白半调船只剪贴、灰色纸感网格、海面和橙色油桶符号分层组合。关键价格占据独立区域，照片承担具体对象，图标与数字承担信息。&quot;,
+  &quot;reference_positions_seconds&quot;: [
+    22
+  ],
+  &quot;observation_limit&quot;: &quot;这是用户原先提供的 Vox 风格制作教程中的示例，不能视为 Vox 官方作品。这里只核查局部实际帧；分层错峰、跨镜头对象连续性是本片待验证的编排选择，未由该静帧证明。教程的播放数据不代表 Vox 风格带来的流量。&quot;,
+  &quot;origin_type&quot;: &quot;third_party_tutorial&quot;,
+  &quot;implementation_status&quot;: &quot;adapted_sample_available&quot;,
+  &quot;application_sample&quot;: &quot;examples/collage-paper-study/README.md&quot;
+}</pre></details>
+    <details><summary>制作时额外补充的设计决策</summary><pre>[
+  {
+    &quot;area&quot;: &quot;category_extension&quot;,
+    &quot;decision&quot;: &quot;使用 custom-style-probe；冻结配方本身未提供此 IR 分类。&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;
+  },
+  {
+    &quot;area&quot;: &quot;final-layout-and-motion&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;content.layout 与 content.timeline 的全部数值、几何、阶段、时长、光影实现和字形均由执行者补充，不能当作配方明确提供。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;final-palette&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;palette 为执行者选择的色值，最后一项是画布底色；原图不重新着色。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;system-font&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;使用已存在 Microsoft YaHei 系统字体，替换 Part1 的未验证 Noto Sans SC；最终渲染需核对中文字形。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;raw-constraints&quot;,
+    &quot;provenance&quot;: &quot;actual-generated-asset&quot;,
+    &quot;decision&quot;: &quot;可验证摄影书本裁片、程序化剪纸指向和纸条文字组合；不验证翻页或真实书页文本定位。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;generation-background&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;四次 imagegen transparent_background=true 是技术调用选项；不能把该请求当作已经满足透明层。drawn 配方未明确透明，该选项为额外选择。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;catalog-reuse&quot;,
+    &quot;provenance&quot;: &quot;technical-skill-and-parent-authorized&quot;,
+    &quot;decision&quot;: &quot;只读技术检索后使用当前 GSAP 3.13.0 技术，不导入 registry 的默认外观。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;existing-style-card-guidance&quot;,
+    &quot;provenance&quot;: &quot;style-card-provided&quot;,
+    &quot;decision&quot;: {
+      &quot;material&quot;: &quot;黑白摄影剪贴、半调、平面符号与纸面网格。摄影指出对象，数字承担必要信息。&quot;,
+      &quot;composition&quot;: &quot;船只、海面、油桶和数据分层，画面中有明确主次，而非单个居中图标。&quot;,
+      &quot;typography&quot;: &quot;数据和必要命题独立成层；不由教程的大数字反推本片每句都要大标题。&quot;,
+      &quot;keywords&quot;: [
+        &quot;照片剪贴&quot;,
+        &quot;编辑式版面&quot;,
+        &quot;半调印刷质感&quot;,
+        &quot;分层场景&quot;,
+        &quot;少量关键数据&quot;
+      ]
+    },
+    &quot;note&quot;: &quot;这是既有输入提供的指导，不是执行者原创选择。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;style-card-realization&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: {
+      &quot;material&quot;: &quot;程序化纸面细网格；箭头用不规则纸片轮廓和低密度印刷缺墨点，纸条使用同一纸色与短接触影子；原始书 PNG 不加滤镜。&quot;,
+      &quot;composition&quot;: &quot;摄影书本为主形，箭头与命题分层；不复制卡片的船只、油桶或数字题材。&quot;,
+      &quot;typography&quot;: &quot;只出现「先学这一段」纸条，不增加数据大标题。&quot;,
+      &quot;motion&quot;: &quot;原图保持；剪纸箭头三段错峰出现、纸条最后落定。类低频纸片切换属于卡中用户试验方向，不是原作已证实时序。&quot;
+    },
+    &quot;note&quot;: &quot;具体数字、轮廓、色值、影子、纸粒参数、摆位和时序是执行者补充。&quot;
+  }
+]</pre></details>
+    <details><summary>未覆盖范围与阻断条件</summary><ul><li>原图没有真实书页文本；程序化段落是额外示意，不能称为真实文字选择。</li><li>仅静态原图检查，片内缩小后的纹理和软边合成仍待样段查看。</li><li>原图半调尺度无法重新处理；保留已生成灰阶纸纹，不能宣称满足卡片的所有印刷材料要求。</li></ul></details></section><section id="vox-mechanism"><h2>编辑式机制图解 · Vox 原作</h2>
+    <div class="verdict">定位关系成立；风格与真实证据交接未验证</div>
+    <div class="pair"><div><h3>参考来源</h3><p><a target="_blank" href="https://www.youtube.com/watch?v=kIID5FDi2JQ">原始来源</a>；外部截图仅在本地检查，未公开复制。位置见既有风格卡。</p></div><div><h3>现有卡片＋配方首版样段</h3><video controls loop preload="metadata" src="vox-mechanism/probe.mp4" poster="vox-mechanism/poster.jpg"></video><p>6 秒 · 无声 · 1280×720 / 30 fps</p></div></div>
+    <p>粗书本轮廓、细行块、整体定位框、连线与局部放大区有明确对应，两个中文标签可读。形体是执行者选择的通用书本示意，当前输入没有真实书页或记录，不能展示图解与证据的交接。</p><p><b>判断：</b>整体与局部回认方法有效，但本主题和输入只覆盖示意关系；不能用它证明参考中地图精度、真实记录与连续视觉组织都已实现。</p>
+
+    <details><summary>实际输入的三条配方</summary><pre>vox-mechanism-map
+根据读者从整本书定位到一个待学段落的关系制作有来源的地图或机制轮廓：粗轮廓定义主体，细线定义必要边界；各层可独立放大。未知数据留空，不为了构图虚构。
+
+vox-mechanism-detail
+为待学习段落与整页书的位置关系设计整体定位框、局部放大区和对应真实资料的连续版面；视觉处理保持线重、比例及指代一致。
+
+vox-mechanism-label
+为已掌握内容与待学习内容只保留必要标签，字号与层级对应主次；来源脚注和字幕分区，避免细字贴满图形。</pre></details>
+    <details><summary>既有风格卡（原输入）</summary><pre>{
+  &quot;id&quot;: &quot;vox-mechanism&quot;,
+  &quot;family&quot;: &quot;vox&quot;,
+  &quot;name&quot;: &quot;编辑式机制图解 · Vox 原作&quot;,
+  &quot;reference_id&quot;: &quot;kIID5FDi2JQ&quot;,
+  &quot;reference_identity&quot;: &quot;Vox 原作；局部片内状态&quot;,
+  &quot;material&quot;: &quot;地图轮廓、细边界与真实地图界面；精度和可辨认性优先。&quot;,
+  &quot;composition&quot;: &quot;大尺度关系与局部细节切换；粗轮廓承担主形，细线承担内部信息。&quot;,
+  &quot;typography&quot;: &quot;标签负责对象指代和必要区别，字幕负责语言跟随；不能让细字与图形争夺观察。&quot;,
+  &quot;motion&quot;: &quot;已有 1:35、1:38、1:43 状态观察；本片可试对象放大与记录承接，尚无完整连续动作审查。&quot;,
+  &quot;fit&quot;: &quot;尺度、比较与机制关系明确的知识解释。&quot;,
+  &quot;failure&quot;: &quot;借来地图外观当装饰，或把一次信息比较铺成全屏关系网。&quot;,
+  &quot;source_url&quot;: &quot;https://www.youtube.com/watch?v=kIID5FDi2JQ&quot;,
+  &quot;keywords&quot;: [
+    &quot;黑白主体&quot;,
+    &quot;精确细线&quot;,
+    &quot;纸面纹理&quot;,
+    &quot;证据与图解交接&quot;
+  ],
+  &quot;observation&quot;: &quot;已核查 1:35 的地图图解、1:38 的局部放大和 1:43 的真实地图界面：粗轮廓承担主形，细边界承担细节，图解与真实记录解释同一对象。&quot;,
+  &quot;reference_positions_seconds&quot;: [
+    98
+  ],
+  &quot;observation_limit&quot;: &quot;这三个局部状态支持视觉组织的观察；未完成整片运动或听觉审查。地图题材与本片不同，不复制地图造型，也不把该作品代表整个 Vox。&quot;,
+  &quot;origin_type&quot;: &quot;external_work&quot;,
+  &quot;implementation_status&quot;: &quot;not_produced_in_this_library&quot;
+}</pre></details>
+    <details><summary>制作时额外补充的设计决策</summary><pre>[
+  {
+    &quot;area&quot;: &quot;category_extension&quot;,
+    &quot;decision&quot;: &quot;使用 custom-style-probe；冻结配方本身未提供此 IR 分类。&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;
+  },
+  {
+    &quot;area&quot;: &quot;source_limitation&quot;,
+    &quot;decision&quot;: &quot;唯一事实来源是 input 的主题关系；书页采用注明的示意布局，不虚构真实章节、页码、学习比例或地理数据。&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;
+  },
+  {
+    &quot;area&quot;: &quot;final-layout-and-motion&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;content.layout 与 content.timeline 的全部数值、几何、阶段、时长、光影实现和字形均由执行者补充，不能当作配方明确提供。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;final-palette&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;palette 为执行者选择的色值，最后一项是画布底色；原图不重新着色。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;system-font&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;使用已存在 Microsoft YaHei 系统字体，替换 Part1 的未验证 Noto Sans SC；最终渲染需核对中文字形。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;raw-constraints&quot;,
+    &quot;provenance&quot;: &quot;actual-generated-asset&quot;,
+    &quot;decision&quot;: &quot;完整执行程序化机制轮廓、整体定位和局部放大；事实范围限于冻结 brief 的已知关系。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;generation-background&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;四次 imagegen transparent_background=true 是技术调用选项；不能把该请求当作已经满足透明层。drawn 配方未明确透明，该选项为额外选择。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;catalog-reuse&quot;,
+    &quot;provenance&quot;: &quot;technical-skill-and-parent-authorized&quot;,
+    &quot;decision&quot;: &quot;只读技术检索后使用当前 GSAP 3.13.0 技术，不导入 registry 的默认外观。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;existing-style-card-guidance&quot;,
+    &quot;provenance&quot;: &quot;style-card-provided&quot;,
+    &quot;decision&quot;: {
+      &quot;material&quot;: &quot;地图轮廓、细边界与真实地图界面；精度和可辨认性优先。&quot;,
+      &quot;composition&quot;: &quot;大尺度关系与局部细节切换；粗轮廓承担主形，细线承担内部信息。&quot;,
+      &quot;typography&quot;: &quot;标签负责对象指代和必要区别，字幕负责语言跟随；不能让细字与图形争夺观察。&quot;,
+      &quot;keywords&quot;: [
+        &quot;黑白主体&quot;,
+        &quot;精确细线&quot;,
+        &quot;纸面纹理&quot;,
+        &quot;证据与图解交接&quot;
+      ]
+    },
+    &quot;note&quot;: &quot;这是既有输入提供的指导，不是执行者原创选择。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;style-card-realization&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: {
+      &quot;material&quot;: &quot;黑白主体与灰阶细线，细密低对比纸面点纹仅在背景；8px 主轮廓、2px 必要内线。&quot;,
+      &quot;composition&quot;: &quot;整体和局部同时回认，单一对应连线；无地理外观或全屏网状装饰。&quot;,
+      &quot;typography&quot;: &quot;仅已掌握/待学习两标签，无口播字幕。&quot;,
+      &quot;motion&quot;: &quot;同一段落 affine 放大并连续对应整体定位框。&quot;
+    },
+    &quot;note&quot;: &quot;具体数字、轮廓、色值、影子、纸粒参数、摆位和时序是执行者补充。&quot;
+  }
+]</pre></details>
+    <details><summary>未覆盖范围与阻断条件</summary><ul><li>没有真实资料或地理数据；此处只能验证主题给出的示意机制关系。</li><li>几何、行数与位置均为额外实现选择，不可当作真实书页结构或学习比例。</li><li>没有真实记录或地图界面输入，不能完成卡片的证据与真实记录交接；只验证示意图解的尺度承接。</li></ul></details></section><section id="vox-earworm-mixed-media"><h2>混合媒介拼贴 · Vox Earworm</h2>
+    <div class="verdict">灰阶器物＋彩片有效；空间分层与器物动作受阻</div>
+    <div class="pair"><div><h3>参考来源</h3><p><a target="_blank" href="https://podenco.tv/vox-earwormdub-music/">原始来源</a>；外部截图仅在本地检查，未公开复制。位置见既有风格卡。</p></div><div><h3>现有卡片＋配方首版样段</h3><video controls loop preload="metadata" src="vox-earworm-mixed-media/probe.mp4" poster="vox-earworm-mixed-media/poster.jpg"></video><p>6 秒 · 无声 · 1280×720 / 30 fps</p></div></div>
+    <p>灰阶书桌与黄、珊瑚色片产生前后遮挡；能认出书、灯和铅笔。原图把整个桌面焊成一层，原有影子也焊在里面；色片只能放在整图前后，无法进入器物之间。后续只有整图靠近和段落框。</p><p><b>判断：</b>这是最接近材料搭配的一案，但不足以实现参考项目的逐件拼贴空间。‘分别输出透明层’不能靠一句话保证，必须落实为实际多文件资产交付。</p>
+    <details><summary>原始生成图片（未经修饰）</summary><img class="raw" src="vox-earworm-mixed-media/assets/hero.png"></details>
+    <details><summary>实际输入的三条配方</summary><pre>vox-earworm-mixed-media-cutout
+制作关于阅读桌面的旧书、铅笔与台灯的灰阶器物摄影裁片，保留具体材质与可辨轮廓；人物与器物分别输出透明层，不生成文字、logo或原作角色。
+
+vox-earworm-mixed-media-color-shape
+用一本打开的书周围的少量彩色形片建立不对称拼贴构图；颜色根据当前主题选择，形片与摄影裁片产生明确遮挡。
+
+vox-earworm-mixed-media-space
+为书、铅笔、台灯安排接触点、前后遮挡及一致方向的地面影子；分层可用于后续动画，先验证静态空间。</pre></details>
+    <details><summary>既有风格卡（原输入）</summary><pre>{
+  &quot;id&quot;: &quot;vox-earworm-mixed-media&quot;,
+  &quot;family&quot;: &quot;vox&quot;,
+  &quot;name&quot;: &quot;混合媒介拼贴 · Vox Earworm&quot;,
+  &quot;graphics&quot;: &quot;已观察灰阶器物与黄色色形组合；本账号的箭头和文字应作为同一拼贴材料系统设计，后者属于待制作方案。&quot;,
+  &quot;surface_language&quot;: &quot;摄影裁片与彩色局部形成材料对比，遮挡和方向性阴影组织空间；字形处理本轮尚未深入核查。&quot;,
+  &quot;temporal_texture&quot;: &quot;只核查项目图。类低频绘本的姿态切换是用户要求的本账号试验方向，不能归为已观察的 Earworm 时序。&quot;,
+  &quot;reference_identity&quot;: &quot;参与作者 Antoni Sendra 的项目展示图；不是本轮截取的片内时间帧&quot;,
+  &quot;source_url&quot;: &quot;https://podenco.tv/vox-earwormdub-music/&quot;,
+  &quot;image_kind&quot;: &quot;作者项目页语境截图；包含静态作品图及播放器封面，未播放视频&quot;,
+  &quot;keywords&quot;: [
+    &quot;灰阶摄影&quot;,
+    &quot;彩色几何&quot;,
+    &quot;不对称拼贴&quot;,
+    &quot;器物场景&quot;,
+    &quot;方向性影子&quot;
+  ],
+  &quot;observation&quot;: &quot;项目图以音箱和话筒建立具体场景，灰阶器物与黄色边缘、珊瑚底色组合；下方另有蓝色场景。作者署名和项目身份同页可见。&quot;,
+  &quot;material&quot;: &quot;摄影人物与音箱等器物、局部几何色形；材料变化保留对象可辨认性。&quot;,
+  &quot;composition&quot;: &quot;器物堆叠构成主形；前后遮挡、话筒的位置和地面方向性影子建立空间。&quot;,
+  &quot;typography&quot;: &quot;本轮未深入核查文字设计，不预设标题字体或文字动画。&quot;,
+  &quot;motion&quot;: &quot;作者说明使用拼贴和角色动画；本轮只看项目图，动作节奏待连续观看。&quot;,
+  &quot;fit&quot;: &quot;对象与文化情境具有视觉材料的叙事；可借材料关系，不能凭空为当前口播增加音乐史内容。&quot;,
+  &quot;failure&quot;: &quot;只加黑白滤镜和荧光描边，没有对象关系与具体情境；把封面当动作证据。&quot;,
+  &quot;origin_type&quot;: &quot;participating_author_project&quot;,
+  &quot;implementation_status&quot;: &quot;not_produced_in_this_library&quot;,
+  &quot;reference_image_url&quot;: &quot;https://podenco.tv/wp-content/uploads/2022/04/vox1.jpg&quot;
+}</pre></details>
+    <details><summary>制作时额外补充的设计决策</summary><pre>[
+  {
+    &quot;area&quot;: &quot;category_extension&quot;,
+    &quot;decision&quot;: &quot;使用 custom-style-probe；冻结配方本身未提供此 IR 分类。&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;
+  },
+  {
+    &quot;area&quot;: &quot;final-layout-and-motion&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;content.layout 与 content.timeline 的全部数值、几何、阶段、时长、光影实现和字形均由执行者补充，不能当作配方明确提供。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;final-palette&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;palette 为执行者选择的色值，最后一项是画布底色；原图不重新着色。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;system-font&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;使用已存在 Microsoft YaHei 系统字体，替换 Part1 的未验证 Noto Sans SC；最终渲染需核对中文字形。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;raw-constraints&quot;,
+    &quot;provenance&quot;: &quot;actual-generated-asset&quot;,
+    &quot;decision&quot;: &quot;可执行灰阶复合器物与彩片组合及段落指示；不能验证器物分层或独立空间动作。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;generation-background&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;四次 imagegen transparent_background=true 是技术调用选项；不能把该请求当作已经满足透明层。drawn 配方未明确透明，该选项为额外选择。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;catalog-reuse&quot;,
+    &quot;provenance&quot;: &quot;technical-skill-and-parent-authorized&quot;,
+    &quot;decision&quot;: &quot;只读技术检索后使用当前 GSAP 3.13.0 技术，不导入 registry 的默认外观。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;existing-style-card-guidance&quot;,
+    &quot;provenance&quot;: &quot;style-card-provided&quot;,
+    &quot;decision&quot;: {
+      &quot;material&quot;: &quot;摄影人物与音箱等器物、局部几何色形；材料变化保留对象可辨认性。&quot;,
+      &quot;composition&quot;: &quot;器物堆叠构成主形；前后遮挡、话筒的位置和地面方向性影子建立空间。&quot;,
+      &quot;typography&quot;: &quot;本轮未深入核查文字设计，不预设标题字体或文字动画。&quot;,
+      &quot;keywords&quot;: [
+        &quot;灰阶摄影&quot;,
+        &quot;彩色几何&quot;,
+        &quot;不对称拼贴&quot;,
+        &quot;器物场景&quot;,
+        &quot;方向性影子&quot;
+      ]
+    },
+    &quot;note&quot;: &quot;这是既有输入提供的指导，不是执行者原创选择。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;style-card-realization&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: {
+      &quot;material&quot;: &quot;原始灰阶桌面图保持；彩片改为黄与珊瑚两色的纸形轮廓；不重新着色器物。&quot;,
+      &quot;composition&quot;: &quot;利用原图已有不对称书堆、灯与打开书的组合，后方黄形片和前缘珊瑚形片与整张图形成遮挡。&quot;,
+      &quot;typography&quot;: &quot;不添加标题或文字动画；卡内文字设计未经深入核查。&quot;,
+      &quot;motion&quot;: &quot;彩片错峰一次出现，整体仅一次有限缩放，保留原图烘焙光影；不把此节奏说成参考已观察动作。&quot;
+    },
+    &quot;note&quot;: &quot;具体数字、轮廓、色值、影子、纸粒参数、摆位和时序是执行者补充。&quot;
+  }
+]</pre></details>
+    <details><summary>未覆盖范围与阻断条件</summary><ul><li>配方要求人物和器物分别输出透明层；实际只给一张复合器物 PNG，独立层未满足。</li><li>不能逐件控制遮挡、接触影子或移动铅笔；程序化彩片只是与整图产生遮挡。</li><li>原图额外出现书堆及笔筒，是生成结果，不能说成冻结配方逐项指定。</li><li>独立层缺失，卡片要求的逐器物空间与角色动画不能完成。</li><li>彩片能与整图遮挡，但不能穿插到原图内部的书、铅笔或灯之间。</li></ul></details></section><section id="drawn-everyday"><h2>绘画式日常情境</h2>
+    <div class="verdict">画风偏离；完整插画代替了可动画素材</div>
+    <div class="pair"><div><h3>参考来源</h3><p><a target="_blank" href="https://www.youtube.com/watch?v=N2uQWfV6Jr4">原始来源</a>；外部截图仅在本地检查，未公开复制。位置见既有风格卡。</p></div><div><h3>现有卡片＋配方首版样段</h3><video controls loop preload="metadata" src="drawn-everyday/probe.mp4" poster="drawn-everyday/poster.jpg"></video><p>6 秒 · 无声 · 1280×720 / 30 fps</p></div></div>
+    <p>生成结果是暖色、细腻、带许多额外文字的完整阅读插画；与参考的简化造型、鲜明叠色和线条语言差异明显。人物、道具与环境没有独立层，也没有起始/转折/结果姿态；样段只是整图轻微靠近与局部指示。</p><p><b>判断：</b>图片本身可用作另一种绘本风格，但没有完成这条参考方向的素材和动作契约。现有‘手绘、纸感、排线’描述太宽，不能稳定限定目标造型语言。</p>
+    <details><summary>原始生成图片（未经修饰）</summary><img class="raw" src="drawn-everyday/assets/hero.png"></details>
+    <details><summary>实际输入的三条配方</summary><pre>drawn-everyday-person
+绘制处于一个读者面对打开的书，正在找出还没掌握的段落的原创人物，使用有粗细变化的手绘轮廓、克制排线和纸感叠色；完整身体与道具分层，不照搬参考人物。
+
+drawn-everyday-environment
+为读者翻阅书页，找到一小段接下来要学的内容设计纸感绘画环境，选择少量有关系的对象，用局部排线与底色区分空间；留出人物姿态变化所需的区域。
+
+drawn-everyday-poses
+为从面对整本书无从下手到发现只需先学一小段提出起始、转折、结果几种手绘姿态，保持轮廓与对象身份；先展示姿态比较，再选择过渡方式。</pre></details>
+    <details><summary>既有风格卡（原输入）</summary><pre>{
+  &quot;id&quot;: &quot;drawn-everyday&quot;,
+  &quot;family&quot;: &quot;illustration&quot;,
+  &quot;name&quot;: &quot;绘画式日常情境&quot;,
+  &quot;reference_id&quot;: &quot;N2uQWfV6Jr4&quot;,
+  &quot;reference_identity&quot;: &quot;TED-Ed 具体作品；不是其全频道统一规范&quot;,
+  &quot;material&quot;: &quot;有粗细变化的手绘轮廓、排线、叠色与纸感底色。&quot;,
+  &quot;composition&quot;: &quot;人物表情和处境为中心，辅助符号受主角关系支配。&quot;,
+  &quot;typography&quot;: &quot;情绪由人物与环境承担；本片不自动沿用参考中的散落字母。&quot;,
+  &quot;motion&quot;: &quot;已观察 0:45 与 1:04 状态；人物姿态与景别变化可作本片提案，尚未核验完整动作。&quot;,
+  &quot;fit&quot;: &quot;个人经历、学习状态和亲切的解释语气。&quot;,
+  &quot;failure&quot;: &quot;把完整插画反复缩放，缺少口播语义引起的姿态或场景变化。&quot;,
+  &quot;source_url&quot;: &quot;https://www.youtube.com/watch?v=N2uQWfV6Jr4&quot;,
+  &quot;keywords&quot;: [
+    &quot;手绘轮廓&quot;,
+    &quot;纸感底色&quot;,
+    &quot;叠色与排线&quot;,
+    &quot;人物表情&quot;,
+    &quot;局部具象符号&quot;
+  ],
+  &quot;observation&quot;: &quot;0:45 的人物被零散符号环绕，1:04 聚焦表情。粗细不完全均匀的轮廓、局部排线和底色共同提供绘画感；它与另一条 TED-Ed 参考的粗形剪影明显不同。&quot;,
+  &quot;reference_positions_seconds&quot;: [
+    64
+  ],
+  &quot;observation_limit&quot;: &quot;本视频发布较近且累计播放突出，但题材、标题、分发与风格无法从公开数据分离。只核查局部帧，未完成整片运动或听觉审查；参考中的散落字母也不自动适合本片。&quot;,
+  &quot;origin_type&quot;: &quot;external_work&quot;,
+  &quot;implementation_status&quot;: &quot;not_produced_in_this_library&quot;
+}</pre></details>
+    <details><summary>制作时额外补充的设计决策</summary><pre>[
+  {
+    &quot;area&quot;: &quot;category_extension&quot;,
+    &quot;decision&quot;: &quot;使用 custom-style-probe；冻结配方本身未提供此 IR 分类。&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;
+  },
+  {
+    &quot;area&quot;: &quot;final-layout-and-motion&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;content.layout 与 content.timeline 的全部数值、几何、阶段、时长、光影实现和字形均由执行者补充，不能当作配方明确提供。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;final-palette&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;palette 为执行者选择的色值，最后一项是画布底色；原图不重新着色。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;system-font&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;使用已存在 Microsoft YaHei 系统字体，替换 Part1 的未验证 Noto Sans SC；最终渲染需核对中文字形。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;raw-constraints&quot;,
+    &quot;provenance&quot;: &quot;actual-generated-asset&quot;,
+    &quot;decision&quot;: &quot;仅观察原始插画的日常阅读情境、整图层的有限镜头动作和局部指示；分层、翻阅与姿态转变不具备输入条件。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;generation-background&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;四次 imagegen transparent_background=true 是技术调用选项；不能把该请求当作已经满足透明层。drawn 配方未明确透明，该选项为额外选择。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;catalog-reuse&quot;,
+    &quot;provenance&quot;: &quot;technical-skill-and-parent-authorized&quot;,
+    &quot;decision&quot;: &quot;只读技术检索后使用当前 GSAP 3.13.0 技术，不导入 registry 的默认外观。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;existing-style-card-guidance&quot;,
+    &quot;provenance&quot;: &quot;style-card-provided&quot;,
+    &quot;decision&quot;: {
+      &quot;material&quot;: &quot;有粗细变化的手绘轮廓、排线、叠色与纸感底色。&quot;,
+      &quot;composition&quot;: &quot;人物表情和处境为中心，辅助符号受主角关系支配。&quot;,
+      &quot;typography&quot;: &quot;情绪由人物与环境承担；本片不自动沿用参考中的散落字母。&quot;,
+      &quot;keywords&quot;: [
+        &quot;手绘轮廓&quot;,
+        &quot;纸感底色&quot;,
+        &quot;叠色与排线&quot;,
+        &quot;人物表情&quot;,
+        &quot;局部具象符号&quot;
+      ]
+    },
+    &quot;note&quot;: &quot;这是既有输入提供的指导，不是执行者原创选择。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;style-card-realization&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: {
+      &quot;material&quot;: &quot;保持原图手绘轮廓、排线、纸底叠色，不在原图外添加纹理补救。&quot;,
+      &quot;composition&quot;: &quot;完整原图等比置入，人物和手边小段是观察目标；不加入额外符号或改画环境。&quot;,
+      &quot;typography&quot;: &quot;不新增情绪大字；模型自行输出的既有文字保留，其密度偏离卡片的人物优先要求。&quot;,
+      &quot;motion&quot;: &quot;仅整图一次轻微靠近与局部定位，不能满足语义引起的姿态或场景变化。&quot;
+    },
+    &quot;note&quot;: &quot;具体数字、轮廓、色值、影子、纸粒参数、摆位和时序是执行者补充。&quot;
+  }
+]</pre></details>
+    <details><summary>未覆盖范围与阻断条件</summary><ul><li>没有 alpha=0 的透明空白；虽然 RGBA alpha 范围为 6–250，但不能作为透明人物裁片使用。</li><li>完整身体与道具分层未满足；不能翻页、单独改变手势或演出起始/转折/结果姿态。</li><li>大量环境、文字及物件是模型自行输出；不能称为配方明确提供，也不能清理或用遮盖补救。</li><li>姿态对比只能记录单一现成姿态，不能伪称展示多姿态比较；情绪变化配方本轮未执行。</li><li>本 case 落入卡片明确的失败风险：完整插画靠镜头缩放而缺少姿态变化；记录为本轮资产限制，不补救。</li><li>原图环境与文字已合成，不能为了人物中心重构或清理。</li></ul></details></section><section id="character-object-feeling"><h2>角色剪影与物件尺度</h2>
+    <div class="verdict">限制色、粗形部分成立；尺度与受力叙事未完成</div>
+    <div class="pair"><div><h3>参考来源</h3><p><a target="_blank" href="https://www.youtube.com/watch?v=IzFObkVRSV0">原始来源</a>；外部截图仅在本地检查，未公开复制。位置见既有风格卡。</p></div><div><h3>现有卡片＋配方首版样段</h3><video controls loop preload="metadata" src="character-object-feeling/probe.mp4" poster="character-object-feeling/poster.jpg"></video><p>6 秒 · 无声 · 1280×720 / 30 fps</p></div></div>
+    <p>深蓝、奶油和黄色的角色书本合成图可辨认，局部段落被框选。角色更接近通用可爱插画，身体裁成上身，只有已经找到段落的结果姿态；无法让角色与书独立改变大小、接触或重心。</p><p><b>判断：</b>核心是角色与物件形成处境，而不是粗色块本身。本轮只有结果插图和指示框，不能把镜头靠近称作承重、失衡及恢复。</p>
+    <details><summary>原始生成图片（未经修饰）</summary><img class="raw" src="character-object-feeling/assets/hero.png"></details>
+    <details><summary>实际输入的三条配方</summary><pre>character-object-feeling-silhouette
+为读者面对厚书，试图挑出自己需要学的一小段设计原创粗形角色剪影，以少量细线刻画表情；限制色与颗粒按画面可读性选择，透明层输出。
+
+character-object-feeling-prop
+用打开的厚书与角色的尺度、接触点和遮挡表现任务负担，保留物件本身可辨认的特征；不要增加不存在的事实。
+
+character-object-feeling-weight
+为读者原本被整本书压得吃力，缩小到一段后恢复稳定设计承重、失衡和恢复的可辨姿态，确认接触点与身体重心；比较关键状态后再做动作短样。</pre></details>
+    <details><summary>既有风格卡（原输入）</summary><pre>{
+  &quot;id&quot;: &quot;character-object-feeling&quot;,
+  &quot;family&quot;: &quot;illustration&quot;,
+  &quot;name&quot;: &quot;角色剪影与物件尺度&quot;,
+  &quot;reference_id&quot;: &quot;IzFObkVRSV0&quot;,
+  &quot;reference_identity&quot;: &quot;TED-Ed 具体作品；与绘画式日常情境分开&quot;,
+  &quot;source_url&quot;: &quot;https://www.youtube.com/watch?v=IzFObkVRSV0&quot;,
+  &quot;keywords&quot;: [
+    &quot;角色剪影&quot;,
+    &quot;限制色&quot;,
+    &quot;物件尺度&quot;,
+    &quot;细线表情&quot;,
+    &quot;印刷颗粒&quot;
+  ],
+  &quot;reference_positions_seconds&quot;: [
+    48
+  ],
+  &quot;observation&quot;: &quot;0:35 以手和心脏聚焦身体感受；0:48 用蓝色人物、红色大铅笔与细线表情构成可辨认的情境，粗形与细线分工明确。&quot;,
+  &quot;observation_limit&quot;: &quot;只核查局部实际帧，未完成整片运动或听觉审查。这里研究表达与美术，不沿用参考中的医学内容，也不将惊恐发作等同于日常焦虑。&quot;,
+  &quot;material&quot;: &quot;粗形角色剪影、限制色、印刷颗粒与细线表情。&quot;,
+  &quot;composition&quot;: &quot;角色和任务物件通过尺度、距离及遮挡形成具体情境。&quot;,
+  &quot;typography&quot;: &quot;情境与身体姿态承担感受，文字补充必要对象或命题。&quot;,
+  &quot;motion&quot;: &quot;已观察0:35和0:48的状态；角色受力及物件尺度变化是制作提案，连续动作尚未核验。&quot;,
+  &quot;fit&quot;: &quot;压力、身体感受与任务负担的情境呈现；不迁移原作的医学主张。&quot;,
+  &quot;failure&quot;: &quot;只留下大色块，表情、接触点和角色与物件的关系不成立。&quot;,
+  &quot;origin_type&quot;: &quot;external_work&quot;,
+  &quot;implementation_status&quot;: &quot;not_produced_in_this_library&quot;
+}</pre></details>
+    <details><summary>制作时额外补充的设计决策</summary><pre>[
+  {
+    &quot;area&quot;: &quot;category_extension&quot;,
+    &quot;decision&quot;: &quot;使用 custom-style-probe；冻结配方本身未提供此 IR 分类。&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;
+  },
+  {
+    &quot;area&quot;: &quot;causal_metaphor&quot;,
+    &quot;decision&quot;: &quot;承重采用 input 已给的心理隐喻；不加入真实能力、健康诊断或学习进度事实。&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;
+  },
+  {
+    &quot;area&quot;: &quot;final-layout-and-motion&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;content.layout 与 content.timeline 的全部数值、几何、阶段、时长、光影实现和字形均由执行者补充，不能当作配方明确提供。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;final-palette&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;palette 为执行者选择的色值，最后一项是画布底色；原图不重新着色。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;system-font&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;使用已存在 Microsoft YaHei 系统字体，替换 Part1 的未验证 Noto Sans SC；最终渲染需核对中文字形。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;raw-constraints&quot;,
+    &quot;provenance&quot;: &quot;actual-generated-asset&quot;,
+    &quot;decision&quot;: &quot;可观察粗形角色、书本关系和现成段落指示；weight 动作配方因原图无独立角色/物件及多姿态而未执行。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;generation-background&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;四次 imagegen transparent_background=true 是技术调用选项；不能把该请求当作已经满足透明层。drawn 配方未明确透明，该选项为额外选择。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;catalog-reuse&quot;,
+    &quot;provenance&quot;: &quot;technical-skill-and-parent-authorized&quot;,
+    &quot;decision&quot;: &quot;只读技术检索后使用当前 GSAP 3.13.0 技术，不导入 registry 的默认外观。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;existing-style-card-guidance&quot;,
+    &quot;provenance&quot;: &quot;style-card-provided&quot;,
+    &quot;decision&quot;: {
+      &quot;material&quot;: &quot;粗形角色剪影、限制色、印刷颗粒与细线表情。&quot;,
+      &quot;composition&quot;: &quot;角色和任务物件通过尺度、距离及遮挡形成具体情境。&quot;,
+      &quot;typography&quot;: &quot;情境与身体姿态承担感受，文字补充必要对象或命题。&quot;,
+      &quot;keywords&quot;: [
+        &quot;角色剪影&quot;,
+        &quot;限制色&quot;,
+        &quot;物件尺度&quot;,
+        &quot;细线表情&quot;,
+        &quot;印刷颗粒&quot;
+      ]
+    },
+    &quot;note&quot;: &quot;这是既有输入提供的指导，不是执行者原创选择。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;style-card-realization&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: {
+      &quot;material&quot;: &quot;原图深蓝、奶白与黄色构成限制色；粗形及细线表情、颗粒均沿用原图，不额外重画。&quot;,
+      &quot;composition&quot;: &quot;保留原图角色与大书的尺度和遮挡，用定位框让整书到现成段落的指代明确。&quot;,
+      &quot;typography&quot;: &quot;不额外用文字代替身体动作。&quot;,
+      &quot;motion&quot;: &quot;仅指代范围变化与一次整图靠近；不把它等同于承重、失衡或恢复动作。&quot;
+    },
+    &quot;note&quot;: &quot;具体数字、轮廓、色值、影子、纸粒参数、摆位和时序是执行者补充。&quot;
+  }
+]</pre></details>
+    <details><summary>未覆盖范围与阻断条件</summary><ul><li>角色与书本无法独立变化；不能建立书本压迫身体的承重、失衡、恢复连续姿态。</li><li>只有结果状态，不能把整图缩放称为任务卸重，也不能宣称完成关键状态比较。</li><li>生成结果的书、书签、黄色强调、裁切式上身与受光是模型添加；不重画或补充身体。</li><li>卡片强调接触与受力情境；原图仅上身结果姿态，无独立角色或书层，此核心动作仍受阻。</li></ul></details></section><section id="geometric-emotion"><h2>几何角色与心理隐喻</h2>
+    <div class="verdict">负担变小的关系可读；造型与材质仍过于通用</div>
+    <div class="pair"><div><h3>参考来源</h3><p><a target="_blank" href="https://www.youtube.com/watch?v=8_PQJNo2wME">原始来源</a>；外部截图仅在本地检查，未公开复制。位置见既有风格卡。</p></div><div><h3>现有卡片＋配方首版样段</h3><video controls loop preload="metadata" src="geometric-emotion/probe.mp4" poster="geometric-emotion/poster.jpg"></video><p>6 秒 · 无声 · 1280×720 / 30 fps</p></div></div>
+    <p>紫色双眼角色、巨书与小段落保留身份，同一段落移出后书退后、身体恢复。轮廓以薄线和轻色填充为主，纸粒近似均匀网点，受力差异较弱；与参考的粗几何体量、饱满限制色和颗粒肌理存在明显距离。</p><p><b>判断：</b>三条关系配方能驱动一次有因果的动作，但几何角色形态、材料和受力表现大多由执行者临场决定。当前描述还不足以产生参考级的造型判断。</p>
+
+    <details><summary>实际输入的三条配方</summary><pre>geometric-emotion-character
+为读者面对厚书无从下手，找到可以先处理的一小段设计原创几何角色，保留一个可追踪的面部或轮廓特征；纸片颗粒与色组服从辨认，避免复制原片角色。
+
+geometric-emotion-relation
+用整本书的信息负担变成一段可处理的学习任务安排角色与物件的体量、距离、支撑和留白；比较两个关键状态，不把心理词写满屏幕。
+
+geometric-emotion-release
+为角色从被书的重量压住到只托起一小段设计受力或空间改变的关键姿态，保持角色与对象的因果连续；何时保持、何时过渡由口播锚点决定。</pre></details>
+    <details><summary>既有风格卡（原输入）</summary><pre>{
+  &quot;id&quot;: &quot;geometric-emotion&quot;,
+  &quot;family&quot;: &quot;illustration&quot;,
+  &quot;name&quot;: &quot;几何角色与心理隐喻&quot;,
+  &quot;reference_id&quot;: &quot;8_PQJNo2wME&quot;,
+  &quot;reference_identity&quot;: &quot;The School of Life 具体作品；经典局部参考&quot;,
+  &quot;material&quot;: &quot;几何角色、纸片颗粒与限制色；保留眼睛等可追踪特征。&quot;,
+  &quot;composition&quot;: &quot;体量、受力与空间关系构成隐喻，画面不是自由散落的几何装饰。&quot;,
+  &quot;typography&quot;: &quot;感受优先通过重量和姿态表现；文字只补必要命题。&quot;,
+  &quot;motion&quot;: &quot;已观察 0:45、1:03 的状态，受力变化是可迁移设计建议；未做整片动作审查。&quot;,
+  &quot;fit&quot;: &quot;压力、矛盾和关系等难以直接摄影的体验。&quot;,
+  &quot;failure&quot;: &quot;有抽象形状却无法说明它与当前口播的对应关系。&quot;,
+  &quot;source_url&quot;: &quot;https://www.youtube.com/watch?v=8_PQJNo2wME&quot;,
+  &quot;keywords&quot;: [
+    &quot;几何角色&quot;,
+    &quot;粉紫限制色&quot;,
+    &quot;纸片颗粒&quot;,
+    &quot;具象心理隐喻&quot;,
+    &quot;宽阔留白&quot;
+  ],
+  &quot;observation&quot;: &quot;0:45 的几何碎片保留眼睛让主体可追踪；1:03 同一个几何角色在大圆物件的重量关系中被理解，造型与受力关系承担含义。&quot;,
+  &quot;reference_positions_seconds&quot;: [
+    63
+  ],
+  &quot;observation_limit&quot;: &quot;是从局部画面得到的本片应用建议，尚未制作新样段。原片色板与角色不作为模板；未完成整片运动或听觉审查。&quot;,
+  &quot;origin_type&quot;: &quot;external_work&quot;,
+  &quot;implementation_status&quot;: &quot;not_produced_in_this_library&quot;
+}</pre></details>
+    <details><summary>制作时额外补充的设计决策</summary><pre>[
+  {
+    &quot;area&quot;: &quot;category_extension&quot;,
+    &quot;decision&quot;: &quot;使用 custom-style-probe；冻结配方本身未提供此 IR 分类。&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;
+  },
+  {
+    &quot;area&quot;: &quot;character_shape&quot;,
+    &quot;decision&quot;: &quot;以圆角梯形躯干和双眼作为可追踪特征是额外造型选择。&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;
+  },
+  {
+    &quot;area&quot;: &quot;final-layout-and-motion&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;content.layout 与 content.timeline 的全部数值、几何、阶段、时长、光影实现和字形均由执行者补充，不能当作配方明确提供。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;final-palette&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;palette 为执行者选择的色值，最后一项是画布底色；原图不重新着色。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;system-font&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;使用已存在 Microsoft YaHei 系统字体，替换 Part1 的未验证 Noto Sans SC；最终渲染需核对中文字形。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;raw-constraints&quot;,
+    &quot;provenance&quot;: &quot;actual-generated-asset&quot;,
+    &quot;decision&quot;: &quot;程序化完整演出原配方的身份追踪、负担变小和受力关系改变；所有具体造型与时序均属 extra_decisions。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;generation-background&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;四次 imagegen transparent_background=true 是技术调用选项；不能把该请求当作已经满足透明层。drawn 配方未明确透明，该选项为额外选择。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;catalog-reuse&quot;,
+    &quot;provenance&quot;: &quot;technical-skill-and-parent-authorized&quot;,
+    &quot;decision&quot;: &quot;只读技术检索后使用当前 GSAP 3.13.0 技术，不导入 registry 的默认外观。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;existing-style-card-guidance&quot;,
+    &quot;provenance&quot;: &quot;style-card-provided&quot;,
+    &quot;decision&quot;: {
+      &quot;material&quot;: &quot;几何角色、纸片颗粒与限制色；保留眼睛等可追踪特征。&quot;,
+      &quot;composition&quot;: &quot;体量、受力与空间关系构成隐喻，画面不是自由散落的几何装饰。&quot;,
+      &quot;typography&quot;: &quot;感受优先通过重量和姿态表现；文字只补必要命题。&quot;,
+      &quot;keywords&quot;: [
+        &quot;几何角色&quot;,
+        &quot;粉紫限制色&quot;,
+        &quot;纸片颗粒&quot;,
+        &quot;具象心理隐喻&quot;,
+        &quot;宽阔留白&quot;
+      ]
+    },
+    &quot;note&quot;: &quot;这是既有输入提供的指导，不是执行者原创选择。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;style-card-realization&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: {
+      &quot;material&quot;: &quot;程序化几何角色与双眼身份，粉紫限制色、低对比纸片颗粒；不复制卡中原作角色或色板的具体值。&quot;,
+      &quot;composition&quot;: &quot;上方书本体量压迫角色，段落被托起后空间增大；保留宽阔留白，避免散落装饰几何。&quot;,
+      &quot;typography&quot;: &quot;不加情绪字，用支点与姿态表达任务变小。&quot;,
+      &quot;motion&quot;: &quot;固定脚底接触，同一段落连续移到双手，角色压低到恢复；不是粒子消散。&quot;
+    },
+    &quot;note&quot;: &quot;具体数字、轮廓、色值、影子、纸粒参数、摆位和时序是执行者补充。&quot;
+  }
+]</pre></details>
+    <details><summary>未覆盖范围与阻断条件</summary><ul><li>全部造型、支点、书页结构与受力动作幅度由执行者补充，配方只给关系和辨认要求。</li><li>心理压力是视觉隐喻，不代表真实能力、医学状态或数据。</li><li>关键状态及接触可信度仍待初版关键帧和样段查看，计划完成不等于动作验收。</li></ul></details></section><section id="coherent-graphic-world"><h2>统一图形世界</h2>
+    <div class="verdict">对象一致与尺度承接成立；图形世界的设计成熟度不足</div>
+    <div class="pair"><div><h3>参考来源</h3><p><a target="_blank" href="https://www.youtube.com/watch?v=WPPPFqsECz0">原始来源</a>；外部截图仅在本地检查，未公开复制。位置见既有风格卡。</p></div><div><h3>现有卡片＋配方首版样段</h3><video controls loop preload="metadata" src="coherent-graphic-world/probe.mp4" poster="coherent-graphic-world/poster.jpg"></video><p>6 秒 · 无声 · 1280×720 / 30 fps</p></div></div>
+    <p>蓝、紫、橙三个对象组共享斜切面和受光规则；橙色段落连续移动放大、连回原位置，身份可以追踪。读者是泛化块状人形，书与对象的比例、色阶及空间细节较简略，场景层次少。</p><p><b>判断：</b>只证明少量对象可保持统一和对应，不能据此说已产生参考的精细几何造型与场景丰富度。色值、对象族比例、顶点、材质与镜头仍是执行者补充。</p>
+
+    <details><summary>实际输入的三条配方</summary><pre>coherent-graphic-world-object-family
+为同一阅读场景中的读者、书、书页和待学习段落制定统一的几何化比例、轮廓与受光方式，输出主对象和辅助对象；色组按本片层级选择，不照搬原作造型。
+
+coherent-graphic-world-system
+将读者从整本书中定位到一个待学习段落组织成局部到整体的场景，连接线只表达已知关系，区分主路径与背景对象；先验证少量对象，再扩展。
+
+coherent-graphic-world-scale
+为从整本书的总览到一个被选出的学习段落设计可追踪对象在近景和总览的对应位置，给观察留出保持状态；光影与造型随景别保持一致。</pre></details>
+    <details><summary>既有风格卡（原输入）</summary><pre>{
+  &quot;id&quot;: &quot;coherent-graphic-world&quot;,
+  &quot;family&quot;: &quot;illustration&quot;,
+  &quot;name&quot;: &quot;统一图形世界&quot;,
+  &quot;reference_id&quot;: &quot;WPPPFqsECz0&quot;,
+  &quot;reference_identity&quot;: &quot;Kurzgesagt 具体作品；经典局部参考&quot;,
+  &quot;material&quot;: &quot;几何化人物与机器、统一受光及高饱和色组。&quot;,
+  &quot;composition&quot;: &quot;对象集群与连接关系形成场景，局部和整体尺度可相互解释。&quot;,
+  &quot;typography&quot;: &quot;优先观察形体和关系，标签只作必要辨认。&quot;,
+  &quot;motion&quot;: &quot;已观察 0:50、0:59 状态；尺度交接与同世界延展是本片提案，未核验连续动作。&quot;,
+  &quot;fit&quot;: &quot;系统、流程或对象间机制比较清楚的内容；造型设计投入较高。&quot;,
+  &quot;failure&quot;: &quot;只借鲜艳色板和圆形，却没有统一造型语言或空间关系。&quot;,
+  &quot;source_url&quot;: &quot;https://www.youtube.com/watch?v=WPPPFqsECz0&quot;,
+  &quot;keywords&quot;: [
+    &quot;高饱和色组&quot;,
+    &quot;几何化物件&quot;,
+    &quot;轴测空间&quot;,
+    &quot;尺度交接&quot;,
+    &quot;连接关系&quot;
+  ],
+  &quot;observation&quot;: &quot;0:50 的人和机器、0:59 的多组对象共享几何化造型和受光方式，连接线承担关系，而不靠多段说明文字组织画面。&quot;,
+  &quot;reference_positions_seconds&quot;: [
+    59
+  ],
+  &quot;observation_limit&quot;: &quot;仅从两个实际状态研究画面层级与连续性，未完成整片运动或听觉审查。本片没有讲述医疗机制，不沿用原片的医学模型或高密度总览。&quot;,
+  &quot;origin_type&quot;: &quot;external_work&quot;,
+  &quot;implementation_status&quot;: &quot;not_produced_in_this_library&quot;
+}</pre></details>
+    <details><summary>制作时额外补充的设计决策</summary><pre>[
+  {
+    &quot;area&quot;: &quot;category_extension&quot;,
+    &quot;decision&quot;: &quot;使用 custom-style-probe；冻结配方本身未提供此 IR 分类。&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;
+  },
+  {
+    &quot;area&quot;: &quot;geometry&quot;,
+    &quot;decision&quot;: &quot;采用圆角多边形与统一斜切边的对象族，是执行者补充的几何规则。&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;
+  },
+  {
+    &quot;area&quot;: &quot;final-layout-and-motion&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;content.layout 与 content.timeline 的全部数值、几何、阶段、时长、光影实现和字形均由执行者补充，不能当作配方明确提供。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;final-palette&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;palette 为执行者选择的色值，最后一项是画布底色；原图不重新着色。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;system-font&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;使用已存在 Microsoft YaHei 系统字体，替换 Part1 的未验证 Noto Sans SC；最终渲染需核对中文字形。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;raw-constraints&quot;,
+    &quot;provenance&quot;: &quot;actual-generated-asset&quot;,
+    &quot;decision&quot;: &quot;执行少量统一对象、已知主路径和连续尺度对应；实际一致性须看首版静帧及动作。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;generation-background&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: &quot;四次 imagegen transparent_background=true 是技术调用选项；不能把该请求当作已经满足透明层。drawn 配方未明确透明，该选项为额外选择。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;catalog-reuse&quot;,
+    &quot;provenance&quot;: &quot;technical-skill-and-parent-authorized&quot;,
+    &quot;decision&quot;: &quot;只读技术检索后使用当前 GSAP 3.13.0 技术，不导入 registry 的默认外观。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;existing-style-card-guidance&quot;,
+    &quot;provenance&quot;: &quot;style-card-provided&quot;,
+    &quot;decision&quot;: {
+      &quot;material&quot;: &quot;几何化人物与机器、统一受光及高饱和色组。&quot;,
+      &quot;composition&quot;: &quot;对象集群与连接关系形成场景，局部和整体尺度可相互解释。&quot;,
+      &quot;typography&quot;: &quot;优先观察形体和关系，标签只作必要辨认。&quot;,
+      &quot;keywords&quot;: [
+        &quot;高饱和色组&quot;,
+        &quot;几何化物件&quot;,
+        &quot;轴测空间&quot;,
+        &quot;尺度交接&quot;,
+        &quot;连接关系&quot;
+      ]
+    },
+    &quot;note&quot;: &quot;这是既有输入提供的指导，不是执行者原创选择。&quot;
+  },
+  {
+    &quot;area&quot;: &quot;style-card-realization&quot;,
+    &quot;provenance&quot;: &quot;executor&quot;,
+    &quot;decision&quot;: {
+      &quot;material&quot;: &quot;高饱和蓝、橙、紫色组，统一几何物件、左上受光与轴测斜切面；不复制卡中人物或机器。&quot;,
+      &quot;composition&quot;: &quot;读者、书、书页和唯一目标组成小对象集群，主路径与放大对应连线各一条。&quot;,
+      &quot;typography&quot;: &quot;不新增说明段落，以形体与关系为主。&quot;,
+      &quot;motion&quot;: &quot;总览保留，同一段落连续转到近景对应位置；共享造型和光向随尺度保持。&quot;
+    },
+    &quot;note&quot;: &quot;具体数字、轮廓、色值、影子、纸粒参数、摆位和时序是执行者补充。&quot;
+  }
+]</pre></details>
+    <details><summary>未覆盖范围与阻断条件</summary><ul><li>具体对象族比例、轮廓、阴影色阶和版面由执行者补充，不代表配方已给定。</li><li>行块只表达已知定位关系，不添加页码、书名、章节或学习百分比。</li><li>本次只有少量对象，不能称为已验证规模增大后的表现。</li><li>仅少量对象，未检验更大规模对象集群的层级。</li></ul></details></section>
+<p>原始输入、素材哈希、首版源文件与动作样段均保留。实际执行状态与质量结论分别记录；“做过测试”不等于“通过”。</p></main></html>

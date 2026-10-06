@@ -1,0 +1,67 @@
+{
+  "cases": [
+    {
+      "id": "vox-editorial-collage-tutorial",
+      "video": "examples/style-prompt-audit/vox-editorial-collage-tutorial/probe.mp4",
+      "poster": "examples/style-prompt-audit/vox-editorial-collage-tutorial/poster.jpg",
+      "report": "examples/style-prompt-audit/vox-editorial-collage-tutorial/report.json",
+      "delivery_sha256": "4c0f8fe189f45539e8a5d54c40968d820ced2d5947a16811155584a0687a60b8",
+      "source_private_sha256": "aed78cc6ce7a135c0fda686d072ab406f0a26f95f36f526676de410edaadbba4",
+      "source_portable_sha256": "e8838d88542edca78e9fc856a88024ab3fa0a1eff5b1c9018a071eeb5fb2e08c"
+    },
+    {
+      "id": "vox-mechanism",
+      "video": "examples/style-prompt-audit/vox-mechanism/probe.mp4",
+      "poster": "examples/style-prompt-audit/vox-mechanism/poster.jpg",
+      "report": "examples/style-prompt-audit/vox-mechanism/report.json",
+      "delivery_sha256": "83703fbca5047a024ace2a39aa842227b6a5e6fb6322900b4128e6b4743ce46c",
+      "source_private_sha256": "04c0c7b23214e36f9e6ddb42637d92a39e6f4c058df2b8359b34db38b2315961",
+      "source_portable_sha256": "fc3e23d2f3b6a79bbfc701fd20418be04ace93b9f1dc1814a55d7240b616bb10"
+    },
+    {
+      "id": "vox-earworm-mixed-media",
+      "video": "examples/style-prompt-audit/vox-earworm-mixed-media/probe.mp4",
+      "poster": "examples/style-prompt-audit/vox-earworm-mixed-media/poster.jpg",
+      "report": "examples/style-prompt-audit/vox-earworm-mixed-media/report.json",
+      "delivery_sha256": "09280524bbab20b7528824d1789983daa59bbb40a416520c3671d5941fe67ee0",
+      "source_private_sha256": "5c28654cdc9023a17b049457551d6e638514cbf21eb3a090d37b77ec55fcfcd6",
+      "source_portable_sha256": "90f7fa509132a8eee7cfa53eaabd719132c60dc8572c773038089990fa4ae05e"
+    },
+    {
+      "id": "drawn-everyday",
+      "video": "examples/style-prompt-audit/drawn-everyday/probe.mp4",
+      "poster": "examples/style-prompt-audit/drawn-everyday/poster.jpg",
+      "report": "examples/style-prompt-audit/drawn-everyday/report.json",
+      "delivery_sha256": "df2dbeb5698513241d04ac0a127c83bf341317e503822d0f12b44893e4a6fb3c",
+      "source_private_sha256": "ae065b3248ec1d15d4680ab3b549383bc84f92761b19b34ffcdca4b5eb398439",
+      "source_portable_sha256": "4b212adc3811204ed4bfe476ceae45c219dbf1a353bb22256064b6517f51e1de"
+    },
+    {
+      "id": "character-object-feeling",
+      "video": "examples/style-prompt-audit/character-object-feeling/probe.mp4",
+      "poster": "examples/style-prompt-audit/character-object-feeling/poster.jpg",
+      "report": "examples/style-prompt-audit/character-object-feeling/report.json",
+      "delivery_sha256": "c052e98286f189e4af9906c35f3d6d09afc94a8a20e382df62549cabe7555017",
+      "source_private_sha256": "9ae6790d160757a1f2b131aab1877eff02dfd6943625ec93405fbe447265ff27",
+      "source_portable_sha256": "f37849e716c5509f8c28bbccde5757a3362c9b0df498b3ec0080b4d7171973af"
+    },
+    {
+      "id": "geometric-emotion",
+      "video": "examples/style-prompt-audit/geometric-emotion/probe.mp4",
+      "poster": "examples/style-prompt-audit/geometric-emotion/poster.jpg",
+      "report": "examples/style-prompt-audit/geometric-emotion/report.json",
+      "delivery_sha256": "d2c53e3371e5a06c2cd24cff416041f4daf3284c21bf9d9454257d97e96f75ab",
+      "source_private_sha256": "bb689a69df0150484ab3c64733c888966bbe60e72e886c1d75f5c95bdd58b5c1",
+      "source_portable_sha256": "ed1667f3bd0e941f02e5e0d663e2120386856931851e48dca4dbd0c0280a9388"
+    },
+    {
+      "id": "coherent-graphic-world",
+      "video": "examples/style-prompt-audit/coherent-graphic-world/probe.mp4",
+      "poster": "examples/style-prompt-audit/coherent-graphic-world/poster.jpg",
+      "report": "examples/style-prompt-audit/coherent-graphic-world/report.json",
+      "delivery_sha256": "c55a58e8f540f164b5a8f7d7b7614d27da19e35d1c94decbff4408efec9b38f2",
+      "source_private_sha256": "379ff1fac200a94f0ead5796c0949e57fa612ff8b741f5f2ecfdfb02f32a2b43",
+      "source_portable_sha256": "8b932a52d1e4933c0d31d42603c2acd42ca33586bdffbf86919aed613b0973f3"
+    }
+  ]
+}

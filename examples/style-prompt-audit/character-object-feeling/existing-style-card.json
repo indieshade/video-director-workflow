@@ -1,0 +1,28 @@
+{
+  "id": "character-object-feeling",
+  "family": "illustration",
+  "name": "角色剪影与物件尺度",
+  "reference_id": "IzFObkVRSV0",
+  "reference_identity": "TED-Ed 具体作品；与绘画式日常情境分开",
+  "source_url": "https://www.youtube.com/watch?v=IzFObkVRSV0",
+  "keywords": [
+    "角色剪影",
+    "限制色",
+    "物件尺度",
+    "细线表情",
+    "印刷颗粒"
+  ],
+  "reference_positions_seconds": [
+    48
+  ],
+  "observation": "0:35 以手和心脏聚焦身体感受；0:48 用蓝色人物、红色大铅笔与细线表情构成可辨认的情境，粗形与细线分工明确。",
+  "observation_limit": "只核查局部实际帧，未完成整片运动或听觉审查。这里研究表达与美术，不沿用参考中的医学内容，也不将惊恐发作等同于日常焦虑。",
+  "material": "粗形角色剪影、限制色、印刷颗粒与细线表情。",
+  "composition": "角色和任务物件通过尺度、距离及遮挡形成具体情境。",
+  "typography": "情境与身体姿态承担感受，文字补充必要对象或命题。",
+  "motion": "已观察0:35和0:48的状态；角色受力及物件尺度变化是制作提案，连续动作尚未核验。",
+  "fit": "压力、身体感受与任务负担的情境呈现；不迁移原作的医学主张。",
+  "failure": "只留下大色块，表情、接触点和角色与物件的关系不成立。",
+  "origin_type": "external_work",
+  "implementation_status": "not_produced_in_this_library"
+}

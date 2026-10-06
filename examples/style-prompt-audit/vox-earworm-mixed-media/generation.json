@@ -1,0 +1,18 @@
+{
+  "asset": "assets/hero.png",
+  "tool": "built-in imagegen",
+  "requested_transparent_background": true,
+  "prompt": "制作关于阅读桌面的旧书、铅笔与台灯的灰阶器物摄影裁片，保留具体材质与可辨轮廓；人物与器物分别输出透明层，不生成文字、logo或原作角色。",
+  "mode": "RGBA",
+  "size": [
+    1536,
+    1024
+  ],
+  "sha256": "d4ee4187dfe75f66b7d9fa149c55723d82aab379c4158a281a1cb883c2e8cb90",
+  "alpha_extrema": [
+    0,
+    254
+  ],
+  "zero_alpha_fraction": 0.5157623291015625,
+  "source_note": "raw tool output; no crop, cutout, recolor or cleanup; one PNG returned, not separate object layers"
+}

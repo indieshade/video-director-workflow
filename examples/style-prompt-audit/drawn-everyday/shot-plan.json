@@ -1,0 +1,625 @@
+{
+  "status": "final",
+  "phase": "director-part-2",
+  "case_id": "drawn-everyday",
+  "category": "custom-style-probe",
+  "classification_note": "内容已给，无需搜索；本测试的素材与关系画面不属于默认统计、地图、文字或真实来源资产融合分类。custom-style-probe 是本次 schema 扩展，不强套分类模板。",
+  "duration_s": 6,
+  "fps": 30,
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9"
+  },
+  "audio": false,
+  "style": "绘画式日常情境：有粗细变化的手绘轮廓、排线、叠色与纸感底色。",
+  "palette": [
+    "#403B34",
+    "#B9835B",
+    "#637D72",
+    "#EFE4D0"
+  ],
+  "font": "Microsoft YaHei",
+  "font_status": "assets/probe-msyh.ttc 已就位，Microsoft YaHei 本地私有渲染，不公开分发；中文字形和可读性仍待首版帧核对。",
+  "beats": [
+    0,
+    24,
+    60,
+    102,
+    132
+  ],
+  "beat_unit": "frames",
+  "export": "mp4",
+  "shot_brief": "将完整手绘阅读场景原图等比完整置于画布中，不清理原图文字或增加重画人物。先看到读者和整本书，再以程序化轮廓指示读者手边已被标记的局部；整图仅有限等比放大并保持。此样段只观察原图画风与定位，不验证翻阅或情绪姿态变化。",
+  "asset_needs": [
+    {
+      "role": "person",
+      "kind": "image",
+      "source": "builtin:imagegen",
+      "query": "绘制处于一个读者面对打开的书，正在找出还没掌握的段落的原创人物，使用有粗细变化的手绘轮廓、克制排线和纸感叠色；完整身体与道具分层，不照搬参考人物。",
+      "treatment": "none",
+      "recipe_id": "drawn-everyday-person",
+      "generation_kind": "raster_generation",
+      "output_path": "assets/hero.png",
+      "transparent_background": true,
+      "status": "resolved_raw_single_png",
+      "request_policy": "只把冻结 filled_prompt 原文传给 imagegen.prompt；不得补写美术限定，不做视觉搜索或参考图片输入。",
+      "resolved_asset": "assets/hero.png",
+      "generation_record": "generation.json",
+      "sha256": "14224ef7c029c01df0f895cea6eece048ea9527ae5d68f15dcccef0bc0dd4408",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "layer_count": 1,
+      "raw_policy": "保持原图字节不变；没有独立对象层。",
+      "generation_prompt_verified_equal": true
+    }
+  ],
+  "search_required": false,
+  "content": {
+    "brief_from_input": "用六秒无声横屏视频呈现：读者面对整本书，找到一小段需要学习的内容；重点是画面语言与动作，不复制参考的题材或造型。",
+    "recipes": [
+      {
+        "id": "drawn-everyday-person",
+        "source_profile": "drawn-everyday",
+        "role": "person",
+        "kind": "raster_generation",
+        "prompt": "绘制处于{日常情境}的原创人物，使用有粗细变化的手绘轮廓、克制排线和纸感叠色；完整身体与道具分层，不照搬参考人物。",
+        "variables": [
+          "日常情境"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "表情、手势和道具共同说明情境。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "日常情境": "一个读者面对打开的书，正在找出还没掌握的段落"
+        },
+        "filled_prompt": "绘制处于一个读者面对打开的书，正在找出还没掌握的段落的原创人物，使用有粗细变化的手绘轮廓、克制排线和纸感叠色；完整身体与道具分层，不照搬参考人物。"
+      },
+      {
+        "id": "drawn-everyday-environment",
+        "source_profile": "drawn-everyday",
+        "role": "environment",
+        "kind": "scene_design",
+        "prompt": "为{人物行为}设计纸感绘画环境，选择少量有关系的对象，用局部排线与底色区分空间；留出人物姿态变化所需的区域。",
+        "variables": [
+          "人物行为"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "环境服务人物行为，不变成静态装饰壁纸。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "人物行为": "读者翻阅书页，找到一小段接下来要学的内容"
+        },
+        "filled_prompt": "为读者翻阅书页，找到一小段接下来要学的内容设计纸感绘画环境，选择少量有关系的对象，用局部排线与底色区分空间；留出人物姿态变化所需的区域。"
+      },
+      {
+        "id": "drawn-everyday-poses",
+        "source_profile": "drawn-everyday",
+        "role": "poses",
+        "kind": "motion_staging",
+        "prompt": "为{情绪变化}提出起始、转折、结果几种手绘姿态，保持轮廓与对象身份；先展示姿态比较，再选择过渡方式。",
+        "variables": [
+          "情绪变化"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "无须大字复述情绪也能看出变化；这是待验证提案。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "情绪变化": "从面对整本书无从下手到发现只需先学一小段"
+        },
+        "filled_prompt": "为从面对整本书无从下手到发现只需先学一小段提出起始、转折、结果几种手绘姿态，保持轮廓与对象身份；先展示姿态比较，再选择过渡方式。"
+      }
+    ],
+    "source_phase_note": "实际 raw hero.png 已接收；只使用整张图，不清理、抠图、分层、重新着色、遮盖补救、重画或生成替代图片。非 raster 配方能执行的范围见 available_scope。",
+    "layout": {
+      "unit": "canvas-px",
+      "source_regions_unit": "normalized-raw-image-coordinate",
+      "policy": "图像完整等比包含；所有 raster 覆盖层用同一 source-to-canvas affine 变换。非 raster 几何为执行者补充。",
+      "elements": [
+        {
+          "id": "raw-scene",
+          "kind": "raw-image",
+          "path": "assets/hero.png",
+          "bounds": [
+            320,
+            67.6,
+            640,
+            584.9
+          ],
+          "z": 1
+        },
+        {
+          "id": "selected-paragraph",
+          "kind": "procedural-svg-frame",
+          "source_region": [
+            0.665,
+            0.642,
+            0.145,
+            0.064
+          ],
+          "parent": "raw-scene-coordinate-group",
+          "stroke_width": 3,
+          "z": 2
+        }
+      ]
+    },
+    "scenes": [
+      {
+        "id": "full-shot",
+        "start": 0,
+        "end": 6,
+        "dominant_motion": "同一整体到一小段的连续定位"
+      }
+    ],
+    "timeline": [
+      {
+        "start": 0,
+        "end": 0.6,
+        "target": "raw-scene",
+        "action": "opacity 0 到 1"
+      },
+      {
+        "start": 0.6,
+        "end": 2.2,
+        "target": "raw-scene",
+        "action": "保持原始姿态，不局部扭曲人物"
+      },
+      {
+        "start": 2.2,
+        "end": 3.3,
+        "target": "selected-paragraph",
+        "action": "strokeDashoffset 指示原图书页上的小段；不覆盖原图文字"
+      },
+      {
+        "start": 3.3,
+        "end": 4.4,
+        "target": "raw-scene-coordinate-group",
+        "action": "scale 1 到 1.1，中心原点；原图完整外接矩形仍在画布内"
+      },
+      {
+        "start": 4.4,
+        "end": 6,
+        "target": "all",
+        "action": "保持一体原图与指示框"
+      }
+    ],
+    "available_scope": "仅观察原始插画的日常阅读情境、整图层的有限镜头动作和局部指示；分层、翻阅与姿态转变不具备输入条件。",
+    "unmet_requirements": [
+      "没有 alpha=0 的透明空白；虽然 RGBA alpha 范围为 6–250，但不能作为透明人物裁片使用。",
+      "完整身体与道具分层未满足；不能翻页、单独改变手势或演出起始/转折/结果姿态。",
+      "大量环境、文字及物件是模型自行输出；不能称为配方明确提供，也不能清理或用遮盖补救。",
+      "姿态对比只能记录单一现成姿态，不能伪称展示多姿态比较；情绪变化配方本轮未执行。",
+      "本 case 落入卡片明确的失败风险：完整插画靠镜头缩放而缺少姿态变化；记录为本轮资产限制，不补救。",
+      "原图环境与文字已合成，不能为了人物中心重构或清理。"
+    ],
+    "style_card_application": {
+      "material": {
+        "provided": "有粗细变化的手绘轮廓、排线、叠色与纸感底色。",
+        "implementation": "保持原图手绘轮廓、排线、纸底叠色，不在原图外添加纹理补救。"
+      },
+      "composition": {
+        "provided": "人物表情和处境为中心，辅助符号受主角关系支配。",
+        "implementation": "完整原图等比置入，人物和手边小段是观察目标；不加入额外符号或改画环境。"
+      },
+      "typography": {
+        "provided": "情绪由人物与环境承担；本片不自动沿用参考中的散落字母。",
+        "implementation": "不新增情绪大字；模型自行输出的既有文字保留，其密度偏离卡片的人物优先要求。"
+      },
+      "keywords": {
+        "provided": [
+          "手绘轮廓",
+          "纸感底色",
+          "叠色与排线",
+          "人物表情",
+          "局部具象符号"
+        ],
+        "implementation_note": "只迁移与当前阅读主题和现有资产相符的材料与关系，不复制卡片观察中的具体题材/造型。"
+      },
+      "motion": {
+        "provided": "已观察 0:45 与 1:04 状态；人物姿态与景别变化可作本片提案，尚未核验完整动作。",
+        "implementation": "仅整图一次轻微靠近与局部定位，不能满足语义引起的姿态或场景变化。"
+      },
+      "status": "first-probe-executed-not-reference-equivalent"
+    },
+    "material_system": {
+      "source": "existing-style-card plus executor numerical realization",
+      "implementation": "保持原图手绘轮廓、排线、纸底叠色，不在原图外添加纹理补救。",
+      "procedural_pattern_rule": "仅非 raster 层可用重复 SVG pattern；固定点距与坐标，不用随机数，不覆盖或处理 raw 图。",
+      "parameters": {
+        "dot_radius_px": 0.55,
+        "dot_pitch_px": 8,
+        "dot_opacity": 0.06,
+        "contact_shadow_offset_px": [
+          2,
+          3
+        ],
+        "contact_shadow_opacity": 0.12,
+        "paper_edge_jitter_px": 2
+      },
+      "avoid": "不要通用 glow、粒子、光滑默认箭头或图表外观。"
+    },
+    "recipe_execution": [
+      {
+        "recipe_id": "drawn-everyday-person",
+        "kind": "raster_generation",
+        "filled_prompt": "绘制处于一个读者面对打开的书，正在找出还没掌握的段落的原创人物，使用有粗细变化的手绘轮廓、克制排线和纸感叠色；完整身体与道具分层，不照搬参考人物。",
+        "status": "raster-generated-reviewed-partial",
+        "evidence_or_scope": "一体环境图及单姿态，完整身体/道具分层未满足。",
+        "validation_status": "generation_tested_with_evidence",
+        "observed_result": "partial",
+        "pre_execution_status": "raw-generated-partial",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      },
+      {
+        "recipe_id": "drawn-everyday-environment",
+        "kind": "scene_design",
+        "filled_prompt": "为读者翻阅书页，找到一小段接下来要学的内容设计纸感绘画环境，选择少量有关系的对象，用局部排线与底色区分空间；留出人物姿态变化所需的区域。",
+        "status": "raw-incidental-only",
+        "evidence_or_scope": "原图已有环境为模型附带，不是独立生成或程序化设计的环境资产。",
+        "validation_status": "not_executed_or_blocked",
+        "observed_result": "not_executed",
+        "pre_execution_status": "raw-incidental-only",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      },
+      {
+        "recipe_id": "drawn-everyday-poses",
+        "kind": "motion_staging",
+        "filled_prompt": "为从面对整本书无从下手到发现只需先学一小段提出起始、转折、结果几种手绘姿态，保持轮廓与对象身份；先展示姿态比较，再选择过渡方式。",
+        "status": "blocked-multiple-poses",
+        "evidence_or_scope": "只有一个现成姿态；无起始/转折/结果比较或姿态动画。",
+        "validation_status": "not_executed_or_blocked",
+        "observed_result": "blocked",
+        "pre_execution_status": "blocked-multiple-poses",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      }
+    ]
+  },
+  "extra_decisions": [
+    {
+      "area": "category_extension",
+      "decision": "使用 custom-style-probe；冻结配方本身未提供此 IR 分类。",
+      "provenance": "executor"
+    },
+    {
+      "area": "final-layout-and-motion",
+      "provenance": "executor",
+      "decision": "content.layout 与 content.timeline 的全部数值、几何、阶段、时长、光影实现和字形均由执行者补充，不能当作配方明确提供。"
+    },
+    {
+      "area": "final-palette",
+      "provenance": "executor",
+      "decision": "palette 为执行者选择的色值，最后一项是画布底色；原图不重新着色。"
+    },
+    {
+      "area": "system-font",
+      "provenance": "executor",
+      "decision": "使用已存在 Microsoft YaHei 系统字体，替换 Part1 的未验证 Noto Sans SC；最终渲染需核对中文字形。"
+    },
+    {
+      "area": "raw-constraints",
+      "provenance": "actual-generated-asset",
+      "decision": "仅观察原始插画的日常阅读情境、整图层的有限镜头动作和局部指示；分层、翻阅与姿态转变不具备输入条件。"
+    },
+    {
+      "area": "generation-background",
+      "provenance": "executor",
+      "decision": "四次 imagegen transparent_background=true 是技术调用选项；不能把该请求当作已经满足透明层。drawn 配方未明确透明，该选项为额外选择。"
+    },
+    {
+      "area": "catalog-reuse",
+      "provenance": "technical-skill-and-parent-authorized",
+      "decision": "只读技术检索后使用当前 GSAP 3.13.0 技术，不导入 registry 的默认外观。"
+    },
+    {
+      "area": "existing-style-card-guidance",
+      "provenance": "style-card-provided",
+      "decision": {
+        "material": "有粗细变化的手绘轮廓、排线、叠色与纸感底色。",
+        "composition": "人物表情和处境为中心，辅助符号受主角关系支配。",
+        "typography": "情绪由人物与环境承担；本片不自动沿用参考中的散落字母。",
+        "keywords": [
+          "手绘轮廓",
+          "纸感底色",
+          "叠色与排线",
+          "人物表情",
+          "局部具象符号"
+        ]
+      },
+      "note": "这是既有输入提供的指导，不是执行者原创选择。"
+    },
+    {
+      "area": "style-card-realization",
+      "provenance": "executor",
+      "decision": {
+        "material": "保持原图手绘轮廓、排线、纸底叠色，不在原图外添加纹理补救。",
+        "composition": "完整原图等比置入，人物和手边小段是观察目标；不加入额外符号或改画环境。",
+        "typography": "不新增情绪大字；模型自行输出的既有文字保留，其密度偏离卡片的人物优先要求。",
+        "motion": "仅整图一次轻微靠近与局部定位，不能满足语义引起的姿态或场景变化。"
+      },
+      "note": "具体数字、轮廓、色值、影子、纸粒参数、摆位和时序是执行者补充。"
+    }
+  ],
+  "validation_plan": {
+    "status": "first-probe-reviewed-with-limitations",
+    "raster": [
+      {
+        "recipe_id": "drawn-everyday-person",
+        "acceptance": "表情、手势和道具共同说明情境。"
+      }
+    ],
+    "procedural": [
+      {
+        "recipe_id": "drawn-everyday-environment",
+        "acceptance": "环境服务人物行为，不变成静态装饰壁纸。"
+      },
+      {
+        "recipe_id": "drawn-everyday-poses",
+        "acceptance": "无须大字复述情绪也能看出变化；这是待验证提案。"
+      }
+    ],
+    "sample_checks": [
+      "核对 input 与 generation.json 的 filled_prompt 逐字一致及 raw hash 不变。",
+      "仅制作一次美术首版；看0.6/2.4/4.4/5.8秒关键帧及完整六秒动作，不以编译或导出替代观看。",
+      "逐条标明素材层、关系层和动作层是否完成；整图镜头动作不算角色姿态或独立物件动画。",
+      "只允许记录技术修复，不优化首版审美；不补图、抠图或重画来掩盖原配方素材不足。",
+      "组合样段的指导输入是既有风格卡+三条冻结配方；图片素材测试仍只来自各条 filled_prompt 原文。分别报告，不能称为仅素材配方的受控风格测试。"
+    ],
+    "technical": [
+      "1280×720，30fps，180 帧，六秒，无声。",
+      "像素资产生成后才确认边缘、裁切、实际尺寸和可分层程度；草案不声称已有透明层或合格素材。"
+    ],
+    "comparison_limit": "既有风格卡文字已揭示；未看目标原作图像、研究目录、旧片。组合样段不称为纯配方盲测，参考匹配结论需另行观看原作后的比较。"
+  },
+  "experimental_rule": "现有配方不改写；仅填变量。实现时自行添加的材料/造型/布局/时序逐项记录。禁止查看原片、图像、原研究描述或此前实验成片。只做一次美术首版；技术修复单独记录，不优化首版审美。",
+  "technical_environment": {
+    "source": "父代理提供的当前技术环境",
+    "hyperframes": "0.8.137",
+    "gsap": "3.13.0",
+    "policy": "沿用现有 public 仓库运行时，不升级或安装。"
+  },
+  "technical_fixes": [],
+  "test_layer": "existing-style-card-plus-recipes-motion-probe",
+  "asset_review": {
+    "reviewed_with": "view_image",
+    "view_scope": "只看本 case 当前 raw hero.png",
+    "raw_observation": "原图是接近方形的完整阅读环境插画，含趴卧读者、打开的书、书堆、猫、植物、书架、杯子与背包；大量中文和英文文字已嵌在图中。人物手指与书上现成标记已表达局部阅读，只有一个姿态。纸感叠色和手绘线条可观察，没有人物/道具独立层。",
+    "generation_metadata": {
+      "asset": "assets/hero.png",
+      "tool": "built-in imagegen",
+      "requested_transparent_background": true,
+      "prompt": "绘制处于一个读者面对打开的书，正在找出还没掌握的段落的原创人物，使用有粗细变化的手绘轮廓、克制排线和纸感叠色；完整身体与道具分层，不照搬参考人物。",
+      "mode": "RGBA",
+      "size": [
+        1312,
+        1199
+      ],
+      "sha256": "14224ef7c029c01df0f895cea6eece048ea9527ae5d68f15dcccef0bc0dd4408",
+      "alpha_extrema": [
+        6,
+        250
+      ],
+      "zero_alpha_fraction": 0,
+      "source_note": "raw tool output; no crop, cutout, recolor or cleanup; one PNG returned, not separate object layers"
+    },
+    "observation_status": "raw-inspected-motion-not-rendered",
+    "unmet_requirements": [
+      "没有 alpha=0 的透明空白；虽然 RGBA alpha 范围为 6–250，但不能作为透明人物裁片使用。",
+      "完整身体与道具分层未满足；不能翻页、单独改变手势或演出起始/转折/结果姿态。",
+      "大量环境、文字及物件是模型自行输出；不能称为配方明确提供，也不能清理或用遮盖补救。",
+      "姿态对比只能记录单一现成姿态，不能伪称展示多姿态比较；情绪变化配方本轮未执行。",
+      "本 case 落入卡片明确的失败风险：完整插画靠镜头缩放而缺少姿态变化；记录为本轮资产限制，不补救。",
+      "原图环境与文字已合成，不能为了人物中心重构或清理。"
+    ]
+  },
+  "catalog_technical_audit": {
+    "queries": [
+      {
+        "query": "GSAP translate scale image camera zoom",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"GSAP translate scale image camera zoom\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "transitions-scale",
+          "cinematic-zoom",
+          "zoom-through-transition",
+          "parallax-zoom",
+          "camera-dolly-zoom",
+          "ui-focus-zoom",
+          "yt-camera-move",
+          "camera-rig-depth-stack",
+          "camera-scan-gate",
+          "frost-sequence-camera-orbit",
+          "particle-image-reveal",
+          "camera-shake"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "SVG stroke dashoffset path reveal",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"SVG stroke dashoffset path reveal\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "svg-stroke-trace",
+          "svg-mask-reveal",
+          "hw-path-text",
+          "svg-line-draw-loader",
+          "offset-path-traveler",
+          "ui-3d-reveal",
+          "arc-motion-path",
+          "lt-mask-reveal",
+          "whiteboard-ink",
+          "carousel-path-5",
+          "carousel-path-4",
+          "carousel-path-3"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "GSAP rotate translate vector shape groups",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"GSAP rotate translate vector shape groups\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "avatar-group-hover",
+          "vector-editor-rig",
+          "transitions-3d",
+          "success-check",
+          "offset-path-traveler",
+          "beat-timeline",
+          "stagger-lattice",
+          "shutter-slam",
+          "code-3d-extrude",
+          "arc-motion-path",
+          "wordmark-tiles",
+          "us-map"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "CSS opacity highlight rectangle",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"CSS opacity highlight rectangle\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "inline-highlight",
+          "yt-feather-highlight",
+          "caption-highlight",
+          "code-highlight",
+          "mk-callout-highlight",
+          "marker-highlight",
+          "shimmer-sweep",
+          "organic-light-leak-overlay",
+          "transitions-light",
+          "light-leak",
+          "soft-blur-in",
+          "caption-pill-karaoke"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "SVG pattern deterministic dots polygon uneven edges",
+        "cli_version": "0.8.137",
+        "tier": "words",
+        "candidate": "svg-stroke-trace",
+        "gap": "查询未给出同时满足纸片边缘和固定颗粒图案的专用能力；该几何由现有 SVG/CSS 技术实现。",
+        "external_preview_opened": false,
+        "installation": false
+      }
+    ],
+    "selected_capabilities": [
+      "existing GSAP transform/opacity",
+      "SVG strokeDashoffset primitive",
+      "existing SVG pattern geometry"
+    ],
+    "reuse_mode": "不下载、add 或引入默认美术模板；按父代理许可复用仓库现有 GSAP3.13.0 基础技术并定制输入关系。",
+    "scope": "只检索技术能力，未查看外部视觉作品、poster 或视频。"
+  },
+  "provenance": {
+    "input_provided": {
+      "file": "input.json",
+      "scope": [
+        "brief",
+        "output",
+        "全部 recipes 原文与 filled_prompt",
+        "experimental_rule"
+      ],
+      "unaltered": true,
+      "style_card": "existing-style-card.json 的材料、构图、字形职责和关键词；仅文字输入，未打开其中来源链接或图片。"
+    },
+    "actual_asset": {
+      "file": "assets/hero.png",
+      "record": "generation.json",
+      "scope": "原图像素和生成器自行添加的对象、文字、构图、光影；这些并非执行者可编辑的分层输入。"
+    },
+    "executor_provided": [
+      "content.layout",
+      "content.timeline",
+      "palette 数值",
+      "font 选择",
+      "额外程序化几何和镜头"
+    ],
+    "technical_provided": [
+      "HF0.8.137/GSAP3.13.0 确定性和单 paused timeline 合同"
+    ]
+  },
+  "builder_contract": {
+    "framework": "HyperFrames0.8.137",
+    "animation": "GSAP3.13.0",
+    "master_timeline": "exactly one gsap.timeline({paused:true}); register window.__timelines[case_id]; tl.seek(0); never play()",
+    "stage": "1280x720, fps30, duration6, one full-duration .clip with stable id",
+    "eases": [
+      "power2.inOut",
+      "power2.out",
+      "sine.inOut"
+    ],
+    "repeat": "none",
+    "determinism": "no timers, network, Math.random or Date.now",
+    "asset_policy": "source PNG byte-for-byte unchanged, full image contained in canvas through all transforms",
+    "export_audio": false,
+    "local_resources": {
+      "gsap": "assets/gsap.min.js",
+      "font": "assets/probe-msyh.ttc",
+      "font_use": "local @font-face, private render only, no public font redistribution"
+    }
+  },
+  "recipe_only_baseline": "recipe-only-plan.json",
+  "style_card_input": {
+    "file": "existing-style-card.json",
+    "origin": "既有公开库条目，是当前新增允许使用的既有输入；不是父代理临时强化或改写的配方。",
+    "card": {
+      "id": "drawn-everyday",
+      "family": "illustration",
+      "name": "绘画式日常情境",
+      "reference_id": "N2uQWfV6Jr4",
+      "reference_identity": "TED-Ed 具体作品；不是其全频道统一规范",
+      "material": "有粗细变化的手绘轮廓、排线、叠色与纸感底色。",
+      "composition": "人物表情和处境为中心，辅助符号受主角关系支配。",
+      "typography": "情绪由人物与环境承担；本片不自动沿用参考中的散落字母。",
+      "motion": "已观察 0:45 与 1:04 状态；人物姿态与景别变化可作本片提案，尚未核验完整动作。",
+      "fit": "个人经历、学习状态和亲切的解释语气。",
+      "failure": "把完整插画反复缩放，缺少口播语义引起的姿态或场景变化。",
+      "source_url": "https://www.youtube.com/watch?v=N2uQWfV6Jr4",
+      "keywords": [
+        "手绘轮廓",
+        "纸感底色",
+        "叠色与排线",
+        "人物表情",
+        "局部具象符号"
+      ],
+      "observation": "0:45 的人物被零散符号环绕，1:04 聚焦表情。粗细不完全均匀的轮廓、局部排线和底色共同提供绘画感；它与另一条 TED-Ed 参考的粗形剪影明显不同。",
+      "reference_positions_seconds": [
+        64
+      ],
+      "observation_limit": "本视频发布较近且累计播放突出，但题材、标题、分发与风格无法从公开数据分离。只核查局部帧，未完成整片运动或听觉审查；参考中的散落字母也不自动适合本片。",
+      "origin_type": "external_work",
+      "implementation_status": "not_produced_in_this_library"
+    }
+  },
+  "actual_review": {
+    "movie_sha256": "df2dbeb5698513241d04ac0a127c83bf341317e503822d0f12b44893e4a6fb3c",
+    "source_sha256": "ae065b3248ec1d15d4680ab3b549383bc84f92761b19b34ffcdca4b5eb398439",
+    "finding": {
+      "verdict": "画风偏离；完整插画代替了可动画素材",
+      "observed": "生成结果是暖色、细腻、带许多额外文字的完整阅读插画；与参考的简化造型、鲜明叠色和线条语言差异明显。人物、道具与环境没有独立层，也没有起始/转折/结果姿态；样段只是整图轻微靠近与局部指示。",
+      "conclusion": "图片本身可用作另一种绘本风格，但没有完成这条参考方向的素材和动作契约。现有‘手绘、纸感、排线’描述太宽，不能稳定限定目标造型语言。",
+      "recipe_results": [
+        "partial",
+        "not_executed",
+        "blocked"
+      ]
+    },
+    "own_observation": "六关键帧与导出视频15帧动作采样（0.0至5.6秒，间隔0.4秒）",
+    "reference_limit": "只比较既有参考静态状态与作者项目图；未审查原片完整运动或声音",
+    "stop_reason": "本任务检验原配方首版；保留失败与限制，不在本版本增强审美后倒算通过"
+  }
+}

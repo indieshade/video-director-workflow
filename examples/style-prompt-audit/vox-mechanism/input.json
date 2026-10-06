@@ -1,0 +1,68 @@
+{
+  "case_id": "vox-mechanism",
+  "brief": "用六秒无声横屏视频呈现：读者面对整本书，找到一小段需要学习的内容；重点是画面语言与动作，不复制参考的题材或造型。",
+  "output": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "duration": 6,
+    "audio": false
+  },
+  "recipes": [
+    {
+      "id": "vox-mechanism-map",
+      "source_profile": "vox-mechanism",
+      "role": "map",
+      "kind": "procedural_geometry",
+      "prompt": "根据{真实空间关系}制作有来源的地图或机制轮廓：粗轮廓定义主体，细线定义必要边界；各层可独立放大。未知数据留空，不为了构图虚构。",
+      "variables": [
+        "真实空间关系"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "空间与事实对应；必要细节在近景可辨。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "真实空间关系": "读者从整本书定位到一个待学段落的关系"
+      },
+      "filled_prompt": "根据读者从整本书定位到一个待学段落的关系制作有来源的地图或机制轮廓：粗轮廓定义主体，细线定义必要边界；各层可独立放大。未知数据留空，不为了构图虚构。"
+    },
+    {
+      "id": "vox-mechanism-detail",
+      "source_profile": "vox-mechanism",
+      "role": "detail",
+      "kind": "scene_design",
+      "prompt": "为{局部细节}设计整体定位框、局部放大区和对应真实资料的连续版面；视觉处理保持线重、比例及指代一致。",
+      "variables": [
+        "局部细节"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "观众能从局部回认整体，不靠补一段说明找位置。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "局部细节": "待学习段落与整页书的位置关系"
+      },
+      "filled_prompt": "为待学习段落与整页书的位置关系设计整体定位框、局部放大区和对应真实资料的连续版面；视觉处理保持线重、比例及指代一致。"
+    },
+    {
+      "id": "vox-mechanism-label",
+      "source_profile": "vox-mechanism",
+      "role": "label",
+      "kind": "typography",
+      "prompt": "为{对象区别}只保留必要标签，字号与层级对应主次；来源脚注和字幕分区，避免细字贴满图形。",
+      "variables": [
+        "对象区别"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "标签明确指代，图形仍是主要观察对象。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "对象区别": "已掌握内容与待学习内容"
+      },
+      "filled_prompt": "为已掌握内容与待学习内容只保留必要标签，字号与层级对应主次；来源脚注和字幕分区，避免细字贴满图形。"
+    }
+  ],
+  "experimental_rule": "现有配方不改写；仅填变量。实现时自行添加的材料/造型/布局/时序逐项记录。禁止查看原片、图像、原研究描述或此前实验成片。只做一次美术首版；技术修复单独记录，不优化首版审美。"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "vox-mechanism",
+  "family": "vox",
+  "name": "编辑式机制图解 · Vox 原作",
+  "reference_id": "kIID5FDi2JQ",
+  "reference_identity": "Vox 原作；局部片内状态",
+  "material": "地图轮廓、细边界与真实地图界面；精度和可辨认性优先。",
+  "composition": "大尺度关系与局部细节切换；粗轮廓承担主形，细线承担内部信息。",
+  "typography": "标签负责对象指代和必要区别，字幕负责语言跟随；不能让细字与图形争夺观察。",
+  "motion": "已有 1:35、1:38、1:43 状态观察；本片可试对象放大与记录承接，尚无完整连续动作审查。",
+  "fit": "尺度、比较与机制关系明确的知识解释。",
+  "failure": "借来地图外观当装饰，或把一次信息比较铺成全屏关系网。",
+  "source_url": "https://www.youtube.com/watch?v=kIID5FDi2JQ",
+  "keywords": [
+    "黑白主体",
+    "精确细线",
+    "纸面纹理",
+    "证据与图解交接"
+  ],
+  "observation": "已核查 1:35 的地图图解、1:38 的局部放大和 1:43 的真实地图界面：粗轮廓承担主形，细边界承担细节，图解与真实记录解释同一对象。",
+  "reference_positions_seconds": [
+    98
+  ],
+  "observation_limit": "这三个局部状态支持视觉组织的观察；未完成整片运动或听觉审查。地图题材与本片不同，不复制地图造型，也不把该作品代表整个 Vox。",
+  "origin_type": "external_work",
+  "implementation_status": "not_produced_in_this_library"
+}

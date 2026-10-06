@@ -23,6 +23,12 @@ The gallery adds our finished compositions, not external benchmark films. Per-ca
 
 No standalone third-party music or sound-effect files are included in these added cases.
 
+## Style-prompt audit probes
+
+Seven original silent six-second compositions and four raw AI-generated concept images are provided under `examples/style-prompt-audit/`. Exact image inputs and limits are recorded with each asset. No external reference pixels, original benchmark films, private voice recordings or user likeness assets are included. The host did not report the image model version; no exclusive-rights guarantee is made.
+
+The private renders used installed Microsoft YaHei. Its font software is not redistributed; portable source uses an installed-font lookup and system fallbacks. GSAP 3.13.0 is prepared from the existing npm dependency by `setup:probes`, retaining its header and upstream license. HyperFrames and FFmpeg are separately installed tools. The original arrangement does not relicense any dependency or font.
+
 ## Research references
 
 The primary style library cites external work and observed positions. Its HTML page uses YouTube's hosted players and an image hosted on Antoni Sendra's [Vox Earworm project page](https://podenco.tv/vox-earwormdub-music/); the README and research document also link/embed that author-hosted image. Those references remain the respective rights holders' work, are not covered by this project's MIT license and are not checked into this repository as media files. A project image is identified as static reference, not continuous motion evidence.

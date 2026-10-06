@@ -1,0 +1,690 @@
+{
+  "status": "final",
+  "phase": "director-part-2",
+  "case_id": "vox-earworm-mixed-media",
+  "category": "custom-style-probe",
+  "classification_note": "内容已给，无需搜索；本测试的素材与关系画面不属于默认统计、地图、文字或真实来源资产融合分类。custom-style-probe 是本次 schema 扩展，不强套分类模板。",
+  "duration_s": 6,
+  "fps": 30,
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9"
+  },
+  "audio": false,
+  "style": "混合媒介拼贴 · Vox Earworm：摄影人物与音箱等器物、局部几何色形；材料变化保留对象可辨认性。",
+  "palette": [
+    "#252525",
+    "#ECC84A",
+    "#C56E60",
+    "#D8A393"
+  ],
+  "font": "Microsoft YaHei",
+  "font_status": "assets/probe-msyh.ttc 已就位，Microsoft YaHei 本地私有渲染，不公开分发；中文字形和可读性仍待首版帧核对。",
+  "beats": [
+    0,
+    24,
+    60,
+    102,
+    132
+  ],
+  "beat_unit": "frames",
+  "export": "mp4",
+  "shot_brief": "使用整张原始阅读桌面 PNG：旧书、铅笔与台灯不能分开移动。两块程序化彩色形片分别位于图后与前缘，整体轻微缩放时保持接触与烘焙阴影。右页示意段落出现边框，表达在整本书中找到一小段；不假装有独立铅笔动作。",
+  "asset_needs": [
+    {
+      "role": "cutout",
+      "kind": "image",
+      "source": "builtin:imagegen",
+      "query": "制作关于阅读桌面的旧书、铅笔与台灯的灰阶器物摄影裁片，保留具体材质与可辨轮廓；人物与器物分别输出透明层，不生成文字、logo或原作角色。",
+      "treatment": "none",
+      "recipe_id": "vox-earworm-mixed-media-cutout",
+      "generation_kind": "raster_generation",
+      "output_path": "assets/hero.png",
+      "transparent_background": true,
+      "status": "resolved_raw_single_png",
+      "request_policy": "只把冻结 filled_prompt 原文传给 imagegen.prompt；不得补写美术限定，不做视觉搜索或参考图片输入。",
+      "resolved_asset": "assets/hero.png",
+      "generation_record": "generation.json",
+      "sha256": "d4ee4187dfe75f66b7d9fa149c55723d82aab379c4158a281a1cb883c2e8cb90",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "layer_count": 1,
+      "raw_policy": "保持原图字节不变；没有独立对象层。",
+      "generation_prompt_verified_equal": true
+    }
+  ],
+  "search_required": false,
+  "content": {
+    "brief_from_input": "用六秒无声横屏视频呈现：读者面对整本书，找到一小段需要学习的内容；重点是画面语言与动作，不复制参考的题材或造型。",
+    "recipes": [
+      {
+        "id": "vox-earworm-mixed-media-cutout",
+        "source_profile": "vox-earworm-mixed-media",
+        "role": "cutout",
+        "kind": "raster_generation",
+        "prompt": "制作关于{文化场景}的灰阶器物摄影裁片，保留具体材质与可辨轮廓；人物与器物分别输出透明层，不生成文字、logo或原作角色。",
+        "variables": [
+          "文化场景"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "器物能建立情境，透明边缘没有脏边。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "文化场景": "阅读桌面的旧书、铅笔与台灯"
+        },
+        "filled_prompt": "制作关于阅读桌面的旧书、铅笔与台灯的灰阶器物摄影裁片，保留具体材质与可辨轮廓；人物与器物分别输出透明层，不生成文字、logo或原作角色。"
+      },
+      {
+        "id": "vox-earworm-mixed-media-color-shape",
+        "source_profile": "vox-earworm-mixed-media",
+        "role": "color-shape",
+        "kind": "vector_or_cutpaper",
+        "prompt": "用{主体对象}周围的少量彩色形片建立不对称拼贴构图；颜色根据当前主题选择，形片与摄影裁片产生明确遮挡。",
+        "variables": [
+          "主体对象"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "彩色部分帮助轮廓和层级，不只是荧光描边。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "主体对象": "一本打开的书"
+        },
+        "filled_prompt": "用一本打开的书周围的少量彩色形片建立不对称拼贴构图；颜色根据当前主题选择，形片与摄影裁片产生明确遮挡。"
+      },
+      {
+        "id": "vox-earworm-mixed-media-space",
+        "source_profile": "vox-earworm-mixed-media",
+        "role": "space",
+        "kind": "lighting_setup",
+        "prompt": "为{器物组合}安排接触点、前后遮挡及一致方向的地面影子；分层可用于后续动画，先验证静态空间。",
+        "variables": [
+          "器物组合"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "器物站得住，阴影对应光源；动态节奏另行试验。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "器物组合": "书、铅笔、台灯"
+        },
+        "filled_prompt": "为书、铅笔、台灯安排接触点、前后遮挡及一致方向的地面影子；分层可用于后续动画，先验证静态空间。"
+      }
+    ],
+    "source_phase_note": "实际 raw hero.png 已接收；只使用整张图，不清理、抠图、分层、重新着色、遮盖补救、重画或生成替代图片。非 raster 配方能执行的范围见 available_scope。",
+    "layout": {
+      "unit": "canvas-px",
+      "source_regions_unit": "normalized-raw-image-coordinate",
+      "policy": "图像完整等比包含；所有 raster 覆盖层用同一 source-to-canvas affine 变换。非 raster 几何为执行者补充。",
+      "elements": [
+        {
+          "id": "rear-color-shape",
+          "kind": "procedural-svg-polygon",
+          "points": [
+            [
+              110,
+              330
+            ],
+            [
+              350,
+              250
+            ],
+            [
+              400,
+              535
+            ],
+            [
+              145,
+              570
+            ]
+          ],
+          "z": 1,
+          "fill": "#ECC84A"
+        },
+        {
+          "id": "raw-desk",
+          "kind": "raw-image",
+          "path": "assets/hero.png",
+          "bounds": [
+            140,
+            27,
+            1000,
+            666.667
+          ],
+          "z": 2
+        },
+        {
+          "id": "foreground-color-shape",
+          "kind": "procedural-svg-polygon",
+          "points": [
+            [
+              1055,
+              550
+            ],
+            [
+              1160,
+              565
+            ],
+            [
+              1145,
+              660
+            ],
+            [
+              1050,
+              647
+            ]
+          ],
+          "z": 3,
+          "fill": "#C56E60"
+        },
+        {
+          "id": "page-lines",
+          "kind": "procedural-svg-lines",
+          "source_region": [
+            0.52,
+            0.746,
+            0.22,
+            0.08
+          ],
+          "parent": "raw-desk-coordinate-group",
+          "line_count": 3,
+          "z": 4
+        },
+        {
+          "id": "selected-paragraph",
+          "kind": "procedural-svg-frame",
+          "source_region": [
+            0.52,
+            0.741,
+            0.22,
+            0.09
+          ],
+          "parent": "raw-desk-coordinate-group",
+          "stroke_width": 4,
+          "z": 5
+        }
+      ]
+    },
+    "scenes": [
+      {
+        "id": "full-shot",
+        "start": 0,
+        "end": 6,
+        "dominant_motion": "同一整体到一小段的连续定位"
+      }
+    ],
+    "timeline": [
+      {
+        "start": 0,
+        "end": 0.8,
+        "target": "raw-desk",
+        "action": "opacity 0 到 1"
+      },
+      {
+        "start": 0.8,
+        "end": 1.5,
+        "target": "rear-color-shape,foreground-color-shape",
+        "action": "opacity 0 到 1；彩片位置固定，不另设摄影器物受光"
+      },
+      {
+        "start": 1.8,
+        "end": 2.7,
+        "target": "page-lines",
+        "action": "opacity 0 到 1，标为示意行块"
+      },
+      {
+        "start": 2.7,
+        "end": 3.4,
+        "target": "selected-paragraph",
+        "action": "strokeDashoffset 连续框出一小段"
+      },
+      {
+        "start": 3.4,
+        "end": 4.4,
+        "target": "raw-desk-coordinate-group",
+        "action": "scale 1 到 1.015，同步行块与边框；原图全矩形始终在画布内"
+      },
+      {
+        "start": 4.4,
+        "end": 6,
+        "target": "all",
+        "action": "静止保持"
+      }
+    ],
+    "available_scope": "可执行灰阶复合器物与彩片组合及段落指示；不能验证器物分层或独立空间动作。",
+    "unmet_requirements": [
+      "配方要求人物和器物分别输出透明层；实际只给一张复合器物 PNG，独立层未满足。",
+      "不能逐件控制遮挡、接触影子或移动铅笔；程序化彩片只是与整图产生遮挡。",
+      "原图额外出现书堆及笔筒，是生成结果，不能说成冻结配方逐项指定。",
+      "独立层缺失，卡片要求的逐器物空间与角色动画不能完成。",
+      "彩片能与整图遮挡，但不能穿插到原图内部的书、铅笔或灯之间。"
+    ],
+    "style_card_application": {
+      "material": {
+        "provided": "摄影人物与音箱等器物、局部几何色形；材料变化保留对象可辨认性。",
+        "implementation": "原始灰阶桌面图保持；彩片改为黄与珊瑚两色的纸形轮廓；不重新着色器物。"
+      },
+      "composition": {
+        "provided": "器物堆叠构成主形；前后遮挡、话筒的位置和地面方向性影子建立空间。",
+        "implementation": "利用原图已有不对称书堆、灯与打开书的组合，后方黄形片和前缘珊瑚形片与整张图形成遮挡。"
+      },
+      "typography": {
+        "provided": "本轮未深入核查文字设计，不预设标题字体或文字动画。",
+        "implementation": "不添加标题或文字动画；卡内文字设计未经深入核查。"
+      },
+      "keywords": {
+        "provided": [
+          "灰阶摄影",
+          "彩色几何",
+          "不对称拼贴",
+          "器物场景",
+          "方向性影子"
+        ],
+        "implementation_note": "只迁移与当前阅读主题和现有资产相符的材料与关系，不复制卡片观察中的具体题材/造型。"
+      },
+      "motion": {
+        "provided": "作者说明使用拼贴和角色动画；本轮只看项目图，动作节奏待连续观看。",
+        "implementation": "彩片错峰一次出现，整体仅一次有限缩放，保留原图烘焙光影；不把此节奏说成参考已观察动作。"
+      },
+      "status": "first-probe-executed-not-reference-equivalent"
+    },
+    "material_system": {
+      "source": "existing-style-card plus executor numerical realization",
+      "implementation": "原始灰阶桌面图保持；彩片改为黄与珊瑚两色的纸形轮廓；不重新着色器物。",
+      "procedural_pattern_rule": "仅非 raster 层可用重复 SVG pattern；固定点距与坐标，不用随机数，不覆盖或处理 raw 图。",
+      "parameters": {
+        "dot_radius_px": 0.55,
+        "dot_pitch_px": 8,
+        "dot_opacity": 0.06,
+        "contact_shadow_offset_px": [
+          2,
+          3
+        ],
+        "contact_shadow_opacity": 0.12,
+        "paper_edge_jitter_px": 2
+      },
+      "avoid": "不要通用 glow、粒子、光滑默认箭头或图表外观。"
+    },
+    "recipe_execution": [
+      {
+        "recipe_id": "vox-earworm-mixed-media-cutout",
+        "kind": "raster_generation",
+        "filled_prompt": "制作关于阅读桌面的旧书、铅笔与台灯的灰阶器物摄影裁片，保留具体材质与可辨轮廓；人物与器物分别输出透明层，不生成文字、logo或原作角色。",
+        "status": "raster-generated-reviewed-partial",
+        "evidence_or_scope": "灰阶器物可辨，但只有单 PNG；分别透明层未满足。",
+        "validation_status": "generation_tested_with_evidence",
+        "observed_result": "partial",
+        "pre_execution_status": "raw-generated-partial",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      },
+      {
+        "recipe_id": "vox-earworm-mixed-media-color-shape",
+        "kind": "vector_or_cutpaper",
+        "filled_prompt": "用一本打开的书周围的少量彩色形片建立不对称拼贴构图；颜色根据当前主题选择，形片与摄影裁片产生明确遮挡。",
+        "status": "implementation-executed-partial",
+        "evidence_or_scope": "两片彩色形状与整图遮挡；无法穿插独立器物。",
+        "validation_status": "implementation_tested_with_evidence",
+        "observed_result": "partial",
+        "pre_execution_status": "planned-procedural-partial",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      },
+      {
+        "recipe_id": "vox-earworm-mixed-media-space",
+        "kind": "lighting_setup",
+        "filled_prompt": "为书、铅笔、台灯安排接触点、前后遮挡及一致方向的地面影子；分层可用于后续动画，先验证静态空间。",
+        "status": "blocked-independent-lighting",
+        "evidence_or_scope": "接触、遮挡和阴影已烘焙；不能说成独立安排或可动画灯光。",
+        "validation_status": "not_executed_or_blocked",
+        "observed_result": "blocked",
+        "pre_execution_status": "blocked-independent-lighting",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      }
+    ]
+  },
+  "extra_decisions": [
+    {
+      "area": "category_extension",
+      "decision": "使用 custom-style-probe；冻结配方本身未提供此 IR 分类。",
+      "provenance": "executor"
+    },
+    {
+      "area": "final-layout-and-motion",
+      "provenance": "executor",
+      "decision": "content.layout 与 content.timeline 的全部数值、几何、阶段、时长、光影实现和字形均由执行者补充，不能当作配方明确提供。"
+    },
+    {
+      "area": "final-palette",
+      "provenance": "executor",
+      "decision": "palette 为执行者选择的色值，最后一项是画布底色；原图不重新着色。"
+    },
+    {
+      "area": "system-font",
+      "provenance": "executor",
+      "decision": "使用已存在 Microsoft YaHei 系统字体，替换 Part1 的未验证 Noto Sans SC；最终渲染需核对中文字形。"
+    },
+    {
+      "area": "raw-constraints",
+      "provenance": "actual-generated-asset",
+      "decision": "可执行灰阶复合器物与彩片组合及段落指示；不能验证器物分层或独立空间动作。"
+    },
+    {
+      "area": "generation-background",
+      "provenance": "executor",
+      "decision": "四次 imagegen transparent_background=true 是技术调用选项；不能把该请求当作已经满足透明层。drawn 配方未明确透明，该选项为额外选择。"
+    },
+    {
+      "area": "catalog-reuse",
+      "provenance": "technical-skill-and-parent-authorized",
+      "decision": "只读技术检索后使用当前 GSAP 3.13.0 技术，不导入 registry 的默认外观。"
+    },
+    {
+      "area": "existing-style-card-guidance",
+      "provenance": "style-card-provided",
+      "decision": {
+        "material": "摄影人物与音箱等器物、局部几何色形；材料变化保留对象可辨认性。",
+        "composition": "器物堆叠构成主形；前后遮挡、话筒的位置和地面方向性影子建立空间。",
+        "typography": "本轮未深入核查文字设计，不预设标题字体或文字动画。",
+        "keywords": [
+          "灰阶摄影",
+          "彩色几何",
+          "不对称拼贴",
+          "器物场景",
+          "方向性影子"
+        ]
+      },
+      "note": "这是既有输入提供的指导，不是执行者原创选择。"
+    },
+    {
+      "area": "style-card-realization",
+      "provenance": "executor",
+      "decision": {
+        "material": "原始灰阶桌面图保持；彩片改为黄与珊瑚两色的纸形轮廓；不重新着色器物。",
+        "composition": "利用原图已有不对称书堆、灯与打开书的组合，后方黄形片和前缘珊瑚形片与整张图形成遮挡。",
+        "typography": "不添加标题或文字动画；卡内文字设计未经深入核查。",
+        "motion": "彩片错峰一次出现，整体仅一次有限缩放，保留原图烘焙光影；不把此节奏说成参考已观察动作。"
+      },
+      "note": "具体数字、轮廓、色值、影子、纸粒参数、摆位和时序是执行者补充。"
+    }
+  ],
+  "validation_plan": {
+    "status": "first-probe-reviewed-with-limitations",
+    "raster": [
+      {
+        "recipe_id": "vox-earworm-mixed-media-cutout",
+        "acceptance": "器物能建立情境，透明边缘没有脏边。"
+      }
+    ],
+    "procedural": [
+      {
+        "recipe_id": "vox-earworm-mixed-media-color-shape",
+        "acceptance": "彩色部分帮助轮廓和层级，不只是荧光描边。"
+      },
+      {
+        "recipe_id": "vox-earworm-mixed-media-space",
+        "acceptance": "器物站得住，阴影对应光源；动态节奏另行试验。"
+      }
+    ],
+    "sample_checks": [
+      "核对 input 与 generation.json 的 filled_prompt 逐字一致及 raw hash 不变。",
+      "仅制作一次美术首版；看0.6/2.4/4.4/5.8秒关键帧及完整六秒动作，不以编译或导出替代观看。",
+      "逐条标明素材层、关系层和动作层是否完成；整图镜头动作不算角色姿态或独立物件动画。",
+      "只允许记录技术修复，不优化首版审美；不补图、抠图或重画来掩盖原配方素材不足。",
+      "组合样段的指导输入是既有风格卡+三条冻结配方；图片素材测试仍只来自各条 filled_prompt 原文。分别报告，不能称为仅素材配方的受控风格测试。"
+    ],
+    "technical": [
+      "1280×720，30fps，180 帧，六秒，无声。",
+      "像素资产生成后才确认边缘、裁切、实际尺寸和可分层程度；草案不声称已有透明层或合格素材。"
+    ],
+    "comparison_limit": "既有风格卡文字已揭示；未看目标原作图像、研究目录、旧片。组合样段不称为纯配方盲测，参考匹配结论需另行观看原作后的比较。"
+  },
+  "experimental_rule": "现有配方不改写；仅填变量。实现时自行添加的材料/造型/布局/时序逐项记录。禁止查看原片、图像、原研究描述或此前实验成片。只做一次美术首版；技术修复单独记录，不优化首版审美。",
+  "technical_environment": {
+    "source": "父代理提供的当前技术环境",
+    "hyperframes": "0.8.137",
+    "gsap": "3.13.0",
+    "policy": "沿用现有 public 仓库运行时，不升级或安装。"
+  },
+  "technical_fixes": [],
+  "test_layer": "existing-style-card-plus-recipes-motion-probe",
+  "asset_review": {
+    "reviewed_with": "view_image",
+    "view_scope": "只看本 case 当前 raw hero.png",
+    "raw_observation": "原图包含打开的书、左侧书堆、笔筒中多支铅笔、台灯与桌面；均已合成在一张 PNG。材质与轮廓可辨，右页空白，灯光、接触、影子已烘焙。存在透明空白，但没有独立器物层。",
+    "generation_metadata": {
+      "asset": "assets/hero.png",
+      "tool": "built-in imagegen",
+      "requested_transparent_background": true,
+      "prompt": "制作关于阅读桌面的旧书、铅笔与台灯的灰阶器物摄影裁片，保留具体材质与可辨轮廓；人物与器物分别输出透明层，不生成文字、logo或原作角色。",
+      "mode": "RGBA",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "d4ee4187dfe75f66b7d9fa149c55723d82aab379c4158a281a1cb883c2e8cb90",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_fraction": 0.5157623291015625,
+      "source_note": "raw tool output; no crop, cutout, recolor or cleanup; one PNG returned, not separate object layers"
+    },
+    "observation_status": "raw-inspected-motion-not-rendered",
+    "unmet_requirements": [
+      "配方要求人物和器物分别输出透明层；实际只给一张复合器物 PNG，独立层未满足。",
+      "不能逐件控制遮挡、接触影子或移动铅笔；程序化彩片只是与整图产生遮挡。",
+      "原图额外出现书堆及笔筒，是生成结果，不能说成冻结配方逐项指定。",
+      "独立层缺失，卡片要求的逐器物空间与角色动画不能完成。",
+      "彩片能与整图遮挡，但不能穿插到原图内部的书、铅笔或灯之间。"
+    ]
+  },
+  "catalog_technical_audit": {
+    "queries": [
+      {
+        "query": "GSAP translate scale image camera zoom",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"GSAP translate scale image camera zoom\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "transitions-scale",
+          "cinematic-zoom",
+          "zoom-through-transition",
+          "parallax-zoom",
+          "camera-dolly-zoom",
+          "ui-focus-zoom",
+          "yt-camera-move",
+          "camera-rig-depth-stack",
+          "camera-scan-gate",
+          "frost-sequence-camera-orbit",
+          "particle-image-reveal",
+          "camera-shake"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "SVG stroke dashoffset path reveal",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"SVG stroke dashoffset path reveal\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "svg-stroke-trace",
+          "svg-mask-reveal",
+          "hw-path-text",
+          "svg-line-draw-loader",
+          "offset-path-traveler",
+          "ui-3d-reveal",
+          "arc-motion-path",
+          "lt-mask-reveal",
+          "whiteboard-ink",
+          "carousel-path-5",
+          "carousel-path-4",
+          "carousel-path-3"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "GSAP rotate translate vector shape groups",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"GSAP rotate translate vector shape groups\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "avatar-group-hover",
+          "vector-editor-rig",
+          "transitions-3d",
+          "success-check",
+          "offset-path-traveler",
+          "beat-timeline",
+          "stagger-lattice",
+          "shutter-slam",
+          "code-3d-extrude",
+          "arc-motion-path",
+          "wordmark-tiles",
+          "us-map"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "CSS opacity highlight rectangle",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"CSS opacity highlight rectangle\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "inline-highlight",
+          "yt-feather-highlight",
+          "caption-highlight",
+          "code-highlight",
+          "mk-callout-highlight",
+          "marker-highlight",
+          "shimmer-sweep",
+          "organic-light-leak-overlay",
+          "transitions-light",
+          "light-leak",
+          "soft-blur-in",
+          "caption-pill-karaoke"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "SVG pattern deterministic dots polygon uneven edges",
+        "cli_version": "0.8.137",
+        "tier": "words",
+        "candidate": "svg-stroke-trace",
+        "gap": "查询未给出同时满足纸片边缘和固定颗粒图案的专用能力；该几何由现有 SVG/CSS 技术实现。",
+        "external_preview_opened": false,
+        "installation": false
+      }
+    ],
+    "selected_capabilities": [
+      "existing GSAP transform/opacity",
+      "SVG strokeDashoffset primitive",
+      "existing SVG pattern geometry"
+    ],
+    "reuse_mode": "不下载、add 或引入默认美术模板；按父代理许可复用仓库现有 GSAP3.13.0 基础技术并定制输入关系。",
+    "scope": "只检索技术能力，未查看外部视觉作品、poster 或视频。"
+  },
+  "provenance": {
+    "input_provided": {
+      "file": "input.json",
+      "scope": [
+        "brief",
+        "output",
+        "全部 recipes 原文与 filled_prompt",
+        "experimental_rule"
+      ],
+      "unaltered": true,
+      "style_card": "existing-style-card.json 的材料、构图、字形职责和关键词；仅文字输入，未打开其中来源链接或图片。"
+    },
+    "actual_asset": {
+      "file": "assets/hero.png",
+      "record": "generation.json",
+      "scope": "原图像素和生成器自行添加的对象、文字、构图、光影；这些并非执行者可编辑的分层输入。"
+    },
+    "executor_provided": [
+      "content.layout",
+      "content.timeline",
+      "palette 数值",
+      "font 选择",
+      "额外程序化几何和镜头"
+    ],
+    "technical_provided": [
+      "HF0.8.137/GSAP3.13.0 确定性和单 paused timeline 合同"
+    ]
+  },
+  "builder_contract": {
+    "framework": "HyperFrames0.8.137",
+    "animation": "GSAP3.13.0",
+    "master_timeline": "exactly one gsap.timeline({paused:true}); register window.__timelines[case_id]; tl.seek(0); never play()",
+    "stage": "1280x720, fps30, duration6, one full-duration .clip with stable id",
+    "eases": [
+      "power2.inOut",
+      "power2.out",
+      "sine.inOut"
+    ],
+    "repeat": "none",
+    "determinism": "no timers, network, Math.random or Date.now",
+    "asset_policy": "source PNG byte-for-byte unchanged, full image contained in canvas through all transforms",
+    "export_audio": false,
+    "local_resources": {
+      "gsap": "assets/gsap.min.js",
+      "font": "assets/probe-msyh.ttc",
+      "font_use": "local @font-face, private render only, no public font redistribution"
+    }
+  },
+  "recipe_only_baseline": "recipe-only-plan.json",
+  "style_card_input": {
+    "file": "existing-style-card.json",
+    "origin": "既有公开库条目，是当前新增允许使用的既有输入；不是父代理临时强化或改写的配方。",
+    "card": {
+      "id": "vox-earworm-mixed-media",
+      "family": "vox",
+      "name": "混合媒介拼贴 · Vox Earworm",
+      "graphics": "已观察灰阶器物与黄色色形组合；本账号的箭头和文字应作为同一拼贴材料系统设计，后者属于待制作方案。",
+      "surface_language": "摄影裁片与彩色局部形成材料对比，遮挡和方向性阴影组织空间；字形处理本轮尚未深入核查。",
+      "temporal_texture": "只核查项目图。类低频绘本的姿态切换是用户要求的本账号试验方向，不能归为已观察的 Earworm 时序。",
+      "reference_identity": "参与作者 Antoni Sendra 的项目展示图；不是本轮截取的片内时间帧",
+      "source_url": "https://podenco.tv/vox-earwormdub-music/",
+      "image_kind": "作者项目页语境截图；包含静态作品图及播放器封面，未播放视频",
+      "keywords": [
+        "灰阶摄影",
+        "彩色几何",
+        "不对称拼贴",
+        "器物场景",
+        "方向性影子"
+      ],
+      "observation": "项目图以音箱和话筒建立具体场景，灰阶器物与黄色边缘、珊瑚底色组合；下方另有蓝色场景。作者署名和项目身份同页可见。",
+      "material": "摄影人物与音箱等器物、局部几何色形；材料变化保留对象可辨认性。",
+      "composition": "器物堆叠构成主形；前后遮挡、话筒的位置和地面方向性影子建立空间。",
+      "typography": "本轮未深入核查文字设计，不预设标题字体或文字动画。",
+      "motion": "作者说明使用拼贴和角色动画；本轮只看项目图，动作节奏待连续观看。",
+      "fit": "对象与文化情境具有视觉材料的叙事；可借材料关系，不能凭空为当前口播增加音乐史内容。",
+      "failure": "只加黑白滤镜和荧光描边，没有对象关系与具体情境；把封面当动作证据。",
+      "origin_type": "participating_author_project",
+      "implementation_status": "not_produced_in_this_library",
+      "reference_image_url": "https://podenco.tv/wp-content/uploads/2022/04/vox1.jpg"
+    }
+  },
+  "actual_review": {
+    "movie_sha256": "09280524bbab20b7528824d1789983daa59bbb40a416520c3671d5941fe67ee0",
+    "source_sha256": "5c28654cdc9023a17b049457551d6e638514cbf21eb3a090d37b77ec55fcfcd6",
+    "finding": {
+      "verdict": "灰阶器物＋彩片有效；空间分层与器物动作受阻",
+      "observed": "灰阶书桌与黄、珊瑚色片产生前后遮挡；能认出书、灯和铅笔。原图把整个桌面焊成一层，原有影子也焊在里面；色片只能放在整图前后，无法进入器物之间。后续只有整图靠近和段落框。",
+      "conclusion": "这是最接近材料搭配的一案，但不足以实现参考项目的逐件拼贴空间。‘分别输出透明层’不能靠一句话保证，必须落实为实际多文件资产交付。",
+      "recipe_results": [
+        "partial",
+        "partial",
+        "blocked"
+      ]
+    },
+    "own_observation": "六关键帧与导出视频15帧动作采样（0.0至5.6秒，间隔0.4秒）",
+    "reference_limit": "只比较既有参考静态状态与作者项目图；未审查原片完整运动或声音",
+    "stop_reason": "本任务检验原配方首版；保留失败与限制，不在本版本增强审美后倒算通过"
+  }
+}

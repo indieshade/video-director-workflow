@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>geometric-emotion</title>
+  <style>
+    @font-face { font-family: 'ProbeYaHei'; src: local("Microsoft YaHei"); font-weight: 400; }
+    * { box-sizing: border-box; }
+    html, body { width: 1280px; height: 720px; margin: 0; overflow: hidden; }
+    body { font-family: 'ProbeYaHei', sans-serif; }
+    #stage { width: 100%; height: 100%; position: relative; background: #F2E7EE; }
+    .clip { width: 100%; height: 100%; }
+    svg { display: block; width: 100%; height: 100%; }
+    #target-frame { opacity: 0; }
+  </style>
+</head>
+<body>
+  <div id="stage" data-composition-id="geometric-emotion" data-start="0" data-duration="6" data-fps="30" data-width="1280" data-height="720">
+    <div id="geometric-emotion-full-shot" class="clip" data-start="0" data-duration="6" data-track-index="0">
+      <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" aria-label="几何读者先被整书压低，随后托起同一个小段落">
+        <defs>
+          <pattern id="geometric-paper" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#F2E7EE"/><circle cx="2" cy="3" r="0.55" fill="#6B456C" opacity="0.06"/></pattern>
+          <pattern id="geometric-pink-paper" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#CE9EC7"/><circle cx="2" cy="3" r="0.55" fill="#6B456C" opacity="0.06"/></pattern>
+          <path id="geometric-body-shape" d="M32 0 Q24 0 22 12 L2 132 Q0 143 14 149 L29 152 L26 178 L65 180 L71 152 L105 152 L113 180 L151 178 L148 152 L162 149 Q170 143 168 132 L148 12 Q146 0 136 0 Z"/>
+          <path id="geometric-book-pages" d="M0 18 L2 8 L164 0 Q244 0 325 18 Q405 0 487 0 L648 8 L650 18 L648 252 Q489 240 325 270 Q162 240 2 252 Z"/>
+        </defs>
+        <rect width="1280" height="720" fill="url(#geometric-paper)"/>
+        <path id="ground" d="M175 585 H1080" fill="none" stroke="#6B456C" stroke-width="3"/>
+        <g transform="translate(355 405)">
+          <g id="character-body">
+            <use href="#geometric-body-shape" fill="url(#geometric-pink-paper)" stroke="#6B456C" stroke-width="5" stroke-linejoin="round"/>
+            <ellipse id="left-eye" cx="66" cy="52" rx="6" ry="8" fill="#6B456C"/>
+            <ellipse id="right-eye" cx="104" cy="52" rx="6" ry="8" fill="#6B456C"/>
+          </g>
+        </g>
+        <g id="arms" fill="none" stroke="#6B456C" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M368 478 Q352 440 410 440"/>
+          <path d="M512 480 Q539 440 510 440"/>
+        </g>
+        <g transform="translate(230 160)">
+          <g id="book">
+            <use href="#geometric-book-pages" x="2" y="3" fill="#6B456C" opacity="0.12"/>
+            <use href="#geometric-book-pages" fill="url(#geometric-paper)" stroke="#6B456C" stroke-width="5" stroke-linejoin="round"/>
+            <path d="M325 18 V270 M3 239 Q165 228 325 254 Q490 228 647 239 M3 245 Q165 234 325 260 Q490 234 647 245" fill="none" stroke="#6B456C" stroke-width="3"/>
+            <g fill="#6B456C" opacity="0.7">
+              <g id="book-lines-1"><rect x="50" y="40" width="200" height="5"/><rect x="50" y="51" width="180" height="5"/><rect x="50" y="62" width="195" height="5"/></g>
+              <g id="book-lines-2"><rect x="50" y="83" width="210" height="5"/><rect x="50" y="94" width="188" height="5"/><rect x="50" y="105" width="198" height="5"/></g>
+              <g id="book-lines-3"><rect x="50" y="126" width="195" height="5"/><rect x="50" y="137" width="210" height="5"/><rect x="50" y="148" width="180" height="5"/></g>
+              <g id="book-lines-4"><rect x="50" y="169" width="205" height="5"/><rect x="50" y="180" width="190" height="5"/><rect x="50" y="191" width="210" height="5"/></g>
+              <g id="book-lines-5"><rect x="50" y="212" width="205" height="5"/><rect x="50" y="223" width="185" height="5"/><rect x="50" y="234" width="170" height="5"/></g>
+              <g id="book-lines-6"><rect x="375" y="40" width="200" height="5"/><rect x="375" y="51" width="180" height="5"/><rect x="375" y="62" width="195" height="5"/></g>
+              <g id="book-lines-8"><rect x="375" y="95" width="210" height="5"/><rect x="375" y="106" width="188" height="5"/><rect x="375" y="117" width="198" height="5"/></g>
+              <g id="book-lines-9"><rect x="375" y="208" width="210" height="5"/><rect x="375" y="219" width="188" height="5"/><rect x="375" y="230" width="198" height="5"/></g>
+              <g id="book-lines-10"><rect x="375" y="240" width="205" height="5"/><rect x="375" y="249" width="190" height="5"/></g>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(605 314)">
+          <g id="target" data-book-line-group="7">
+            <path d="M0 1 L153 0 L155 46 L2 48 Z" fill="url(#geometric-paper)"/>
+            <g fill="#6B456C" opacity="0.7"><rect x="8" y="9" width="139" height="5"/><rect x="8" y="21" width="129" height="5"/><rect x="8" y="33" width="135" height="5"/></g>
+            <path id="target-frame" d="M0 1 L153 0 L155 46 L2 48 Z" fill="none" stroke="#6B456C" stroke-width="3" stroke-linejoin="round"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <script src="assets/gsap.min.js"></script>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+    tl.set('#character-body', { scaleY: 0.82, transformOrigin: '50% 100%' }, 0);
+    tl.set('#arms', { y: -10 }, 0);
+    tl.fromTo('#target-frame', { opacity: 0 }, { opacity: 1, duration: 1, ease: 'power2.out' }, 1);
+    tl.fromTo('#target', { x: 0, y: 0, scaleX: 1, scaleY: 1, transformOrigin: '0% 0%' }, { x: -208, y: 78, scaleX: 145 / 155, scaleY: 45 / 48, duration: 1.6, ease: 'power2.inOut' }, 2);
+    tl.fromTo('#book', { x: 0, y: 0, scaleX: 1, scaleY: 1, transformOrigin: '0% 0%' }, { x: 510, y: 35, scaleX: 340 / 650, scaleY: 142 / 270, duration: 1.4, ease: 'power2.inOut' }, 2.2);
+    tl.to('#character-body', { scaleY: 1, duration: 1.4, ease: 'sine.inOut' }, 2.6);
+    tl.to('#arms', { y: 0, duration: 1.4, ease: 'sine.inOut' }, 2.6);
+    window.__timelines['geometric-emotion'] = tl;
+    tl.seek(0);
+  </script>
+</body>
+</html>

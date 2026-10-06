@@ -1,0 +1,612 @@
+{
+  "status": "final",
+  "phase": "director-part-2",
+  "case_id": "geometric-emotion",
+  "category": "custom-style-probe",
+  "classification_note": "内容已给，无需搜索；本测试的素材与关系画面不属于默认统计、地图、文字或真实来源资产融合分类。custom-style-probe 是本次 schema 扩展，不强套分类模板。",
+  "duration_s": 6,
+  "fps": 30,
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9"
+  },
+  "audio": false,
+  "style": "几何角色与心理隐喻：几何角色、纸片颗粒与限制色；保留眼睛等可追踪特征。",
+  "palette": [
+    "#6B456C",
+    "#CE9EC7",
+    "#F2E7EE"
+  ],
+  "font": "Microsoft YaHei",
+  "font_status": "assets/probe-msyh.ttc 已就位，Microsoft YaHei 本地私有渲染，不公开分发；中文字形和可读性仍待首版帧核对。",
+  "beats": [
+    0,
+    24,
+    60,
+    102,
+    132
+  ],
+  "beat_unit": "frames",
+  "export": "mp4",
+  "shot_brief": "程序化几何读者保留双眼身份及固定脚部支点；整本书在上方形成负担。书页上的同一段落先被标记，然后该段落离开整本书落到双手，角色从压低转为稳定，原书退到后侧但保持身份。关键状态先以相同对象 ID 建立，不用粒子消散。",
+  "asset_needs": [],
+  "search_required": false,
+  "content": {
+    "brief_from_input": "用六秒无声横屏视频呈现：读者面对整本书，找到一小段需要学习的内容；重点是画面语言与动作，不复制参考的题材或造型。",
+    "recipes": [
+      {
+        "id": "geometric-emotion-character",
+        "source_profile": "geometric-emotion",
+        "role": "character",
+        "kind": "vector_or_cutpaper",
+        "prompt": "为{心理处境}设计原创几何角色，保留一个可追踪的面部或轮廓特征；纸片颗粒与色组服从辨认，避免复制原片角色。",
+        "variables": [
+          "心理处境"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "变形后角色身份仍可追踪。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "心理处境": "读者面对厚书无从下手，找到可以先处理的一小段"
+        },
+        "filled_prompt": "为读者面对厚书无从下手，找到可以先处理的一小段设计原创几何角色，保留一个可追踪的面部或轮廓特征；纸片颗粒与色组服从辨认，避免复制原片角色。"
+      },
+      {
+        "id": "geometric-emotion-relation",
+        "source_profile": "geometric-emotion",
+        "role": "relation",
+        "kind": "scene_design",
+        "prompt": "用{压力关系}安排角色与物件的体量、距离、支撑和留白；比较两个关键状态，不把心理词写满屏幕。",
+        "variables": [
+          "压力关系"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "关系让观众观察到压力，而不是只有抽象形状。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "压力关系": "整本书的信息负担变成一段可处理的学习任务"
+        },
+        "filled_prompt": "用整本书的信息负担变成一段可处理的学习任务安排角色与物件的体量、距离、支撑和留白；比较两个关键状态，不把心理词写满屏幕。"
+      },
+      {
+        "id": "geometric-emotion-release",
+        "source_profile": "geometric-emotion",
+        "role": "release",
+        "kind": "motion_staging",
+        "prompt": "为{关系变化}设计受力或空间改变的关键姿态，保持角色与对象的因果连续；何时保持、何时过渡由口播锚点决定。",
+        "variables": [
+          "关系变化"
+        ],
+        "validation_status": "authored_from_reference_not_generation_tested",
+        "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+        "acceptance": "变化兑现当前含义；不把通用粒子消散当消解。",
+        "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+        "filled_variables": {
+          "关系变化": "角色从被书的重量压住到只托起一小段"
+        },
+        "filled_prompt": "为角色从被书的重量压住到只托起一小段设计受力或空间改变的关键姿态，保持角色与对象的因果连续；何时保持、何时过渡由口播锚点决定。"
+      }
+    ],
+    "source_phase_note": "无 raster 输入；冻结非 raster 配方由程序化 SVG/CSS/GSAP 实现，不新增图片。",
+    "layout": {
+      "unit": "canvas-px",
+      "source_regions_unit": "normalized-raw-image-coordinate",
+      "policy": "图像完整等比包含；所有 raster 覆盖层用同一 source-to-canvas affine 变换。非 raster 几何为执行者补充。",
+      "elements": [
+        {
+          "id": "ground",
+          "kind": "procedural-svg-line",
+          "points": [
+            [
+              175,
+              585
+            ],
+            [
+              1080,
+              585
+            ]
+          ],
+          "z": 1
+        },
+        {
+          "id": "character-body",
+          "kind": "procedural-svg",
+          "bounds": [
+            355,
+            405,
+            170,
+            180
+          ],
+          "geometry": "圆角梯形躯干与两脚，双眼间距固定 38px，轮廓 5px；脚底 anchor=[440,585]",
+          "z": 3
+        },
+        {
+          "id": "arms",
+          "kind": "procedural-svg-paths",
+          "geometry": "手部终点 anchor=[410,440] 与 [510,440]；身体姿态过渡时保持最终支点",
+          "z": 4
+        },
+        {
+          "id": "book",
+          "kind": "procedural-svg-group",
+          "bounds": [
+            230,
+            160,
+            650,
+            270
+          ],
+          "geometry": "两页共享书脊，页内 10 组行块；第 7 组为 target",
+          "z": 5
+        },
+        {
+          "id": "target",
+          "kind": "procedural-svg-group",
+          "bounds": [
+            605,
+            314,
+            155,
+            48
+          ],
+          "geometry": "书内相同行块有唯一 ID；转移时只移动此组",
+          "z": 6
+        }
+      ]
+    },
+    "scenes": [
+      {
+        "id": "full-shot",
+        "start": 0,
+        "end": 6,
+        "dominant_motion": "同一整体到一小段的连续定位"
+      }
+    ],
+    "timeline": [
+      {
+        "start": 0,
+        "end": 1,
+        "target": "all",
+        "action": "建立受力状态：body scaleY=0.82，书下缘接近角色上方；保持0.8秒，不加入文字解释"
+      },
+      {
+        "start": 1,
+        "end": 2,
+        "target": "target",
+        "action": "边框显示，将段落身份建立"
+      },
+      {
+        "start": 2,
+        "end": 3.6,
+        "target": "target",
+        "action": "从书内 bounds 平移到 [397,392,145,45]，保持行块身份，终点在双手上方"
+      },
+      {
+        "start": 2.2,
+        "end": 3.6,
+        "target": "book",
+        "action": "同一书退到 [740,195,340,142]；不能消失成粒子"
+      },
+      {
+        "start": 2.6,
+        "end": 4,
+        "target": "character-body,arms",
+        "action": "固定脚底支点，body scaleY 0.82 到 1，arms 连续到托起状态；双眼仍可追踪"
+      },
+      {
+        "start": 4,
+        "end": 6,
+        "target": "all",
+        "action": "稳定保持角色托起小段、书居后侧"
+      }
+    ],
+    "available_scope": "程序化完整演出原配方的身份追踪、负担变小和受力关系改变；所有具体造型与时序均属 extra_decisions。",
+    "unmet_requirements": [
+      "全部造型、支点、书页结构与受力动作幅度由执行者补充，配方只给关系和辨认要求。",
+      "心理压力是视觉隐喻，不代表真实能力、医学状态或数据。",
+      "关键状态及接触可信度仍待初版关键帧和样段查看，计划完成不等于动作验收。"
+    ],
+    "style_card_application": {
+      "material": {
+        "provided": "几何角色、纸片颗粒与限制色；保留眼睛等可追踪特征。",
+        "implementation": "程序化几何角色与双眼身份，粉紫限制色、低对比纸片颗粒；不复制卡中原作角色或色板的具体值。"
+      },
+      "composition": {
+        "provided": "体量、受力与空间关系构成隐喻，画面不是自由散落的几何装饰。",
+        "implementation": "上方书本体量压迫角色，段落被托起后空间增大；保留宽阔留白，避免散落装饰几何。"
+      },
+      "typography": {
+        "provided": "感受优先通过重量和姿态表现；文字只补必要命题。",
+        "implementation": "不加情绪字，用支点与姿态表达任务变小。"
+      },
+      "keywords": {
+        "provided": [
+          "几何角色",
+          "粉紫限制色",
+          "纸片颗粒",
+          "具象心理隐喻",
+          "宽阔留白"
+        ],
+        "implementation_note": "只迁移与当前阅读主题和现有资产相符的材料与关系，不复制卡片观察中的具体题材/造型。"
+      },
+      "motion": {
+        "provided": "已观察 0:45、1:03 的状态，受力变化是可迁移设计建议；未做整片动作审查。",
+        "implementation": "固定脚底接触，同一段落连续移到双手，角色压低到恢复；不是粒子消散。"
+      },
+      "status": "first-probe-executed-not-reference-equivalent"
+    },
+    "material_system": {
+      "source": "existing-style-card plus executor numerical realization",
+      "implementation": "程序化几何角色与双眼身份，粉紫限制色、低对比纸片颗粒；不复制卡中原作角色或色板的具体值。",
+      "procedural_pattern_rule": "仅非 raster 层可用重复 SVG pattern；固定点距与坐标，不用随机数，不覆盖或处理 raw 图。",
+      "parameters": {
+        "dot_radius_px": 0.55,
+        "dot_pitch_px": 8,
+        "dot_opacity": 0.06,
+        "contact_shadow_offset_px": [
+          2,
+          3
+        ],
+        "contact_shadow_opacity": 0.12,
+        "paper_edge_jitter_px": 2
+      },
+      "avoid": "不要通用 glow、粒子、光滑默认箭头或图表外观。"
+    },
+    "recipe_execution": [
+      {
+        "recipe_id": "geometric-emotion-character",
+        "kind": "vector_or_cutpaper",
+        "filled_prompt": "为读者面对厚书无从下手，找到可以先处理的一小段设计原创几何角色，保留一个可追踪的面部或轮廓特征；纸片颗粒与色组服从辨认，避免复制原片角色。",
+        "status": "implementation-executed-partial",
+        "evidence_or_scope": "原创几何角色、双眼身份和纸片颗粒需在首版验证。",
+        "validation_status": "implementation_tested_with_evidence",
+        "observed_result": "partial",
+        "pre_execution_status": "planned-procedural",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      },
+      {
+        "recipe_id": "geometric-emotion-relation",
+        "kind": "scene_design",
+        "filled_prompt": "用整本书的信息负担变成一段可处理的学习任务安排角色与物件的体量、距离、支撑和留白；比较两个关键状态，不把心理词写满屏幕。",
+        "status": "implementation-executed-partial",
+        "evidence_or_scope": "两个关系状态及支点由执行者设计；未渲染。",
+        "validation_status": "implementation_tested_with_evidence",
+        "observed_result": "partial",
+        "pre_execution_status": "planned-procedural",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      },
+      {
+        "recipe_id": "geometric-emotion-release",
+        "kind": "motion_staging",
+        "filled_prompt": "为角色从被书的重量压住到只托起一小段设计受力或空间改变的关键姿态，保持角色与对象的因果连续；何时保持、何时过渡由口播锚点决定。",
+        "status": "implementation-executed-partial",
+        "evidence_or_scope": "同段落转移、角色恢复和保持时长是额外实现选择。",
+        "validation_status": "implementation_tested_with_evidence",
+        "observed_result": "partial",
+        "pre_execution_status": "planned-procedural",
+        "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+      }
+    ]
+  },
+  "extra_decisions": [
+    {
+      "area": "category_extension",
+      "decision": "使用 custom-style-probe；冻结配方本身未提供此 IR 分类。",
+      "provenance": "executor"
+    },
+    {
+      "area": "character_shape",
+      "decision": "以圆角梯形躯干和双眼作为可追踪特征是额外造型选择。",
+      "provenance": "executor"
+    },
+    {
+      "area": "final-layout-and-motion",
+      "provenance": "executor",
+      "decision": "content.layout 与 content.timeline 的全部数值、几何、阶段、时长、光影实现和字形均由执行者补充，不能当作配方明确提供。"
+    },
+    {
+      "area": "final-palette",
+      "provenance": "executor",
+      "decision": "palette 为执行者选择的色值，最后一项是画布底色；原图不重新着色。"
+    },
+    {
+      "area": "system-font",
+      "provenance": "executor",
+      "decision": "使用已存在 Microsoft YaHei 系统字体，替换 Part1 的未验证 Noto Sans SC；最终渲染需核对中文字形。"
+    },
+    {
+      "area": "raw-constraints",
+      "provenance": "actual-generated-asset",
+      "decision": "程序化完整演出原配方的身份追踪、负担变小和受力关系改变；所有具体造型与时序均属 extra_decisions。"
+    },
+    {
+      "area": "generation-background",
+      "provenance": "executor",
+      "decision": "四次 imagegen transparent_background=true 是技术调用选项；不能把该请求当作已经满足透明层。drawn 配方未明确透明，该选项为额外选择。"
+    },
+    {
+      "area": "catalog-reuse",
+      "provenance": "technical-skill-and-parent-authorized",
+      "decision": "只读技术检索后使用当前 GSAP 3.13.0 技术，不导入 registry 的默认外观。"
+    },
+    {
+      "area": "existing-style-card-guidance",
+      "provenance": "style-card-provided",
+      "decision": {
+        "material": "几何角色、纸片颗粒与限制色；保留眼睛等可追踪特征。",
+        "composition": "体量、受力与空间关系构成隐喻，画面不是自由散落的几何装饰。",
+        "typography": "感受优先通过重量和姿态表现；文字只补必要命题。",
+        "keywords": [
+          "几何角色",
+          "粉紫限制色",
+          "纸片颗粒",
+          "具象心理隐喻",
+          "宽阔留白"
+        ]
+      },
+      "note": "这是既有输入提供的指导，不是执行者原创选择。"
+    },
+    {
+      "area": "style-card-realization",
+      "provenance": "executor",
+      "decision": {
+        "material": "程序化几何角色与双眼身份，粉紫限制色、低对比纸片颗粒；不复制卡中原作角色或色板的具体值。",
+        "composition": "上方书本体量压迫角色，段落被托起后空间增大；保留宽阔留白，避免散落装饰几何。",
+        "typography": "不加情绪字，用支点与姿态表达任务变小。",
+        "motion": "固定脚底接触，同一段落连续移到双手，角色压低到恢复；不是粒子消散。"
+      },
+      "note": "具体数字、轮廓、色值、影子、纸粒参数、摆位和时序是执行者补充。"
+    }
+  ],
+  "validation_plan": {
+    "status": "first-probe-reviewed-with-limitations",
+    "raster": [],
+    "procedural": [
+      {
+        "recipe_id": "geometric-emotion-character",
+        "acceptance": "变形后角色身份仍可追踪。"
+      },
+      {
+        "recipe_id": "geometric-emotion-relation",
+        "acceptance": "关系让观众观察到压力，而不是只有抽象形状。"
+      },
+      {
+        "recipe_id": "geometric-emotion-release",
+        "acceptance": "变化兑现当前含义；不把通用粒子消散当消解。"
+      }
+    ],
+    "sample_checks": [
+      "核对 input 与 generation.json 的 filled_prompt 逐字一致及 raw hash 不变。",
+      "仅制作一次美术首版；看0.6/2.4/4.4/5.8秒关键帧及完整六秒动作，不以编译或导出替代观看。",
+      "逐条标明素材层、关系层和动作层是否完成；整图镜头动作不算角色姿态或独立物件动画。",
+      "只允许记录技术修复，不优化首版审美；不补图、抠图或重画来掩盖原配方素材不足。",
+      "组合样段的指导输入是既有风格卡+三条冻结配方；图片素材测试仍只来自各条 filled_prompt 原文。分别报告，不能称为仅素材配方的受控风格测试。"
+    ],
+    "technical": [
+      "1280×720，30fps，180 帧，六秒，无声。",
+      "像素资产生成后才确认边缘、裁切、实际尺寸和可分层程度；草案不声称已有透明层或合格素材。"
+    ],
+    "comparison_limit": "既有风格卡文字已揭示；未看目标原作图像、研究目录、旧片。组合样段不称为纯配方盲测，参考匹配结论需另行观看原作后的比较。"
+  },
+  "experimental_rule": "现有配方不改写；仅填变量。实现时自行添加的材料/造型/布局/时序逐项记录。禁止查看原片、图像、原研究描述或此前实验成片。只做一次美术首版；技术修复单独记录，不优化首版审美。",
+  "technical_environment": {
+    "source": "父代理提供的当前技术环境",
+    "hyperframes": "0.8.137",
+    "gsap": "3.13.0",
+    "policy": "沿用现有 public 仓库运行时，不升级或安装。"
+  },
+  "technical_fixes": [],
+  "test_layer": "existing-style-card-plus-recipes-motion-probe",
+  "asset_review": {
+    "reviewed_with": "none-no-raster",
+    "observation_status": "procedural-not-rendered",
+    "unmet_requirements": [
+      "全部造型、支点、书页结构与受力动作幅度由执行者补充，配方只给关系和辨认要求。",
+      "心理压力是视觉隐喻，不代表真实能力、医学状态或数据。",
+      "关键状态及接触可信度仍待初版关键帧和样段查看，计划完成不等于动作验收。"
+    ]
+  },
+  "catalog_technical_audit": {
+    "queries": [
+      {
+        "query": "GSAP translate scale image camera zoom",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"GSAP translate scale image camera zoom\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "transitions-scale",
+          "cinematic-zoom",
+          "zoom-through-transition",
+          "parallax-zoom",
+          "camera-dolly-zoom",
+          "ui-focus-zoom",
+          "yt-camera-move",
+          "camera-rig-depth-stack",
+          "camera-scan-gate",
+          "frost-sequence-camera-orbit",
+          "particle-image-reveal",
+          "camera-shake"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "SVG stroke dashoffset path reveal",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"SVG stroke dashoffset path reveal\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "svg-stroke-trace",
+          "svg-mask-reveal",
+          "hw-path-text",
+          "svg-line-draw-loader",
+          "offset-path-traveler",
+          "ui-3d-reveal",
+          "arc-motion-path",
+          "lt-mask-reveal",
+          "whiteboard-ink",
+          "carousel-path-5",
+          "carousel-path-4",
+          "carousel-path-3"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "GSAP rotate translate vector shape groups",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"GSAP rotate translate vector shape groups\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "avatar-group-hover",
+          "vector-editor-rig",
+          "transitions-3d",
+          "success-check",
+          "offset-path-traveler",
+          "beat-timeline",
+          "stagger-lattice",
+          "shutter-slam",
+          "code-3d-extrude",
+          "arc-motion-path",
+          "wordmark-tiles",
+          "us-map"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "CSS opacity highlight rectangle",
+        "cli_version": "0.8.137",
+        "command": "node node_modules/hyperframes/dist/cli.js catalog --query \"CSS opacity highlight rectangle\" --json",
+        "tier": "words",
+        "capability_candidates": [
+          "inline-highlight",
+          "yt-feather-highlight",
+          "caption-highlight",
+          "code-highlight",
+          "mk-callout-highlight",
+          "marker-highlight",
+          "shimmer-sweep",
+          "organic-light-leak-overlay",
+          "transitions-light",
+          "light-leak",
+          "soft-blur-in",
+          "caption-pill-karaoke"
+        ],
+        "external_preview_opened": false,
+        "installation": false
+      },
+      {
+        "query": "SVG pattern deterministic dots polygon uneven edges",
+        "cli_version": "0.8.137",
+        "tier": "words",
+        "candidate": "svg-stroke-trace",
+        "gap": "查询未给出同时满足纸片边缘和固定颗粒图案的专用能力；该几何由现有 SVG/CSS 技术实现。",
+        "external_preview_opened": false,
+        "installation": false
+      }
+    ],
+    "selected_capabilities": [
+      "existing GSAP transform/opacity",
+      "SVG strokeDashoffset primitive",
+      "existing SVG pattern geometry"
+    ],
+    "reuse_mode": "不下载、add 或引入默认美术模板；按父代理许可复用仓库现有 GSAP3.13.0 基础技术并定制输入关系。",
+    "scope": "只检索技术能力，未查看外部视觉作品、poster 或视频。"
+  },
+  "provenance": {
+    "input_provided": {
+      "file": "input.json",
+      "scope": [
+        "brief",
+        "output",
+        "全部 recipes 原文与 filled_prompt",
+        "experimental_rule"
+      ],
+      "unaltered": true,
+      "style_card": "existing-style-card.json 的材料、构图、字形职责和关键词；仅文字输入，未打开其中来源链接或图片。"
+    },
+    "actual_asset": null,
+    "executor_provided": [
+      "content.layout",
+      "content.timeline",
+      "palette 数值",
+      "font 选择",
+      "额外程序化几何和镜头"
+    ],
+    "technical_provided": [
+      "HF0.8.137/GSAP3.13.0 确定性和单 paused timeline 合同"
+    ]
+  },
+  "builder_contract": {
+    "framework": "HyperFrames0.8.137",
+    "animation": "GSAP3.13.0",
+    "master_timeline": "exactly one gsap.timeline({paused:true}); register window.__timelines[case_id]; tl.seek(0); never play()",
+    "stage": "1280x720, fps30, duration6, one full-duration .clip with stable id",
+    "eases": [
+      "power2.inOut",
+      "power2.out",
+      "sine.inOut"
+    ],
+    "repeat": "none",
+    "determinism": "no timers, network, Math.random or Date.now",
+    "asset_policy": "source PNG byte-for-byte unchanged, full image contained in canvas through all transforms",
+    "export_audio": false,
+    "local_resources": {
+      "gsap": "assets/gsap.min.js",
+      "font": "assets/probe-msyh.ttc",
+      "font_use": "local @font-face, private render only, no public font redistribution"
+    }
+  },
+  "recipe_only_baseline": "recipe-only-plan.json",
+  "style_card_input": {
+    "file": "existing-style-card.json",
+    "origin": "既有公开库条目，是当前新增允许使用的既有输入；不是父代理临时强化或改写的配方。",
+    "card": {
+      "id": "geometric-emotion",
+      "family": "illustration",
+      "name": "几何角色与心理隐喻",
+      "reference_id": "8_PQJNo2wME",
+      "reference_identity": "The School of Life 具体作品；经典局部参考",
+      "material": "几何角色、纸片颗粒与限制色；保留眼睛等可追踪特征。",
+      "composition": "体量、受力与空间关系构成隐喻，画面不是自由散落的几何装饰。",
+      "typography": "感受优先通过重量和姿态表现；文字只补必要命题。",
+      "motion": "已观察 0:45、1:03 的状态，受力变化是可迁移设计建议；未做整片动作审查。",
+      "fit": "压力、矛盾和关系等难以直接摄影的体验。",
+      "failure": "有抽象形状却无法说明它与当前口播的对应关系。",
+      "source_url": "https://www.youtube.com/watch?v=8_PQJNo2wME",
+      "keywords": [
+        "几何角色",
+        "粉紫限制色",
+        "纸片颗粒",
+        "具象心理隐喻",
+        "宽阔留白"
+      ],
+      "observation": "0:45 的几何碎片保留眼睛让主体可追踪；1:03 同一个几何角色在大圆物件的重量关系中被理解，造型与受力关系承担含义。",
+      "reference_positions_seconds": [
+        63
+      ],
+      "observation_limit": "是从局部画面得到的本片应用建议，尚未制作新样段。原片色板与角色不作为模板；未完成整片运动或听觉审查。",
+      "origin_type": "external_work",
+      "implementation_status": "not_produced_in_this_library"
+    }
+  },
+  "actual_review": {
+    "movie_sha256": "d2c53e3371e5a06c2cd24cff416041f4daf3284c21bf9d9454257d97e96f75ab",
+    "source_sha256": "bb689a69df0150484ab3c64733c888966bbe60e72e886c1d75f5c95bdd58b5c1",
+    "finding": {
+      "verdict": "负担变小的关系可读；造型与材质仍过于通用",
+      "observed": "紫色双眼角色、巨书与小段落保留身份，同一段落移出后书退后、身体恢复。轮廓以薄线和轻色填充为主，纸粒近似均匀网点，受力差异较弱；与参考的粗几何体量、饱满限制色和颗粒肌理存在明显距离。",
+      "conclusion": "三条关系配方能驱动一次有因果的动作，但几何角色形态、材料和受力表现大多由执行者临场决定。当前描述还不足以产生参考级的造型判断。",
+      "recipe_results": [
+        "partial",
+        "partial",
+        "partial"
+      ]
+    },
+    "own_observation": "六关键帧与导出视频15帧动作采样（0.0至5.6秒，间隔0.4秒）",
+    "reference_limit": "只比较既有参考静态状态与作者项目图；未审查原片完整运动或声音",
+    "stop_reason": "本任务检验原配方首版；保留失败与限制，不在本版本增强审美后倒算通过"
+  }
+}

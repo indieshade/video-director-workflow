@@ -1,0 +1,68 @@
+{
+  "case_id": "vox-earworm-mixed-media",
+  "brief": "用六秒无声横屏视频呈现：读者面对整本书，找到一小段需要学习的内容；重点是画面语言与动作，不复制参考的题材或造型。",
+  "output": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "duration": 6,
+    "audio": false
+  },
+  "recipes": [
+    {
+      "id": "vox-earworm-mixed-media-cutout",
+      "source_profile": "vox-earworm-mixed-media",
+      "role": "cutout",
+      "kind": "raster_generation",
+      "prompt": "制作关于{文化场景}的灰阶器物摄影裁片，保留具体材质与可辨轮廓；人物与器物分别输出透明层，不生成文字、logo或原作角色。",
+      "variables": [
+        "文化场景"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "器物能建立情境，透明边缘没有脏边。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "文化场景": "阅读桌面的旧书、铅笔与台灯"
+      },
+      "filled_prompt": "制作关于阅读桌面的旧书、铅笔与台灯的灰阶器物摄影裁片，保留具体材质与可辨轮廓；人物与器物分别输出透明层，不生成文字、logo或原作角色。"
+    },
+    {
+      "id": "vox-earworm-mixed-media-color-shape",
+      "source_profile": "vox-earworm-mixed-media",
+      "role": "color-shape",
+      "kind": "vector_or_cutpaper",
+      "prompt": "用{主体对象}周围的少量彩色形片建立不对称拼贴构图；颜色根据当前主题选择，形片与摄影裁片产生明确遮挡。",
+      "variables": [
+        "主体对象"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "彩色部分帮助轮廓和层级，不只是荧光描边。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "主体对象": "一本打开的书"
+      },
+      "filled_prompt": "用一本打开的书周围的少量彩色形片建立不对称拼贴构图；颜色根据当前主题选择，形片与摄影裁片产生明确遮挡。"
+    },
+    {
+      "id": "vox-earworm-mixed-media-space",
+      "source_profile": "vox-earworm-mixed-media",
+      "role": "space",
+      "kind": "lighting_setup",
+      "prompt": "为{器物组合}安排接触点、前后遮挡及一致方向的地面影子；分层可用于后续动画，先验证静态空间。",
+      "variables": [
+        "器物组合"
+      ],
+      "validation_status": "authored_from_reference_not_generation_tested",
+      "basis": "既有局部视觉研究与本片制作提案；不是原作者或原模型的提示词",
+      "acceptance": "器物站得住，阴影对应光源；动态节奏另行试验。",
+      "output_scope": "素材或关键状态设计；需要工具实现及实际镜头验证",
+      "filled_variables": {
+        "器物组合": "书、铅笔、台灯"
+      },
+      "filled_prompt": "为书、铅笔、台灯安排接触点、前后遮挡及一致方向的地面影子；分层可用于后续动画，先验证静态空间。"
+    }
+  ],
+  "experimental_rule": "现有配方不改写；仅填变量。实现时自行添加的材料/造型/布局/时序逐项记录。禁止查看原片、图像、原研究描述或此前实验成片。只做一次美术首版；技术修复单独记录，不优化首版审美。"
+}

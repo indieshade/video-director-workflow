@@ -1,0 +1,236 @@
+{
+  "case_id": "geometric-emotion",
+  "status": "first-art-build-static-technical-checks-passed",
+  "edit_scope": [
+    "index.html",
+    "build-notes.json"
+  ],
+  "framework": {
+    "hyperframes": "0.8.137",
+    "gsap": "3.13.0",
+    "installed_or_upgraded": false
+  },
+  "output": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "duration_s": 6,
+    "frames": 180,
+    "audio": false
+  },
+  "inputs_read": [
+    "input.json",
+    "existing-style-card.json",
+    "shot-plan.json",
+    "assets/index.md"
+  ],
+  "visual_inputs_viewed": [],
+  "external_reference_or_prior_film_viewed": false,
+  "first_art_build_count": 1,
+  "implementation": {
+    "root": "#stage; data-composition-id=geometric-emotion; one full-duration clip",
+    "timeline": "one paused GSAP timeline, registered after synchronous construction, seek(0), no play",
+    "palette": [
+      "#6B456C",
+      "#CE9EC7",
+      "#F2E7EE"
+    ],
+    "ground": [
+      [
+        175,
+        585
+      ],
+      [
+        1080,
+        585
+      ]
+    ],
+    "body": {
+      "nominal_bounds": [
+        355,
+        405,
+        170,
+        180
+      ],
+      "foot_anchor": [
+        440,
+        585
+      ],
+      "initial_scale_y": 0.82,
+      "final_scale_y": 1,
+      "stroke_width": 5,
+      "eyes_local_centers": [
+        [
+          66,
+          52
+        ],
+        [
+          104,
+          52
+        ]
+      ],
+      "eye_distance": 38
+    },
+    "arms": {
+      "final_hand_anchors": [
+        [
+          410,
+          440
+        ],
+        [
+          510,
+          440
+        ]
+      ],
+      "initial_y_offset": -10,
+      "final_y_offset": 0,
+      "stroke_width": 10,
+      "technique": "two stable quadratic paths move as one group; no path morphing"
+    },
+    "book": {
+      "initial_bounds": [
+        230,
+        160,
+        650,
+        270
+      ],
+      "final_bounds": [
+        740,
+        195,
+        340,
+        142
+      ],
+      "translation": [
+        510,
+        35
+      ],
+      "scale_x": 0.5230769230769231,
+      "scale_y": 0.5259259259259259,
+      "shared_spine_local_x": 325,
+      "line_groups": 10
+    },
+    "target": {
+      "initial_bounds": [
+        605,
+        314,
+        155,
+        48
+      ],
+      "final_bounds": [
+        397,
+        392,
+        145,
+        45
+      ],
+      "translation": [
+        -208,
+        78
+      ],
+      "scale_x": 0.9354838709677419,
+      "scale_y": 0.9375,
+      "identity": "one #target group, data-book-line-group=7; retained during transfer"
+    },
+    "material": {
+      "dot_radius_px": 0.55,
+      "dot_pitch_px": 8,
+      "dot_opacity": 0.06,
+      "pattern_dot_coordinate": [
+        2,
+        3
+      ],
+      "book_contact_shadow_offset": [
+        2,
+        3
+      ],
+      "book_contact_shadow_opacity": 0.12,
+      "paper_edge_jitter_px": 2,
+      "randomness": false
+    },
+    "timeline_seconds": [
+      {
+        "start": 0,
+        "end": 1,
+        "action": "hold compressed body and book contact state"
+      },
+      {
+        "start": 1,
+        "end": 2,
+        "action": "target boundary opacity 0 to 1",
+        "ease": "power2.out"
+      },
+      {
+        "start": 2,
+        "end": 3.6,
+        "action": "same target translates and scales to the hands",
+        "ease": "power2.inOut"
+      },
+      {
+        "start": 2.2,
+        "end": 3.6,
+        "action": "same book retreats to final bounds",
+        "ease": "power2.inOut"
+      },
+      {
+        "start": 2.6,
+        "end": 4,
+        "action": "body recovers around bottom center; arm group shifts 10px to final hand anchors",
+        "ease": "sine.inOut"
+      },
+      {
+        "start": 4,
+        "end": 6,
+        "action": "hold body, target and book"
+      }
+    ]
+  },
+  "additional_implementation_choices": [
+    "Numerical palette, layout and times follow the final shot plan; concrete SVG path vertices, book line lengths, eye ellipse radii and arm quadratic curves are builder realization.",
+    "Body is a rounded trapezoid and two feet in one scalable group; eyes remain in that same group at fixed horizontal distance.",
+    "Ten book line groups are nine page groups plus the independent target as group seven. The same paragraph is never replaced with a duplicate during transfer.",
+    "A 3px no-fill target outline appears before the paragraph travels. The target paper path has 2px corner offsets.",
+    "Arms use rigid translation from y=-10 to y=0 instead of unsupported SVG path morphing. This is a technical realization of continuous hand movement; tactile credibility is not pre-validated.",
+    "Book pages have explicit zero-coordinate vertices so the planned top-left scale origin is not dependent on a nonzero path bounding box.",
+    "Fixed 8px SVG patterns supply low-opacity paper dots on procedural surfaces; no particle, glow or free-floating decoration is added.",
+    "Local @font-face references the supplied private TTC; no visible explanatory text is added.",
+    "No registry block is added. The final plan records the authorized catalog audit and reuse of existing GSAP/SVG technical primitives."
+  ],
+  "recipe_execution": [
+    {
+      "recipe_id": "geometric-emotion-character",
+      "status": "built-not-motion-reviewed",
+      "scope": "One geometric silhouette with fixed eye spacing and paper-dot pattern."
+    },
+    {
+      "recipe_id": "geometric-emotion-relation",
+      "status": "built-not-motion-reviewed",
+      "scope": "Initial book/body contact arrangement and final smaller task above hands."
+    },
+    {
+      "recipe_id": "geometric-emotion-release",
+      "status": "built-not-motion-reviewed",
+      "scope": "Same paragraph travels; same book retreats; body scales around its foot position."
+    }
+  ],
+  "unmet_requirements": [
+    "Actual keyframes and six-second playback are still required to verify perceived pressure, hand contact, posture and identity tracking.",
+    "The supplied recipes do not specify numerical shapes, pivots, layout or timing; these are executor additions recorded here and in shot-plan.",
+    "Psychological pressure remains a visual metaphor without any medical or factual capability claim."
+  ],
+  "verification": {
+    "inline_javascript_syntax": "passed with node vm.Script",
+    "local_resource_references": "passed",
+    "single_timeline_and_no_play_or_clock": "passed static check",
+    "raster": "none",
+    "hyperframes_lint": "not run by builder",
+    "runtime_seek_or_visual_review": "not run by builder",
+    "render": "not run by builder"
+  },
+  "technical_fixes": [
+    {
+      "stage": "initial build static geometry",
+      "reason": "book transform origin must match the numerical plan",
+      "change": "explicit page vertices include y=0; no aesthetic iteration"
+    }
+  ],
+  "aesthetic_revision": false
+}

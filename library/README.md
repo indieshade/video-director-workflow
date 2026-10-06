@@ -4,9 +4,11 @@
 
 `docs/style-profiles.json` 是选型真值：七个外部调研分支与一个自有改编。`material-prompts.json` 的21条配方按 `source_profile` 关联这份调研；类型分别表示图片生成、程序绘图、场景、字形、照明或动作设计，不应全交给图片生成器。替换 `variables` 中的变量，再按 `acceptance` 在实际片内尺寸与动作中检查。
 
-配方状态是 `authored_from_reference_not_generation_tested`：从既有视觉研究转成制作提案，尚未生成验证，不是原作者使用过的提示词。参考图像、动作观察、本片提案与已制作样例分别成立。标记 `generation_tested_with_evidence` 时需附实际输入、工具/版本、输出和反馈的 `evidence` 文件。
+配方不是原作者使用过的提示词。参考观察、素材生成、实现测试与风格通过分别记录。[首轮实测](../examples/style-prompt-audit/README.md)实际生成4条图像配方、实施12条程序化/设计配方；另5条未执行或受阻。七段首版只部分兑现，没有标为参考等效通过。
 
-多数方向尚无自己的制作样片，不能拿此前实验片补上“已制作”状态。[剪贴样例](../examples/collage-paper-study/README.md)提供完整可运行源码，属于自有改编而非原作复刻。
+状态 `authored_from_reference_not_generation_tested` 表示未实际完成；`generation_tested_with_evidence` 与 `implementation_tested_with_evidence` 分别表示生成或实现被测试，必须附 `evidence`，不能解释为质量通过。`validation_result` 单独报告本轮结果。受阻条目保留未验证状态并附 `test_attempt`。原提示词不因状态更新而改写。
+
+七个六秒诊断样段不能代替完整视频，不能拿此前实验片补上“风格已验证”。[剪贴样例](../examples/collage-paper-study/README.md)另提供完整可运行源码，属于自有改编而非原作复刻。
 
 ## 保留的实验资料
 

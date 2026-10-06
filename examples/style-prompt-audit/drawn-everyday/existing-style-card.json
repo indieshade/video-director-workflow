@@ -1,0 +1,28 @@
+{
+  "id": "drawn-everyday",
+  "family": "illustration",
+  "name": "绘画式日常情境",
+  "reference_id": "N2uQWfV6Jr4",
+  "reference_identity": "TED-Ed 具体作品；不是其全频道统一规范",
+  "material": "有粗细变化的手绘轮廓、排线、叠色与纸感底色。",
+  "composition": "人物表情和处境为中心，辅助符号受主角关系支配。",
+  "typography": "情绪由人物与环境承担；本片不自动沿用参考中的散落字母。",
+  "motion": "已观察 0:45 与 1:04 状态；人物姿态与景别变化可作本片提案，尚未核验完整动作。",
+  "fit": "个人经历、学习状态和亲切的解释语气。",
+  "failure": "把完整插画反复缩放，缺少口播语义引起的姿态或场景变化。",
+  "source_url": "https://www.youtube.com/watch?v=N2uQWfV6Jr4",
+  "keywords": [
+    "手绘轮廓",
+    "纸感底色",
+    "叠色与排线",
+    "人物表情",
+    "局部具象符号"
+  ],
+  "observation": "0:45 的人物被零散符号环绕，1:04 聚焦表情。粗细不完全均匀的轮廓、局部排线和底色共同提供绘画感；它与另一条 TED-Ed 参考的粗形剪影明显不同。",
+  "reference_positions_seconds": [
+    64
+  ],
+  "observation_limit": "本视频发布较近且累计播放突出，但题材、标题、分发与风格无法从公开数据分离。只核查局部帧，未完成整片运动或听觉审查；参考中的散落字母也不自动适合本片。",
+  "origin_type": "external_work",
+  "implementation_status": "not_produced_in_this_library"
+}

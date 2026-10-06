@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1280, height=720">
+  <title>现有提示词实测 · 编辑拼贴</title>
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Probe YaHei"; src: local("Microsoft YaHei"); font-weight: 100 900; }
+    html, body { width: 1280px; height: 720px; margin: 0; }
+    body { font-family: "Probe YaHei", sans-serif; }
+    #stage { position: relative; width: 100%; height: 100%; overflow: hidden; background: #F1E9DA; }
+    .clip { position: absolute; inset: 0; }
+    .full-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+    #paper-grid { z-index: 0; opacity: .07; }
+    #raw-book-coordinate-group { position: absolute; left: 190px; top: 60px; width: 900px; height: 600px; }
+    #raw-book { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; z-index: 2; }
+    #book-annotation { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; z-index: 3; }
+    #page-lines, #selected-paragraph, .arrow-piece { opacity: 0; }
+    #title-strip { position: absolute; left: 470px; top: 626px; width: 340px; height: 54px; opacity: 0; z-index: 6; filter: drop-shadow(2px 3px 0 rgba(39,39,39,.12)); }
+    #title-paper { position: absolute; inset: 0; width: 100%; height: 100%; }
+    #title-text { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; margin: 0; color: #272727; font-size: 38px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div id="stage" data-composition-id="vox-editorial-collage-tutorial" data-start="0" data-duration="6" data-fps="30" data-width="1280" data-height="720">
+    <section id="vox-editorial-collage-tutorial-full-shot" class="clip" data-start="0" data-duration="6" data-track-index="0">
+      <svg id="paper-grid" class="full-canvas" viewBox="0 0 1280 720" aria-hidden="true">
+        <defs><pattern id="editorial-grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#272727" stroke-width="1"/></pattern></defs>
+        <rect width="1280" height="720" fill="url(#editorial-grid-pattern)"/>
+      </svg>
+      <div id="raw-book-coordinate-group">
+        <img id="raw-book" src="assets/hero.png" width="1536" height="1024" alt="生成器输出的完整旧书，未处理">
+        <svg id="book-annotation" viewBox="0 0 900 600" aria-label="额外程序化示意段落与剪纸指向">
+          <defs>
+            <pattern id="editorial-ink-pattern" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r=".55" fill="#272727" opacity=".06"/></pattern>
+            <polygon id="editorial-arrow-piece-1" points="300,145 337,147 378,144 419,146 455,145 456,156 418,154 378,157 337,155 300,155"/>
+            <polygon id="editorial-arrow-piece-2" points="453,145 493,147 535,144 578,146 636.75,145 638.75,155 578,154 535,157 493,155 454,156"/>
+            <polygon id="editorial-arrow-piece-3" points="631.75,150 641.75,149 640.75,181 643.75,219 641.75,263 644.75,263 636.75,279 628.75,263 631.75,264 629.75,219 632.75,181"/>
+          </defs>
+          <g id="page-lines" stroke="#272727" stroke-width="3" aria-label="七行示意内容，并非原书文本">
+            <path d="M522 180H756 M522 201H756 M522 222H756 M522 243H756 M522 264H756 M522 285H756 M522 306H756" fill="none"/>
+          </g>
+          <rect id="selected-paragraph" x="531" y="243" width="211.5" height="72" fill="none" stroke="#D8B446" stroke-width="4"/>
+          <g id="paper-arrow" aria-label="从左页上方转折指向右页小段中心">
+            <g id="paper-arrow-1" class="arrow-piece"><use href="#editorial-arrow-piece-1" fill="#272727" opacity=".12" x="2" y="3"/><use href="#editorial-arrow-piece-1" fill="#D8B446"/><use href="#editorial-arrow-piece-1" fill="url(#editorial-ink-pattern)"/></g>
+            <g id="paper-arrow-2" class="arrow-piece"><use href="#editorial-arrow-piece-2" fill="#272727" opacity=".12" x="2" y="3"/><use href="#editorial-arrow-piece-2" fill="#D8B446"/><use href="#editorial-arrow-piece-2" fill="url(#editorial-ink-pattern)"/></g>
+            <g id="paper-arrow-3" class="arrow-piece"><use href="#editorial-arrow-piece-3" fill="#272727" opacity=".12" x="2" y="3"/><use href="#editorial-arrow-piece-3" fill="#D8B446"/><use href="#editorial-arrow-piece-3" fill="url(#editorial-ink-pattern)"/></g>
+          </g>
+        </svg>
+      </div>
+      <div id="title-strip">
+        <svg id="title-paper" viewBox="0 0 340 54" aria-hidden="true">
+          <defs><pattern id="editorial-title-ink-pattern" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r=".55" fill="#272727" opacity=".06"/></pattern></defs>
+          <path d="M2 1L83 2L167 0L254 2L338 1L340 27L338 53L255 52L169 54L84 52L1 53L0 27Z" fill="#F1E9DA"/>
+          <path d="M2 1L83 2L167 0L254 2L338 1L340 27L338 53L255 52L169 54L84 52L1 53L0 27Z" fill="url(#editorial-title-ink-pattern)"/>
+        </svg>
+        <p id="title-text">先学这一段</p>
+      </div>
+    </section>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#raw-book", { opacity: 0 }, { opacity: 1, duration: .6, ease: "power2.out" }, 0);
+    tl.fromTo("#page-lines", { opacity: 0 }, { opacity: 1, duration: 1, ease: "sine.inOut" }, .8);
+    tl.fromTo("#paper-arrow-1", { opacity: 0 }, { opacity: 1, duration: 0 }, 1.8);
+    tl.fromTo("#paper-arrow-2", { opacity: 0 }, { opacity: 1, duration: 0 }, 2.2);
+    tl.fromTo("#paper-arrow-3", { opacity: 0 }, { opacity: 1, duration: 0 }, 2.6);
+    tl.fromTo("#selected-paragraph", { opacity: 0 }, { opacity: 1, duration: .6, ease: "sine.inOut" }, 2.8);
+    tl.fromTo("#title-strip", { opacity: 0, y: 6 }, { opacity: 1, y: 0, duration: .5, ease: "power2.out" }, 4);
+    window.__timelines = window.__timelines || {};
+    window.__timelines["vox-editorial-collage-tutorial"] = tl;
+    tl.seek(0);
+  </script>
+</body>
+</html>

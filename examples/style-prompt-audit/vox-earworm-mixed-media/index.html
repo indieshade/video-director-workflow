@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1280, height=720">
+  <title>现有提示词实测 · 混合媒介</title>
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Probe YaHei"; src: local("Microsoft YaHei"); font-weight: 100 900; }
+    html, body { width: 1280px; height: 720px; margin: 0; }
+    body { font-family: "Probe YaHei", sans-serif; }
+    #stage { position: relative; width: 100%; height: 100%; overflow: hidden; background: #D8A393; }
+    .clip { position: absolute; inset: 0; }
+    .shape-layer { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+    #rear-color-layer { z-index: 1; }
+    #foreground-color-layer { z-index: 3; }
+    #rear-color-shape, #foreground-color-shape, #page-lines { opacity: 0; }
+    #raw-desk-coordinate-group { position: absolute; left: 140px; top: 27px; width: 1000px; height: 666.666666667px; z-index: 2; transform-origin: 50% 50%; }
+    #raw-desk { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; }
+    #desk-annotation { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+    #selected-paragraph { opacity: 0; }
+  </style>
+</head>
+<body>
+  <div id="stage" data-composition-id="vox-earworm-mixed-media" data-start="0" data-duration="6" data-fps="30" data-width="1280" data-height="720">
+    <section id="vox-earworm-mixed-media-full-shot" class="clip" data-start="0" data-duration="6" data-track-index="0">
+      <svg id="rear-color-layer" class="shape-layer" viewBox="0 0 1280 720" aria-hidden="true">
+        <defs>
+          <pattern id="earworm-rear-ink-pattern" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r=".55" fill="#252525" opacity=".06"/></pattern>
+          <polygon id="earworm-rear-paper" points="110,330 170,308 231,291 289,268 350,250 365,321 373,395 389,465 400,535 337,542 272,553 209,559 145,570 136,507 126,448 121,388"/>
+        </defs>
+        <g id="rear-color-shape"><use href="#earworm-rear-paper" fill="#252525" opacity=".12" x="2" y="3"/><use href="#earworm-rear-paper" fill="#ECC84A"/><use href="#earworm-rear-paper" fill="url(#earworm-rear-ink-pattern)"/></g>
+      </svg>
+      <div id="raw-desk-coordinate-group">
+        <img id="raw-desk" src="assets/hero.png" width="1536" height="1024" alt="生成器输出的一体灰阶桌面，未分层或处理">
+        <svg id="desk-annotation" viewBox="0 0 1000 666.666666667" aria-label="附加示意行块与段落框">
+          <g id="page-lines" stroke="#252525" stroke-width="3" aria-label="三行额外示意内容，并非原书文本"><path d="M520 497.333333333H740 M520 524H740 M520 550.666666667H740" fill="none"/></g>
+          <rect id="selected-paragraph" x="520" y="494" width="220" height="60" fill="none" stroke="#ECC84A" stroke-width="4"/>
+        </svg>
+      </div>
+      <svg id="foreground-color-layer" class="shape-layer" viewBox="0 0 1280 720" aria-hidden="true">
+        <defs>
+          <pattern id="earworm-front-ink-pattern" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r=".55" fill="#252525" opacity=".06"/></pattern>
+          <polygon id="earworm-front-paper" points="1055,550 1081,556 1108,556 1133,562 1160,565 1157,589 1151,612 1150,637 1145,660 1121,657 1097,653 1073,653 1050,647 1053,623 1052,599 1056,575"/>
+        </defs>
+        <g id="foreground-color-shape"><use href="#earworm-front-paper" fill="#252525" opacity=".12" x="2" y="3"/><use href="#earworm-front-paper" fill="#C56E60"/><use href="#earworm-front-paper" fill="url(#earworm-front-ink-pattern)"/></g>
+      </svg>
+    </section>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const frame = document.getElementById("selected-paragraph");
+    const frameLength = frame.getTotalLength();
+    frame.style.strokeDasharray = String(frameLength);
+    frame.style.strokeDashoffset = String(frameLength);
+    tl.fromTo("#raw-desk", { opacity: 0 }, { opacity: 1, duration: .8, ease: "power2.out" }, 0);
+    tl.fromTo("#rear-color-shape", { opacity: 0 }, { opacity: 1, duration: .5, ease: "sine.inOut" }, .8);
+    tl.fromTo("#foreground-color-shape", { opacity: 0 }, { opacity: 1, duration: .5, ease: "sine.inOut" }, 1);
+    tl.fromTo("#page-lines", { opacity: 0 }, { opacity: 1, duration: .9, ease: "power2.out" }, 1.8);
+    tl.set("#selected-paragraph", { opacity: 1 }, 2.7);
+    tl.fromTo("#selected-paragraph", { strokeDashoffset: frameLength }, { strokeDashoffset: 0, duration: .7, ease: "none" }, 2.7);
+    tl.fromTo("#raw-desk-coordinate-group", { scale: 1 }, { scale: 1.015, duration: 1, ease: "power2.inOut" }, 3.4);
+    window.__timelines = window.__timelines || {};
+    window.__timelines["vox-earworm-mixed-media"] = tl;
+    tl.seek(0);
+  </script>
+</body>
+</html>

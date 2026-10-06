@@ -1,0 +1,28 @@
+{
+  "id": "coherent-graphic-world",
+  "family": "illustration",
+  "name": "统一图形世界",
+  "reference_id": "WPPPFqsECz0",
+  "reference_identity": "Kurzgesagt 具体作品；经典局部参考",
+  "material": "几何化人物与机器、统一受光及高饱和色组。",
+  "composition": "对象集群与连接关系形成场景，局部和整体尺度可相互解释。",
+  "typography": "优先观察形体和关系，标签只作必要辨认。",
+  "motion": "已观察 0:50、0:59 状态；尺度交接与同世界延展是本片提案，未核验连续动作。",
+  "fit": "系统、流程或对象间机制比较清楚的内容；造型设计投入较高。",
+  "failure": "只借鲜艳色板和圆形，却没有统一造型语言或空间关系。",
+  "source_url": "https://www.youtube.com/watch?v=WPPPFqsECz0",
+  "keywords": [
+    "高饱和色组",
+    "几何化物件",
+    "轴测空间",
+    "尺度交接",
+    "连接关系"
+  ],
+  "observation": "0:50 的人和机器、0:59 的多组对象共享几何化造型和受光方式，连接线承担关系，而不靠多段说明文字组织画面。",
+  "reference_positions_seconds": [
+    59
+  ],
+  "observation_limit": "仅从两个实际状态研究画面层级与连续性，未完成整片运动或听觉审查。本片没有讲述医疗机制，不沿用原片的医学模型或高密度总览。",
+  "origin_type": "external_work",
+  "implementation_status": "not_produced_in_this_library"
+}

@@ -31,8 +31,11 @@
       ],
       "observation_limit": "这是用户原先提供的 Vox 风格制作教程中的示例，不能视为 Vox 官方作品。这里只核查局部实际帧；分层错峰、跨镜头对象连续性是本片待验证的编排选择，未由该静帧证明。教程的播放数据不代表 Vox 风格带来的流量。",
       "origin_type": "third_party_tutorial",
-      "implementation_status": "adapted_sample_available",
-      "application_sample": "examples/collage-paper-study/README.md"
+      "implementation_status": "first_probe_produced_not_reference_equivalent",
+      "application_sample": "examples/collage-paper-study/README.md",
+      "prompt_audit": "examples/style-prompt-audit/vox-editorial-collage-tutorial/report.json",
+      "prompt_probe": "examples/style-prompt-audit/vox-editorial-collage-tutorial/probe.mp4",
+      "prompt_verdict": "部分材料迁移；剪贴视觉系统尚未成立"
     },
     {
       "id": "vox-mechanism",
@@ -59,7 +62,10 @@
       ],
       "observation_limit": "这三个局部状态支持视觉组织的观察；未完成整片运动或听觉审查。地图题材与本片不同，不复制地图造型，也不把该作品代表整个 Vox。",
       "origin_type": "external_work",
-      "implementation_status": "not_produced_in_this_library"
+      "implementation_status": "first_probe_produced_not_reference_equivalent",
+      "prompt_audit": "examples/style-prompt-audit/vox-mechanism/report.json",
+      "prompt_probe": "examples/style-prompt-audit/vox-mechanism/probe.mp4",
+      "prompt_verdict": "定位关系成立；风格与真实证据交接未验证"
     },
     {
       "id": "vox-earworm-mixed-media",
@@ -86,8 +92,11 @@
       "fit": "对象与文化情境具有视觉材料的叙事；可借材料关系，不能凭空为当前口播增加音乐史内容。",
       "failure": "只加黑白滤镜和荧光描边，没有对象关系与具体情境；把封面当动作证据。",
       "origin_type": "participating_author_project",
-      "implementation_status": "not_produced_in_this_library",
-      "reference_image_url": "https://podenco.tv/wp-content/uploads/2022/04/vox1.jpg"
+      "implementation_status": "first_probe_produced_not_reference_equivalent",
+      "reference_image_url": "https://podenco.tv/wp-content/uploads/2022/04/vox1.jpg",
+      "prompt_audit": "examples/style-prompt-audit/vox-earworm-mixed-media/report.json",
+      "prompt_probe": "examples/style-prompt-audit/vox-earworm-mixed-media/probe.mp4",
+      "prompt_verdict": "灰阶器物＋彩片有效；空间分层与器物动作受阻"
     },
     {
       "id": "drawn-everyday",
@@ -115,7 +124,10 @@
       ],
       "observation_limit": "本视频发布较近且累计播放突出，但题材、标题、分发与风格无法从公开数据分离。只核查局部帧，未完成整片运动或听觉审查；参考中的散落字母也不自动适合本片。",
       "origin_type": "external_work",
-      "implementation_status": "not_produced_in_this_library"
+      "implementation_status": "first_probe_produced_not_reference_equivalent",
+      "prompt_audit": "examples/style-prompt-audit/drawn-everyday/report.json",
+      "prompt_probe": "examples/style-prompt-audit/drawn-everyday/probe.mp4",
+      "prompt_verdict": "画风偏离；完整插画代替了可动画素材"
     },
     {
       "id": "character-object-feeling",
@@ -143,7 +155,10 @@
       "fit": "压力、身体感受与任务负担的情境呈现；不迁移原作的医学主张。",
       "failure": "只留下大色块，表情、接触点和角色与物件的关系不成立。",
       "origin_type": "external_work",
-      "implementation_status": "not_produced_in_this_library"
+      "implementation_status": "first_probe_produced_not_reference_equivalent",
+      "prompt_audit": "examples/style-prompt-audit/character-object-feeling/report.json",
+      "prompt_probe": "examples/style-prompt-audit/character-object-feeling/probe.mp4",
+      "prompt_verdict": "限制色、粗形部分成立；尺度与受力叙事未完成"
     },
     {
       "id": "geometric-emotion",
@@ -171,7 +186,10 @@
       ],
       "observation_limit": "是从局部画面得到的本片应用建议，尚未制作新样段。原片色板与角色不作为模板；未完成整片运动或听觉审查。",
       "origin_type": "external_work",
-      "implementation_status": "not_produced_in_this_library"
+      "implementation_status": "first_probe_produced_not_reference_equivalent",
+      "prompt_audit": "examples/style-prompt-audit/geometric-emotion/report.json",
+      "prompt_probe": "examples/style-prompt-audit/geometric-emotion/probe.mp4",
+      "prompt_verdict": "负担变小的关系可读；造型与材质仍过于通用"
     },
     {
       "id": "coherent-graphic-world",
@@ -199,7 +217,10 @@
       ],
       "observation_limit": "仅从两个实际状态研究画面层级与连续性，未完成整片运动或听觉审查。本片没有讲述医疗机制，不沿用原片的医学模型或高密度总览。",
       "origin_type": "external_work",
-      "implementation_status": "not_produced_in_this_library"
+      "implementation_status": "first_probe_produced_not_reference_equivalent",
+      "prompt_audit": "examples/style-prompt-audit/coherent-graphic-world/report.json",
+      "prompt_probe": "examples/style-prompt-audit/coherent-graphic-world/probe.mp4",
+      "prompt_verdict": "对象一致与尺度承接成立；图形世界的设计成熟度不足"
     },
     {
       "id": "indieshade-editorial-storybook",

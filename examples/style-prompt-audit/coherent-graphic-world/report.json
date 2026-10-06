@@ -1,0 +1,114 @@
+{
+  "finding": {
+    "verdict": "对象一致与尺度承接成立；图形世界的设计成熟度不足",
+    "observed": "蓝、紫、橙三个对象组共享斜切面和受光规则；橙色段落连续移动放大、连回原位置，身份可以追踪。读者是泛化块状人形，书与对象的比例、色阶及空间细节较简略，场景层次少。",
+    "conclusion": "只证明少量对象可保持统一和对应，不能据此说已产生参考的精细几何造型与场景丰富度。色值、对象族比例、顶点、材质与镜头仍是执行者补充。",
+    "recipe_results": [
+      "partial",
+      "partial",
+      "partial"
+    ]
+  },
+  "recipe_execution": [
+    {
+      "recipe_id": "coherent-graphic-world-object-family",
+      "kind": "procedural_geometry",
+      "filled_prompt": "为同一阅读场景中的读者、书、书页和待学习段落制定统一的几何化比例、轮廓与受光方式，输出主对象和辅助对象；色组按本片层级选择，不照搬原作造型。",
+      "status": "implementation-executed-partial",
+      "evidence_or_scope": "对象族比例、轮廓和统一受光由执行者设计。",
+      "validation_status": "implementation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "planned-procedural",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    },
+    {
+      "recipe_id": "coherent-graphic-world-system",
+      "kind": "procedural_layout",
+      "filled_prompt": "将读者从整本书中定位到一个待学习段落组织成局部到整体的场景，连接线只表达已知关系，区分主路径与背景对象；先验证少量对象，再扩展。",
+      "status": "implementation-executed-partial",
+      "evidence_or_scope": "少量对象的已知定位关系；不扩展虚构数据。",
+      "validation_status": "implementation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "planned-procedural",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    },
+    {
+      "recipe_id": "coherent-graphic-world-scale",
+      "kind": "motion_staging",
+      "filled_prompt": "为从整本书的总览到一个被选出的学习段落设计可追踪对象在近景和总览的对应位置，给观察留出保持状态；光影与造型随景别保持一致。",
+      "status": "implementation-executed-partial",
+      "evidence_or_scope": "同目标 ID 连续尺度交接；实际回认待首版查看。",
+      "validation_status": "implementation_tested_with_evidence",
+      "observed_result": "partial",
+      "pre_execution_status": "planned-procedural",
+      "review_scope": "四张原始图像及本case六关键帧、0.4秒间隔导出动作采样；不是参考完整运动比较"
+    }
+  ],
+  "measurements": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "unknown",
+        "profile": "100",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1280,
+        "height": 720,
+        "coded_width": 1280,
+        "coded_height": 720,
+        "closed_captions": 0,
+        "film_grain": 0,
+        "has_b_frames": 0,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": 31,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "center",
+        "field_order": "progressive",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 92160,
+        "duration": "6.000000",
+        "bit_rate": "281142",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "180",
+        "extradata_size": 51
+      }
+    ],
+    "format": {
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "start_time": "0.000000",
+      "duration": "6.000000",
+      "size": "212771",
+      "bit_rate": "283694",
+      "probe_score": 100
+    },
+    "sha256": "c55a58e8f540f164b5a8f7d7b7614d27da19e35d1c94decbff4408efec9b38f2"
+  },
+  "hashes": {
+    "id": "coherent-graphic-world",
+    "video": "examples/style-prompt-audit/coherent-graphic-world/probe.mp4",
+    "poster": "examples/style-prompt-audit/coherent-graphic-world/poster.jpg",
+    "report": "examples/style-prompt-audit/coherent-graphic-world/report.json",
+    "delivery_sha256": "c55a58e8f540f164b5a8f7d7b7614d27da19e35d1c94decbff4408efec9b38f2",
+    "source_private_sha256": "379ff1fac200a94f0ead5796c0949e57fa612ff8b741f5f2ecfdfb02f32a2b43",
+    "source_portable_sha256": "8b932a52d1e4933c0d31d42603c2acd42ca33586bdffbf86919aed613b0973f3"
+  },
+  "source_export_difference": "Only font loading changed from private bundled font to installed Microsoft YaHei with existing CSS fallbacks; this file is not the exact private render source. No standalone font redistributed."
+}

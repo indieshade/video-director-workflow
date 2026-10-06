@@ -1,0 +1,28 @@
+{
+  "counts": {
+    "executed_raster": 4,
+    "executed_implementation": 12,
+    "blocked_or_not_executed": 5
+  },
+  "input_and_card_hashes": "all match frozen manifest",
+  "raw_images": "all four unchanged",
+  "technical": {
+    "cases": 7,
+    "hf_check": "7 pass; each has one nested_structure_needs_subcomposition authoring warning",
+    "runtime_errors": 0,
+    "layout_issues": 0,
+    "movie_contract": "all 1280x720,30fps,180frames,6seconds,one video stream,no audio",
+    "bundle_note": "three large PNGs and the private font remain file-backed; not a self-contained bundle",
+    "render_quality_actual": "standard",
+    "snapshot_times": [
+      0.6,
+      1.4,
+      2.4,
+      3.2,
+      4.4,
+      5.8
+    ]
+  },
+  "semantic_verdict": "partial/no reference-equivalent verification; technical success is separate",
+  "replications": 1
+}

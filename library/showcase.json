@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-06",
+  "scope": "自制完整成片的风格展示；不是同题公平排名",
+  "cases": [
+    {
+      "id": "collage",
+      "title": "摄影印刷剪贴",
+      "family": "editorial-collage",
+      "name": "留下这一句",
+      "keywords": [
+        "摄影裁片",
+        "印刷宋体",
+        "纸片箭头",
+        "有限姿态"
+      ],
+      "exposure": "明确选择剪贴方向的风格样段，不是同提示词盲测。",
+      "limit": "核对了关键状态和编码；主观听感及连续运动审美未声称验证。",
+      "video": "gallery/collage/film.mp4",
+      "poster": "gallery/collage/poster.jpg",
+      "prompt": "gallery/collage/prompt.md",
+      "credits": "gallery/collage/CREDITS.md",
+      "media": "gallery/collage/media.json"
+    },
+    {
+      "id": "shape-play",
+      "title": "平涂图形与群体编排",
+      "family": "flat-graphic-motion",
+      "name": "PLAY / FORM",
+      "keywords": [
+        "实心轮廓",
+        "形变接力",
+        "错峰群体",
+        "负空间"
+      ],
+      "exposure": "视觉初版先独立完成与锁定，经过用户选型；展示的是揭示原片后的声音修订版，整份交付不能称为未看参考直出。",
+      "limit": "用户认可声音修订有提升；仍未确认达到外部Opus作品质量。",
+      "video": "gallery/shape-play/film.mp4",
+      "poster": "gallery/shape-play/poster.jpg",
+      "prompt": "gallery/shape-play/prompt.md",
+      "credits": "gallery/shape-play/CREDITS.md",
+      "media": "gallery/shape-play/media.json"
+    },
+    {
+      "id": "material-field",
+      "title": "立体材质与空间光影",
+      "family": "lit-3d-material",
+      "name": "In Between · 共振的场",
+      "keywords": [
+        "薄膜曲面",
+        "暖金与冷反射",
+        "空间穿行",
+        "开放轮廓"
+      ],
+      "exposure": "整片自审和锁定后揭示原片；用户选择B方向，属于额外上下文。影片是艺术想象，不是模型实际主观体验证据。",
+      "limit": "用户认为概念、意义、整体节奏与外部参考差距明显；公开它作为形式探索及失败案例，不当作成功范式。",
+      "video": "gallery/material-field/film.mp4",
+      "poster": "gallery/material-field/poster.jpg",
+      "prompt": "gallery/material-field/prompt.md",
+      "credits": "gallery/material-field/CREDITS.md",
+      "media": "gallery/material-field/media.json"
+    },
+    {
+      "id": "pixel-wizard",
+      "title": "像素角色与法术表演",
+      "family": "pixel-art-animation",
+      "name": "Copper & Cyan",
+      "keywords": [
+        "整数像素",
+        "限定色阶",
+        "角色受力",
+        "像素光效"
+      ],
+      "exposure": "已有作品的参考研究后修订，不是新题盲测。查看Saint11教程与此前对标形成额外上下文。",
+      "limit": "造型与魔法形态修订有可见变化；对标的像素细节及层次仍更丰富。编码60fps不证明所有设备实时稳定60fps。",
+      "video": "gallery/pixel-wizard/film.mp4",
+      "poster": "gallery/pixel-wizard/poster.jpg",
+      "prompt": "gallery/pixel-wizard/prompt.md",
+      "credits": "gallery/pixel-wizard/CREDITS.md",
+      "media": "gallery/pixel-wizard/media.json"
+    },
+    {
+      "id": "ui-morph",
+      "title": "极简UI连续形变",
+      "family": "minimal-ui-motion",
+      "name": "Soft Signal",
+      "keywords": [
+        "单一外壳",
+        "直接操控",
+        "闭式弹簧",
+        "曝光模糊"
+      ],
+      "exposure": "制作时已经查看原片时间采样，属于带参考研究的独立设计，不是盲测。",
+      "limit": "带参考创作，不支持“从未看原片也能达到相同质量”的结论；这里展示自己的UI文案、布局与图表选择。",
+      "video": "gallery/ui-morph/film.mp4",
+      "poster": "gallery/ui-morph/poster.jpg",
+      "prompt": "gallery/ui-morph/prompt.md",
+      "credits": "gallery/ui-morph/CREDITS.md",
+      "media": "gallery/ui-morph/media.json"
+    }
+  ]
+}

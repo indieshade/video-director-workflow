@@ -10,3 +10,15 @@ The root MIT license covers original workflow documentation, scripts and origina
 - **GSAP 3.13.0**: installed via npm, not checked in. Its header and npm license are retained when the setup script copies the browser file. https://gsap.com/standard-license/ .
 - **HyperFrames CLI / FFmpeg**: separately installed runtime dependencies with their own licenses. No runtime binaries are distributed here.
 - **External references**: skill documents retain source links and distinguish source findings from our application choices. Downloaded benchmark videos, reference screenshots and third-party skill bundles are not included. This project has no affiliation with Vox, Anthropic, OpenAI, HeyGen or the referenced creators.
+
+## Gallery compositions
+
+The gallery adds our finished compositions, not external benchmark films. Per-case notices include attribution, license links and changes; they govern third-party material within each film. Original arrangement does not change those licenses.
+
+- [Collage](gallery/collage/CREDITS.md): the same sample assets described above.
+- [PLAY / FORM](gallery/shape-play/CREDITS.md): Kevin MacLeod music, CC BY 4.0, and Pixabay sound effects within the edited film.
+- [In Between](gallery/material-field/CREDITS.md): Kevin MacLeod music, CC BY 4.0, Pixabay sound effects and rendered OFL font text. The gallery delivery is resized and re-encoded; its metadata preserves the source hash.
+- [Copper & Cyan](gallery/pixel-wizard/CREDITS.md): original procedural pixels; tutorial/reference links are not redistributed sprites.
+- [SoftSignal](gallery/ui-morph/CREDITS.md): original synthesized audio and procedural layout; rendered Geist font, Lucide icons and D3 shapes retain the notices identified in the case.
+
+No standalone third-party music or sound-effect files are included in these added cases.

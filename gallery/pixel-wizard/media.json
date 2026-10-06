@@ -1,0 +1,21 @@
+{
+  "source_sha256": "3f320375872546f4e888b4c04e7c4f863cba4fb1c94fdefdc6fe5f4de1c90a49",
+  "delivery_sha256": "3f320375872546f4e888b4c04e7c4f863cba4fb1c94fdefdc6fe5f4de1c90a49",
+  "reencoded": false,
+  "measurements": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1080,
+        "height": 890,
+        "r_frame_rate": "60/1",
+        "nb_frames": "672"
+      }
+    ],
+    "format": {
+      "duration": "11.200000"
+    }
+  }
+}

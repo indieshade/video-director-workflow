@@ -1,0 +1,26 @@
+{
+  "source_sha256": "5ac88bb4890fc0bf42484be88d66f9726a3c62b0262d9791597a63305a369ae7",
+  "delivery_sha256": "5ac88bb4890fc0bf42484be88d66f9726a3c62b0262d9791597a63305a369ae7",
+  "reencoded": false,
+  "measurements": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "60/1",
+        "nb_frames": "900"
+      },
+      {
+        "codec_name": "aac",
+        "r_frame_rate": "0/0",
+        "nb_frames": "705"
+      }
+    ],
+    "format": {
+      "duration": "15.000000"
+    }
+  }
+}

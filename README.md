@@ -2,11 +2,25 @@
 
 用流程、提示词与专项 skills，把 AI 视频从“能运行”推进到有内容设计、美术、动作和声音判断的作品。
 
-这是 indieshade 与 AI 持续试作、反馈、修订形成的工作流。我们尝试在同一公开提示词下，让独立创作的设计质量靠近公开分享中的 Opus 作品，**目前仍有明显差距，尚未证明能够稳定追平，也没有建立受控模型排名**。仓库公开可迁移的方法、失败教训和一个可运行样例。
+这是 indieshade 与 AI 持续试作、反馈、修订形成的工作流。我们尝试在同一公开提示词下，让独立创作的设计质量靠近公开分享中的 Opus 作品，**目前仍有明显差距，尚未证明能够稳定追平，也没有建立受控模型排名**。仓库公开不同风格的实际作品、可迁移的方法、失败教训和一个可运行样例。
 
-![五秒摄影印刷剪贴样例](examples/collage-paper-study/poster.png)
+## 不同画面风格，实际作品
 
-[观看五秒带声 MP4](examples/collage-paper-study/renders/collage-paper-study.mp4) · [制作提示词](examples/collage-paper-study/BRIEF.md) · [实验复盘](docs/experiment-notes.md)
+| 风格与作品静帧 | 成片与制作内容 |
+| --- | --- |
+| [![摄影印刷剪贴](gallery/collage/poster.jpg)](gallery/collage/README.md) | **摄影印刷剪贴** · 5 秒。摄影裁片、纸片箭头、印刷字形、有限姿态。[视频](gallery/collage/film.mp4) · [提示词与制作方法](gallery/collage/prompt.md) |
+| [![平涂图形编排](gallery/shape-play/poster.jpg)](gallery/shape-play/README.md) | **平涂图形与群体编排** · 15 秒。实心轮廓、形变接力、错峰群体与声音编排。[视频](gallery/shape-play/film.mp4) · [提示词与制作方法](gallery/shape-play/prompt.md) |
+| [![立体材质与光影](gallery/material-field/poster.jpg)](gallery/material-field/README.md) | **立体材质与空间光影** · 30 秒。曲面、反射、空间穿行；包含意义与节奏不够成立的失败教训。[视频](gallery/material-field/film.mp4) · [提示词与制作方法](gallery/material-field/prompt.md) |
+| [![像素角色表演](gallery/pixel-wizard/poster.jpg)](gallery/pixel-wizard/README.md) | **像素角色与法术表演** · 11.2 秒，无声。轮廓、色阶、受力、像素光效。[视频](gallery/pixel-wizard/film.mp4) · [提示词与制作方法](gallery/pixel-wizard/prompt.md) |
+| [![极简UI形变](gallery/ui-morph/poster.jpg)](gallery/ui-morph/README.md) | **极简 UI 连续形变** · 14 秒。连续外壳、游标与图表关系、音乐节拍。[视频](gallery/ui-morph/film.mp4) · [提示词与制作方法](gallery/ui-morph/prompt.md) |
+
+[完整展示与输入边界](docs/showcase.md) · [十五条素材提示词](library/README.md) · [交互展示页源码](showcase.html) · [实验复盘](docs/experiment-notes.md)
+
+这是不同题材的风格展示，不是同题排名。每例记录是否看过参考、额外选择及不足；复用提示词为事后提炼，十五条素材配方尚未逐条生成验证。除剪贴样例外，其余案例目前公开成片与方法，未打包完整源工程。
+
+## 长期方向：让指导最终不再必要
+
+持续扩充风格和素材提示词库，并用新模型在普通提示词、风格素材卡、完整流程三种条件下的实际作品检验收益。当模型能自主完成同等设计判断时，逐步删减对应指导；若创作补偿框架已无收益，就允许它退役。具体扩充、比较与简化方式见[长期维护方法](docs/library-roadmap.md)。
 
 ## 先用哪个入口
 
@@ -16,6 +30,8 @@
 | 安装、调用导演 skill | [narration-video-director](skills/narration-video-director/SKILL.md) |
 | 理解制作过程与提示词结构 | [工作流](docs/workflow.md) · [提示词示例](docs/prompts.md) |
 | 选择画面风格 | [风格条目](docs/style-profiles.json) · [剪贴画指导](skills/narration-video-director/references/vox-collage.md) |
+| 查看实际作品与选择素材配方 | [五种风格作品](docs/showcase.md) · [素材库](library/README.md) |
+| 扩充库与评估新模型 | [维护方法](docs/library-roadmap.md) · [导演库维护指导](skills/narration-video-director/references/library-maintenance.md) |
 | 判断首版之后还该做什么 | [创作复审](skills/narration-video-director/references/creative-iteration.md) |
 | 复现这个五秒样段 | [样例说明](examples/collage-paper-study/README.md) |
 

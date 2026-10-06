@@ -1,0 +1,13 @@
+node_modules/
+/renders/
+__pycache__/
+*.pyc
+.env
+.env.*
+.DS_Store
+.hyperframes/
+.thumbnails/
+snapshots/
+examples/collage-paper-study/assets/gsap.min.js
+examples/collage-paper-study/renders/picture.mp4
+examples/collage-paper-study/renders/reproduced.mp4

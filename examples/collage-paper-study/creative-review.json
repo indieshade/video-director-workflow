@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "scope": "full",
+  "objective": "五秒呈现从书页挑出一句并留下的完整动作",
+  "quality_targets": [
+    "摄影、字形、箭头与纸面共享剪贴材质；离散动作清楚且最后可读"
+  ],
+  "artifact": {
+    "file": "renders/collage-paper-study.mp4",
+    "sha256": "dd0d7b8719c5f2e8944f5ba85204856e4e34a14276bcef30b3910c0a2c7384da"
+  },
+  "observations": [
+    {
+      "at": "0–5s",
+      "finding": "实际编码帧中，人物与书有一致的灰阶印刷颗粒和暖白剪纸边；珊瑚色纸片、箭头与书封面协调，末段标题是有缺墨纹理的厚重宋体。",
+      "evidence": {
+        "kind": "visual",
+        "file": "evidence/encoded-contact.jpg",
+        "description": "查看从实际最终 MP4 每半秒抽取的十帧；这是离散造型与状态证据，不声称连续观看或听觉判断。"
+      }
+    },
+    {
+      "at": "0.8–3.4s",
+      "finding": "纸条在书页出现，沿同一弧线迁移并扩大，保留红色识别条；末段文字完整可读。首尾没有黑场。",
+      "evidence": {
+        "kind": "visual",
+        "file": "evidence/action-frames/contact-sheet.jpg",
+        "description": "逐项查看七个时间点，确认书页、纸条、箭头、展开标题的空间交接。"
+      }
+    },
+    {
+      "at": "0–5s",
+      "finding": "输出 H.264 1920×1080、30fps、150帧、5.000秒，含48kHz AAC声音。",
+      "evidence": {
+        "kind": "technical",
+        "file": "evidence/encode.json",
+        "description": "FFprobe 核对最终含声音成片。"
+      }
+    },
+    {
+      "at": "0–5s",
+      "finding": "动作时间以10fps量化；声音单独以48kHz冻结，不量化声音。字体覆盖全部五个汉字。技术检查通过，保留两项结构提示。",
+      "evidence": {
+        "kind": "technical",
+        "file": "evidence/check-summary.txt",
+        "description": "Runtime/Layout/Motion/Contrast无错误；两个img复用同一透明atlas以及小样内联场景产生lint提示，不是视觉缺陷。"
+      }
+    }
+  ],
+  "issues": [],
+  "iterations": [],
+  "decision": {
+    "action": "deliver_with_limits",
+    "rationale": "实际编码帧与关键状态支持当前五秒材质样段的目标；没有发现需要重做的构图或文字问题，保留有限姿态和末段停留。未取得主观声音证据，不以音量检查代替听感。",
+    "limits": [
+      {
+        "description": "已编排纸张动作音，主观听感尚未核验；离散帧支持造型与状态，不能据此声称完成连续运动审美判断。",
+        "basis": "感官证据限于实际查看的编码帧、关键状态以及播放页截图。",
+        "evidence": {
+          "kind": "technical",
+          "file": "evidence/audio-check.txt",
+          "description": "音频峰值-11.8dB，无技术削波；该结果不证明声音美学。"
+        }
+      }
+    ]
+  }
+}

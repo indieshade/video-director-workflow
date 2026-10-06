@@ -1,0 +1,20 @@
+{
+  "name": "video-director-workflow",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Design-led AI video workflow, director skill and a reproducible collage sample",
+  "scripts": {
+    "setup": "node scripts/setup-demo.mjs",
+    "preview": "hyperframes preview examples/collage-paper-study",
+    "check:demo": "hyperframes check examples/collage-paper-study",
+    "render:demo": "hyperframes render examples/collage-paper-study --workers 3 --output examples/collage-paper-study/renders/picture.mp4",
+    "mix:demo": "node scripts/mix-demo.mjs",
+    "validate": "python scripts/validate-public.py",
+    "test": "python -m unittest discover -s skills/narration-video-director/scripts -p test_*.py"
+  },
+  "devDependencies": {
+    "hyperframes": "0.8.137",
+    "gsap": "3.13.0"
+  }
+}

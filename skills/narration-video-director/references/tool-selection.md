@@ -1,0 +1,46 @@
+# 工具复用与依赖选择
+
+默认先找成熟实现，再决定是否手写。工具选择从当前镜头的难点出发：轮子承担通用能力，创作者负责视觉解释、构图、材质、动作意图与注意力分配。不要把安装清单当作制作成果。
+
+新作品默认先用 HyperFrames；已有项目局部修改沿用原框架，明确的工具要求优先。HyperFrames、GSAP、SVG/Canvas 与 Three.js 可以承担本片的图形、编排和空间表达，不为这些能力额外引入 Remotion。所选框架的入口与渲染规范按当前版本读取。
+
+## 从镜头到实现
+
+1. 检查项目依赖、已有组件与官方集成，复用已满足需要的能力。
+2. 缺少能力时，查候选工具的官方文档和项目包版本，确认它能解决当前镜头的具体问题。默认选择成熟库，不先手写路径采样、时间轴调度、噪声算法、常用几何生成或媒体封装再寻求替代。
+3. 在目标项目中安装、锁定兼容版本并接到实际画面。HyperFrames 与适配器按当前项目版本核验；使用 Remotion 时其家族版本保持一致，其他库按兼容范围选择。保留原有作品与无关修改。
+4. 用关键帧暴露轮廓、遮挡和构图问题，再用连续播放验证动作；请求成片时验证实际编码输出。未满足镜头需求时调整设计或换实现，不以安装成功代替验收。
+
+已有用户授权制作并要求复用库时，常规项目依赖安装可直接进行。涉及付费服务、账号授权或范围外发布时，按实际动作另行判断授权；不因使用第三方库自动增加审批步骤。
+
+## 按能力找工具
+
+以下是能力映射，不是每个项目必须安装的套餐。API 与可用版本以当前官方资料为准。需要素材合成、压力笔触、形变、因果图、专业动画或 3D 后期时，再读 [镜头能力与实际接入案例](library-recipes.md)，包含首次定位、内部时钟、素材背景和音频截取的已验证边界。
+
+光影、背景、合成与特效的设计和取舍见 [光影、背景与特效](lighting-and-effects.md)。已有案例记录的是特定版本和框架的适配经验，不能把其中的 Remotion wrapper 当作 HyperFrames 的必要依赖。
+
+| 镜头能力 | 优先考察 | 创作者仍需决定 |
+|---|---|---|
+| 常用图形、箭头、轮廓 | SVG/Canvas、成熟图标库；手绘方向用 Rough.js；Remotion 项目可用 `@remotion/shapes` | 形状语义、比例、笔触和层级 |
+| 描线、路径长度、采样、切向或形状变换 | SVG 路径能力、GSAP 相应插件或专门路径库；Remotion 项目可用 `@remotion/paths` | 路径构图、节奏、端点和遮挡 |
+| 多元素错峰、相机式交接、复杂缓动编排 | GSAP 完整时间线接入 HyperFrames；Remotion 项目用其官方帧驱动集成 | 动机、主次、预备、跟随、保持；不只取一个 ease 函数就算编排完成 |
+| 稳定噪声与自然变化 | 固定 seed 的噪声/粒子工具；Remotion 项目可用 `@remotion/noise` | 纹理尺度、位置、强度，是否真的需要 |
+| 高速运动的曝光感、拖影或合成 | 支持子帧采样的渲染/后期实现，SVG/Canvas 或 shader 拖影；Remotion 项目可用其 motion-blur 组件 | 处理对象、曝光长度、阅读保持、色彩与成本；曝光模糊和拖影分开选择 |
+| 3D 线条、纹理、材质、空间结构 | Three.js 接入 HyperFrames 时间适配器；React 项目按需选 R3F/Drei，Remotion 可用 `@remotion/three` | 空间解释、光源、相机与真实素材分工 |
+| 光照、局部辉光、烟尘、景深与调色 | 2D 遮罩/渐变/滤镜；3D 光源和材质，Three.js addons 或兼容的后期库 | 光源与受光关系、影响范围、空间层次、时序和输出色彩 |
+| 图表、地图、复杂数据关系 | D3 或成熟专门工具；Remotion 地图任务可用其官方集成 | 编码准确性、视觉层级与叙事顺序 |
+| 音频分析、剪裁、混音、封装与编码 | FFmpeg、Mediabunny、相应媒体集成；配音用已有 TTS 或录音 | 配音锚点、响度关系、声音取舍；FFmpeg 本身不生成自然人声 |
+
+没有成熟实现、库不能表达必要效果，或适配成本明显超过小段专用代码时，可以手写，并说明原因。场景构图、领域公式与素材组合本来就是作品代码，不应为了“全用轮子”扭曲设计。
+
+## 渲染契约
+
+所有变化由所选框架的帧时间定位；拖到任意帧、倒着定位或并发渲染时应得到相同画面。检查集成是否支持这一点，不能直接搬网页的运行时动画。
+
+- HyperFrames 中按当前官方规范注册可定位的主时间线，由框架拥有时间；Three.js、shader 和粒子接收同一视频时间，不另启 RAF/ticker。GSAP 子时间线按嵌套规则配置，不把暂停根的配置直接套给所有子时间线。
+- Remotion 中用匹配版本的 GSAP 帧驱动集成或已验证的等价适配，不另启 ticker、播放时间轴或用更新回调推进 React 状态。
+- 选择 Drei 等工具时，区分稳定的几何/纹理辅助与会自行逐帧运行的控制器。3D 光源、观察位置和动画时间保持明确。
+- 随机、噪声、Rough.js 笔触固定 seed。素材、字体、shader/pass 就绪应进入框架支持的等待机制；检查第一次直接定位，不能靠先播放或空的 fallback 掩盖尚未加载的主体。
+- 检查实际 PNG/MP4：细线、抗锯齿、透明合成与纹理可能和开发预览不同。
+
+需要 API 时查对应项目的官方文档，例如 [HyperFrames 运行时与 3D](https://github.com/heygen-com/hyperframes/blob/main/docs/prompting/runtimes-and-3d.mdx)、[GSAP](https://gsap.com/docs/v3/)、[Three.js 后期](https://threejs.org/manual/pages/post-processing.html)；Remotion 项目再查 [GSAP 集成](https://www.remotion.dev/docs/gsap/use-gsap-timeline)、[paths](https://www.remotion.dev/docs/paths)、[shapes](https://www.remotion.dev/docs/shapes)、[noise](https://www.remotion.dev/docs/noise)。[Drei](https://drei.docs.pmnd.rs/) 和 [FFmpeg](https://ffmpeg.org/documentation.html) 也按实际使用查询。

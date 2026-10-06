@@ -1,0 +1,1 @@
+Original sample: HyperFrames 0.8.137 check passed. Runtime/layout/motion had no errors; four contrast checks passed. Two lint warnings: duplicate atlas media discovery and inline nested scene. This is technical evidence, not an aesthetic verdict.

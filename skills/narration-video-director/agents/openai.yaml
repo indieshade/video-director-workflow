@@ -1,0 +1,4 @@
+interface:
+  display_name: "视频导演与动效设计"
+  short_description: "规划配音与动效短片，主动选用相关技能，并用实际画面核验分镜、动作与创作质量"
+  default_prompt: "使用 $narration-video-director，根据现有素材与制作要求设计视频，主动选用相关技能和工具，以关键画面、动作样段和整片审查落实方案。"

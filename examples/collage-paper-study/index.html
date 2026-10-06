@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>留下这一句 · 印刷剪贴实验</title>
+  <style>
+    @font-face{font-family:CutSerif;src:url('assets/fonts/CutSerif-900.woff2') format('woff2');font-weight:900;font-display:block}
+    @font-face{font-family:CutSans;src:url('assets/fonts/CutSans-800.woff2') format('woff2');font-weight:800;font-display:block}
+    *{box-sizing:border-box}
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#eee6d7}
+    #stage{position:relative;width:100%;height:100%;overflow:hidden;isolation:isolate;color:#272723}
+    #collage-scene{position:absolute;inset:0;overflow:hidden}
+    .paper-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 23%,#f7f1e5 0%,#f3eddf 45%,#e8dfcd 100%)}
+    .paper-fibre{position:absolute;inset:0;opacity:.12;background-image:repeating-linear-gradient(8deg,transparent 0px,transparent 73px,#a79a7b18 74px,transparent 76px),repeating-linear-gradient(93deg,transparent 0px,transparent 152px,#fff9ed 153px,transparent 155px);mix-blend-mode:multiply}
+    /* Registry grain-overlay: reuse the seeded SVG turbulence surface;
+       remove its wall-clock CSS loop. The paper grain is held, not jittered. */
+    #grain-overlay{position:absolute;inset:0;pointer-events:none;z-index:20;overflow:hidden;mix-blend-mode:multiply}
+    #grain-overlay .grain-texture{position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' seed='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");opacity:.13}
+    .red-patch-wrap{position:absolute;left:135px;top:386px;width:1180px;height:622px;filter:drop-shadow(4px 7px 1px #322b2528);transform-origin:40% 80%}
+    .red-patch{width:100%;height:100%;background:#cf5746;clip-path:polygon(2% 10%,13% 4%,28% 0%,42% 5%,57% 2%,66% 12%,76% 8%,91% 27%,97% 44%,100% 68%,94% 93%,81% 98%,62% 96%,47% 100%,29% 94%,16% 96%,2% 88%,0% 65%,3% 49%,1% 28%)}
+    .red-patch:after{content:"";display:block;width:100%;height:100%;background:url('assets/texture-mask-text/masks/concrete.png') center/650px 650px;mix-blend-mode:multiply;opacity:.16}
+    .under-book{position:absolute;left:676px;top:799px;width:804px;height:116px;background:#b67d4530;clip-path:polygon(0% 32%,22% 3%,82% 0%,100% 65%,72% 99%,14% 82%)}
+    .reader-pose{position:absolute;left:66px;top:143px;width:840px;height:860px;transform-origin:73% 94%;filter:drop-shadow(5px 7px 1px #342c282b)}
+    .reader-crop{position:absolute;inset:0;overflow:hidden}
+    .reader-crop img{position:absolute;left:0;top:0;width:1774px;height:887px;max-width:none}
+    .book-pose{position:absolute;left:674px;top:367px;width:924px;height:727px;transform-origin:38% 77%;filter:drop-shadow(5px 7px 1px #342c282b)}
+    .book-crop{position:absolute;inset:0;overflow:hidden}
+    .book-crop img{position:absolute;left:-850px;top:-160px;width:1774px;height:887px;max-width:none}
+    /* The arrow is a cut ribbon, not an SVG stroke being traced.
+       Three finite cut-piece replacements expose its body and head. */
+    .arrow-pose{position:absolute;left:975px;top:319px;width:396px;height:308px;opacity:0;filter:drop-shadow(3px 4px 0px #3d302b20)}
+    .arrow-pose svg{width:100%;height:100%;display:block}
+    .arrow-ink{fill:#d65646}
+    .arrow-print{fill:#f8debb;opacity:.3}
+    /* Registry texture-mask-text's real luminance-mask capability.
+       The light ink underprint preserves complete Chinese counters;
+       the textured overprint supplies restrained ink loss at shared scale. */
+    .texture-print{-webkit-mask-image:url('assets/texture-mask-text/masks/concrete.png');mask-image:url('assets/texture-mask-text/masks/concrete.png');-webkit-mask-size:cover;mask-size:cover;-webkit-mask-position:center;mask-position:center;-webkit-mask-mode:luminance;mask-mode:luminance}
+    .arrow-wear{position:absolute;inset:0;background:#efe7d6;opacity:.25;clip-path:path('M 64 264 C 48 136 143 74 299 53 L 276 22 L 386 30 L 317 115 L 312 83 C 184 109 94 153 96 263 Z')}
+    .paper-travel{position:absolute;left:0;top:0;width:764px;height:226px;opacity:0;transform-origin:50% 50%;filter:drop-shadow(4px 7px 0 #43362828)}
+    .saved-paper{position:absolute;inset:0;background:#faf3df;clip-path:polygon(0% 6%,12% 3%,24% 5%,36% 1%,55% 4%,71% 0%,87% 3%,99% 1%,100% 17%,99% 39%,100% 67%,99% 95%,85% 97%,72% 94%,57% 99%,43% 96%,29% 100%,15% 96%,1% 99%,2% 75%,0% 47%,1% 26%)}
+    .saved-paper:before{content:"";position:absolute;inset:0;background:url('assets/texture-mask-text/masks/plaster-001.png') center/764px 226px;opacity:.1;mix-blend-mode:multiply}
+    .fold-seam{position:absolute;left:23%;top:6%;bottom:4%;width:3px;background:#b7a18545;box-shadow:3px 0 0 #fffdf254;opacity:.7}
+    .red-tab{position:absolute;left:18px;top:0;width:43px;height:226px;background:#ce5948;clip-path:polygon(5% 0%,95% 0%,100% 81%,47% 73%,0% 85%)}
+    .title-face{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:6px 22px 18px 73px;font-family:CutSerif;font-weight:900;font-size:119px;letter-spacing:2px;line-height:1;white-space:nowrap;opacity:0}
+    .title-solid{color:#2d2b24;opacity:.75}
+    .title-printed{color:#1e201e;opacity:.85}
+    .picked-mark{position:absolute;left:207px;top:96px;width:353px;height:22px;background:#807564;opacity:.42;clip-path:polygon(1% 12%,99% 0%,100% 92%,3% 100%)}
+    .picked-mark:after{content:"";position:absolute;left:0;top:9px;width:100%;height:4px;background:#f4ead6;opacity:.55}
+    .page-notch{position:absolute;left:1194px;top:629px;width:150px;height:35px;background:#d75b46;clip-path:polygon(1% 16%,98% 0%,100% 78%,3% 100%);opacity:0}
+  </style>
+</head>
+<body>
+  <div data-hf-id="hf-6jn2" id="stage" data-composition-id="collage-paper-study" data-start="0" data-duration="5" data-fps="30" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-rulr" id="collage-scene" class="clip" data-start="0" data-duration="5" data-track-index="0">
+      <div data-hf-id="hf-ug6y" class="paper-bg"></div>
+      <div data-hf-id="hf-d49t" class="paper-fibre"></div>
+      <div data-hf-id="hf-l2r5" class="red-patch-wrap"><div data-hf-id="hf-6zbg" class="red-patch"></div></div>
+      <div data-hf-id="hf-xqi4" class="under-book"></div>
+      <div data-hf-id="hf-rdv1" class="reader-pose"><div data-hf-id="hf-uv10" class="reader-crop"><img data-hf-id="hf-ttgc" src="assets/reader-book-atlas.png" alt="印刷剪贴读者" data-layout-allow-overflow="true"></div></div>
+      <div data-hf-id="hf-wl5e" class="book-pose" data-layout-allow-overflow="true"><div data-hf-id="hf-y3yq" class="book-crop"><img data-hf-id="hf-kwze" src="assets/reader-book-atlas.png" alt="独立的旧书纸片" data-layout-allow-overflow="true"></div></div>
+      <div data-hf-id="hf-d2j8" class="page-notch"></div>
+      <div data-hf-id="hf-smhv" class="arrow-pose">
+        <svg data-hf-id="hf-o2e1" viewBox="0 0 396 308" aria-hidden="true"><path data-hf-id="hf-7dqq" class="arrow-ink" d="M64 264 C48 136 143 74 299 53 L276 22 L386 30 L317 115 L312 83 C184 109 94 153 96 263 Z" /><path data-hf-id="hf-azxp" class="arrow-print" d="M66 262 C57 166 108 100 178 74 L181 80 C115 112 67 176 73 262Z" /></svg>
+        <div data-hf-id="hf-10j2" class="arrow-wear texture-print"></div>
+      </div>
+      <div data-hf-id="hf-xexf" class="paper-travel">
+        <div data-hf-id="hf-b8lw" class="saved-paper"></div><div data-hf-id="hf-yp68" class="fold-seam"></div><div data-hf-id="hf-7hzr" class="red-tab"></div><div data-hf-id="hf-irse" class="picked-mark"></div>
+        <div data-hf-id="hf-tzgu" class="title-face title-solid" data-layout-allow-overlap="true">留下这一句</div><div data-hf-id="hf-0o7r" class="title-face title-printed texture-print" data-layout-allow-overlap="true" aria-hidden="true">留下这一句</div>
+      </div>
+      <div data-hf-id="hf-mkrp" id="grain-overlay"><div data-hf-id="hf-0qtj" class="grain-texture"></div></div>
+    </div>
+  </div>
+  <script src="assets/gsap.min.js"></script>
+  <script>
+  (function(){
+    'use strict';
+    const reader=document.querySelector('.reader-pose');
+    const book=document.querySelector('.book-pose');
+    const patch=document.querySelector('.red-patch-wrap');
+    const paper=document.querySelector('.paper-travel');
+    const arrow=document.querySelector('.arrow-pose');
+    const notch=document.querySelector('.page-notch');
+    const titles=document.querySelectorAll('.title-face');
+    const mark=document.querySelector('.picked-mark');
+    const seam=document.querySelector('.fold-seam');
+    const clamp=x=>Math.min(1,Math.max(0,x));
+    const lerp=(a,b,u)=>a+(b-a)*u;
+    const out=u=>1-Math.pow(1-u,3);
+    const inOut=u=>u<.5?4*u*u*u:1-Math.pow(-2*u+2,3)/2;
+    const span=(t,a,b)=>clamp((t-a)/(b-a));
+    // Actual registry reuse: stop-motion-cadence's quantize-first time law,
+    // epsilon boundary handling and pure-function pose evaluation.
+    // Boil disabled: paper is still after its one deliberate settling pose.
+    function applyTime(time){
+      const step=Math.floor(time*10+1e-6);
+      const t=step/10;
+      const patchP=out(span(t,.1,.4));
+      gsap.set(patch,{x:lerp(-13,0,patchP),y:lerp(12,0,patchP),rotation:lerp(-2.2,-1.2,patchP),scale:lerp(.988,1,patchP),opacity:1});
+      const lean=inOut(span(t,.6,1.1));
+      gsap.set(reader,{rotation:lerp(-1.2,.5,lean),scale:.91,x:lerp(0,6,lean),y:lerp(0,3,lean)});
+      gsap.set(book,{rotation:-5.3,scale:.83,x:0,y:0});
+      gsap.set(notch,{opacity:t>=.6&&t<1.3?.65:0});
+      const lift=out(span(t,.6,1.2));
+      const flight=inOut(span(t,1.2,2.8));
+      const cx=lerp(1232,1456,flight);
+      const cy=t<1.2?lerp(638,555,lift):lerp(555,270,flight)-75*4*flight*(1-flight);
+      let sx=.245,sy=.18,rot=lerp(-25,-11,lift);
+      if(t>=1.2){rot=lerp(-11,-6,flight);}
+      // Finite fold replacement, not a fluid website scale tween.
+      // Width unfolds in four material poses while the identity/red tab stays.
+      if(t>=2.8){
+        const pose=t<2.9?0:t<3.1?1:t<3.3?2:3;
+        sx=[.35,.58,.83,1][pose];
+        sy=[.35,.62,.84,1][pose];
+        rot=[-9,-4,-6,-4][pose];
+      }
+      if(t>=3.65)rot=t<3.9?-3.2:-4;
+      gsap.set(paper,{x:cx-382,y:cy-113,scaleX:sx,scaleY:sy,rotation:rot,opacity:t>=.6?1:0});
+      gsap.set(mark,{opacity:t>=2.9?0:.42});
+      gsap.set(seam,{opacity:t>=3.3?.26:.7});
+      gsap.set(titles[0],{opacity:t>=3.3?.72:0});
+      gsap.set(titles[1],{opacity:t>=3.3?.85:0});
+      // The arrow grows by replacing three cut-lengths, not a pen stroke.
+      let arrowCrop=t<1.6?0:t<2?30:t<2.4?68:100;
+      gsap.set(arrow,{opacity:arrowCrop?1:0});
+      arrow.style.clipPath='inset(0 '+(100-arrowCrop)+'% 0 0)';
+    }
+    const clock={p:0};
+    const tl=gsap.timeline({paused:true,onUpdate:()=>applyTime(tl.time())});
+    tl.to(clock,{p:1,duration:5,ease:'none'},0);
+    window.__timelines=window.__timelines||{};
+    window.__timelines['collage-paper-study']=tl;
+    tl.seek(0);
+    applyTime(0);
+  })();
+  </script>
+</body>
+</html>

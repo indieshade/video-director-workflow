@@ -1,0 +1,30 @@
+{
+  "artifact": "gallery/jfk-collage/film.mp4",
+  "sha256": "5ab37fd08938a159c0525eac296705066efc8fd1a8418d4d7d9d76606767f06a",
+  "sourceSha256": "0ede967bb6dfff578071ca4302df1f3709d7f2fa0b2dc9693e28cf47295119d9",
+  "duration": 26.3,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": "30/1",
+  "frames": "789",
+  "fullDecodePassed": true,
+  "levels": {
+    "input_i": "-14.05",
+    "input_tp": "-4.41",
+    "input_lra": "2.40"
+  },
+  "captionCount": 11,
+  "captionBoundsPassed": true,
+  "sourceAlignment": {
+    "file": "assets/narration.wav",
+    "lagMs": 0.0,
+    "correlation": 0.9999153614663983,
+    "sourceSha256": "195f9aaa55240853814794cc66780247a66cb72544ec53e9ab5c2aa1e34d27c8"
+  },
+  "skillsAndSnapshotUnchanged": true,
+  "promptUnchanged": true,
+  "hearingReviewed": false,
+  "continuousRealTimeViewingClaimed": false
+}

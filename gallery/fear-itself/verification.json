@@ -1,0 +1,30 @@
+{
+  "artifact": "gallery/fear-itself/film.mp4",
+  "sha256": "89659916f10c6325bd376351f3db4088c26920602d9090304087481043d31fff",
+  "sourceSha256": "ba3ef791ad67604ddbacf3a40994488429361e5d863a10c299935339b0ac1881",
+  "duration": 23.0,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": "30/1",
+  "frames": "690",
+  "fullDecodePassed": true,
+  "levels": {
+    "input_i": "-18.11",
+    "input_tp": "-6.45",
+    "input_lra": "3.50"
+  },
+  "captionCount": 10,
+  "captionBoundsPassed": true,
+  "sourceAlignment": {
+    "file": "assets/voice.wav",
+    "lagMs": 4.979166666666667,
+    "correlation": 0.9992248218026957,
+    "sourceSha256": "fde6d6e6400ff1fa6eb49d359d57bc106f83b2a3cfd0b88c29f947cea9d6b102"
+  },
+  "skillsAndSnapshotUnchanged": true,
+  "promptUnchanged": true,
+  "hearingReviewed": false,
+  "continuousRealTimeViewingClaimed": false
+}

@@ -1,0 +1,115 @@
+{
+  "title": "A hard choice / 困难的选择",
+  "production_date": "2026-10-18",
+  "usage": "原创教育/编辑式拼贴短片；不暗示JFK、NASA或Vox背书",
+  "audio": {
+    "speaker": "John F. Kennedy",
+    "event": "Address at Rice University on the Nation’s Space Effort",
+    "recorded": "1962-09-12",
+    "archive": "John F. Kennedy Presidential Library & Museum",
+    "page": "https://commons.wikimedia.org/wiki/File:Jfk_rice_university_we_choose_to_go_to_the_moon.ogg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/5/50/Jfk_rice_university_we_choose_to_go_to_the_moon.ogg",
+    "file": "assets/jfk-full.ogg",
+    "start": 527.7,
+    "end": 554.0,
+    "output": "assets/narration.wav",
+    "speed": 1.0,
+    "edit": "连续截取；未更换顺序、未修改台词、未分离现场声；无新增音乐",
+    "license": "美国联邦政府职务作品；Commons页面标PD-USGov / Public Domain Mark 1.0",
+    "verification": "实际音频截段ASR与JFK档案原文核对；没有观看源视频画面；未真实听审"
+  },
+  "photographs": [
+    {
+      "file": "assets/Apollo-mission-control0.jpg",
+      "derivative": "assets/control-print.png",
+      "url": "https://images-assets.nasa.gov/image/S68-49301/S68-49301~medium.jpg",
+      "nasa_id": "S68-49301",
+      "title": "Overall view of Mission Control on first day of Apollo 7 space mission",
+      "credit": "NASA / NASA JPL",
+      "date": "1968-10-11T00:00:00Z",
+      "license_use": "NASA内容，一般不受美国版权保护；按官方媒体指南作教育编辑用途并署名；没有购买或宣传背书。原资料非1962年现场；仅做纸面裁切、去色、印刷处理，不改变事件事实。"
+    },
+    {
+      "file": "assets/F-1-engine0.jpg",
+      "derivative": "assets/test-print.png",
+      "url": "https://images-assets.nasa.gov/image/6866986/6866986~medium.jpg",
+      "nasa_id": "6866986",
+      "title": "Saturn Apollo Program",
+      "credit": "NASA / NASA JPL",
+      "date": "1968-06-01T00:00:00Z",
+      "license_use": "NASA内容，一般不受美国版权保护；按官方媒体指南作教育编辑用途并署名；没有购买或宣传背书。原资料非1962年现场；仅做纸面裁切、去色、印刷处理，不改变事件事实。"
+    },
+    {
+      "file": "assets/F-1-engine1.jpg",
+      "derivative": "assets/engine-print.png",
+      "url": "https://images-assets.nasa.gov/image/9264931/9264931~medium.jpg",
+      "nasa_id": "9264931",
+      "title": "Saturn Apollo Program",
+      "credit": "NASA / NASA JPL",
+      "date": "2004-04-15T00:00:00Z",
+      "license_use": "NASA内容，一般不受美国版权保护；按官方媒体指南作教育编辑用途并署名；没有购买或宣传背书。原资料非1962年现场；仅做纸面裁切、去色、印刷处理，不改变事件事实。"
+    },
+    {
+      "file": "assets/Saturn-V-launch0.jpg",
+      "derivative": "assets/rocket-cut.png",
+      "url": "https://images-assets.nasa.gov/image/6864722/6864722~medium.jpg",
+      "nasa_id": "6864722",
+      "title": "Saturn Apollo Program",
+      "credit": "NASA / NASA JPL",
+      "date": "1968-04-04T00:00:00Z",
+      "license_use": "NASA内容，一般不受美国版权保护；按官方媒体指南作教育编辑用途并署名；没有购买或宣传背书。原资料非1962年现场；仅做纸面裁切、去色、印刷处理，不改变事件事实。"
+    },
+    {
+      "file": "assets/moon.jpg",
+      "derivative": "assets/moon-print.png",
+      "url": "http://images-assets.nasa.gov/image/PIA00405/PIA00405~orig.jpg",
+      "nasa_id": "PIA00405",
+      "title": "Full Moon — PIA00405",
+      "credit": "NASA/JPL/USGS",
+      "date": null,
+      "license_use": "NASA内容，一般不受美国版权保护；按官方媒体指南作教育编辑用途并署名；没有购买或宣传背书。原资料非1962年现场；仅做纸面裁切、去色、印刷处理，不改变事件事实。",
+      "verified_credit_page": "https://science.nasa.gov/resource/earths-moon/"
+    }
+  ],
+  "fonts": [
+    {
+      "family": "Anton",
+      "source": "https://github.com/google/fonts/tree/main/ofl/anton",
+      "license": "SIL Open Font License 1.1",
+      "license_file": "assets/anton-OFL.txt"
+    },
+    {
+      "family": "IBM Plex Mono",
+      "source": "https://github.com/google/fonts/tree/main/ofl/ibmplexmono",
+      "license": "SIL Open Font License 1.1",
+      "license_file": "assets/ibmplexmono-OFL.txt"
+    },
+    {
+      "family": "CaptionSans",
+      "file": "assets/CaptionSans.ttf",
+      "use": "仅按交接提供的中文字幕运行资源使用；来源随交接授权，未把它用作画内设计字体"
+    }
+  ],
+  "sound": {
+    "file": "assets/foley.wav",
+    "author": "本片制作代理程序合成",
+    "method": "NumPy固定种子、FFT频段限制噪声与衰减触点；见tools/build-assets.py",
+    "purpose": "纸张否定、工程归位、测量纸带展开、日历移开和决心盖印",
+    "status": "已混入；仅完成技术测量，未经真实听审"
+  },
+  "reference": {
+    "url": "https://podenco.tv/vox-earwormdub-music/",
+    "author": "Antoni Sendra / Podenco；commissioner Estelle Caswell, Dion Lee",
+    "files": [
+      "research/vox1.jpg",
+      "research/vox2.jpg"
+    ],
+    "use": "静态项目图研究，未作为生产素材；未看连续动作；未取得可比表现数据"
+  },
+  "facts": [
+    "https://www.nasa.gov/history/60-years-ago-president-kennedy-reaffirms-moon-landing-goal-in-rice-university-speech/"
+  ],
+  "media_guidelines": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "distribution_scope": "Finished film, poster, captions and provenance only. Relative asset paths describe original production inputs, not files bundled in this gallery.",
+  "publication_review": "2026-10-19: expanded PIA00405 credit to NASA/JPL/USGS from NASA Science; finished film unchanged."
+}

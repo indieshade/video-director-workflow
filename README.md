@@ -31,13 +31,21 @@
 
 [七方向首版样段与报告](examples/style-prompt-audit/README.md) · [交互检验页](examples/style-prompt-audit/review.html)。这轮保留原配方只填变量，不补图或润色首版来掩盖失败；图像生成、组合设计、动作可实现性分别记录。
 
+## 当前制作入口（2026-10-19）
+
+新作品优先交给干净上下文中的独立制作代理。主代理提供观看目标、真实约束和明确的风格段；制作代理自行找素材、设计音画、实现与自审，主代理再从实际成片合稿。[可填写的交接模板](skills/narration-video-director/references/independent-production.md)包含摄影剪贴与几何角色两种可直接使用的风格段，保留具体构图、物件和动作的创作空间。
+
+声音从首版分镜开始，按画面动作、信息含义与情绪选声，不因画面有纸感就全部套纸声；标准箭头与连接图形优先复用成熟能力。几何角色指导补充轮廓、重心、接触关系、可动画素材及未完成动作的语义判断。
+
+最新新题材样片：[困难的选择 · 26.3秒摄影剪贴](gallery/jfk-collage/film.mp4) · [恐惧本身 · 23秒几何角色](gallery/fear-itself/film.mp4)。[输入、来源和合稿范围](docs/showcase.md)随片公开；它们有主代理反馈，不是未经干预的直出或稳定性证明。两片使用HyperFrames 0.8.170；仓库原可运行样例仍保持自己的0.8.137版本。新增画廊只提供成片、通用化输入及取证，不冒充完整可运行项目。
+
 ## 应用样例与实验记录
 
 ![自有五秒剪贴应用](gallery/collage/poster.jpg)
 
 [五秒剪贴视频](gallery/collage/film.mp4) · [可运行工程](examples/collage-paper-study/README.md) · [实际输入](examples/collage-paper-study/BRIEF.md)
 
-另外保留 [五个已有实验作品](docs/showcase.md)及其工艺、额外输入和局限，包括图形编排、立体光影、像素和 UI 形变。它们不替代外部调研风格库，也不证明这些方向已达到外部参考质量。旧的十五条事后工艺配方另存于[实验素材配方](library/experiment-material-prompts.json)。
+另外保留 [已有实验作品与新题材检验](docs/showcase.md)及其工艺、额外输入和局限，包括图形编排、立体光影、像素和 UI 形变。它们不替代外部调研风格库，也不证明这些方向已达到外部参考质量。旧的十五条事后工艺配方另存于[实验素材配方](library/experiment-material-prompts.json)。
 
 ## 长期方向：让指导最终不再必要
 
@@ -50,10 +58,12 @@
 | 让代理主动执行视频制作流程 | [AGENTS.md](AGENTS.md) |
 | 安装、调用导演 skill | [narration-video-director](skills/narration-video-director/SKILL.md) |
 | 理解制作过程与提示词结构 | [工作流](docs/workflow.md) · [提示词示例](docs/prompts.md) |
+| 将新作品交给独立制作代理 | [交接模板与风格段](skills/narration-video-director/references/independent-production.md) |
 | 选择画面风格 | [风格条目](docs/style-profiles.json) · [剪贴画指导](skills/narration-video-director/references/vox-collage.md) |
 | 查看实际作品与选择素材配方 | [外部调研风格](docs/researched-styles.md) · [素材库](library/README.md) |
 | 扩充库与评估新模型 | [维护方法](docs/library-roadmap.md) · [导演库维护指导](skills/narration-video-director/references/library-maintenance.md) |
 | 判断首版之后还该做什么 | [创作复审](skills/narration-video-director/references/creative-iteration.md) |
+| 设计几何角色与心理隐喻 | [造型、表演与声音](skills/narration-video-director/references/geometric-emotion.md) |
 | 复现这个五秒样段 | [样例说明](examples/collage-paper-study/README.md) |
 
 ## 安装导演 skill

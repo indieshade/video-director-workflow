@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-06",
+  "updated_on": "2026-10-19",
   "scope": "自制完整成片的风格展示；不是同题公平排名",
   "cases": [
     {
@@ -97,6 +97,44 @@
       "prompt": "gallery/ui-morph/prompt.md",
       "credits": "gallery/ui-morph/CREDITS.md",
       "media": "gallery/ui-morph/media.json"
+    },
+    {
+      "id": "jfk-collage",
+      "title": "档案摄影剪贴",
+      "family": "editorial-collage",
+      "name": "困难的选择",
+      "keywords": [
+        "NASA摄影制版",
+        "印刷字块",
+        "纸片归位",
+        "测量展开"
+      ],
+      "exposure": "干净上下文代理自主找原声与素材；合稿后删除一个多余常驻角标。不是对外部成片的盲测。",
+      "limit": "有26.3秒新题材成片；英文强调字块较多，后半段构图变化偏少；没有真实听审及实时连续观看验收。",
+      "video": "gallery/jfk-collage/film.mp4",
+      "poster": "gallery/jfk-collage/poster.jpg",
+      "prompt": "gallery/jfk-collage/prompt.md",
+      "credits": "gallery/jfk-collage/CREDITS.md",
+      "media": "gallery/jfk-collage/media.json"
+    },
+    {
+      "id": "fear-itself",
+      "title": "几何角色与心理隐喻",
+      "family": "geometric-character-metaphor",
+      "name": "恐惧本身",
+      "keywords": [
+        "块面侧脸",
+        "自我投影",
+        "局部姿态",
+        "未完成的尝试"
+      ],
+      "exposure": "独立代理自主找原声、绘制造型与声音；主代理指出末句语义对齐风险，由制作代理修订，另同步生成元数据。",
+      "limit": "有23秒新题材成片；单场景、角色表演偏克制。只有静帧与密集序列观察、技术测量，未完成真实听审及实时连续观看。",
+      "video": "gallery/fear-itself/film.mp4",
+      "poster": "gallery/fear-itself/poster.jpg",
+      "prompt": "gallery/fear-itself/prompt.md",
+      "credits": "gallery/fear-itself/CREDITS.md",
+      "media": "gallery/fear-itself/media.json"
     }
   ]
 }

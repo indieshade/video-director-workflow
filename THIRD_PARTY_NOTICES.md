@@ -23,6 +23,13 @@ The gallery adds our finished compositions, not external benchmark films. Per-ca
 
 No standalone third-party music or sound-effect files are included in these added cases.
 
+## New narration-entry films (2026-10-18 productions)
+
+- [A Hard Choice / JFK collage](gallery/jfk-collage/CREDITS.md): JFK Library archival speech and NASA engineering/mission imagery, with source IDs, edits and dates in the case provenance. Images from later engineering work are not presented as contemporaneous 1962 speech footage. Rendered Anton and IBM Plex Mono text retain their OFL provenance. No affiliation or endorsement is implied.
+- [Fear Itself](gallery/fear-itself/CREDITS.md): FDR speech excerpt from Wikimedia Commons, uploaded by South Bay and transferred by Hop on Bananas, credited under the file page's CC BY 3.0 notice. The credit identifies extraction, voice processing and original added sounds. Character arrangement and sound synthesis are original; Instrument Serif is rendered text with OFL provenance.
+
+These additions distribute finished films, posters, captions, normalized production inputs and review/provenance records. They do not distribute reference pixels, raw font software, standalone archival audio or complete editable production projects. Original MIT arrangements do not relicense archival material. The case notices and upstream licenses apply to those components.
+
 ## Style-prompt audit probes
 
 Seven original silent six-second compositions and four raw AI-generated concept images are provided under `examples/style-prompt-audit/`. Exact image inputs and limits are recorded with each asset. No external reference pixels, original benchmark films, private voice recordings or user likeness assets are included. The host did not report the image model version; no exclusive-rights guarantee is made.

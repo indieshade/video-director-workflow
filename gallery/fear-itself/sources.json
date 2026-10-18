@@ -1,0 +1,60 @@
+{
+  "retrieved": "2026-10-18",
+  "voice": {
+    "author": "Franklin D. Roosevelt",
+    "event": "First inaugural address, 1933-03-04",
+    "page": "https://commons.wikimedia.org/wiki/File:FDR_speech.ogg",
+    "file": "https://upload.wikimedia.org/wikipedia/commons/7/7d/FDR_speech.ogg",
+    "uploader": "South Bay at English Wikipedia; transferred by Hop on Bananas",
+    "license": "CC BY 3.0 per file page; page also carries PD-US-no-notice",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "original_file": "assets/original-fdr.ogg",
+    "source_in": 23.8,
+    "source_out": 45.610667,
+    "changes": "Extracted intact sentence; high-pass and voice loudness processing, no time stretch, no TTS, no word reordering. Existing archive noise retained.",
+    "transcript_reference": "https://millercenter.org/the-presidency/presidential-speeches/march-4-1933-first-inaugural-address",
+    "context": "1933 economic crisis address. Geometric enactment is an original interpretive metaphor, not documentary footage."
+  },
+  "font": {
+    "name": "Instrument Serif",
+    "source": "https://github.com/google/fonts/tree/main/ofl/instrumentserif",
+    "license": "SIL OFL 1.1",
+    "local_license": "assets/InstrumentSerif-OFL.txt"
+  },
+  "graphics": {
+    "creator": "Original SVG character and scene drawn for this production; deterministic grain made by prepare.py",
+    "reference": "Allowed school-063.jpg observed as static style research only; not copied into production"
+  },
+  "sound": {
+    "creator": "Original NumPy synthesis, prepare.py",
+    "music": "No added music; archival source is not claimed to be a studio dry stem",
+    "stems": [
+      "assets/voice.wav",
+      "assets/action-sfx.wav"
+    ],
+    "mix": "assets/mix.wav",
+    "meaning": [
+      {
+        "at": 7.7,
+        "type": "low resonant friction",
+        "use": "Own shadow grows; tension without a monster jump scare"
+      },
+      {
+        "at": 16.65,
+        "type": "dry friction stop",
+        "use": "Effort halts mid step"
+      },
+      {
+        "at": 19.6,
+        "type": "matte ceramic wood toe contact",
+        "use": "Tentative front foot touches; pelvis has not completed transfer"
+      },
+      {
+        "at": 21.49,
+        "type": "quieter low contact",
+        "use": "Back heel returns to ground, an arrested attempt; no victory cue"
+      }
+    ]
+  },
+  "distribution_scope": "Finished film, poster, captions and provenance only. Relative asset paths describe original production inputs, not files bundled in this gallery."
+}

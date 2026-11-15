@@ -2,6 +2,8 @@
 
 新建视频、显著重做视觉方案或制作同提示词对照时，主动使用 [narration-video-director](skills/narration-video-director/SKILL.md)，按其制作入口选择相关 references 和当前所选框架版本的官方指导。新作品默认先用 HyperFrames；现有项目局部修订沿用其框架，用户明确指定工具时按指定执行。无需用户反复指定技能；只讨论方案或修改局部时保持对应范围。
 
+获准委派的新作品完整制作与显著重做默认使用两名干净上下文的 subagent：导演统一全篇设计并负责成片合稿，制作代理实现素材、动画、声音与导出，主代理协调输入和核对交付。沿用[独立制作入口](skills/narration-video-director/references/independent-production.md)的实际交接，不按章节各自设计一套美术。局部修改沿用原分工；用户指定的分工、实验条件与宿主权限优先。关键前后镜在分镜阶段共同设计，再按连接需要生产素材，并从实际成片核对接缝。
+
 当前质感提升重点是光影、背景的有机设计与服务内容的特效，按该技能的 [光影、背景与特效](skills/narration-video-director/references/lighting-and-effects.md) 在视觉设计阶段安排，在实际画面和动作样段中核对；不把特效数量当作质量指标。
 
 制作中的关键帧、动作样段和审片证据按该技能的 [执行与证据闭环](skills/narration-video-director/references/production-planning.md#执行与证据闭环) 处理，由代理完成检查与必要修订。不要把编译、导出或书面分镜当成创作要求已经落实的证据，也不要把这些内部检查变成用户逐项审批。

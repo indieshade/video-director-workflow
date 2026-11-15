@@ -58,12 +58,14 @@
 | 让代理主动执行视频制作流程 | [AGENTS.md](AGENTS.md) |
 | 安装、调用导演 skill | [narration-video-director](skills/narration-video-director/SKILL.md) |
 | 理解制作过程与提示词结构 | [工作流](docs/workflow.md) · [提示词示例](docs/prompts.md) |
-| 将新作品交给独立制作代理 | [交接模板与风格段](skills/narration-video-director/references/independent-production.md) |
+| 将新作品交给独立导演与制作代理 | [双代理交接模板与风格段](skills/narration-video-director/references/independent-production.md) |
+| 设计蒙太奇与跨镜头连接 | [形状、动作、焦点与语义的接续](skills/narration-video-director/references/motion-and-sound.md#镜头连接与蒙太奇) |
 | 选择画面风格 | [风格条目](docs/style-profiles.json) · [剪贴画指导](skills/narration-video-director/references/vox-collage.md) |
 | 查看实际作品与选择素材配方 | [外部调研风格](docs/researched-styles.md) · [素材库](library/README.md) |
 | 扩充库与评估新模型 | [维护方法](docs/library-roadmap.md) · [导演库维护指导](skills/narration-video-director/references/library-maintenance.md) |
 | 判断首版之后还该做什么 | [创作复审](skills/narration-video-director/references/creative-iteration.md) |
 | 设计几何角色与心理隐喻 | [造型、表演与声音](skills/narration-video-director/references/geometric-emotion.md) |
+| 设计极简 UI 动效 | [界面层级与连续运动](skills/narration-video-director/references/minimal-ui-motion.md) |
 | 复现这个五秒样段 | [样例说明](examples/collage-paper-study/README.md) |
 
 ## 安装导演 skill

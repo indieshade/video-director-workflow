@@ -31,9 +31,9 @@
 
 [七方向首版样段与报告](examples/style-prompt-audit/README.md) · [交互检验页](examples/style-prompt-audit/review.html)。这轮保留原配方只填变量，不补图或润色首版来掩盖失败；图像生成、组合设计、动作可实现性分别记录。
 
-## 当前制作入口（2026-10-19）
+## 当前制作入口
 
-新作品优先交给干净上下文中的独立制作代理。主代理提供观看目标、真实约束和明确的风格段；制作代理自行找素材、设计音画、实现与自审，主代理再从实际成片合稿。[可填写的交接模板](skills/narration-video-director/references/independent-production.md)包含摄影剪贴与几何角色两种可直接使用的风格段，保留具体构图、物件和动作的创作空间。
+获准委派时，由独立导演和制作代理分别负责设计与实现。主代理提供观看目标、原始素材和已确认的要求。导演先根据内容构思场景和动作，再按需要查风格参考。制作方依据代表画面与动作交接实现，导演从实际成片复审。 [简短交接模板](skills/narration-video-director/references/independent-production.md) · [风格与工艺索引](skills/narration-video-director/references/style-profiles.md#按需查阅风格与工艺)
 
 声音从首版分镜开始，按画面动作、信息含义与情绪选声，不因画面有纸感就全部套纸声；标准箭头与连接图形优先复用成熟能力。几何角色指导补充轮廓、重心、接触关系、可动画素材及未完成动作的语义判断。
 
@@ -58,7 +58,7 @@
 | 让代理主动执行视频制作流程 | [AGENTS.md](AGENTS.md) |
 | 安装、调用导演 skill | [narration-video-director](skills/narration-video-director/SKILL.md) |
 | 理解制作过程与提示词结构 | [工作流](docs/workflow.md) · [提示词示例](docs/prompts.md) |
-| 将新作品交给独立导演与制作代理 | [双代理交接模板与风格段](skills/narration-video-director/references/independent-production.md) |
+| 将新作品交给独立导演与制作代理 | [双代理交接模板](skills/narration-video-director/references/independent-production.md) |
 | 设计蒙太奇与跨镜头连接 | [形状、动作、焦点与语义的接续](skills/narration-video-director/references/motion-and-sound.md#镜头连接与蒙太奇) |
 | 选择画面风格 | [风格条目](docs/style-profiles.json) · [剪贴画指导](skills/narration-video-director/references/vox-collage.md) |
 | 查看实际作品与选择素材配方 | [外部调研风格](docs/researched-styles.md) · [素材库](library/README.md) |

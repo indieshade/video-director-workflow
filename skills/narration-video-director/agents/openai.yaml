@@ -1,4 +1,4 @@
 interface:
   display_name: "视频导演与动效设计"
-  short_description: "规划配音与动效短片，主动选用相关技能，并用实际画面核验分镜、动作与创作质量"
-  default_prompt: "使用 $narration-video-director，根据现有素材与制作要求，设计画面如何随内容引导视线、呈现关系与关键变化，主动选用相关技能和工具，以实际画面、动作样段和成片复审落实表达。"
+  short_description: "为口播解说与音乐主题短片设计画面、编排动作和声音，并核对实际成片"
+  default_prompt: "使用 $narration-video-director，根据我给的口播或音乐与主题设计短片，让画面传达这段内容独有的意思或感受。"

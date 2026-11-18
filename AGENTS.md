@@ -4,7 +4,7 @@
 
 获准委派的新作品完整制作与显著重做默认使用两名干净上下文的 subagent：导演统一全篇设计并负责成片合稿，制作代理实现素材、动画、声音与导出，主代理协调输入和核对交付。沿用[独立制作入口](skills/narration-video-director/references/independent-production.md)的实际交接，不按章节各自设计一套美术。局部修改沿用原分工；用户指定的分工、实验条件与宿主权限优先。关键前后镜在分镜阶段共同设计，再按连接需要生产素材，并从实际成片核对接缝。
 
-当前质感提升重点是光影、背景的有机设计与服务内容的特效，按该技能的 [光影、背景与特效](skills/narration-video-director/references/lighting-and-effects.md) 在视觉设计阶段安排，在实际画面和动作样段中核对；不把特效数量当作质量指标。
+当主体与背景的关系、光影或特效影响本片表达时，查[光影、背景与特效](skills/narration-video-director/references/lighting-and-effects.md)，用实际样段核对效果。
 
 制作中的关键帧、动作样段和审片证据按该技能的 [执行与证据闭环](skills/narration-video-director/references/production-planning.md#执行与证据闭环) 处理，由代理完成检查与必要修订。不要把编译、导出或书面分镜当成创作要求已经落实的证据，也不要把这些内部检查变成用户逐项审批。
 
@@ -14,7 +14,7 @@
 
 新作品先由导演从内容推导画面。用户希望参加选型，或美术取舍会实质改变交付且偏好无法推断时，按[创作方向选型](skills/narration-video-director/references/comparison-and-calibration.md#创作方向选型)提供实际预览。导演用代表性动作样段自审设计，合稿时核对全片。
 
-新美学方向按[风格选型与表现数据](skills/narration-video-director/references/style-selection-and-performance.md)主动研究具体作品，以带出处的片内参考图、设计关键词和可比表现数据支撑候选，再落实为本片预览。区分经典与近期、封面包装与片内设计、传播线索与风格效果，不把高播放直接归因于美术，也不以固定热门风格限制表达。
+为风格库选型或评估传播表现时，按[风格选型与表现数据](skills/narration-video-director/references/style-selection-and-performance.md)核对片内参考与可比数据。单片创作按当前设计难点取用参考。
 
 公开风格参考条目见 [风格目录](docs/style-profiles.json)，仅保留出处和观察边界；历史研究截图与流量缓存不随本仓库分发。
 
